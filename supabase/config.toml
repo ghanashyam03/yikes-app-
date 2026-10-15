@@ -1,0 +1,44 @@
+# Supabase local development configuration for yikes!
+
+project_id = "yikes-app"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "storage", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+
+[studio]
+enabled = true
+port = 54323
+
+[auth]
+enabled = true
+# 10-minute OTP expiry in seconds (600 seconds) per docs/spec/02-auth-onboarding.md
+otp_exp = 600
+# Rate limits: 30 requests per window to mitigate brute force
+rate_limit_token_refresh = 30
+rate_limit_verify = 30
+rate_limit_email_sent = 30
+rate_limit_sms_sent = 30
+
+[auth.email]
+enable_signup = true
+double_positive_signup = false
+enable_confirmations = true
+otp_length = 6
+
+[auth.sms]
+enable_signup = true
+enable_confirmations = true
+otp_length = 6
+
+[auth.external.apple]
+enabled = true
+
+[auth.external.google]
+enabled = true

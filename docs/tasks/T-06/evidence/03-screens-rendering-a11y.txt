@@ -1,0 +1,22 @@
+$ pnpm --filter mobile test src/features/auth/__tests__/screens.test.tsx
+PASS src/features/auth/__tests__/screens.test.tsx (6.093 s)
+  Auth Screens Rendering and Accessibility
+    WelcomeScreen (A2)
+      √ renders wordmark, story cards, page dots, and accessibility elements (115 ms)
+      √ navigates to quiz intro on start quiz button press (27 ms)
+      √ navigates to sign-in on returning account press (20 ms)
+    SignInScreen (A9, A16)
+      √ renders provider buttons, privacy promise, and not now action (26 ms)
+      √ navigates to code entry on email button press (18 ms)
+    CodeScreen (A10, A11)
+      √ renders target entry field, send code button, and accessible back control (16 ms)
+    ConsentScreen (A12)
+      √ renders four glass cards with switch accessibility roles (77 ms)
+    AgeScreen (A13)
+      √ renders birth year scroll picker, zero-storage note, and confirm action (39 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6.704 s, estimated 8 s
+Ran all test suites matching /src\features\auth\__tests__\screens.test.tsx/i.

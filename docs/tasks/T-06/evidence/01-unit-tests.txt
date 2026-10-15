@@ -1,0 +1,14 @@
+$ pnpm --filter mobile test src/features/auth/__tests__/
+PASS src/features/auth/__tests__/ageGate.test.ts
+PASS src/features/auth/__tests__/acceptance.test.ts
+PASS src/features/auth/__tests__/otpManager.test.ts
+PASS src/features/auth/__tests__/consents.test.ts
+PASS src/features/auth/__tests__/quietLock.test.ts
+PASS src/features/auth/__tests__/guestStorage.test.ts
+PASS src/features/auth/__tests__/screens.test.tsx (7.06 s)
+
+Test Suites: 7 passed, 7 total
+Tests:       33 passed, 33 total
+Snapshots:   0 total
+Time:        9.028 s, estimated 14 s
+Ran all test suites matching /src\features\auth\__tests__\/i.
