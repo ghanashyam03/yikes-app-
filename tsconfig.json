@@ -1,0 +1,11 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/shared" },
+    { "path": "packages/db" },
+    { "path": "packages/content" },
+    { "path": "packages/ai-prompts" },
+    { "path": "services/gateway" },
+    { "path": "apps/mobile" }
+  ]
+}

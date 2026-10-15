@@ -1,0 +1,24 @@
+=======================================================
+Deep import @yikes/shared/version verification
+=======================================================
+
+1. Package exports definition in packages/shared/package.json:
+   "exports": {
+     "./*": "./src/*.ts"
+   }
+   No barrel files exist.
+
+2. Node.js runtime resolution from services/gateway:
+   $ cd services/gateway
+   $ node --input-type=module -e "import { version } from '@yikes/shared/version'; console.log('Resolved version:', version);"
+   Resolved version: 0.0.1
+
+3. Gateway Vitest execution in services/gateway/src/app.test.ts:
+   import { version } from '@yikes/shared/version';
+   ✓ gateway > resolves @yikes/shared/version deep import
+
+4. Mobile Jest execution in apps/mobile/src/__tests__/layout.smoke.test.tsx:
+   RootLayout in apps/mobile/app/_layout.tsx imports:
+   import { version } from '@yikes/shared/version';
+   Test assertion:
+   ✓ resolves @yikes/shared/version in mobile

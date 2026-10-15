@@ -1,0 +1,25 @@
+$ pnpm --filter mobile web
+Waiting on http://localhost:8081
+
+$ curl.exe -i http://localhost:8081/
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 1340
+
+HTML contains entry script:
+<script src="/node_modules/.pnpm/expo-router@4.0.17_c28802e069c69de2fa2aef53cf432117/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.engine=hermes&transform.routerRoot=app&unstable_transformProfile=hermes-stable" defer></script>
+
+$ curl.exe -i "http://localhost:8081/node_modules/.pnpm/expo-router@4.0.17_c28802e069c69de2fa2aef53cf432117/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.engine=hermes&transform.routerRoot=app&unstable_transformProfile=hermes-stable"
+HTTP/1.1 200 OK
+Content-Type: application/javascript; charset=UTF-8
+Content-Length: 4008958
+
+JavaScript bundle preview (first 500 chars):
+var __BUNDLE_START_TIME__=globalThis.nativePerformanceNow?nativePerformanceNow():Date.now(),__DEV__=true,process=globalThis.process||{},__METRO_GLOBAL_PREFIX__='',__requireCycleIgnorePatterns=[/(^|\/|\\)node_modules($|\/|\\)/];process.env=process.env||{};process.env.NODE_ENV=process.env.NODE_ENV||"development";
+(function (global) {
+  "use strict";
+
+  global.__r = metroRequire;
+  global[`${__METRO_GLOBAL_PREFIX__}__d`] = define;
+  global.__c = clear;
+  global.__registerSegment = registerSegment;
