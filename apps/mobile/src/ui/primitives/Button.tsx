@@ -7,6 +7,7 @@ import {
   type StyleProp,
   type ViewStyle
 } from 'react-native';
+import Svg, { Defs, LinearGradient, Stop, Rect } from 'react-native-svg';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -81,6 +82,8 @@ export function Button({
   const isFocused = focused || internalFocused;
   const isInteractive = !disabled && !loading;
 
+  const showEmberGradient = variant === 'primary' && !disabled && !selected;
+
   // Determine colors based on variant
   let backgroundColor: string;
   let borderColor: string = 'transparent';
@@ -90,7 +93,7 @@ export function Button({
 
   if (variant === 'primary') {
     // Primary Ember action: per spec uses Ember gradient/pop with Ink text
-    backgroundColor = accents.ember.pop;
+    backgroundColor = showEmberGradient ? 'transparent' : accents.ember.pop;
     textColor = colors.ink; // Spec line 50: "primary Ember gradient with Ink text"
   } else if (variant === 'secondary') {
     backgroundColor = colors.surface1;
@@ -158,12 +161,24 @@ export function Button({
               borderWidth,
               borderStyle,
               paddingHorizontal: spacing[5],
-              paddingVertical: spacing[3]
+              paddingVertical: spacing[3],
+              overflow: 'hidden'
             },
             variant === 'ghost' && styles.ghostPadding,
             style
           ]}
         >
+          {showEmberGradient && (
+            <Svg style={StyleSheet.absoluteFill}>
+              <Defs>
+                <LinearGradient id="emberGrad" x1="0" y1="0" x2="1" y2="1">
+                  <Stop offset="0" stopColor={accents.ember.gradient.start} />
+                  <Stop offset="1" stopColor={accents.ember.gradient.end} />
+                </LinearGradient>
+              </Defs>
+              <Rect width="100%" height="100%" rx={radii.pill} fill="url(#emberGrad)" />
+            </Svg>
+          )}
           {loading ? (
             <LoadingDots color={textColor} reducedMotion={reducedMotion} />
           ) : children ? (

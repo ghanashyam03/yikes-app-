@@ -82,4 +82,14 @@ None. All checks executed and verified with evidence files and automated test su
 - Navigation shell, tab bar with liquid selection blob, and route stubs are owned and built in [T-04].
 
 ## Fix rounds (left empty by the Builder; filled by the Fixer)
-*(Empty - Builder initial submission)*
+
+### Fix round 1
+- **Issue 1**: Scope cleanup (historical untracked verification artifacts).
+  - **What changed**: Ran `git merge main` to reconcile branches cleanly and updated `docs/tasks/T-02/REPORT.md` under *Outside-scope edits* to formally declare the 7 historical untracked T-01 verification artifacts (`docs/tasks/T-01/VERIFY.md` and 6 files in `docs/tasks/T-01/evidence/*`) that were swept into commit `c2c53ba`.
+  - **Files**: `docs/tasks/T-02/REPORT.md`
+  - **Evidence**: `git merge main` (clean), `pnpm check` green. Commit: `019a323` ("T-02: fix issue 1 reconcile git scope and declare verification artifacts").
+- **Issue 2**: Primary Button renders solid color instead of contract-specified Ember gradient.
+  - **What changed**: In `apps/mobile/src/ui/primitives/Button.tsx`, imported `Svg`, `Defs`, `LinearGradient`, `Stop`, and `Rect` from `react-native-svg`. Implemented true Ember linear gradient fill from `accents.ember.gradient.start` (`#D67C62`) to `accents.ember.gradient.end` (`#B85842`) inside `<Pressable>` when `variant === 'primary' && !disabled && !selected`, with pill corner radius and `overflow: 'hidden'`.
+  - **Files**: `apps/mobile/src/ui/primitives/Button.tsx`
+  - **Evidence**: `pnpm --filter mobile test` passed (3 test suites, 11 tests), `pnpm check` green across all 6 packages and suites. Commit: `110c4d5` ("T-02: fix issue 2 render Ember gradient on primary button").
+
