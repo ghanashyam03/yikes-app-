@@ -6,8 +6,8 @@ const monorepoRoot = path.resolve(projectRoot, '../..');
 
 const config = getDefaultConfig(projectRoot);
 
-// Watch packages in monorepo
-config.watchFolders = [path.resolve(monorepoRoot, 'packages')];
+// Watch monorepo root to include packages and pnpm symlinked node_modules
+config.watchFolders = [monorepoRoot];
 
 // Resolve node_modules
 config.resolver.nodeModulesPaths = [
