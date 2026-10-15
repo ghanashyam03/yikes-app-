@@ -1,0 +1,10 @@
+$ vitest run src/safety/__tests__/route.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+
+ ✓ src/safety/__tests__/route.test.ts (2 tests) 115ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  01:45:23
+   Duration  2.21s (transform 277ms, setup 0ms, collect 1.16s, tests 115ms, environment 0ms, prepare 332ms)

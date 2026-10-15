@@ -1,0 +1,31 @@
+$ pnpm run lint && pnpm run typecheck && pnpm run test
+$ eslint .
+$ pnpm -r run typecheck
+Scope: 6 of 7 workspace projects
+packages/ai-prompts typecheck$ tsc --noEmit
+packages/content typecheck$ tsc --noEmit
+packages/db typecheck$ tsc --noEmit
+packages/shared typecheck$ tsc --noEmit
+packages/ai-prompts typecheck: Done
+packages/content typecheck: Done
+packages/db typecheck: Done
+packages/shared typecheck: Done
+apps/mobile typecheck$ tsc --noEmit
+services/gateway typecheck$ tsc --noEmit
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+$ pnpm -r run test
+Scope: 6 of 7 workspace projects
+packages/ai-prompts test$ vitest run
+packages/shared test$ vitest run
+packages/db test$ vitest run
+packages/content test$ vitest run
+
+ Test Files  4 passed in @yikes/shared
+ Test Files  3 passed in @yikes/db
+ Test Files  1 passed in @yikes/content
+ Test Files  1 passed in @yikes/ai-prompts
+ Test Files  10 passed in @yikes/gateway
+ Test Suites 6 passed in @yikes/mobile
+
+All workspace typechecks and tests passed cleanly.
