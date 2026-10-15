@@ -1,0 +1,12 @@
+Command: PowerShell search for any casts across apps/mobile/app, apps/mobile/src/navigation, apps/mobile/src/features/auth/useSession.ts, apps/mobile/src/copy/navigation.ts
+Pattern: (\bas\s+any\b|:\s*any\b|<any>)
+
+Result:
+0 matches found.
+
+Also checked for @ts-ignore and @ts-expect-error:
+0 matches found.
+
+TypeScript strict typecheck:
+apps/mobile typecheck: tsc --noEmit: Clean (0 errors).
+Exit code: 0

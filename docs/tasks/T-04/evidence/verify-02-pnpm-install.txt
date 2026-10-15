@@ -1,0 +1,7 @@
+Command: pnpm install --frozen-lockfile
+Exit code: 0
+
+Output:
+Scope: all 7 workspace projects
+Lockfile is up to date, resolution step is skipped
+Done in 252ms using pnpm v12.10.1
