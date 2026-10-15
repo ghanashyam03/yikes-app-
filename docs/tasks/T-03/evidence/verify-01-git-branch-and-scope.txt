@@ -1,14 +1,15 @@
 git branch --show-current
 task/T-03-components
 
-git log -n 3 --oneline
+git log -n 4 --oneline
+b570734 T-03: fix issue 1 extract remaining hardcoded strings to copy file
 94b2c69 T-03: interactive components and component gallery
 4b90c85 Merge T-08
 f961a5c T-08: live smoke test 4/4 passing against NVIDIA API
 
 git diff --stat 4b90c85..HEAD
  apps/mobile/app/dev/gallery-components.tsx         | 472 +++++++++++++++++++++
- apps/mobile/src/copy/components.ts                 | 128 ++++++
+ apps/mobile/src/copy/components.ts                 | 136 ++++++
  apps/mobile/src/ui/components/BatteryGauge.tsx     | 339 +++++++++++++++
  apps/mobile/src/ui/components/BottomSheet.tsx      | 273 ++++++++++++
  apps/mobile/src/ui/components/CharacterAvatar.tsx  | 329 ++++++++++++++
@@ -25,4 +26,8 @@ git diff --stat 4b90c85..HEAD
  apps/mobile/src/ui/components/WinceMascot.tsx      | 260 ++++++++++++
  .../ui/components/__tests__/components.test.tsx    | 458 ++++++++++++++++++++
 
-All code files are within Files owned by T-03 in docs/tasks/TASKS.md.
+All code files are within Files owned by T-03 in docs/tasks/TASKS.md:
+- apps/mobile/src/ui/components/**
+- apps/mobile/src/copy/components.ts
+- apps/mobile/app/dev/gallery-components.tsx
+Exit code: 0

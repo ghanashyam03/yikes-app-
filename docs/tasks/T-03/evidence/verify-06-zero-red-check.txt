@@ -1,4 +1,13 @@
-$ git grep -i -E "(#[fF]00\b|#[fF]{2}0000|color:\s*'red'|'#e53935')" -- apps/mobile/src/ui/components apps/mobile/src/copy/components.ts apps/mobile/app/dev/gallery-components.tsx
+Zero Red Verification (T-03)
+============================
+Audit script: docs/tasks/T-03/evidence/audit-zero-red.cjs
+Command: node docs/tasks/T-03/evidence/audit-zero-red.cjs
+
+Result:
+Zero red scan matches found in production code: 0
+
+Git grep verification:
+git grep -i -E "(#[fF]00\b|#[fF]{2}0000|color:\s*'red'|'#e53935')" -- apps/mobile/src/ui/components apps/mobile/src/copy/components.ts apps/mobile/app/dev/gallery-components.tsx
 
 apps/mobile/src/ui/components/__tests__/components.test.tsx:      expect(high80.pop).not.toMatch(/red|#FF0000|#FF2020|#E53935/i);
 apps/mobile/src/ui/components/__tests__/components.test.tsx:      expect(mid60.pop).not.toMatch(/red|#FF0000/i);
@@ -8,5 +17,5 @@ apps/mobile/src/ui/components/__tests__/components.test.tsx:        expect(color
 apps/mobile/src/ui/components/__tests__/components.test.tsx:        expect(color).not.toBe('#F00');
 apps/mobile/src/ui/components/__tests__/components.test.tsx:        expect(color).not.toBe('#E53935');
 
-Result: Zero red color definitions or usage in production components or copy. Only test negative assertions match.
+Result: Zero red color definitions or usage in production components, copy, or gallery. Only test negative assertions match.
 Exit code: 0
