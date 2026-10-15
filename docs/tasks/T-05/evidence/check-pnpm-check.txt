@@ -1,0 +1,43 @@
+$ pnpm check
+$ pnpm run lint && pnpm run typecheck && pnpm run test
+$ eslint .
+$ pnpm -r run typecheck
+Scope: 6 of 7 workspace projects
+packages/shared typecheck$ tsc --noEmit
+packages/content typecheck$ tsc --noEmit
+packages/db typecheck$ tsc --noEmit
+packages/ai-prompts typecheck$ tsc --noEmit
+packages/content typecheck: Done
+packages/ai-prompts typecheck: Done
+packages/shared typecheck: Done
+apps/mobile typecheck$ tsc --noEmit
+services/gateway typecheck$ tsc --noEmit
+packages/db typecheck: Done
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+$ pnpm -r run test
+Scope: 6 of 7 workspace projects
+packages/db test$ vitest run
+packages/ai-prompts test$ vitest run
+packages/shared test$ vitest run
+packages/content test$ vitest run
+packages/ai-prompts test:  ✓ src/placeholder.test.ts (1 test) 6ms
+packages/shared test:  ✓ src/version.test.ts (1 test) 7ms
+packages/shared test:  ✓ src/tokens/contrast.test.ts (19 tests) 14ms
+packages/shared test:  ✓ src/tokens/tokens.test.ts (10 tests) 19ms
+packages/db test:  ✓ src/schema.test.ts (5 tests) 16ms
+packages/db test:  ✓ src/migrations.test.ts (6 tests) 17ms
+packages/db test:  ✓ src/placeholder.test.ts (1 test) 7ms
+packages/content test:  ✓ src/placeholder.test.ts (1 test) 7ms
+services/gateway test:  ✓ src/app.test.ts (2 tests) 105ms
+apps/mobile test: PASS src/__tests__/layout.smoke.test.tsx
+apps/mobile test: PASS src/ui/primitives/__tests__/Screen.reducedMotion.test.tsx (6.616 s)
+apps/mobile test: PASS src/ui/primitives/__tests__/primitives.smoke.test.tsx (8.72 s)
+
+Test Suites: 3 passed, 3 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        11 s
+Ran all test suites.
+
+Exit code: 0

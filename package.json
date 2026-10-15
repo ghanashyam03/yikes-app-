@@ -9,7 +9,7 @@
     "test": "pnpm -r run test",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "db:reset": "supabase db reset",
+    "db:reset": "npx --yes supabase db reset",
     "db:test": "node scripts/db-test.mjs"
   },
   "devDependencies": {
