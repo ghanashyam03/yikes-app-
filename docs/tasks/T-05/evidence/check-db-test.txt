@@ -1,0 +1,96 @@
+$ pnpm db:test
+$ node scripts/db-test.mjs
+Connecting to Postgres at 127.0.0.1:54329/postgres as postgres...
+
+--- 1. Checking Row Level Security (RLS) on all public tables ---
+OK: Table 'profiles' has RLS enabled.
+OK: Table 'consents' has RLS enabled.
+OK: Table 'notification_prefs' has RLS enabled.
+OK: Table 'entitlements' has RLS enabled.
+OK: Table 'deletion_requests' has RLS enabled.
+OK: Table 'exports' has RLS enabled.
+OK: Table 'playbooks' has RLS enabled.
+OK: Table 'skills_progress' has RLS enabled.
+OK: Table 'sessions_log' has RLS enabled.
+OK: Table 'attempts' has RLS enabled.
+OK: Table 'turns' has RLS enabled.
+OK: Table 'coach_feedback' has RLS enabled.
+OK: Table 'ai_feedback' has RLS enabled.
+OK: Table 'moments' has RLS enabled.
+OK: Table 'energy_checkins' has RLS enabled.
+OK: Table 'micro_reps' has RLS enabled.
+OK: Table 'debriefs' has RLS enabled.
+OK: Table 'ladder_rungs' has RLS enabled.
+OK: Table 'journal_entries' has RLS enabled.
+OK: Table 'weekly_letters' has RLS enabled.
+OK: Table 'ai_calls' has RLS enabled.
+OK: Table 'safety_events' has RLS enabled.
+OK: Table 'ai_usage_daily' has RLS enabled.
+
+--- 2. Checking Privacy Guarantees (No Birth/DOB, Restrict Free-Text) ---
+OK: Zero birth year, date of birth, or age-identifying columns found across all tables.
+Found text payload columns:
+  debriefs|takeaway|text
+  journal_entries|body|text
+  turns|text|text
+  turns|thought|text
+  weekly_letters|content|text
+OK: ai_calls table contains strict metadata only, zero message text.
+OK: safety_events table contains kind and source only, zero message text.
+
+--- 3. Two-User Isolation Tests (Multi-tenant RLS Verification) ---
+User A records created.
+OK: User B reads 0 rows from User A in 'profiles'.
+OK: User B reads 0 rows from User A in 'consents'.
+OK: User B reads 0 rows from User A in 'playbooks'.
+OK: User B reads 0 rows from User A in 'skills_progress'.
+OK: User B reads 0 rows from User A in 'sessions_log'.
+OK: User B reads 0 rows from User A in 'attempts'.
+OK: User B reads 0 rows from User A in 'ai_feedback'.
+OK: User B reads 0 rows from User A in 'moments'.
+OK: User B reads 0 rows from User A in 'energy_checkins'.
+OK: User B reads 0 rows from User A in 'micro_reps'.
+OK: User B reads 0 rows from User A in 'debriefs'.
+OK: User B reads 0 rows from User A in 'ladder_rungs'.
+OK: User B reads 0 rows from User A in 'journal_entries'.
+OK: User B reads 0 rows from User A in 'weekly_letters'.
+OK: User B reads 0 rows from User A in 'notification_prefs'.
+OK: User B reads 0 rows from User A in 'entitlements'.
+OK: User B reads 0 rows from User A in 'ai_usage_daily'.
+OK: User B reads 0 rows from User A in 'deletion_requests'.
+OK: User B reads 0 rows from User A in 'exports'.
+OK: User B reads 0 child rows from 'turns'.
+OK: User B reads 0 child rows from 'coach_feedback'.
+
+--- 4. Verifying User B cannot INSERT rows for User A ---
+OK: User B inserting for User A into 'profiles' was denied by RLS.
+OK: User B inserting for User A into 'consents' was denied by RLS.
+OK: User B inserting for User A into 'playbooks' was denied by RLS.
+OK: User B inserting for User A into 'skills_progress' was denied by RLS.
+OK: User B inserting for User A into 'sessions_log' was denied by RLS.
+OK: User B inserting for User A into 'attempts' was denied by RLS.
+OK: User B inserting for User A into 'ai_feedback' was denied by RLS.
+OK: User B inserting for User A into 'moments' was denied by RLS.
+OK: User B inserting for User A into 'energy_checkins' was denied by RLS.
+OK: User B inserting for User A into 'micro_reps' was denied by RLS.
+OK: User B inserting for User A into 'debriefs' was denied by RLS.
+OK: User B inserting for User A into 'ladder_rungs' was denied by RLS.
+OK: User B inserting for User A into 'journal_entries' was denied by RLS.
+OK: User B inserting for User A into 'weekly_letters' was denied by RLS.
+OK: User B inserting for User A into 'notification_prefs' was denied by RLS.
+OK: User B inserting for User A into 'ai_usage_daily' was denied by RLS.
+OK: User B inserting for User A into 'deletion_requests' was denied by RLS.
+OK: User B inserting for User A into 'exports' was denied by RLS.
+OK: User B inserting into 'turns' of User A was denied by RLS.
+OK: User B inserting into 'coach_feedback' of User A was denied by RLS.
+
+--- 5. Verifying Service-Role Tables (ai_calls, safety_events) ---
+OK: Authenticated user cannot insert into ai_calls (denied).
+OK: Authenticated user cannot insert into safety_events (denied).
+OK: User cannot insert into entitlements (service-role only).
+
+--- 6. Verifying purge_expired_text() function ---
+OK: purge_expired_text() successfully deleted 1 expired turn(s).
+
+=== ALL DATABASE ACCEPTANCE CHECKS PASSED ===
+Exit code: 0

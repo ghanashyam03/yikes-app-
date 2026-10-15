@@ -1,0 +1,5 @@
+$ node scripts/gen-db-types.mjs
+Generating database types...
+Successfully generated database types to: C:\Users\ghana\OneDrive\Desktop\yikes-app!\packages\db\src\types.ts
+
+Exit code: 0
