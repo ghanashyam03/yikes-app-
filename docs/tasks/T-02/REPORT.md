@@ -72,7 +72,7 @@ Verified that ambient bubble backdrop drift halts deterministically under Reduce
 None. All required dependencies were pre-scaffolded in T-00 (`react-native-reanimated`, `react-native-svg`, `expo-font`, etc.).
 
 ## Outside-scope edits (file, reason, size of change)
-None. All edits strictly confined to task files owned.
+- `docs/tasks/T-01/VERIFY.md` and `docs/tasks/T-01/evidence/*` (6 files: `verify-01-git-status-scope.txt`, `verify-02-pnpm-install.txt`, `verify-03-pnpm-check.txt`, `verify-04-check-spec-split.txt`, `verify-05-independent-verbatim-audit.txt`, `verify-06-glossary-decisions-design-audit.txt`): Historical untracked verification artifacts produced during the independent T-01 verification workflow and swept in during the T-02 commit. 7 files (+355 lines).
 
 ## UNVERIFIED items (anything you could not prove, and the fallback you built)
 None. All checks executed and verified with evidence files and automated test suites.
