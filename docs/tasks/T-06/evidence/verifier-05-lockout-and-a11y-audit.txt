@@ -1,0 +1,34 @@
+Lockout Timing, Cooldown Enforcement, and Accessibility Audit for T-06:
+
+1. Lockout State Machine & Bypass Analysis:
+- Implementation: `apps/mobile/src/features/auth/otpManager.ts`
+  - `MAX_OTP_TRIES = 5`
+  - `LOCKOUT_DURATION_MS = 15 * 60 * 1000` (15 minutes)
+  - `isLockedOut(target, now)` normalizes target using `.trim().toLowerCase()`, preventing case-sensitivity or whitespace bypasses.
+  - `verifyOtp` strictly verifies `isLockedOut(target)` before making any network calls or checking tokens.
+  - Cooldown timing verified at 14 minutes (still locked, 1m0s remaining) and 15 minutes (unlocked).
+- Verification: `apps/mobile/src/features/auth/__tests__/otpManager.test.ts` (4 passed tests)
+
+2. Quiet Lock Biometrics:
+- Implementation: `apps/mobile/src/features/auth/quietLock.ts`
+  - Listens to AppState background -> active transitions.
+  - Triggers `expo-local-authentication` challenge if enabled.
+- Verification: `apps/mobile/src/features/auth/__tests__/quietLock.test.ts` (3 passed tests)
+
+3. Accessibility & Touch Targets:
+- Implementation: `apps/mobile/app/(auth)/code.tsx`
+  - 6 Digit boxes: `width: 48, height: 56` (meets minimum 48pt touch target).
+  - Each box has explicit `accessibilityLabel="Digit X of 6"`.
+  - Back button: `minWidth: 48, minHeight: 48`, `accessibilityRole="button"`, `accessibilityLabel="Go back"`.
+  - Resend action: `minHeight: 48`, `accessibilityRole="button"`.
+  - Screens tested: WelcomeScreen (A2), SignInScreen (A9, A16), CodeScreen (A10, A11), ConsentScreen (A12), AgeScreen (A13).
+- Verification: `apps/mobile/src/features/auth/__tests__/screens.test.tsx` (11 passed tests)
+
+Command run:
+$ pnpm --filter mobile test src/features/auth/__tests__/otpManager.test.ts src/features/auth/__tests__/quietLock.test.ts src/features/auth/__tests__/screens.test.tsx
+PASS src/features/auth/__tests__/otpManager.test.ts
+PASS src/features/auth/__tests__/quietLock.test.ts
+PASS src/features/auth/__tests__/screens.test.tsx (6.595 s)
+Test Suites: 3 passed, 3 total
+Tests: 18 passed, 18 total
+Exit code: 0

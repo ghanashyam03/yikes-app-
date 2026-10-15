@@ -215,12 +215,12 @@ describe('Route enumeration and file verification', () => {
   it('renders a sample route stub without crashing and displays Not built yet copy', () => {
     const { getByText, getByTestId } = render(
       <ThemeProvider initialPreference="light">
-        <AuthWelcome />
+        <SessionIdea />
       </ThemeProvider>
     );
 
-    expect(getByTestId('route-stub-authWelcome')).toBeTruthy();
-    expect(getByText(navigationCopy.routes.authWelcome.title)).toBeTruthy();
+    expect(getByTestId('route-stub-sessionIdea')).toBeTruthy();
+    expect(getByText(navigationCopy.routes.sessionIdea.title)).toBeTruthy();
     expect(getByText(navigationCopy.notBuiltYet)).toBeTruthy();
   });
 });
