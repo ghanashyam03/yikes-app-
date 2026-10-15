@@ -1,0 +1,23 @@
+$ jest --watchAll=false --verbose src/ui/components/__tests__/components.test.tsx
+PASS src/ui/components/__tests__/components.test.tsx (6.346 s)
+  Interactive Components Suite (T-03)
+    a) NoDefaultSlider
+      √ initial value is strictly null until user touches the track (185 ms)
+    b) BatteryGauge value-to-color mapping
+      √ maps >60% to Mint, 30-60% to Honey, <30% to Ember and NEVER red (8 ms)
+      √ renders in drag mode with adjustable role and display mode with progressbar role (20 ms)
+    c) CharacterAvatar expression switching
+      √ switches between all 4 expressions: neutral, warm, distracted, wrapping_up (29 ms)
+    d) Accessibility attributes on all 14 interactive components
+      √ asserts proper accessibilityRole and accessibilityLabel across components (156 ms)
+    e) Reduced Motion path tested
+      √ proves Reduced Motion disables or freezes motion loops and springs (31 ms)
+      √ proves ThoughtBubble pops directly under Reduced Motion (9 ms)
+    Zero Red Rule Compliance
+      √ verifies daylight, midnight and accents contain zero red colors (10 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        6.978 s
+Exit code: 0

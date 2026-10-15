@@ -210,8 +210,8 @@ export function BatteryGauge({
       accessibilityActions={
         mode === 'drag'
           ? [
-              { name: 'increment', label: 'Increase battery level by 10%' },
-              { name: 'decrement', label: 'Decrease battery level by 10%' }
+              { name: 'increment', label: componentsCopy.batteryGauge.batteryIncrementAction },
+              { name: 'decrement', label: componentsCopy.batteryGauge.batteryDecrementAction }
             ]
           : undefined
       }

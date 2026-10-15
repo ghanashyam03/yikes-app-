@@ -68,3 +68,22 @@ None. All 14 interactive components, unit tests, web export bundling, accessibil
 - Integration of interactive components into full navigation shells and route screens is owned and handled in subsequent tasks (Navigation shell in [T-04], Onboarding quiz sliders in [T-11], Try chat bubbles and typing dots in [T-12], Coach feedback evidence lines in [T-13], and Moments battery gauges in [T-16]).
 
 ## Fix rounds (left empty by the Builder; filled by the Fixer)
+
+### Fix round 1
+- **Issue fixed**: Issue 1: Hardcoded user-facing strings in `ErrorBubble.tsx`, `BatteryGauge.tsx`, and `RhythmRing.tsx`
+- **What changed**:
+  1. Added keys to `componentsCopy` in `apps/mobile/src/copy/components.ts`:
+     - `retryButton: 'Retry'` (at root and under `errorBubble`)
+     - `batteryIncrementAction: 'Increase battery level by 10%'` (at root and under `batteryGauge`)
+     - `batteryDecrementAction: 'Decrease battery level by 10%'` (at root and under `batteryGauge`)
+     - `rhythmProgress: (filled: number, total: number) => \`${filled} of \${total} sessions\`` (at root and under `rhythmRing`)
+  2. Updated `apps/mobile/src/ui/components/ErrorBubble.tsx` to reference `componentsCopy.errorBubble.retryButton` for both the button's `accessibilityLabel` and the child text label.
+  3. Updated `apps/mobile/src/ui/components/BatteryGauge.tsx` to reference `componentsCopy.batteryGauge.batteryIncrementAction` and `componentsCopy.batteryGauge.batteryDecrementAction` in `accessibilityActions`.
+  4. Updated `apps/mobile/src/ui/components/RhythmRing.tsx` to reference `componentsCopy.rhythmRing.rhythmProgress(clampedFilled, clampedTotal)` in `accessibilityValue.text`.
+- **Files touched**:
+  - `apps/mobile/src/copy/components.ts`
+  - `apps/mobile/src/ui/components/ErrorBubble.tsx`
+  - `apps/mobile/src/ui/components/BatteryGauge.tsx`
+  - `apps/mobile/src/ui/components/RhythmRing.tsx`
+- **Evidence**:
+  - `pnpm check`: PASS (Exit code 0, ESLint clean, all 6 workspace packages typecheck cleanly, 19 Jest tests pass, 42 Vitest tests pass).

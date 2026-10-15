@@ -1,0 +1,28 @@
+git branch --show-current
+task/T-03-components
+
+git log -n 3 --oneline
+94b2c69 T-03: interactive components and component gallery
+4b90c85 Merge T-08
+f961a5c T-08: live smoke test 4/4 passing against NVIDIA API
+
+git diff --stat 4b90c85..HEAD
+ apps/mobile/app/dev/gallery-components.tsx         | 472 +++++++++++++++++++++
+ apps/mobile/src/copy/components.ts                 | 128 ++++++
+ apps/mobile/src/ui/components/BatteryGauge.tsx     | 339 +++++++++++++++
+ apps/mobile/src/ui/components/BottomSheet.tsx      | 273 ++++++++++++
+ apps/mobile/src/ui/components/CharacterAvatar.tsx  | 329 ++++++++++++++
+ apps/mobile/src/ui/components/ChatBubble.tsx       | 230 ++++++++++
+ apps/mobile/src/ui/components/EmptyState.tsx       | 141 ++++++
+ apps/mobile/src/ui/components/ErrorBubble.tsx      | 171 ++++++++
+ apps/mobile/src/ui/components/EvidenceLine.tsx     | 167 ++++++++
+ apps/mobile/src/ui/components/NoDefaultSlider.tsx  | 304 +++++++++++++
+ apps/mobile/src/ui/components/RhythmRing.tsx       | 212 +++++++++
+ apps/mobile/src/ui/components/Skeleton.tsx         | 135 ++++++
+ apps/mobile/src/ui/components/ThoughtBubble.tsx    | 214 ++++++++++
+ apps/mobile/src/ui/components/Toast.tsx            | 202 +++++++++
+ apps/mobile/src/ui/components/TypingDots.tsx       | 180 ++++++++
+ apps/mobile/src/ui/components/WinceMascot.tsx      | 260 ++++++++++++
+ .../ui/components/__tests__/components.test.tsx    | 458 ++++++++++++++++++++
+
+All code files are within Files owned by T-03 in docs/tasks/TASKS.md.

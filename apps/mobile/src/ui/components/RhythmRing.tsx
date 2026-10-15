@@ -118,7 +118,7 @@ export function RhythmRing({
         min: 0,
         max: clampedTotal,
         now: clampedFilled,
-        text: `${clampedFilled} of ${clampedTotal} sessions`
+        text: componentsCopy.rhythmRing.rhythmProgress(clampedFilled, clampedTotal)
       }}
       accessibilityState={{ disabled, busy: loading }}
     >

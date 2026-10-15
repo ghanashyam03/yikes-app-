@@ -109,12 +109,12 @@ export function ErrorBubble({
             testID={`${testID}-retry`}
             accessible={true}
             accessibilityRole="button"
-            accessibilityLabel="Retry"
+            accessibilityLabel={componentsCopy.errorBubble.retryButton}
             onPress={onRetry}
             style={styles.dismissButton}
           >
             <Text role="labelSmall" style={{ color: colors.ink, fontWeight: '600' }}>
-              Retry
+              {componentsCopy.errorBubble.retryButton}
             </Text>
           </Pressable>
         )}

@@ -1,4 +1,8 @@
 export const componentsCopy = {
+  retryButton: 'Retry',
+  batteryIncrementAction: 'Increase battery level by 10%',
+  batteryDecrementAction: 'Decrease battery level by 10%',
+  rhythmProgress: (filled: number, total: number) => `${filled} of ${total} sessions`,
   slider: {
     unselectedText: 'Slide to rate',
     unselectedAccessibilityValue: 'Not set',
@@ -15,13 +19,16 @@ export const componentsCopy = {
     dragHint: 'Drag vertically to adjust battery level',
     highEnergyLabel: 'Energised and open',
     midEnergyLabel: 'Steady and balanced',
-    lowEnergyLabel: 'Running on reserve'
+    lowEnergyLabel: 'Running on reserve',
+    batteryIncrementAction: 'Increase battery level by 10%',
+    batteryDecrementAction: 'Decrease battery level by 10%'
   },
   rhythmRing: {
     accessibilityLabel: (filled: number, total: number) =>
       `Weekly Rhythm: ${filled} of ${total} sessions completed`,
     sparkleLabel: 'Rhythm milestone sparkle',
-    completedBadge: 'Week goal reached'
+    completedBadge: 'Week goal reached',
+    rhythmProgress: (filled: number, total: number) => `${filled} of ${total} sessions`
   },
   chatBubble: {
     userSender: 'You',
@@ -82,7 +89,8 @@ export const componentsCopy = {
   errorBubble: {
     accessibilityLabel: (msg: string) => `Notice: ${msg}`,
     defaultTitle: 'Something went sideways',
-    dismissAction: 'Dismiss notice'
+    dismissAction: 'Dismiss notice',
+    retryButton: 'Retry'
   },
   toast: {
     accessibilityLabel: (msg: string) => `Notification: ${msg}`,
