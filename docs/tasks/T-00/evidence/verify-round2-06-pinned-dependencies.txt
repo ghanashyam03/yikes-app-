@@ -1,0 +1,11 @@
+$ $files = @("package.json", "apps/mobile/package.json", "services/gateway/package.json", "packages/shared/package.json", "packages/db/package.json", "packages/content/package.json", "packages/ai-prompts/package.json"); foreach ($f in $files) { $matches = Select-String -Path $f -Pattern '[\^~]'; if ($matches) { Write-Output "$f : UNPINNED"; $matches } else { Write-Output "$f : CLEAN (no ^ or ~)" } }
+
+package.json : CLEAN (no ^ or ~)
+apps/mobile/package.json : CLEAN (no ^ or ~)
+services/gateway/package.json : CLEAN (no ^ or ~)
+packages/shared/package.json : CLEAN (no ^ or ~)
+packages/db/package.json : CLEAN (no ^ or ~)
+packages/content/package.json : CLEAN (no ^ or ~)
+packages/ai-prompts/package.json : CLEAN (no ^ or ~)
+
+All dependencies and devDependencies across all manifests are strictly pinned to exact versions.

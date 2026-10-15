@@ -1,0 +1,9 @@
+Manifest dependency pinning verification:
+Command:
+$files = @("package.json", "apps/mobile/package.json", "services/gateway/package.json", "packages/shared/package.json", "packages/db/package.json", "packages/content/package.json", "packages/ai-prompts/package.json"); foreach ($f in $files) { $j = Get-Content $f -Raw | ConvertFrom-Json; foreach ($sec in @('dependencies', 'devDependencies', 'peerDependencies')) { if ($j.$sec) { foreach ($p in $j.$sec.PSObject.Properties) { if ($p.Value -match '[\^~]') { Write-Output "UNPINNED: $f ($sec): $($p.Name) = $($p.Value)" } } } } }; Write-Output "Check completed."
+
+Output:
+Check completed.
+
+Result:
+Zero dependencies across all package manifests contain semver range specifiers (^ or ~). All dependencies are strictly pinned to exact versions.

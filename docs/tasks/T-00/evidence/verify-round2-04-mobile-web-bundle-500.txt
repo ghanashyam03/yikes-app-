@@ -1,0 +1,32 @@
+$ pnpm --filter mobile web
+$ expo start --web
+Starting project at C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile
+Starting Metro Bundler
+Waiting on http://localhost:8081
+
+$ curl.exe -i http://localhost:8081/
+HTTP/1.1 200 OK
+Content-Type: text/html
+Date: Thu, 15 Oct 2026 11:34:57 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 1340
+
+HTML contains script:
+<script src="/node_modules/.pnpm/expo-router@4.0.17_c28802e069c69de2fa2aef53cf432117/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.engine=hermes&transform.routerRoot=app&unstable_transformProfile=hermes-stable" defer></script>
+
+$ curl.exe -i "http://localhost:8081/node_modules/.pnpm/expo-router@4.0.17_c28802e069c69de2fa2aef53cf432117/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.engine=hermes&transform.routerRoot=app&unstable_transformProfile=hermes-stable"
+HTTP/1.1 500 Internal Server Error
+X-Content-Type-Options: nosniff
+Surrogate-Control: no-store
+Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: application/json; charset=UTF-8
+Vary: Accept-Encoding
+Date: Thu, 15 Oct 2026 11:35:48 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+{"originModulePath":"C:\\Users\\ghana\\OneDrive\\Desktop\\yikes-app!\\apps\\mobile\\app\\_layout.tsx","targetModuleName":"@babel/runtime/helpers/interopRequireDefault","message":"Unable to resolve module @babel/runtime/helpers/interopRequireDefault from C:\\Users\\ghana\\OneDrive\\Desktop\\yikes-app!\\apps\\mobile\\app\\_layout.tsx: @babel/runtime/helpers/interopRequireDefault could not be found within the project or in these directories:\n  node_modules\n  ..\\..\\node_modules\n  node_modules\n  ..\\..\\node_modules\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 1 |\u001b[39m \u001b[36mimport\u001b[39m { \u001b[33mSlot\u001b[39m } \u001b[36mfrom\u001b[39m \u001b[32m'expo-router'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 2 |\u001b[39m \u001b[36mimport\u001b[39m { \u001b[33mView\u001b[39m\u001b[33m,\u001b[39m \u001b[33mText\u001b[39m\u001b[33m,\u001b[39m \u001b[33mStyleSheet\u001b[39m } \u001b[36mfrom\u001b[39m \u001b[32m'react-native'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mimport\u001b[39m { \u001b[33mSafeAreaProvider\u001b[39m } \u001b[36mfrom\u001b[39m \u001b[32m'react-native-safe-area-context'\u001b[39m\u001b[33m;\u001b[39m\n \u001b[90m 4 |\u001b[39m \u001b[36mimport\u001b[39m { version } \u001b[36mfrom\u001b[39m \u001b[32m'@yikes/shared/version'\u001b[39m\u001b[33m;\u001b[39m\u001b[0m"}

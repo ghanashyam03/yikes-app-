@@ -1,0 +1,19 @@
+1. Gateway Node ESM runtime resolution:
+$ cd services/gateway
+$ node --input-type=module -e "import { version } from '@yikes/shared/version'; console.log('Resolved from gateway cwd:', version);"
+Resolved from gateway cwd: 0.0.1
+Exit code: 0
+
+2. Mobile Node ESM runtime resolution:
+$ cd apps/mobile
+$ node --input-type=module -e "import { version } from '@yikes/shared/version'; console.log('Resolved from mobile cwd:', version);"
+Resolved from mobile cwd: 0.0.1
+Exit code: 0
+
+3. Mobile Jest test:
+apps/mobile test: PASS src/__tests__/layout.smoke.test.tsx
+apps/mobile test:   RootLayout smoke test
+apps/mobile test:     √ resolves @yikes/shared/version in mobile (8 ms)
+
+4. Gateway Vitest test:
+services/gateway test:  ✓ src/app.test.ts > gateway > resolves @yikes/shared/version deep import
