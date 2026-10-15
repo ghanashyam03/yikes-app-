@@ -64,7 +64,7 @@ const HINGLISH_CRISIS_PATTERNS: { pattern: RegExp; category: 'self-harm' | 'suic
   { pattern: /\bzeher\s+kha\s+(?:l[ue]ng[ai]|raha|rahi)\b/i, category: 'suicide' },
   { pattern: /\bkhud\s*kush[ie]\b/i, category: 'suicide' },
   { pattern: /\baatma?\s*hatya\b/i, category: 'suicide' },
-  { pattern: /\bapn[ie]\s+jaan\s+le\s+(?:lunga|lungi|lena)\b/i, category: 'suicide' },
+  { pattern: /\bapn[ie]\s+jaan\s+(?:le\s+)?(?:lunga|lungi|lena)\b/i, category: 'suicide' },
   { pattern: /\bjeen[aie]\s+k[ie]\s+ich+ha\s+nah?i\b/i, category: 'suicide' },
   { pattern: /\bab\s+jeena\s+nahi\s+chaht[aie]\b/i, category: 'suicide' },
   { pattern: /\bjine\s+ka\s+man\s+nahi\b/i, category: 'suicide' },

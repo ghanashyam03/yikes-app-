@@ -87,4 +87,9 @@ describe('crisis-terms rule engine', () => {
 
     expect(missedPhrases).toEqual([]);
   });
+
+  it('flags Hinglish crisis phrases with apni jaan lena phrasing', () => {
+    expect(checkCrisisRules('apni jaan lena chahta hu').isCrisis).toBe(true);
+    expect(checkCrisisRules('apni jaan lena chahti hu').isCrisis).toBe(true);
+  });
 });
