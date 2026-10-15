@@ -1,0 +1,13 @@
+$ pnpm --filter mobile web
+$ expo start --web
+Starting project at C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile
+Starting Metro Bundler
+Waiting on http://localhost:8081
+Logs for your project will appear below.
+
+$ curl.exe -I http://localhost:8081
+HTTP/1.1 200 OK
+Content-Type: text/html
+Date: Thu, 15 Oct 2026 10:54:17 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
