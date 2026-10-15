@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844" role="img" aria-labelledby="title desc">
+<title id="title">C10 — Free chat setup</title><desc id="desc">yikes! Soft Pop mobile app screen. Editable vector shapes and typography.</desc>
+<defs>
+ <linearGradient id="emberGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D67C62"/><stop offset="1" stop-color="#B85842"/></linearGradient>
+ <linearGradient id="blobGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D38D"/><stop offset="1" stop-color="#DEA95C"/></linearGradient>
+ <linearGradient id="lilacGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D4C6E9"/><stop offset="1" stop-color="#A898CC"/></linearGradient>
+ <linearGradient id="surfaceGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFCF7"/><stop offset="1" stop-color="#F1E9DF"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#30212A" flood-opacity="0.08"/></filter>
+ <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="15"/></filter>
+</defs>
+<rect width="390" height="844" rx="34" fill="#F7F1E9"/>
+
+<text x="24" y="25" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="700" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">9:41</tspan></text>
+<path d="M313 20 Q319 14 325 20" fill="none" stroke="#29232B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M315 23 Q319 19 323 23" fill="none" stroke="#29232B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="319" cy="26" r="1.4" fill="#29232B"/>
+<rect x="334" y="17" width="17" height="10" rx="2" fill="none" stroke="#29232B" stroke-width="1" />
+<rect x="336" y="19" width="9" height="6" rx="0" fill="#29232B" />
+<rect x="352" y="20" width="2" height="4" rx="0" fill="#29232B" />
+<path d="M32 51 L24 59 L32 67" fill="none" stroke="#29232B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M25 59 H43" fill="none" stroke="#29232B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="58" y="61" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="700" fill="#C8664D" text-anchor="start" letter-spacing="1.0"><tspan x="58" dy="0">FREE CHAT</tspan></text>
+<text x="24" y="84" font-family="'Instrument Serif', 'Georgia', serif" font-size="30" font-weight="400" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">Build a scene to</tspan><tspan x="24" dy="33.0">practise.</tspan></text>
+<text x="24" y="158.0" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="12" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">Choose a situation, a partner and a goal.</tspan></text>
+<text x="24" y="210" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="700" fill="#C8664D" text-anchor="start" letter-spacing="1"><tspan x="24" dy="0">SITUATION</tspan></text>
+<rect x="24" y="226" width="160" height="31" rx="16" fill="#EDE6F5" />
+<text x="104" y="246" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="600" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="104" dy="0">Small talk</tspan></text>
+<rect x="198" y="226" width="160" height="31" rx="16" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<text x="278" y="246" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="600" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="278" dy="0">Work meeting</tspan></text>
+<rect x="24" y="264" width="160" height="31" rx="16" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<text x="104" y="284" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="600" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="104" dy="0">New group</tspan></text>
+<rect x="198" y="264" width="160" height="31" rx="16" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<text x="278" y="284" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="600" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="278" dy="0">Follow-up</tspan></text>
+<rect x="24" y="302" width="160" height="31" rx="16" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<text x="104" y="322" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="600" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="104" dy="0">Hard moment</tspan></text>
+<text x="24" y="349" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="700" fill="#C8664D" text-anchor="start" letter-spacing="1"><tspan x="24" dy="0">CHOOSE YOUR PARTNER</tspan></text>
+<circle cx="66" cy="396" r="28" fill="#B9A8D9"/>
+<text x="66" y="401" font-family="'Instrument Serif', 'Georgia', serif" font-size="16" font-weight="600" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="66" dy="0">M</tspan></text>
+<text x="66" y="438" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="600" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="66" dy="0">Maya</tspan></text>
+<circle cx="182" cy="396" r="28" fill="#AFCDB8"/>
+<text x="182" y="401" font-family="'Instrument Serif', 'Georgia', serif" font-size="16" font-weight="600" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="182" dy="0">P</tspan></text>
+<text x="182" y="438" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="600" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="182" dy="0">Priya</tspan></text>
+<circle cx="298" cy="396" r="28" fill="#E6C278"/>
+<text x="298" y="401" font-family="'Instrument Serif', 'Georgia', serif" font-size="16" font-weight="600" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="298" dy="0">S</tspan></text>
+<text x="298" y="438" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="600" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="298" dy="0">Sam</tspan></text>
+<text x="24" y="483" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="700" fill="#776D72" text-anchor="start" letter-spacing="0.8"><tspan x="24" dy="0">RESERVED</tspan></text>
+<rect x="24" y="500" width="342" height="5" rx="3" fill="#E5DACE" />
+<rect x="24" y="500" width="150" height="5" rx="3" fill="#B9A8D9" />
+<circle cx="174" cy="502" r="10" fill="#FFFCF7" stroke="#B9A8D9" stroke-width="2"/>
+<text x="24" y="522" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">Reserved</tspan></text>
+<text x="366" y="522" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="400" fill="#776D72" text-anchor="end" letter-spacing="0"><tspan x="366" dy="0">Chatty</tspan></text>
+<rect x="24" y="550" width="342" height="66" rx="20" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" filter="url(#shadow)"/>
+<circle cx="346" cy="570" r="4" fill="#E6C278"/>
+<text x="40" y="575" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11.5" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="40" dy="0">YOUR GOAL</tspan></text>
+<text x="40" y="592" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="40" dy="0">Just practise · Practise a hard moment</tspan></text>
+<rect x="24" y="704" width="342" height="52" rx="26" fill="url(#emberGrad)" filter="url(#shadow)"/>
+<text x="195.0" y="736" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="14" font-weight="650" fill="#FFFFFF" text-anchor="middle" letter-spacing="0"><tspan x="195.0" dy="0">Start</tspan></text>
+</svg>

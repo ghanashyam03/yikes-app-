@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844" role="img" aria-labelledby="title desc">
+<title id="title">D01 — Settings</title><desc id="desc">yikes! Soft Pop mobile app screen. Editable vector shapes and typography.</desc>
+<defs>
+ <linearGradient id="emberGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D67C62"/><stop offset="1" stop-color="#B85842"/></linearGradient>
+ <linearGradient id="blobGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D38D"/><stop offset="1" stop-color="#DEA95C"/></linearGradient>
+ <linearGradient id="lilacGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D4C6E9"/><stop offset="1" stop-color="#A898CC"/></linearGradient>
+ <linearGradient id="surfaceGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFCF7"/><stop offset="1" stop-color="#F1E9DF"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#30212A" flood-opacity="0.08"/></filter>
+ <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="15"/></filter>
+</defs>
+<rect width="390" height="844" rx="34" fill="#F7F1E9"/>
+
+<text x="24" y="25" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="700" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">9:41</tspan></text>
+<path d="M313 20 Q319 14 325 20" fill="none" stroke="#29232B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M315 23 Q319 19 323 23" fill="none" stroke="#29232B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="319" cy="26" r="1.4" fill="#29232B"/>
+<rect x="334" y="17" width="17" height="10" rx="2" fill="none" stroke="#29232B" stroke-width="1" />
+<rect x="336" y="19" width="9" height="6" rx="0" fill="#29232B" />
+<rect x="352" y="20" width="2" height="4" rx="0" fill="#29232B" />
+<text x="24" y="61" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="700" fill="#C8664D" text-anchor="start" letter-spacing="1.0"><tspan x="24" dy="0">SETTINGS</tspan></text>
+<text x="24" y="84" font-family="'Instrument Serif', 'Georgia', serif" font-size="30" font-weight="400" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">Make yikes! feel like</tspan><tspan x="24" dy="33.0">yours.</tspan></text>
+<text x="24" y="158.0" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="12" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">Small controls for a calmer, more personal practice.</tspan></text>
+<rect x="24" y="182" width="342" height="46" rx="14" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<circle cx="44" cy="205" r="7" fill="#B9A8D9"/>
+<text x="62" y="201" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Playbook</tspan></text>
+<text x="62" y="216" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Edit your quiz answers</tspan></text>
+<text x="344" y="212" font-family="'Instrument Serif', 'Georgia', serif" font-size="17" font-weight="400" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="344" dy="0">›</tspan></text>
+<rect x="24" y="236" width="342" height="46" rx="14" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<circle cx="44" cy="259" r="7" fill="#AFCDB8"/>
+<text x="62" y="255" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Coach</tspan></text>
+<text x="62" y="270" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Tone, humour and voice</tspan></text>
+<text x="344" y="266" font-family="'Instrument Serif', 'Georgia', serif" font-size="17" font-weight="400" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="344" dy="0">›</tspan></text>
+<rect x="24" y="290" width="342" height="46" rx="14" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<circle cx="44" cy="313" r="7" fill="#E6C278"/>
+<text x="62" y="309" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Rhythm</tspan></text>
+<text x="62" y="324" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Weekly goal and optional streak</tspan></text>
+<text x="344" y="320" font-family="'Instrument Serif', 'Georgia', serif" font-size="17" font-weight="400" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="344" dy="0">›</tspan></text>
+<rect x="24" y="344" width="342" height="46" rx="14" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<circle cx="44" cy="367" r="7" fill="#B9A8D9"/>
+<text x="62" y="363" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Reminders</tspan></text>
+<text x="62" y="378" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Time window and anchor</tspan></text>
+<text x="344" y="374" font-family="'Instrument Serif', 'Georgia', serif" font-size="17" font-weight="400" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="344" dy="0">›</tspan></text>
+<rect x="24" y="398" width="342" height="46" rx="14" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<circle cx="44" cy="421" r="7" fill="#AFCDB8"/>
+<text x="62" y="417" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Appearance</tspan></text>
+<text x="62" y="432" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Theme, text size, motion, sound</tspan></text>
+<text x="344" y="428" font-family="'Instrument Serif', 'Georgia', serif" font-size="17" font-weight="400" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="344" dy="0">›</tspan></text>
+<rect x="24" y="452" width="342" height="46" rx="14" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<circle cx="44" cy="475" r="7" fill="#E6C278"/>
+<text x="62" y="471" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Quiet Lock</tspan></text>
+<text x="62" y="486" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Face ID or fingerprint</tspan></text>
+<text x="344" y="482" font-family="'Instrument Serif', 'Georgia', serif" font-size="17" font-weight="400" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="344" dy="0">›</tspan></text>
+<rect x="24" y="506" width="342" height="46" rx="14" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<circle cx="44" cy="529" r="7" fill="#B9A8D9"/>
+<text x="62" y="525" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Account</tspan></text>
+<text x="62" y="540" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Email, devices and passkeys</tspan></text>
+<text x="344" y="536" font-family="'Instrument Serif', 'Georgia', serif" font-size="17" font-weight="400" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="344" dy="0">›</tspan></text>
+<rect x="24" y="560" width="342" height="46" rx="14" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<circle cx="44" cy="583" r="7" fill="#AFCDB8"/>
+<text x="62" y="579" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Privacy centre</tspan></text>
+<text x="62" y="594" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Consent, export and deletion</tspan></text>
+<text x="344" y="590" font-family="'Instrument Serif', 'Georgia', serif" font-size="17" font-weight="400" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="344" dy="0">›</tspan></text>
+<rect x="24" y="614" width="342" height="46" rx="14" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<circle cx="44" cy="637" r="7" fill="#E6C278"/>
+<text x="62" y="633" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Subscription</tspan></text>
+<text x="62" y="648" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Free and Plus</tspan></text>
+<text x="344" y="644" font-family="'Instrument Serif', 'Georgia', serif" font-size="17" font-weight="400" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="344" dy="0">›</tspan></text>
+<rect x="24" y="668" width="342" height="46" rx="14" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<circle cx="44" cy="691" r="7" fill="#B9A8D9"/>
+<text x="62" y="687" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Help &amp; About</tspan></text>
+<text x="62" y="702" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="62" dy="0">Support, feedback and AI details</tspan></text>
+<text x="344" y="698" font-family="'Instrument Serif', 'Georgia', serif" font-size="17" font-weight="400" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="344" dy="0">›</tspan></text>
+<rect x="0" y="768" width="390" height="76" rx="0" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<path d="M30 793 L38 786 L46 793 V802 H41 V796 H35 V802 H30 Z" fill="none" stroke="#776D72" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<text x="38" y="824" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="650" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="38" dy="0">Today</tspan></text>
+<path d="M109 799 C114 799 111 790 117 790 S123 787 123 783" fill="none" stroke="#776D72" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="109" cy="799" r="2" fill="#776D72"/>
+<circle cx="123" cy="783" r="2" fill="#776D72"/>
+<text x="116" y="824" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="650" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="116" dy="0">Path</tspan></text>
+<path d="M187 795 H201 M194 788 V802" fill="none" stroke="#776D72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="194" y="824" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="650" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="194" dy="0">Practice</tspan></text>
+<rect x="265" y="785" width="14" height="17" rx="3" fill="none" stroke="#776D72" stroke-width="1.4" />
+<path d="M265 790 H279 M269 783 V788 M275 783 V788" fill="none" stroke="#776D72" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+<text x="272" y="824" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="650" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="272" dy="0">Moments</tspan></text>
+<rect x="325" y="777" width="50" height="3" rx="2" fill="#C8664D" />
+<circle cx="350" cy="789" r="4" fill="none" stroke="#C8664D" stroke-width="1.5"/>
+<path d="M342 802 C342 795 358 795 358 802" fill="none" stroke="#C8664D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<text x="350" y="824" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="650" fill="#C8664D" text-anchor="middle" letter-spacing="0"><tspan x="350" dy="0">You</tspan></text>
+</svg>

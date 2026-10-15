@@ -1,0 +1,12 @@
+node_modules
+.env*
+!.env.example
+.expo/
+dist/
+build/
+ios/
+android/
+.DS_Store
+Thumbs.db
+*.log
+docs/tasks/**/evidence/*.mp4

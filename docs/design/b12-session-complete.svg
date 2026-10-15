@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844" role="img" aria-labelledby="title desc">
+<title id="title">B12 — Session complete</title><desc id="desc">yikes! Soft Pop mobile app screen. Editable vector shapes and typography.</desc>
+<defs>
+ <linearGradient id="emberGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D67C62"/><stop offset="1" stop-color="#B85842"/></linearGradient>
+ <linearGradient id="blobGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D38D"/><stop offset="1" stop-color="#DEA95C"/></linearGradient>
+ <linearGradient id="lilacGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D4C6E9"/><stop offset="1" stop-color="#A898CC"/></linearGradient>
+ <linearGradient id="surfaceGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFCF7"/><stop offset="1" stop-color="#F1E9DF"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#30212A" flood-opacity="0.08"/></filter>
+ <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="15"/></filter>
+</defs>
+<rect width="390" height="844" rx="34" fill="#F7F1E9"/>
+
+<text x="24" y="25" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="700" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">9:41</tspan></text>
+<path d="M313 20 Q319 14 325 20" fill="none" stroke="#29232B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M315 23 Q319 19 323 23" fill="none" stroke="#29232B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="319" cy="26" r="1.4" fill="#29232B"/>
+<rect x="334" y="17" width="17" height="10" rx="2" fill="none" stroke="#29232B" stroke-width="1" />
+<rect x="336" y="19" width="9" height="6" rx="0" fill="#29232B" />
+<rect x="352" y="20" width="2" height="4" rx="0" fill="#29232B" />
+<circle cx="195" cy="270" r="126" fill="#E6F0E7"/>
+<g transform="translate(146 208) scale(1.0)">
+<circle cx="50" cy="51" r="47" fill="#5A3F3A" opacity="0.05"/>
+<path d="M50 5 C69 3 86 16 92 34 C99 53 90 75 74 87 C59 98 36 95 20 84 C4 73 1 53 8 34 C14 17 31 7 50 5 Z" fill="url(#blobGrad)" filter="url(#shadow)"/>
+<path d="M25 21 C34 12 47 10 57 13" fill="none" stroke="#FFF8E6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.62" />
+<path d="M27 42 Q33 34 39 42" fill="none" stroke="#29232B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M60 42 Q66 34 72 42" fill="none" stroke="#29232B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M39 59 Q51 72 64 57" fill="none" stroke="#6E4039" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" />
+</g>
+<text x="195" y="402" font-family="'Instrument Serif', 'Georgia', serif" font-size="34" font-weight="400" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="195" dy="0">That counts.</tspan></text>
+<text x="195" y="441" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="12" font-weight="400" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="195" dy="0">You practised a new move and noticed what</tspan><tspan x="195" dy="16">happened.</tspan></text>
+<rect x="24" y="507" width="342" height="90" rx="22" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<text x="42" y="536" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="700" fill="#C8664D" text-anchor="start" letter-spacing="1"><tspan x="42" dy="0">EVIDENCE FROM TODAY</tspan></text>
+<text x="42" y="564" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="12" font-weight="500" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="42" dy="0">“What did you learn from them?” You left room</tspan><tspan x="42" dy="16">for a real answer.</tspan></text>
+<circle cx="195" cy="635" r="19" fill="#AFCDB8"/>
+<path d="M186 635 L193 642 L205 628" fill="none" stroke="#29232B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+<text x="195" y="674" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="500" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="195" dy="0">Your weekly rhythm moved forward.</tspan></text>
+<rect x="24" y="710" width="342" height="52" rx="26" fill="url(#emberGrad)" filter="url(#shadow)"/>
+<text x="195.0" y="742" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="14" font-weight="650" fill="#FFFFFF" text-anchor="middle" letter-spacing="0"><tspan x="195.0" dy="0">Done</tspan></text>
+<rect x="24" y="772" width="342" height="52" rx="26" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<text x="195.0" y="804" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="14" font-weight="650" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="195.0" dy="0">Another one</tspan></text>
+</svg>

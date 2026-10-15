@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844" role="img" aria-labelledby="title desc">
+<title id="title">B02 — Path</title><desc id="desc">yikes! Soft Pop mobile app screen. Editable vector shapes and typography.</desc>
+<defs>
+ <linearGradient id="emberGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D67C62"/><stop offset="1" stop-color="#B85842"/></linearGradient>
+ <linearGradient id="blobGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D38D"/><stop offset="1" stop-color="#DEA95C"/></linearGradient>
+ <linearGradient id="lilacGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D4C6E9"/><stop offset="1" stop-color="#A898CC"/></linearGradient>
+ <linearGradient id="surfaceGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFCF7"/><stop offset="1" stop-color="#F1E9DF"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#30212A" flood-opacity="0.08"/></filter>
+ <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="15"/></filter>
+</defs>
+<rect width="390" height="844" rx="34" fill="#F7F1E9"/>
+
+<text x="24" y="25" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="700" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">9:41</tspan></text>
+<path d="M313 20 Q319 14 325 20" fill="none" stroke="#29232B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M315 23 Q319 19 323 23" fill="none" stroke="#29232B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="319" cy="26" r="1.4" fill="#29232B"/>
+<rect x="334" y="17" width="17" height="10" rx="2" fill="none" stroke="#29232B" stroke-width="1" />
+<rect x="336" y="19" width="9" height="6" rx="0" fill="#29232B" />
+<rect x="352" y="20" width="2" height="4" rx="0" fill="#29232B" />
+<path d="M32 51 L24 59 L32 67" fill="none" stroke="#29232B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M25 59 H43" fill="none" stroke="#29232B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="58" y="61" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="700" fill="#C8664D" text-anchor="start" letter-spacing="1.0"><tspan x="58" dy="0">YOUR PATH</tspan></text>
+<text x="24" y="84" font-family="'Instrument Serif', 'Georgia', serif" font-size="30" font-weight="400" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">A path that starts</tspan><tspan x="24" dy="33.0">with you.</tspan></text>
+<text x="24" y="158.0" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="12" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">Skills grouped by situation. Every stage has</tspan><tspan x="24" dy="16">evidence.</tspan></text>
+<rect x="24" y="195" width="342" height="68" rx="20" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" filter="url(#shadow)"/>
+<circle cx="346" cy="215" r="4" fill="#B9A8D9"/>
+<text x="40" y="220" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11.5" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="40" dy="0">YOUR GAP TREND</tspan></text>
+<text x="40" y="237" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="40" dy="0">Your forecasts are getting closer to what happens.</tspan></text>
+<path d="M85 290 C145 310 250 322 255 383 S125 453 110 505 S220 584 270 634" fill="none" stroke="#E5DACE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="78" cy="306" r="22" fill="#FFFCF7" stroke="#C8664D" stroke-width="3"/>
+<circle cx="78" cy="306" r="5" fill="#C8664D"/>
+<text x="110" y="303" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="12" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="110" dy="0">Open a chat</tspan></text>
+<text x="110" y="320" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="500" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="110" dy="0">Starting</tspan></text>
+<circle cx="264" cy="402" r="22" fill="#FFFCF7" stroke="#B9A8D9" stroke-width="3"/>
+<circle cx="264" cy="402" r="5" fill="#B9A8D9"/>
+<text x="296" y="399" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="12" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="296" dy="0">Ask follow-ups</tspan></text>
+<text x="296" y="416" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="500" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="296" dy="0">Practicing</tspan></text>
+<circle cx="105" cy="510" r="22" fill="#FFFCF7" stroke="#AFCDB8" stroke-width="3"/>
+<circle cx="105" cy="510" r="5" fill="#AFCDB8"/>
+<text x="137" y="507" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="12" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="137" dy="0">Read engagement</tspan></text>
+<text x="137" y="524" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="500" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="137" dy="0">Growing</tspan></text>
+<circle cx="273" cy="624" r="22" fill="#FFFCF7" stroke="#E6C278" stroke-width="3"/>
+<circle cx="273" cy="624" r="5" fill="#E6C278"/>
+<text x="305" y="621" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="12" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="305" dy="0">Graceful exits</tspan></text>
+<text x="305" y="638" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="500" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="305" dy="0">Starting</tspan></text>
+<rect x="0" y="768" width="390" height="76" rx="0" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<path d="M30 793 L38 786 L46 793 V802 H41 V796 H35 V802 H30 Z" fill="none" stroke="#776D72" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<text x="38" y="824" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="650" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="38" dy="0">Today</tspan></text>
+<rect x="91" y="777" width="50" height="3" rx="2" fill="#C8664D" />
+<path d="M109 799 C114 799 111 790 117 790 S123 787 123 783" fill="none" stroke="#C8664D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="109" cy="799" r="2" fill="#C8664D"/>
+<circle cx="123" cy="783" r="2" fill="#C8664D"/>
+<text x="116" y="824" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="650" fill="#C8664D" text-anchor="middle" letter-spacing="0"><tspan x="116" dy="0">Path</tspan></text>
+<path d="M187 795 H201 M194 788 V802" fill="none" stroke="#776D72" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="194" y="824" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="650" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="194" dy="0">Practice</tspan></text>
+<rect x="265" y="785" width="14" height="17" rx="3" fill="none" stroke="#776D72" stroke-width="1.4" />
+<path d="M265 790 H279 M269 783 V788 M275 783 V788" fill="none" stroke="#776D72" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+<text x="272" y="824" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="650" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="272" dy="0">Moments</tspan></text>
+<circle cx="350" cy="789" r="4" fill="none" stroke="#776D72" stroke-width="1.5"/>
+<path d="M342 802 C342 795 358 795 358 802" fill="none" stroke="#776D72" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<text x="350" y="824" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="650" fill="#776D72" text-anchor="middle" letter-spacing="0"><tspan x="350" dy="0">You</tspan></text>
+</svg>

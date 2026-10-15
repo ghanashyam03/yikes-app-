@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844" role="img" aria-labelledby="title desc">
+<title id="title">C18 — Quiet Ladder</title><desc id="desc">yikes! Soft Pop mobile app screen. Editable vector shapes and typography.</desc>
+<defs>
+ <linearGradient id="emberGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D67C62"/><stop offset="1" stop-color="#B85842"/></linearGradient>
+ <linearGradient id="blobGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D38D"/><stop offset="1" stop-color="#DEA95C"/></linearGradient>
+ <linearGradient id="lilacGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D4C6E9"/><stop offset="1" stop-color="#A898CC"/></linearGradient>
+ <linearGradient id="surfaceGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFCF7"/><stop offset="1" stop-color="#F1E9DF"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#30212A" flood-opacity="0.08"/></filter>
+ <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="15"/></filter>
+</defs>
+<rect width="390" height="844" rx="34" fill="#F7F1E9"/>
+
+<text x="24" y="25" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="700" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">9:41</tspan></text>
+<path d="M313 20 Q319 14 325 20" fill="none" stroke="#29232B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M315 23 Q319 19 323 23" fill="none" stroke="#29232B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="319" cy="26" r="1.4" fill="#29232B"/>
+<rect x="334" y="17" width="17" height="10" rx="2" fill="none" stroke="#29232B" stroke-width="1" />
+<rect x="336" y="19" width="9" height="6" rx="0" fill="#29232B" />
+<rect x="352" y="20" width="2" height="4" rx="0" fill="#29232B" />
+<path d="M32 51 L24 59 L32 67" fill="none" stroke="#29232B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M25 59 H43" fill="none" stroke="#29232B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="58" y="61" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="700" fill="#C8664D" text-anchor="start" letter-spacing="1.0"><tspan x="58" dy="0">QUIET LADDER</tspan></text>
+<text x="24" y="84" font-family="'Instrument Serif', 'Georgia', serif" font-size="30" font-weight="400" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">Your next rung is</tspan><tspan x="24" dy="33.0">yours to choose.</tspan></text>
+<text x="24" y="158.0" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="12" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">Move at your pace. Edit, reorder or rewrite any rung.</tspan></text>
+<path d="M72 238 C120 265 120 312 80 344 S130 408 164 442 S120 510 80 543" fill="none" stroke="#E5DACE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="72" cy="246" r="19" fill="#AFCDB8"/>
+<text x="72" y="250" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="700" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="72" dy="0">1</tspan></text>
+<text x="195" y="244" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="195" dy="0">Say hi to a neighbour</tspan></text>
+<text x="195" y="263" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="500" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="195" dy="0">Easy</tspan></text>
+<circle cx="120" cy="341" r="19" fill="#B9A8D9"/>
+<text x="120" y="345" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="700" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="120" dy="0">2</tspan></text>
+<text x="195" y="339" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="195" dy="0">Ask one follow-up</tspan></text>
+<text x="195" y="358" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="500" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="195" dy="0">Small stretch</tspan></text>
+<circle cx="80" cy="436" r="19" fill="#E6C278"/>
+<text x="80" y="440" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="700" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="80" dy="0">3</tspan></text>
+<text x="195" y="434" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="195" dy="0">Stay in a group chat a little longer</tspan></text>
+<text x="195" y="453" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="500" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="195" dy="0">Stretch</tspan></text>
+<circle cx="164" cy="531" r="19" fill="#F2DCD4"/>
+<text x="164" y="535" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="700" fill="#29232B" text-anchor="middle" letter-spacing="0"><tspan x="164" dy="0">4</tspan></text>
+<text x="195" y="529" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="195" dy="0">Ask a question in a meeting</tspan></text>
+<text x="195" y="548" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="500" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="195" dy="0">Bigger stretch</tspan></text>
+<rect x="24" y="638" width="342" height="51" rx="20" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" filter="url(#shadow)"/>
+<circle cx="346" cy="658" r="4" fill="#B9A8D9"/>
+<text x="40" y="663" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11.5" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="40" dy="0">MAKE IT YOURS</tspan></text>
+<text x="40" y="678" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9.5" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="40" dy="0">Add a rung or rewrite one in your own words.</tspan></text>
+<rect x="24" y="714" width="342" height="52" rx="26" fill="url(#emberGrad)" filter="url(#shadow)"/>
+<text x="195.0" y="746" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="14" font-weight="650" fill="#FFFFFF" text-anchor="middle" letter-spacing="0"><tspan x="195.0" dy="0">Edit ladder</tspan></text>
+</svg>

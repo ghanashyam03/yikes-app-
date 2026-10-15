@@ -1,0 +1,554 @@
+{
+  "title": "yikes! \u2014 Soft Pop SVG Screen Library",
+  "screens": [
+    {
+      "id": "A01",
+      "name": "Launch",
+      "section": "A \u00b7 Onboarding",
+      "file": "a01-launch.svg",
+      "dark": true
+    },
+    {
+      "id": "A02",
+      "name": "Welcome",
+      "section": "A \u00b7 Onboarding",
+      "file": "a02-welcome.svg",
+      "dark": false
+    },
+    {
+      "id": "A03",
+      "name": "Quiz intro",
+      "section": "A \u00b7 Onboarding",
+      "file": "a03-quiz-intro.svg",
+      "dark": false
+    },
+    {
+      "id": "A04-Q01",
+      "name": "Quiz question 01",
+      "section": "A \u00b7 Onboarding",
+      "file": "a04-q01-quiz-question-01.svg",
+      "dark": false
+    },
+    {
+      "id": "A04-Q02",
+      "name": "Quiz question 02",
+      "section": "A \u00b7 Onboarding",
+      "file": "a04-q02-quiz-question-02.svg",
+      "dark": false
+    },
+    {
+      "id": "A04-Q03",
+      "name": "Quiz question 03",
+      "section": "A \u00b7 Onboarding",
+      "file": "a04-q03-quiz-question-03.svg",
+      "dark": false
+    },
+    {
+      "id": "A04-Q04",
+      "name": "Quiz question 04",
+      "section": "A \u00b7 Onboarding",
+      "file": "a04-q04-quiz-question-04.svg",
+      "dark": false
+    },
+    {
+      "id": "A04-Q05",
+      "name": "Quiz question 05",
+      "section": "A \u00b7 Onboarding",
+      "file": "a04-q05-quiz-question-05.svg",
+      "dark": false
+    },
+    {
+      "id": "A04-Q06",
+      "name": "Quiz question 06",
+      "section": "A \u00b7 Onboarding",
+      "file": "a04-q06-quiz-question-06.svg",
+      "dark": false
+    },
+    {
+      "id": "A04-Q07",
+      "name": "Quiz question 07",
+      "section": "A \u00b7 Onboarding",
+      "file": "a04-q07-quiz-question-07.svg",
+      "dark": false
+    },
+    {
+      "id": "A04-Q08",
+      "name": "Quiz question 08",
+      "section": "A \u00b7 Onboarding",
+      "file": "a04-q08-quiz-question-08.svg",
+      "dark": false
+    },
+    {
+      "id": "A04-Q09",
+      "name": "Quiz question 09",
+      "section": "A \u00b7 Onboarding",
+      "file": "a04-q09-quiz-question-09.svg",
+      "dark": false
+    },
+    {
+      "id": "A04-Q10",
+      "name": "Quiz question 10",
+      "section": "A \u00b7 Onboarding",
+      "file": "a04-q10-quiz-question-10.svg",
+      "dark": false
+    },
+    {
+      "id": "A04-Q11",
+      "name": "Quiz question 11",
+      "section": "A \u00b7 Onboarding",
+      "file": "a04-q11-quiz-question-11.svg",
+      "dark": false
+    },
+    {
+      "id": "A04-Q12",
+      "name": "Quiz question 12",
+      "section": "A \u00b7 Onboarding",
+      "file": "a04-q12-quiz-question-12.svg",
+      "dark": false
+    },
+    {
+      "id": "A04-Q13",
+      "name": "Quiz question 13",
+      "section": "A \u00b7 Onboarding",
+      "file": "a04-q13-quiz-question-13.svg",
+      "dark": false
+    },
+    {
+      "id": "A04-Q14",
+      "name": "Quiz question 14",
+      "section": "A \u00b7 Onboarding",
+      "file": "a04-q14-quiz-question-14.svg",
+      "dark": false
+    },
+    {
+      "id": "A05",
+      "name": "Optional deeper profile",
+      "section": "A \u00b7 Onboarding",
+      "file": "a05-optional-deeper-profile.svg",
+      "dark": false
+    },
+    {
+      "id": "A06",
+      "name": "Warm-up chat",
+      "section": "A \u00b7 Onboarding",
+      "file": "a06-warm-up-chat.svg",
+      "dark": false
+    },
+    {
+      "id": "A07",
+      "name": "Coach's first read",
+      "section": "A \u00b7 Onboarding",
+      "file": "a07-coach-s-first-read.svg",
+      "dark": false
+    },
+    {
+      "id": "A08",
+      "name": "Your Playbook reveal",
+      "section": "A \u00b7 Onboarding",
+      "file": "a08-your-playbook-reveal.svg",
+      "dark": false
+    },
+    {
+      "id": "A09",
+      "name": "Create account",
+      "section": "A \u00b7 Account",
+      "file": "a09-create-account.svg",
+      "dark": false
+    },
+    {
+      "id": "A10",
+      "name": "Email or phone entry",
+      "section": "A \u00b7 Account",
+      "file": "a10-email-or-phone-entry.svg",
+      "dark": false
+    },
+    {
+      "id": "A11",
+      "name": "Code entry",
+      "section": "A \u00b7 Account",
+      "file": "a11-code-entry.svg",
+      "dark": false
+    },
+    {
+      "id": "A12",
+      "name": "Consent",
+      "section": "A \u00b7 Account",
+      "file": "a12-consent.svg",
+      "dark": false
+    },
+    {
+      "id": "A13",
+      "name": "Age confirmation",
+      "section": "A \u00b7 Account",
+      "file": "a13-age-confirmation.svg",
+      "dark": false
+    },
+    {
+      "id": "A14",
+      "name": "Permissions, just in time",
+      "section": "A \u00b7 Account",
+      "file": "a14-permissions-just-in-time.svg",
+      "dark": false
+    },
+    {
+      "id": "A15",
+      "name": "Passkey offer",
+      "section": "A \u00b7 Account",
+      "file": "a15-passkey-offer.svg",
+      "dark": false
+    },
+    {
+      "id": "A16",
+      "name": "Returning sign-in",
+      "section": "A \u00b7 Account",
+      "file": "a16-returning-sign-in.svg",
+      "dark": false
+    },
+    {
+      "id": "B01",
+      "name": "Today \u2014 Home",
+      "section": "B \u00b7 Core app",
+      "file": "b01-today-home.svg",
+      "dark": false
+    },
+    {
+      "id": "B02",
+      "name": "Path",
+      "section": "B \u00b7 Core app",
+      "file": "b02-path.svg",
+      "dark": false
+    },
+    {
+      "id": "B03",
+      "name": "Session intro",
+      "section": "B \u00b7 Core app",
+      "file": "b03-session-intro.svg",
+      "dark": false
+    },
+    {
+      "id": "B04",
+      "name": "Idea",
+      "section": "B \u00b7 Core app",
+      "file": "b04-idea.svg",
+      "dark": false
+    },
+    {
+      "id": "B05",
+      "name": "Watch",
+      "section": "B \u00b7 Core app",
+      "file": "b05-watch.svg",
+      "dark": false
+    },
+    {
+      "id": "B06",
+      "name": "Read",
+      "section": "B \u00b7 Core app",
+      "file": "b06-read.svg",
+      "dark": false
+    },
+    {
+      "id": "B07",
+      "name": "Try",
+      "section": "B \u00b7 Core app",
+      "file": "b07-try.svg",
+      "dark": false
+    },
+    {
+      "id": "B08",
+      "name": "Coach",
+      "section": "B \u00b7 Core app",
+      "file": "b08-coach.svg",
+      "dark": false
+    },
+    {
+      "id": "B09",
+      "name": "Inner Voice reveal",
+      "section": "B \u00b7 Core app",
+      "file": "b09-inner-voice-reveal.svg",
+      "dark": false
+    },
+    {
+      "id": "B10",
+      "name": "Rewind and Retry",
+      "section": "B \u00b7 Core app",
+      "file": "b10-rewind-and-retry.svg",
+      "dark": false
+    },
+    {
+      "id": "B11",
+      "name": "Out there",
+      "section": "B \u00b7 Core app",
+      "file": "b11-out-there.svg",
+      "dark": false
+    },
+    {
+      "id": "B12",
+      "name": "Session complete",
+      "section": "B \u00b7 Core app",
+      "file": "b12-session-complete.svg",
+      "dark": false
+    },
+    {
+      "id": "B13",
+      "name": "Take it easy mode",
+      "section": "B \u00b7 Core app",
+      "file": "b13-take-it-easy-mode.svg",
+      "dark": false
+    },
+    {
+      "id": "C01",
+      "name": "Moments tab",
+      "section": "C \u00b7 Moments & tools",
+      "file": "c01-moments-tab.svg",
+      "dark": false
+    },
+    {
+      "id": "C02",
+      "name": "Add a Moment",
+      "section": "C \u00b7 Moments & tools",
+      "file": "c02-add-a-moment.svg",
+      "dark": false
+    },
+    {
+      "id": "C03",
+      "name": "Prep for a Moment",
+      "section": "C \u00b7 Moments & tools",
+      "file": "c03-prep-for-a-moment.svg",
+      "dark": false
+    },
+    {
+      "id": "C04",
+      "name": "Rehearse",
+      "section": "C \u00b7 Moments & tools",
+      "file": "c04-rehearse.svg",
+      "dark": false
+    },
+    {
+      "id": "C05",
+      "name": "Pocket card",
+      "section": "C \u00b7 Moments & tools",
+      "file": "c05-pocket-card.svg",
+      "dark": true
+    },
+    {
+      "id": "C06",
+      "name": "Energy check-in",
+      "section": "C \u00b7 Moments & tools",
+      "file": "c06-energy-check-in.svg",
+      "dark": false
+    },
+    {
+      "id": "C07",
+      "name": "Debrief chat",
+      "section": "C \u00b7 Moments & tools",
+      "file": "c07-debrief-chat.svg",
+      "dark": false
+    },
+    {
+      "id": "C08",
+      "name": "Check-in \u2014 micro-rep",
+      "section": "C \u00b7 Moments & tools",
+      "file": "c08-check-in-micro-rep.svg",
+      "dark": false
+    },
+    {
+      "id": "C09",
+      "name": "Practice sheet",
+      "section": "C \u00b7 Moments & tools",
+      "file": "c09-practice-sheet.svg",
+      "dark": false
+    },
+    {
+      "id": "C10",
+      "name": "Free chat setup",
+      "section": "C \u00b7 Moments & tools",
+      "file": "c10-free-chat-setup.svg",
+      "dark": false
+    },
+    {
+      "id": "C11",
+      "name": "Reply Helper",
+      "section": "C \u00b7 Moments & tools",
+      "file": "c11-reply-helper.svg",
+      "dark": false
+    },
+    {
+      "id": "C12",
+      "name": "You tab",
+      "section": "C \u00b7 Progress",
+      "file": "c12-you-tab.svg",
+      "dark": false
+    },
+    {
+      "id": "C13",
+      "name": "Growth Journal",
+      "section": "C \u00b7 Progress",
+      "file": "c13-growth-journal.svg",
+      "dark": false
+    },
+    {
+      "id": "C14",
+      "name": "Weekly Letter",
+      "section": "C \u00b7 Progress",
+      "file": "c14-weekly-letter.svg",
+      "dark": false
+    },
+    {
+      "id": "C15",
+      "name": "Skill detail",
+      "section": "C \u00b7 Progress",
+      "file": "c15-skill-detail.svg",
+      "dark": false
+    },
+    {
+      "id": "C16",
+      "name": "Gap screen",
+      "section": "C \u00b7 Progress",
+      "file": "c16-gap-screen.svg",
+      "dark": false
+    },
+    {
+      "id": "C17",
+      "name": "Battery patterns",
+      "section": "C \u00b7 Progress",
+      "file": "c17-battery-patterns.svg",
+      "dark": false
+    },
+    {
+      "id": "C18",
+      "name": "Quiet Ladder",
+      "section": "C \u00b7 Progress",
+      "file": "c18-quiet-ladder.svg",
+      "dark": false
+    },
+    {
+      "id": "D01",
+      "name": "Settings",
+      "section": "D \u00b7 Settings & states",
+      "file": "d01-settings.svg",
+      "dark": false
+    },
+    {
+      "id": "D02",
+      "name": "Notification preferences",
+      "section": "D \u00b7 Settings & states",
+      "file": "d02-notification-preferences.svg",
+      "dark": false
+    },
+    {
+      "id": "D03",
+      "name": "Privacy centre",
+      "section": "D \u00b7 Settings & states",
+      "file": "d03-privacy-centre.svg",
+      "dark": false
+    },
+    {
+      "id": "D04",
+      "name": "Subscription",
+      "section": "D \u00b7 Settings & states",
+      "file": "d04-subscription.svg",
+      "dark": false
+    },
+    {
+      "id": "D05",
+      "name": "Paywall moment",
+      "section": "D \u00b7 Settings & states",
+      "file": "d05-paywall-moment.svg",
+      "dark": false
+    },
+    {
+      "id": "D06",
+      "name": "Help and feedback",
+      "section": "D \u00b7 Settings & states",
+      "file": "d06-help-and-feedback.svg",
+      "dark": false
+    },
+    {
+      "id": "D07",
+      "name": "About the AI",
+      "section": "D \u00b7 Settings & states",
+      "file": "d07-about-the-ai.svg",
+      "dark": false
+    },
+    {
+      "id": "D08",
+      "name": "Support screen",
+      "section": "D \u00b7 Settings & states",
+      "file": "d08-support-screen.svg",
+      "dark": true
+    },
+    {
+      "id": "D09",
+      "name": "Offline",
+      "section": "D \u00b7 Settings & states",
+      "file": "d09-offline.svg",
+      "dark": false
+    },
+    {
+      "id": "D10",
+      "name": "Coach or partner busy",
+      "section": "D \u00b7 Settings & states",
+      "file": "d10-coach-or-partner-busy.svg",
+      "dark": false
+    },
+    {
+      "id": "D11",
+      "name": "Daily AI limit",
+      "section": "D \u00b7 Settings & states",
+      "file": "d11-daily-ai-limit.svg",
+      "dark": false
+    },
+    {
+      "id": "D12",
+      "name": "Welcome back",
+      "section": "D \u00b7 Settings & states",
+      "file": "d12-welcome-back.svg",
+      "dark": false
+    },
+    {
+      "id": "D13",
+      "name": "Empty states",
+      "section": "D \u00b7 Settings & states",
+      "file": "d13-empty-states.svg",
+      "dark": false
+    },
+    {
+      "id": "D14",
+      "name": "Error states",
+      "section": "D \u00b7 Settings & states",
+      "file": "d14-error-states.svg",
+      "dark": false
+    }
+  ],
+  "palette": {
+    "bg": "#F7F1E9",
+    "surface": "#FFFCF7",
+    "surface2": "#F1E9DF",
+    "ink": "#29232B",
+    "ink2": "#4F454D",
+    "ember": "#C8664D",
+    "ember_dark": "#A94E3A",
+    "ember_tint": "#F2DCD4",
+    "lilac": "#B9A8D9",
+    "lilac_tint": "#EDE6F5",
+    "mint": "#AFCDB8",
+    "mint_tint": "#E6F0E7",
+    "honey": "#E6C278",
+    "honey_tint": "#F7EED8",
+    "line": "#E5DACE",
+    "muted": "#776D72",
+    "soft": "#A69AA0",
+    "white": "#FFFFFF",
+    "deep": "#211B25",
+    "deep2": "#332A37",
+    "deep3": "#443749"
+  },
+  "screenSize": {
+    "width": 390,
+    "height": 844
+  },
+  "fontSuggestions": [
+    "Plus Jakarta Sans",
+    "Instrument Serif"
+  ]
+}

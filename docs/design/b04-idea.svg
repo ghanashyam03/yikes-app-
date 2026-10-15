@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844" role="img" aria-labelledby="title desc">
+<title id="title">B04 — Idea</title><desc id="desc">yikes! Soft Pop mobile app screen. Editable vector shapes and typography.</desc>
+<defs>
+ <linearGradient id="emberGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D67C62"/><stop offset="1" stop-color="#B85842"/></linearGradient>
+ <linearGradient id="blobGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4D38D"/><stop offset="1" stop-color="#DEA95C"/></linearGradient>
+ <linearGradient id="lilacGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#D4C6E9"/><stop offset="1" stop-color="#A898CC"/></linearGradient>
+ <linearGradient id="surfaceGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFCF7"/><stop offset="1" stop-color="#F1E9DF"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="7" flood-color="#30212A" flood-opacity="0.08"/></filter>
+ <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="15"/></filter>
+</defs>
+<rect width="390" height="844" rx="34" fill="#F7F1E9"/>
+
+<text x="24" y="25" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11" font-weight="700" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">9:41</tspan></text>
+<path d="M313 20 Q319 14 325 20" fill="none" stroke="#29232B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M315 23 Q319 19 323 23" fill="none" stroke="#29232B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="319" cy="26" r="1.4" fill="#29232B"/>
+<rect x="334" y="17" width="17" height="10" rx="2" fill="none" stroke="#29232B" stroke-width="1" />
+<rect x="336" y="19" width="9" height="6" rx="0" fill="#29232B" />
+<rect x="352" y="20" width="2" height="4" rx="0" fill="#29232B" />
+<path d="M32 51 L24 59 L32 67" fill="none" stroke="#29232B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M25 59 H43" fill="none" stroke="#29232B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="58" y="61" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="700" fill="#C8664D" text-anchor="start" letter-spacing="1.0"><tspan x="58" dy="0">IDEA · 20 SECONDS</tspan></text>
+<text x="24" y="84" font-family="'Instrument Serif', 'Georgia', serif" font-size="30" font-weight="400" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">Ask about their</tspan><tspan x="24" dy="33.0">excitement.</tspan></text>
+<text x="24" y="158.0" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="12" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="24" dy="0">One conversational move. One example.</tspan></text>
+<rect x="24" y="218" width="342" height="185" rx="24" fill="#211B25" />
+<text x="44" y="253" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="9" font-weight="700" fill="#B9A8D9" text-anchor="start" letter-spacing="1.2"><tspan x="44" dy="0">THE MOVE</tspan></text>
+<text x="44" y="292" font-family="'Instrument Serif', 'Georgia', serif" font-size="20" font-weight="400" fill="#FFFCF7" text-anchor="start" letter-spacing="0"><tspan x="44" dy="0">Ask about the thing they got</tspan><tspan x="44" dy="25">excited about — not just the</tspan><tspan x="44" dy="25">thing you want to say next.</tspan></text>
+<rect x="24" y="423" width="342" height="69" rx="20" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" filter="url(#shadow)"/>
+<circle cx="346" cy="443" r="4" fill="#B9A8D9"/>
+<text x="40" y="448" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="11.5" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="40" dy="0">MAYA</tspan></text>
+<text x="40" y="465" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="40" dy="0">“I loved helping with the launch.”</tspan></text>
+<rect x="24" y="503" width="342" height="87" rx="20" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" filter="url(#shadow)"/>
+<circle cx="346" cy="523" r="4" fill="#AFCDB8"/>
+<text x="40" y="528" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="13" font-weight="650" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="40" dy="0">YOU</tspan></text>
+<text x="40" y="548" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="10.5" font-weight="400" fill="#776D72" text-anchor="start" letter-spacing="0"><tspan x="40" dy="0">“What part did you enjoy the most?”</tspan></text>
+<rect x="24" y="605" width="342" height="50" rx="15" fill="#FFFCF7" stroke="#E5DACE" stroke-width="1" />
+<text x="42" y="636" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="12" font-weight="600" fill="#29232B" text-anchor="start" letter-spacing="0"><tspan x="42" dy="0">＋  Why this works</tspan></text>
+<rect x="24" y="713" width="342" height="52" rx="26" fill="url(#emberGrad)" filter="url(#shadow)"/>
+<text x="195.0" y="745" font-family="'Plus Jakarta Sans', 'Inter', sans-serif" font-size="14" font-weight="650" fill="#FFFFFF" text-anchor="middle" letter-spacing="0"><tspan x="195.0" dy="0">Next</tspan></text>
+</svg>
