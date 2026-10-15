@@ -1,0 +1,25 @@
+$ node docs/tasks/T-05/evidence/extra-rls-probes.mjs
+--- Extra RLS & Schema Integrity Probes ---
+1. Setting up fresh test tenants User A and User B...
+   Setup complete.
+2. Probing cross-tenant JOIN isolation (User B attempting joins into User A data)...
+   OK: User B attempts-turns JOIN returned 0 rows.
+   OK: User B profiles-attempts JOIN returned 0 rows.
+   OK: User B moments-debriefs JOIN returned 0 rows.
+3. Probing cross-tenant UPDATE and DELETE tampering...
+   OK: User B UPDATE and DELETE attempts had zero effect on User A rows.
+4. Probing service-role lockdown on ai_calls, safety_events, and entitlements...
+   OK: Authenticated user reads 0 rows from ai_calls.
+   OK: Authenticated user reads 0 rows from safety_events.
+   OK: Anon user access to ai_calls completely denied by database permissions.
+   OK: Anon user access to safety_events completely denied by database permissions.
+   OK: User cannot modify entitlements (service-role only).
+5. Probing child cascade delete on attempt deletion...
+   OK: Deleting parent attempt cascaded to child turns (0 left) and coach_feedback (0 left).
+6. Probing moment deletion behavior on micro_reps and debriefs (ON DELETE SET NULL)...
+   OK: Deleting moment correctly set foreign keys to NULL in micro_reps and debriefs.
+7. Probing tenant deletion cascade from auth.users...
+   OK: Deleting auth.users record cleanly cascaded to all 17 user tables (0 rows remaining).
+
+=== ALL EXTRA RLS & SCHEMA INTEGRITY PROBES PASSED ===
+Exit code: 0

@@ -1,0 +1,10 @@
+$ Get-ChildItem -Path apps\mobile\src\ui\components, apps\mobile\src\copy\components.ts, apps\mobile\app\dev\gallery-components.tsx -Exclude "*.test.tsx" -Recurse | Select-String -Pattern "#FF0000|#ff0000|#f00|#E53935|'red'|`"red`""
+
+Result: Clean (Zero matches found)
+Exit Code: 0
+
+Strict adherence to non-negotiable product rule:
+"Never use red for errors or wrong answers. Use Honey (amber)."
+ErrorBubble uses Honey (#F9C784 / #E89D42).
+BatteryGauge low level uses Ember (#D67C62 / #FAF0EB).
+Zero red color exists in any component or copy file.

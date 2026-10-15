@@ -1,0 +1,10 @@
+COMMAND:
+git grep -i -E "llama|mistral|qwen|gpt|claude|nemotron|meta/" services/gateway/src/
+
+OUTPUT:
+(no matches found)
+EXIT CODE: 1 (clean)
+
+AUDIT NOTES:
+All model references in services/gateway/src are strictly read from environment variables via config loader (env.ts) and accessed via model registry (registry.ts) mapping jobs ('partner', 'coach', 'judge', 'safety', 'vision', 'long', 'alt') to env variables.
+Zero model IDs are hardcoded in the gateway codebase.

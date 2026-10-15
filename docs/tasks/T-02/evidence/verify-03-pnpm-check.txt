@@ -1,0 +1,98 @@
+=== VERIFIER PNPM CHECK AUDIT ===
+Command: pnpm check
+Exit code: 0
+
+Output:
+$ pnpm run lint && pnpm run typecheck && pnpm run test
+$ eslint .
+$ pnpm -r run typecheck
+Scope: 6 of 7 workspace projects
+packages/ai-prompts typecheck$ tsc --noEmit
+packages/db typecheck$ tsc --noEmit
+packages/shared typecheck$ tsc --noEmit
+packages/content typecheck$ tsc --noEmit
+packages/content typecheck: Done
+packages/db typecheck: Done
+packages/ai-prompts typecheck: Done
+packages/shared typecheck: Done
+apps/mobile typecheck$ tsc --noEmit
+services/gateway typecheck$ tsc --noEmit
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+$ pnpm -r run test
+Scope: 6 of 7 workspace projects
+packages/ai-prompts test$ vitest run
+packages/db test$ vitest run
+packages/content test$ vitest run
+packages/shared test$ vitest run
+packages/db test: 
+packages/db test:  RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/db
+packages/db test: 
+packages/content test: 
+packages/content test:  RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/content
+packages/shared test: 
+packages/content test: 
+packages/shared test:  RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/shared
+packages/shared test: 
+packages/ai-prompts test: 
+packages/ai-prompts test:  RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/ai-prompts
+packages/ai-prompts test: 
+packages/db test:  ✓ src/placeholder.test.ts (1 test) 6ms
+packages/db test: 
+packages/db test:  Test Files  1 passed (1)
+packages/db test:       Tests  1 passed (1)
+packages/db test:    Start at  18:47:42
+packages/db test:    Duration  2.19s (transform 197ms, setup 0ms, collect 164ms, tests 6ms, environment 1ms, prepare 603ms)
+packages/db test: 
+packages/db test: Done
+packages/ai-prompts test:  ✓ src/placeholder.test.ts (1 test) 6ms
+packages/ai-prompts test: 
+packages/ai-prompts test:  Test Files  1 passed (1)
+packages/ai-prompts test:       Tests  1 passed (1)
+packages/ai-prompts test:    Start at  18:47:42
+packages/ai-prompts test:    Duration  2.86s (transform 121ms, setup 0ms, collect 116ms, tests 6ms, environment 0ms, prepare 966ms)
+packages/ai-prompts test: 
+packages/shared test:  ✓ src/tokens/contrast.test.ts (19 tests) 11ms
+packages/shared test:  ✓ src/version.test.ts (1 test) 4ms
+packages/ai-prompts test: Done
+packages/shared test:  ✓ src/tokens/tokens.test.ts (10 tests) 19ms
+packages/shared test: 
+packages/shared test:  Test Files  3 passed (3)
+packages/shared test:       Tests  30 passed (30)
+packages/shared test:    Start at  18:47:42
+packages/shared test:    Duration  3.29s (transform 293ms, setup 0ms, collect 440ms, tests 34ms, environment 1ms, prepare 1.69s)
+packages/shared test: 
+packages/content test:  ✓ src/placeholder.test.ts (1 test) 6ms
+packages/content test: 
+packages/content test:  Test Files  1 passed (1)
+packages/content test:       Tests  1 passed (1)
+packages/content test:    Start at  18:47:42
+packages/content test:    Duration  3.35s (transform 123ms, setup 0ms, collect 119ms, tests 6ms, environment 1ms, prepare 316ms)
+packages/content test: 
+packages/shared test: Done
+apps/mobile test$ jest --watchAll=false
+services/gateway test$ vitest run
+packages/content test: Done
+services/gateway test: 
+services/gateway test:  RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+services/gateway test: 
+services/gateway test:  ✓ src/app.test.ts (2 tests) 70ms
+services/gateway test: 
+services/gateway test:  Test Files  1 passed (1)
+services/gateway test:       Tests  2 passed (2)
+services/gateway test:    Start at  18:47:47
+services/gateway test:    Duration  1.87s (transform 120ms, setup 0ms, collect 556ms, tests 70ms, environment 0ms, prepare 537ms)
+services/gateway test: 
+services/gateway test: Done
+apps/mobile test: PASS src/__tests__/layout.smoke.test.tsx
+apps/mobile test: PASS src/ui/primitives/__tests__/Screen.reducedMotion.test.tsx (6.137 s)
+apps/mobile test: PASS src/ui/primitives/__tests__/primitives.smoke.test.tsx (7.709 s)
+apps/mobile test: 
+apps/mobile test: Test Suites: 3 passed, 3 total
+apps/mobile test: Tests:       11 passed, 11 total
+apps/mobile test: Snapshots:   0 total
+apps/mobile test: Time:        9.659 s
+apps/mobile test: Ran all test suites.
+apps/mobile test: Done
+
+AUDIT RESULT: PASS

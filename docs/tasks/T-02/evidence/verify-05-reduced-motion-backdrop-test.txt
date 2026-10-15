@@ -1,0 +1,21 @@
+=== VERIFIER REDUCED MOTION BACKDROP TEST AUDIT ===
+Command: pnpm --filter mobile test -- src/ui/primitives/__tests__/Screen.reducedMotion.test.tsx
+Exit code: 0
+
+Output:
+$ jest --watchAll=false src/ui/primitives/__tests__/Screen.reducedMotion.test.tsx
+PASS src/ui/primitives/__tests__/Screen.reducedMotion.test.tsx
+  Screen Ambient Bubble Backdrop Reduced Motion
+    √ logic proves ambient drifting halts when Reduced Motion is enabled (4 ms)
+    √ renders ambient-drift-stopped element when Reduced Motion is forced on (44 ms)
+    √ renders ambient-drift-running element when Reduced Motion is false (10 ms)
+    √ renders Screen container with child text and backdrop (10 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        5.336 s, estimated 7 s
+Ran all test suites matching /src\ui\primitives\__tests__\Screen.reducedMotion.test.tsx/i.
+
+AUDIT RESULT: PASS
+Proves ambient bubble drift stops under Reduced Motion.

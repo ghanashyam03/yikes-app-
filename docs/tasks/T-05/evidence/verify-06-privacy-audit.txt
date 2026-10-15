@@ -1,0 +1,39 @@
+--- Database Privacy & Data Safety Audit ---
+
+1. Check for birth year, date of birth, or age columns:
+SQL Query:
+SELECT table_name, column_name 
+FROM information_schema.columns 
+WHERE table_schema = 'public' 
+  AND (column_name ~* 'birth' OR column_name ~* 'dob' OR column_name ~* 'age')
+  AND column_name NOT IN ('adult_confirmed_at', 'stage', 'stage_history', 'usage_date');
+
+Result:
+(0 rows)
+OK: No column anywhere stores a birth year, date of birth, or age.
+
+2. Check for free-text message content columns:
+SQL Query:
+SELECT table_name, column_name, data_type 
+FROM information_schema.columns 
+WHERE table_schema = 'public' 
+  AND data_type = 'text'
+  AND column_name IN ('text', 'thought', 'body', 'content', 'transcript', 'takeaway', 'message', 'prompt', 'response')
+ORDER BY table_name, column_name;
+
+Result:
+debriefs | takeaway | text
+journal_entries | body | text
+turns | text | text
+turns | thought | text
+weekly_letters | content | text
+
+OK: Message text is strictly confined to turns, debriefs, and journal_entries (plus weekly_letters for AI-generated letter).
+
+3. Check telemetry table public.ai_calls:
+Columns: ['id', 'job', 'model', 'prompt_version', 'latency_ms', 'status', 'token_counts', 'created_at']
+OK: Strictly metadata only, zero message text or user identifiers.
+
+4. Check safety telemetry public.safety_events:
+Columns: ['id', 'kind', 'source', 'created_at']
+OK: Kind and source only, zero message text or user identifiers.

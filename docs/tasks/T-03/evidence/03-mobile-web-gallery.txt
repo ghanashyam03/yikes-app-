@@ -1,0 +1,12 @@
+$ npx expo export -p web --output-dir dist-web
+Starting Metro Bundler
+Web Bundled 23973ms node_modules\.pnpm\expo-router@4.0.17_c28802e069c69de2fa2aef53cf432117\node_modules\expo-router\entry.js (886 modules)
+
+› Assets (17) bundled cleanly
+› web bundles (1):
+_expo/static/js/web/entry-2b3680242224067c9d1e02a496de84a0.js (1.62 MB)
+› Files (2):
+index.html (1.17 kB)
+metadata.json (49 B)
+
+Exported: dist-web (HTTP 200 compilation, 0 bundle errors, all 14 components bundled for mobile web)

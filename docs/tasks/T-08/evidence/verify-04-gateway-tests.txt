@@ -1,0 +1,23 @@
+COMMAND:
+pnpm --filter @yikes/gateway test
+
+OUTPUT:
+$ vitest run
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+
+ ✓ src/usage/__tests__/daily-caps.test.ts (2 tests) 8ms
+ ✓ src/providers/__tests__/fake.test.ts (4 tests) 13ms
+ ✓ src/queue/__tests__/rate-limiter.test.ts (3 tests) 116ms
+ ✓ src/telemetry/__tests__/logger.test.ts (1 test) 37ms
+ ✓ src/structured/__tests__/call-structured.test.ts (4 tests) 23ms
+ ✓ src/reliability/__tests__/reliability.test.ts (6 tests) 257ms
+ ✓ src/middleware/__tests__/auth.test.ts (3 tests) 104ms
+ ✓ src/app.test.ts (2 tests) 205ms
+
+ Test Files  8 passed (8)
+      Tests  25 passed (25)
+   Start at  23:59:46
+   Duration  2.23s (transform 900ms, setup 0ms, collect 3.16s, tests 761ms, environment 4ms, prepare 3.08s)
+
+EXIT CODE: 0

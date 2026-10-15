@@ -1,0 +1,77 @@
+=== VERIFIER SCOPE AUDIT ===
+Branch: task/T-02-tokens
+HEAD Commits:
+7a08994 T-02: fix issue 2 render Ember gradient on primary button
+019a323 T-02: fix issue 1 reconcile git scope and declare verification artifacts
+c2c53ba T-02: design tokens, theme and primitives
+
+$ git branch --show-current
+task/T-02-tokens
+
+$ git log main..HEAD --oneline
+7a08994 T-02: fix issue 2 render Ember gradient on primary button
+019a323 T-02: fix issue 1 reconcile git scope and declare verification artifacts
+c2c53ba T-02: design tokens, theme and primitives
+
+$ git diff --name-only main...HEAD
+apps/mobile/app/dev/gallery.tsx
+apps/mobile/src/copy/common.ts
+apps/mobile/src/theme/ThemeProvider.tsx
+apps/mobile/src/theme/fonts.ts
+apps/mobile/src/theme/useTheme.ts
+apps/mobile/src/ui/icons/BackIcon.tsx
+apps/mobile/src/ui/icons/BatteryIcon.tsx
+apps/mobile/src/ui/icons/CalendarIcon.tsx
+apps/mobile/src/ui/icons/CheckIcon.tsx
+apps/mobile/src/ui/icons/CloseIcon.tsx
+apps/mobile/src/ui/icons/HomeIcon.tsx
+apps/mobile/src/ui/icons/Icon.tsx
+apps/mobile/src/ui/icons/PathIcon.tsx
+apps/mobile/src/ui/icons/PersonIcon.tsx
+apps/mobile/src/ui/icons/PlusIcon.tsx
+apps/mobile/src/ui/icons/SendIcon.tsx
+apps/mobile/src/ui/primitives/Button.tsx
+apps/mobile/src/ui/primitives/Card.tsx
+apps/mobile/src/ui/primitives/Chip.tsx
+apps/mobile/src/ui/primitives/Screen.tsx
+apps/mobile/src/ui/primitives/Text.tsx
+apps/mobile/src/ui/primitives/__tests__/Screen.reducedMotion.test.tsx
+apps/mobile/src/ui/primitives/__tests__/primitives.smoke.test.tsx
+docs/tasks/T-01/VERIFY.md
+docs/tasks/T-01/evidence/verify-01-git-status-scope.txt
+docs/tasks/T-01/evidence/verify-02-pnpm-install.txt
+docs/tasks/T-01/evidence/verify-03-pnpm-check.txt
+docs/tasks/T-01/evidence/verify-04-check-spec-split.txt
+docs/tasks/T-01/evidence/verify-05-independent-verbatim-audit.txt
+docs/tasks/T-01/evidence/verify-06-glossary-decisions-design-audit.txt
+docs/tasks/T-02/REPORT.md
+docs/tasks/T-02/evidence/01-pnpm-check.txt
+docs/tasks/T-02/evidence/02-mobile-web-gallery.txt
+docs/tasks/T-02/evidence/03-reduced-motion-backdrop-test.txt
+docs/tasks/T-02/evidence/04-tokens-spec-test.txt
+docs/tasks/T-02/evidence/05-contrast-test.txt
+docs/tasks/T-02/evidence/gallery-dark.jpg
+docs/tasks/T-02/evidence/gallery-light.jpg
+packages/shared/src/tokens/colors.ts
+packages/shared/src/tokens/contrast.test.ts
+packages/shared/src/tokens/contrast.ts
+packages/shared/src/tokens/haptics.ts
+packages/shared/src/tokens/motion.ts
+packages/shared/src/tokens/radii.ts
+packages/shared/src/tokens/shadows.ts
+packages/shared/src/tokens/spacing.ts
+packages/shared/src/tokens/tokens.test.ts
+packages/shared/src/tokens/typography.ts
+
+Files owned per TASKS.md contract T-02:
+- packages/shared/src/tokens/**
+- apps/mobile/src/theme/**
+- apps/mobile/src/ui/primitives/**
+- apps/mobile/src/ui/icons/**
+- apps/mobile/src/copy/common.ts
+- apps/mobile/app/dev/gallery.tsx
+
+Outside-scope edits declared in docs/tasks/T-02/REPORT.md (lines 74-75):
+"- docs/tasks/T-01/VERIFY.md and docs/tasks/T-01/evidence/* (6 files: verify-01-git-status-scope.txt, verify-02-pnpm-install.txt, verify-03-pnpm-check.txt, verify-04-check-spec-split.txt, verify-05-independent-verbatim-audit.txt, verify-06-glossary-decisions-design-audit.txt): Historical untracked verification artifacts produced during the independent T-01 verification workflow and swept in during the T-02 commit. 7 files (+355 lines)."
+
+AUDIT RESULT: PASS. All changed files are either in Files owned, task reports/evidence, or explicitly declared under Outside-scope edits.

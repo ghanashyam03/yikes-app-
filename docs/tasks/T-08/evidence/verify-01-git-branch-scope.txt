@@ -1,0 +1,50 @@
+BRANCH:
+task/T-08-gateway
+
+COMMITS:
+f961a5c T-08: live smoke test 4/4 passing against NVIDIA API
+ac9c1ec T-08: AI gateway core with model failover and smoke test
+
+DIFF STAT (main...HEAD):
+ docs/tasks/T-08/REPORT.md                          |  96 +++++++++
+ docs/tasks/T-08/evidence/01-fake-provider-tests.txt |  17 ++
+ docs/tasks/T-08/evidence/02-route-autoloader-test.txt |  10 +
+ docs/tasks/T-08/evidence/03-live-smoke-test-cli.txt | Bin 0 -> 3682 bytes
+ docs/tasks/T-08/evidence/04-grep-zero-model-ids.txt |   1 +
+ docs/tasks/T-08/evidence/05-pnpm-check.txt         |  96 +++++++++
+ pnpm-lock.yaml                                     | 140 +++++++++++++
+ services/gateway/package.json                      |  13 +-
+ services/gateway/src/app.test.ts                   |  32 ++-
+ services/gateway/src/app.ts                        |  59 +++++-
+ services/gateway/src/config/env.ts                 |  91 +++++++++
+ services/gateway/src/errors/ai-errors.ts           |  38 ++++
+ services/gateway/src/index.ts                      |  11 +-
+ services/gateway/src/middleware/__tests__/auth.test.ts |  87 +++++++++
+ services/gateway/src/middleware/auth.ts            |  80 ++++++++
+ services/gateway/src/models/registry.ts            |  75 +++++++
+ services/gateway/src/providers/__tests__/fake.test.ts |  75 +++++++
+ services/gateway/src/providers/fake.ts             |  96 +++++++++
+ services/gateway/src/providers/nvidia.ts           | 217 +++++++++++++++++++++
+ services/gateway/src/providers/types.ts            |  37 ++++
+ services/gateway/src/queue/__tests__/rate-limiter.test.ts |  65 ++++++
+ services/gateway/src/queue/rate-limiter.ts         | 144 ++++++++++++++
+ services/gateway/src/reliability/__tests__/reliability.test.ts | 167 ++++++++++++++++
+ services/gateway/src/reliability/circuit-breaker.ts |  88 +++++++++
+ services/gateway/src/reliability/engine.ts         | 186 ++++++++++++++++++
+ services/gateway/src/routes/health.ts              |   7 +
+ services/gateway/src/routes/loader.ts              |  32 +++
+ services/gateway/src/routes/smoke.ts               |  21 ++
+ services/gateway/src/scripts/smoke-runner.ts       |  62 ++++++
+ services/gateway/src/scripts/smoke.ts              |  41 ++++
+ services/gateway/src/structured/__tests__/call-structured.test.ts | 108 ++++++++++
+ services/gateway/src/structured/call-structured.ts | 149 ++++++++++++++
+ services/gateway/src/telemetry/__tests__/logger.test.ts |  54 +++++
+ services/gateway/src/telemetry/ai-calls.ts         |  62 ++++++
+ services/gateway/src/telemetry/logger.ts           |  44 +++++
+ services/gateway/src/usage/__tests__/daily-caps.test.ts |  19 ++
+ services/gateway/src/usage/daily-caps.ts           | 156 +++++++++++++++
+ 37 files changed, 2651 insertions(+), 25 deletions(-)
+
+SCOPE AUDIT VERDICT:
+All changed files belong strictly to services/gateway/**, docs/tasks/T-08/**, and pnpm-lock.yaml.
+Zero outside-scope files touched.

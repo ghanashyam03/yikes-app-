@@ -1,0 +1,35 @@
+VERIFIER FOCUS ITEMS AUDIT:
+
+1. Request-per-minute arithmetic and Queue:
+   - Source: services/gateway/src/queue/rate-limiter.ts
+   - Configuration: RPM_LIMIT (default 35) in env.ts.
+   - Algorithm: Token bucket with continuous refill:
+     tokensToAdd = (elapsedMs * this.rpmLimit) / 60_000
+   - Priority queue:
+     chat (weight 1) > coach (weight 2) > background (weight 3)
+     FIFO within same priority tier.
+   - Wait timeout: Max 6000ms (6s). Upon timeout, entry is removed from queue and rejected with GatewayBusyError (code 'BUSY', status 429).
+   - Test coverage: src/queue/__tests__/rate-limiter.test.ts verifies priority ordering and 6s timeout BUSY error.
+
+2. User ID provenance and Auth Middleware:
+   - Source: services/gateway/src/middleware/auth.ts
+   - Verification: Jose jwtVerify against SUPABASE_JWT_SECRET or SUPABASE_URL JWKS.
+   - Enforcement: request.userId is strictly set from verified payload.sub (L66-72).
+   - Spoofing prevention: Any `userId` provided in request payload/body is ignored and never bound to request context.
+   - Test coverage: src/middleware/__tests__/auth.test.ts (L69-86) explicitly passes a spoofed payload `{ userId: 'spoofed-body-user' }` and asserts request.userId equals the authenticated JWT subject.
+
+3. Log redaction and Secret Safety:
+   - Source: services/gateway/src/telemetry/logger.ts
+   - Implementation: Pino redaction paths covering 'messages', 'messages[*].content', 'content', 'text', 'prompt', 'thought', 'reply', 'rawText', 'body.*', '*.content', '*.text', '*.prompt', 'authorization', etc.
+   - Telemetry logging: CallLogger (services/gateway/src/telemetry/ai-calls.ts) writes only metadata (job, model, prompt_version, latency_ms, status, token_counts) to table ai_calls. Zero prompt/reply text is written.
+   - Test coverage: src/telemetry/__tests__/logger.test.ts passes sensitive user messages, prompt, and bearer token through logger and asserts they are redacted to '[REDACTED]' and never appear in output stream.
+
+4. Malformed JSON handling in callStructured:
+   - Source: services/gateway/src/structured/call-structured.ts
+   - Implementation:
+     - stripCodeFences removes markdown ```json ... ``` wrappers and trims exterior non-JSON commentary by detecting first/last brackets or braces.
+     - parseAndValidate executes JSON.parse and zod.safeParse.
+     - If initial parse or validation fails, retries once appending error hint:
+       "Your previous response could not be parsed: {error}. Please fix the issue and return ONLY the valid JSON object without commentary or markdown code fences."
+     - If second response fails validation, throws typed BadOutputError (code 'BAD_OUTPUT', status 502).
+   - Test coverage: src/structured/__tests__/call-structured.test.ts tests code fence stripping, valid JSON on first attempt, single repair retry on malformed JSON, and BadOutputError on double failure.
