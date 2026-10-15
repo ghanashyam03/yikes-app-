@@ -1,0 +1,17 @@
+$ pnpm --filter gateway test src/routes/privacy/__tests__/privacy.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+
+ ✓ src/routes/privacy/__tests__/privacy.test.ts (7 tests) 143ms
+   ✓ Acceptance Check 1: Export contains only that user rows and zero rows of other users
+   ✓ Acceptance Check 2: After delete-account, dynamic table inspection finds zero rows for user
+   ✓ Acceptance Check 3: delete-text clears turns, debrief transcript, and journal body, but leaves skills_progress intact
+   ✓ Acceptance Check 4: Routes derive identity strictly from JWT sub and reject another user id
+   ✓ Acceptance Check 5: Toggling consent persists to database and is read by canUseForImprovement
+   ✓ Retention purge: purgeExpiredText deletes turns past 90-day retention
+   ✓ Export expiration: download returns 410 when 24h validity window has expired
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  04:57:54
+   Duration  2.07s (transform 237ms, setup 0ms, collect 1.03s, tests 143ms, environment 0ms, prepare 308ms)

@@ -1,0 +1,17 @@
+$ pnpm --filter mobile test apps/mobile/src/features/privacy/__tests__/privacy.test.tsx
+
+PASS src/features/privacy/__tests__/privacy.test.tsx (7.087 s)
+  D3 Privacy Centre Screen
+    ✓ renders title, subtitle, and all 4 consent options with plain language (309 ms)
+    ✓ renders model training disclaimer explaining trained models cannot be untrained (180 ms)
+    ✓ toggles consent when user switches Improve AI toggle (58 ms)
+    ✓ handles "Download my data" request and shows 24h expiration link (110 ms)
+    ✓ opens confirmation modal for Delete Practice Text emphasizing skills are kept (378 ms)
+    ✓ opens OTP modal for Delete Account with 30-day notice and handles confirmation (153 ms)
+    ✓ back button navigates back to previous screen (61 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        7.682 s
+Ran all test suites matching /apps\mobile\src\features\privacy\__tests__\privacy.test.tsx/i.
