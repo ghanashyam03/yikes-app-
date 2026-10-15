@@ -1,0 +1,44 @@
+Command: pnpm check
+Exit code: 0
+
+Output:
+$ pnpm run lint && pnpm run typecheck && pnpm run test
+$ eslint .
+$ pnpm -r run typecheck
+Scope: 6 of 7 workspace projects
+packages/content typecheck$ tsc --noEmit
+packages/ai-prompts typecheck$ tsc --noEmit
+packages/db typecheck$ tsc --noEmit
+packages/shared typecheck$ tsc --noEmit
+packages/ai-prompts typecheck: Done
+packages/content typecheck: Done
+packages/db typecheck: Done
+packages/shared typecheck: Done
+services/gateway typecheck$ tsc --noEmit
+apps/mobile typecheck$ tsc --noEmit
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+$ pnpm -r run test
+Scope: 6 of 7 workspace projects
+packages/db test$ vitest run
+packages/ai-prompts test$ vitest run
+packages/shared test$ vitest run
+packages/content test$ vitest run
+packages/content test:  Test Files  1 passed (1)
+packages/content test:       Tests  1 passed (1)
+packages/ai-prompts test:  Test Files  1 passed (1)
+packages/ai-prompts test:       Tests  1 passed (1)
+packages/shared test:  Test Files  3 passed (3)
+packages/shared test:       Tests  30 passed (30)
+packages/db test:  Test Files  3 passed (3)
+packages/db test:       Tests  12 passed (12)
+services/gateway test:  Test Files  8 passed (8)
+services/gateway test:       Tests  25 passed (25)
+apps/mobile test: PASS src/__tests__/layout.smoke.test.tsx
+apps/mobile test: PASS src/ui/primitives/__tests__/Screen.reducedMotion.test.tsx
+apps/mobile test: PASS src/ui/primitives/__tests__/primitives.smoke.test.tsx
+apps/mobile test: PASS src/navigation/__tests__/routes.test.tsx
+apps/mobile test: PASS src/ui/components/__tests__/components.test.tsx
+apps/mobile test: Test Suites: 5 passed, 5 total
+apps/mobile test: Tests:       28 passed, 28 total
+apps/mobile test: Snapshots:   0 total

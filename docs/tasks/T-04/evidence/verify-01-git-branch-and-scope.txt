@@ -1,0 +1,69 @@
+Branch: task/T-04-navigation
+Commit: c93ea22 T-04: navigation shell and complete route stubs
+
+Git Diff Stat against main:
+ apps/mobile/app/(auth)/_layout.tsx                 |  13 +
+ apps/mobile/app/(auth)/age.tsx                     |   6 +
+ apps/mobile/app/(auth)/code.tsx                    |   6 +
+ apps/mobile/app/(auth)/consent.tsx                 |   6 +
+ apps/mobile/app/(auth)/sign-in.tsx                 |   6 +
+ apps/mobile/app/(auth)/welcome.tsx                 |   6 +
+ apps/mobile/app/(onboarding)/_layout.tsx           |  13 +
+ apps/mobile/app/(onboarding)/coach-read.tsx        |   6 +
+ apps/mobile/app/(onboarding)/deeper.tsx            |   6 +
+ apps/mobile/app/(onboarding)/intro.tsx             |   6 +
+ apps/mobile/app/(onboarding)/playbook.tsx          |   6 +
+ apps/mobile/app/(onboarding)/quiz/[step].tsx       |   6 +
+ apps/mobile/app/(onboarding)/warmup.tsx            |   6 +
+ apps/mobile/app/(tabs)/_layout.tsx                 |  19 +
+ apps/mobile/app/(tabs)/index.tsx                   |   6 +
+ apps/mobile/app/(tabs)/moments.tsx                 |   6 +
+ apps/mobile/app/(tabs)/path.tsx                    |   6 +
+ apps/mobile/app/(tabs)/you.tsx                     |   6 +
+ apps/mobile/app/_layout.tsx                        |  61 ++-
+ apps/mobile/app/battery.tsx                        |   6 +
+ apps/mobile/app/checkin/[id].tsx                   |   6 +
+ apps/mobile/app/debrief/[id].tsx                   |   6 +
+ apps/mobile/app/energy.tsx                         |   6 +
+ apps/mobile/app/gap.tsx                            |   6 +
+ apps/mobile/app/index.tsx                          |  47 +--
+ apps/mobile/app/journal.tsx                        |   6 +
+ apps/mobile/app/ladder.tsx                         |   6 +
+ apps/mobile/app/letter/[id].tsx                    |   6 +
+ apps/mobile/app/moments/[id]/pocket.tsx            |   6 +
+ apps/mobile/app/moments/[id]/prep.tsx              |   6 +
+ apps/mobile/app/moments/[id]/rehearse.tsx          |   6 +
+ apps/mobile/app/moments/new.tsx                    |   6 +
+ apps/mobile/app/paywall.tsx                        |   6 +
+ apps/mobile/app/practice.tsx                       |   6 +
+ apps/mobile/app/session/[id]/coach.tsx             |   6 +
+ apps/mobile/app/session/[id]/complete.tsx          |   6 +
+ apps/mobile/app/session/[id]/idea.tsx              |   6 +
+ apps/mobile/app/session/[id]/inner-voice.tsx       |   6 +
+ apps/mobile/app/session/[id]/out-there.tsx         |   6 +
+ apps/mobile/app/session/[id]/read.tsx              |   6 +
+ apps/mobile/app/session/[id]/try.tsx               |   6 +
+ apps/mobile/app/session/[id]/watch.tsx             |   6 +
+ apps/mobile/app/settings/about-ai.tsx              |   6 +
+ apps/mobile/app/settings/help.tsx                  |   6 +
+ apps/mobile/app/settings/index.tsx                 |   6 +
+ apps/mobile/app/settings/notifications.tsx         |   6 +
+ apps/mobile/app/settings/privacy.tsx               |   6 +
+ apps/mobile/app/settings/subscription.tsx          |   6 +
+ apps/mobile/app/skill/[id].tsx                     |   6 +
+ apps/mobile/app/support.tsx                        |   6 +
+ apps/mobile/app/tools/free-chat.tsx                |   6 +
+ apps/mobile/app/tools/reply-helper.tsx             |   6 +
+ apps/mobile/src/copy/navigation.ts                 | 105 +++++
+ apps/mobile/src/features/auth/useSession.ts        |  33 ++
+ apps/mobile/src/navigation/RouteStub.tsx           |  96 +++++
+ apps/mobile/src/navigation/TabBar.tsx              | 445 +++++++++++++++++++++
+ .../src/navigation/__tests__/routes.test.tsx       | 343 ++++++++++++++++
+
+Files owned compliance:
+All 57 source files fall strictly within:
+- apps/mobile/app/**
+- apps/mobile/src/navigation/**
+- apps/mobile/src/features/auth/useSession.ts
+- apps/mobile/src/copy/navigation.ts
+Zero unlisted or out-of-scope files touched.

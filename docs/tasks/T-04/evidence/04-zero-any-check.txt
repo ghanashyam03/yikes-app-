@@ -1,0 +1,14 @@
+=== T-04 TypeScript Strict Audit (Zero `any` casts) ===
+Scanned directories and files:
+- apps/mobile/app/**
+- apps/mobile/src/navigation/**
+- apps/mobile/src/features/auth/useSession.ts
+- apps/mobile/src/copy/navigation.ts
+
+Search regex: (\bas\s+any\b|:\s*any\b)
+Matches found: 0
+
+pnpm --filter mobile typecheck result:
+$ tsc --noEmit
+Exit code: 0
+Strict type checking passed cleanly with zero `any` casts.

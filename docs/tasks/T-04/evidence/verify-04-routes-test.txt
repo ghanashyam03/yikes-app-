@@ -1,0 +1,23 @@
+Command: pnpm --filter mobile test src/navigation/__tests__/routes.test.tsx
+Exit code: 0
+
+Output:
+PASS src/navigation/__tests__/routes.test.tsx
+  Route enumeration and file verification
+    √ verifies all 47 required route files exist on disk and export valid React components (21 ms)
+    √ verifies all 5 required layouts and entry files exist on disk and export valid React components (7 ms)
+    √ renders a sample route stub without crashing and displays Not built yet copy (63 ms)
+  Root auth and redirection stub
+    √ useSession returns guest state without profile (1 ms)
+  Floating glass TabBar
+    √ renders tab bar with 4 tabs and center practice button in daylight mode (60 ms)
+    √ renders correctly in midnight mode (20 ms)
+    √ has correct accessibility roles, labels and states on all tabs (21 ms)
+    √ navigates when an inactive tab is pressed (22 ms)
+    √ opens /practice modal when center practice button is pressed (27 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        6.746 s
+Ran all test suites matching /src\\navigation\\__tests__\\routes.test.tsx/i.
