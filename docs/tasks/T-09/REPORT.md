@@ -69,3 +69,20 @@ None. All rules, degraded fallbacks, model integrations, routes, and mobile navi
 - T-22 will build the complete visual Support screen UI in `apps/mobile/app/support.tsx` displaying the static crisis resources parsed by `loadCrisisResources()`.
 
 ## Fix rounds (left empty by the Builder; filled by the Fixer)
+
+### Fix round 1
+- **Issue 1**: Hinglish Crisis Pre-filter Misses "apni jaan lena" Phrasing
+  - **What changed**: Made the `le` token optional in the Hinglish crisis regex (`/\bapn[ie]\s+jaan\s+(?:le\s+)?(?:lunga|lungi|lena)\b/i`) so that natural Hinglish crisis expressions like "apni jaan lena chahta hu" and "apni jaan lena chahti hu" are reliably flagged with `category: 'suicide'`.
+  - **Files touched**:
+    - [`packages/shared/src/safety/crisis-terms.ts`](file:///c:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/shared/src/safety/crisis-terms.ts)
+    - [`packages/shared/src/safety/__tests__/crisis-terms.test.ts`](file:///c:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/shared/src/safety/__tests__/crisis-terms.test.ts)
+  - **Commit**: `a22deef` ("T-09: fix issue 1 include apni jaan lena phrasing in hinglish crisis rules")
+  - **Evidence**: `pnpm --filter @yikes/shared test` passed (33 tests across 4 test files). `pnpm check` passed across all 6 workspace packages.
+
+- **Issue 2**: Crisis Resources Markdown Parser Corrupts Helplines on Indented Sub-bullets
+  - **What changed**: Refactored markdown line parsing in `loadCrisisResources` to differentiate top-level helplines (`/^-\s+\*\*/` without leading whitespace) from indented sub-bullets (`isIndented = /^\s+/.test(rawLine)` or sub-property bullet prefixes). Extended sub-bullet parser to support `- **Hours**:`, `- **Alternate Phone**:`, `- **Website**:`, `- **SMS**:`, and `- **Verification**:`. Ensured Tele-MANAS receives its `alternatePhone: '1800-891-4416'` and `website: 'https://telemanas.mohfw.gov.in'`, and prevented spurious entries from ever entering `allHelplines`. Added assertions in `safety.test.ts` verifying all fields on Tele-MANAS and checking that no spurious helpline names exist.
+  - **Files touched**:
+    - [`services/gateway/src/safety/resources.ts`](file:///c:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway/src/safety/resources.ts)
+    - [`services/gateway/src/safety/__tests__/safety.test.ts`](file:///c:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway/src/safety/__tests__/safety.test.ts)
+  - **Commit**: `a5fd41c` ("T-09: fix issue 2 preserve sub-bullet indentation and properties in crisis resources parser")
+  - **Evidence**: `pnpm --filter @yikes/gateway test src/safety/__tests__/safety.test.ts` passed (14/14 tests). Monorepo-wide `pnpm check` passed with zero errors across lint, typecheck, and all test suites.
