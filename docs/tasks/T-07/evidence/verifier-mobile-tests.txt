@@ -1,0 +1,20 @@
+=== MOBILE PRIVACY FEATURE COMPONENT TESTS ===
+Command: pnpm --filter mobile test apps/mobile/src/features/privacy/__tests__/privacy.test.tsx
+
+Output:
+PASS src/features/privacy/__tests__/privacy.test.tsx (7.027 s)
+  D3 Privacy Centre Screen
+    ✓ renders title, subtitle, and all 4 consent options with plain language (324 ms)
+    ✓ renders model training disclaimer explaining trained models cannot be untrained (183 ms)
+    ✓ toggles consent when user switches Improve AI toggle (65 ms)
+    ✓ handles "Download my data" request and shows 24h expiration link (114 ms)
+    ✓ opens confirmation modal for Delete Practice Text emphasizing skills are kept (366 ms)
+    ✓ opens OTP modal for Delete Account with 30-day notice and handles confirmation (148 ms)
+    ✓ back button navigates back to previous screen (67 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        7.627 s
+
+Result: All 7 UI component and interaction tests passed cleanly.

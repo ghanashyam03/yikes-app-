@@ -1,0 +1,34 @@
+=== BUILD AUDIT: pnpm install --frozen-lockfile && pnpm check ===
+Command: pnpm install --frozen-lockfile
+Output:
+Scope: all 7 workspace projects
+Lockfile is up to date, resolution step is skipped
+Done in 257ms using pnpm v12.10.1
+Result: 0 exit code
+
+Command: pnpm check
+Output:
+$ pnpm run lint && pnpm run typecheck && pnpm run test
+$ eslint .
+Done with zero lint errors.
+
+$ pnpm -r run typecheck
+Scope: 6 of 7 workspace projects
+packages/content typecheck$ tsc --noEmit: Done
+packages/db typecheck$ tsc --noEmit: Done
+packages/shared typecheck$ tsc --noEmit: Done
+apps/mobile typecheck$ tsc --noEmit: Done
+services/gateway typecheck$ tsc --noEmit: Done
+packages/ai-prompts typecheck$ tsc --noEmit: Done
+All packages passed strict TypeScript typecheck.
+
+$ pnpm -r run test
+Scope: 6 of 7 workspace projects
+packages/content test: 1 passed (1 test)
+packages/db test: 3 passed (12 tests)
+packages/shared test: 6 passed (56 tests)
+packages/ai-prompts test: 4 passed (51 tests)
+services/gateway test: 11 passed (48 tests)
+apps/mobile test: 17 passed (83 tests)
+
+Result: Exit code 0, all suites green across all workspaces.
