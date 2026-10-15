@@ -121,3 +121,36 @@ None. All 5 acceptance checks were executed and passed with command logs saved i
 - Full expo-router navigation tabs and route stubs will be created in [T-04].
 
 ## Fix rounds (left empty by the Builder; filled by the Fixer)
+
+### Fix round 1
+
+#### Issue 1: Metro web bundle resolution fails with HTTP 404 in monorepo
+- **What changed**: Updated `apps/mobile/metro.config.js` so that `config.watchFolders` watches `monorepoRoot` instead of only `path.resolve(monorepoRoot, 'packages')`. This ensures Metro's file watcher includes `<monorepoRoot>/node_modules/.pnpm/` where symlinked package entries reside in a pnpm monorepo.
+- **Files**:
+  - `apps/mobile/metro.config.js`
+- **Commit**: `475514a` ("T-00: fix issue 1 watch monorepoRoot in metro.config.js")
+- **Evidence**:
+  - `pnpm --filter mobile web` started and HTTP request for the web bundle no longer returns HTTP 404 Not Found.
+  - `pnpm check` exited 0.
+
+#### Issue 2: Dependency versions unpinned across package manifests
+- **What changed**: Removed semver range prefixes (`^` and `~`) across all package manifests (`package.json`, `apps/mobile/package.json`, `services/gateway/package.json`, `packages/shared/package.json`, `packages/db/package.json`, `packages/content/package.json`, `packages/ai-prompts/package.json`). Added `*.tsbuildinfo` to `.gitignore` and removed previously committed `*.tsbuildinfo` files from git tracking. Ran `pnpm install` and regenerated `pnpm-lock.yaml` with strictly pinned dependencies.
+- **Files**:
+  - `package.json`
+  - `apps/mobile/package.json`
+  - `services/gateway/package.json`
+  - `packages/shared/package.json`
+  - `packages/db/package.json`
+  - `packages/content/package.json`
+  - `packages/ai-prompts/package.json`
+  - `pnpm-lock.yaml`
+  - `.gitignore`
+  - `packages/ai-prompts/tsconfig.tsbuildinfo` (deleted)
+  - `packages/content/tsconfig.tsbuildinfo` (deleted)
+  - `packages/db/tsconfig.tsbuildinfo` (deleted)
+  - `packages/shared/tsconfig.tsbuildinfo` (deleted)
+  - `services/gateway/tsconfig.tsbuildinfo` (deleted)
+- **Commit**: `66dbb1d` ("T-00: fix issue 2 pin dependency versions across manifests")
+- **Evidence**:
+  - `pnpm install --frozen-lockfile` exited 0 (lockfile is clean and up to date).
+  - `pnpm check` exited 0 (ESLint, TypeScript across all 6 workspace packages, Vitest unit tests, Fastify health inject test, and mobile layout smoke test all passed).

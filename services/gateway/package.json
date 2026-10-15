@@ -10,12 +10,12 @@
   },
   "dependencies": {
     "@yikes/shared": "workspace:*",
-    "fastify": "^5.2.1"
+    "fastify": "5.2.1"
   },
   "devDependencies": {
-    "@types/node": "^20.17.19",
-    "tsx": "^4.19.2",
-    "typescript": "^5.7.2",
-    "vitest": "^3.0.5"
+    "@types/node": "20.17.19",
+    "tsx": "4.19.2",
+    "typescript": "5.7.2",
+    "vitest": "3.0.5"
   }
 }

@@ -10,3 +10,4 @@ android/
 Thumbs.db
 *.log
 docs/tasks/**/evidence/*.mp4
+*.tsbuildinfo
