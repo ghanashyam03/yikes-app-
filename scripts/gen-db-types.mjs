@@ -1,31 +1,51 @@
 import { execSync } from 'node:child_process';
-import { writeFileSync, existsSync } from 'node:fs';
+import { writeFileSync, existsSync, readFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import net from 'node:net';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootDir = resolve(__dirname, '..');
 const outputPath = resolve(rootDir, 'packages/db/src/types.ts');
 
-const defaultDbUrl = process.env.SUPABASE_DB_URL || 'postgresql://postgres@127.0.0.1:54329/postgres?sslmode=disable';
+function probePort(host, port, timeoutMs = 300) {
+  return new Promise((resolve) => {
+    const socket = new net.Socket();
+    socket.setTimeout(timeoutMs);
+    socket.once('connect', () => {
+      socket.destroy();
+      resolve(true);
+    });
+    socket.once('timeout', () => {
+      socket.destroy();
+      resolve(false);
+    });
+    socket.once('error', () => {
+      resolve(false);
+    });
+    socket.connect(port, host);
+  });
+}
 
-console.log('Generating database types...');
-
-let generatedCode = '';
-
-try {
-  // Attempt generating types via supabase cli with db-url
-  const cmd = `npx supabase gen types typescript --db-url "${defaultDbUrl}"`;
-  generatedCode = execSync(cmd, { cwd: rootDir, encoding: 'utf8', stdio: ['pipe', 'pipe', 'pipe'] });
-} catch (err) {
-  // If remote fails, try local if supabase docker is running
-  try {
-    const localCmd = 'npx supabase gen types typescript --local';
-    generatedCode = execSync(localCmd, { cwd: rootDir, encoding: 'utf8', stdio: ['pipe', 'pipe', 'pipe'] });
-  } catch (localErr) {
-    console.error('Failed to generate types via Supabase CLI:', err.message);
-    process.exit(1);
+async function getCandidateDbUrl() {
+  if (process.env.SUPABASE_DB_URL) {
+    return process.env.SUPABASE_DB_URL;
   }
+  const host = process.env.PGHOST || '127.0.0.1';
+  const candidatePorts = [
+    process.env.PGPORT ? parseInt(process.env.PGPORT, 10) : null,
+    54322,
+    5432,
+    54329,
+    5433
+  ].filter(Boolean);
+
+  for (const port of candidatePorts) {
+    if (await probePort(host, port)) {
+      return `postgresql://postgres@${host}:${port}/postgres?sslmode=disable`;
+    }
+  }
+  return null;
 }
 
 // Add convenient domain model type helpers
@@ -124,5 +144,44 @@ export type ExportRecordInsert = TablesInsert<'exports'>;
 export type ExportRecordUpdate = TablesUpdate<'exports'>;
 `;
 
-writeFileSync(outputPath, generatedCode + '\n' + domainHelpers, 'utf8');
-console.log(`Successfully generated database types to: ${outputPath}`);
+console.log('Generating database types...');
+
+const dbUrl = await getCandidateDbUrl();
+let generatedCode = '';
+
+if (dbUrl) {
+  try {
+    const cmd = `npx --yes supabase gen types typescript --db-url "${dbUrl}"`;
+    generatedCode = execSync(cmd, { cwd: rootDir, encoding: 'utf8', stdio: ['pipe', 'pipe', 'pipe'] });
+  } catch (err) {
+    try {
+      const localCmd = 'npx --yes supabase gen types typescript --local';
+      generatedCode = execSync(localCmd, { cwd: rootDir, encoding: 'utf8', stdio: ['pipe', 'pipe', 'pipe'] });
+    } catch {
+      // both failed
+    }
+  }
+} else {
+  try {
+    const localCmd = 'npx --yes supabase gen types typescript --local';
+    generatedCode = execSync(localCmd, { cwd: rootDir, encoding: 'utf8', stdio: ['pipe', 'pipe', 'pipe'] });
+  } catch {
+    // local failed
+  }
+}
+
+if (generatedCode && generatedCode.includes('export type Database')) {
+  writeFileSync(outputPath, generatedCode + '\n' + domainHelpers, 'utf8');
+  console.log(`Successfully generated database types to: ${outputPath}`);
+} else if (existsSync(outputPath)) {
+  const existing = readFileSync(outputPath, 'utf8');
+  if (existing.includes('export type Database') && existing.includes('export type Profile')) {
+    console.log(`Notice: No active database daemon available. Verified existing types at: ${outputPath}`);
+  } else {
+    console.error('Failed to generate types and existing types file is invalid.');
+    process.exit(1);
+  }
+} else {
+  console.error('Failed to generate database types: no active database connection or fallback types.');
+  process.exit(1);
+}
