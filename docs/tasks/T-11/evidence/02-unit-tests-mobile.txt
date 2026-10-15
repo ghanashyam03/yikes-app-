@@ -1,0 +1,22 @@
+﻿pnpm.exe : $ jest --watchAll=false src/features/onboarding/
+At C:\Users\ghana\AppData\Roaming\npm\pnpm.ps1:14 char:3
++   & "$basedir/node_modules/pnpm/pnpm.exe"   $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ($ jest --watchA...res/onboarding/:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+(node:13852) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS src/features/onboarding/__tests__/guestMerger.test.ts
+(node:14988) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS src/features/onboarding/__tests__/store.test.ts
+(node:32360) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS src/features/onboarding/__tests__/screens.test.tsx (6.985 s)
+
+Test Suites: 3 passed, 3 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        8.556 s, estimated 12 s
+Ran all test suites matching /src\\features\\onboarding\\/i.
