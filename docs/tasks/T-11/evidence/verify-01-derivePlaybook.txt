@@ -1,0 +1,14 @@
+$ pnpm --filter @yikes/shared test src/playbook/__tests__/derivePlaybook.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/shared
+
+ ✓ src/playbook/__tests__/derivePlaybook.test.ts (6 tests) 11ms
+   ✓ derivePlaybook > handles answer set 1: all-skipped returning documented defaults
+   ✓ derivePlaybook > handles answer set 2: active student with straight coach and high difficulty tolerance
+   ✓ derivePlaybook > handles answer set 3: reserved working professional with gentle coach
+   ✓ derivePlaybook > handles answer set 4: custom anchor and funny coach
+   ✓ derivePlaybook > handles answer set 5: moderate quiz answers + high confidence deeper profile nudge
+   ✓ derivePlaybook > handles answer set 6: easy quiz comfort + low confidence deeper profile nudge
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)

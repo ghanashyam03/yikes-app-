@@ -1,0 +1,24 @@
+$ pnpm check
+$ pnpm run lint && pnpm run typecheck && pnpm run test
+$ eslint .
+$ pnpm -r run typecheck
+Scope: 6 of 7 workspace projects
+packages/ai-prompts typecheck: Done
+packages/db typecheck: Done
+packages/content typecheck: Done
+packages/shared typecheck: Done
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+
+$ pnpm -r run test
+Scope: 6 of 7 workspace projects
+packages/db test: 3 passed (12 tests)
+packages/content test: 1 passed (1 test)
+packages/shared test: 6 passed (56 tests)
+packages/ai-prompts test: 4 passed (51 tests)
+services/gateway test: 10 passed (41 tests)
+apps/mobile test: 16 passed (76 tests)
+
+Total Test Suites: 40 passed, 40 total
+Total Tests: 237 passed, 237 total
+pnpm check exited with code 0.

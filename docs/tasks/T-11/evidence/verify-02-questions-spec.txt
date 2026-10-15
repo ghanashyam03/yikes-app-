@@ -1,0 +1,25 @@
+$ pnpm --filter @yikes/shared test src/playbook/__tests__/questions.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/shared
+
+ ✓ src/playbook/__tests__/questions.test.ts (17 tests) 22ms
+   ✓ Specification Conformance > proves exactly 14 questions exist with matching IDs q1 to q14
+   ✓ Specification Conformance > proves Q1 matches spec: Goals, up to 3, with 8 specific options
+   ✓ Specification Conformance > proves Q2 matches spec: Goals, top 2, with 8 specific options
+   ✓ Specification Conformance > proves Q3 matches spec: Goals, Moment form with 4 types
+   ✓ Specification Conformance > proves Q4 matches spec: Context with Student, Working, Both, Other
+   ✓ Specification Conformance > proves Q5 matches spec: Energy slider 1 to 5, Charged to Need a day alone
+   ✓ Specification Conformance > proves Q6 matches spec: Energy single-choice think vs speak
+   ✓ Specification Conformance > proves Q7 matches spec: Energy replay, forget, feel mostly fine
+   ✓ Specification Conformance > proves Q8 matches spec: Worry with 5 defined worries
+   ✓ Specification Conformance > proves Q9 matches spec: Comfort slider 1 to 5, Easy to Very hard
+   ✓ Specification Conformance > proves Q10 matches spec: Style talking/texting register
+   ✓ Specification Conformance > proves Q11 matches spec: Style coach tone Gentle, Straight, Funny
+   ✓ Specification Conformance > proves Q12 matches spec: Habit sessions a week (2..5)
+   ✓ Specification Conformance > proves Q13 matches spec: Habit times of day
+   ✓ Specification Conformance > proves Q14 matches spec: Habit routine anchors + custom option
+   ✓ Specification Conformance > proves Deeper profile contains the 8 exact statements from the spec
+   ✓ Specification Conformance > proves firstStepsLibrary contains 24 small real-world steps graded 1 to 5
+
+ Test Files  1 passed (1)
+      Tests  17 passed (17)
