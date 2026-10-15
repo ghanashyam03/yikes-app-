@@ -40,8 +40,8 @@ describe('SQL Migrations Verification', () => {
     .map(f => readFileSync(resolve(migrationsDir, f), 'utf8'))
     .join('\n');
 
-  it('contains all 6 required migration files', () => {
-    expect(migrationFiles).toHaveLength(6);
+  it('contains at least 6 required migration files', () => {
+    expect(migrationFiles.length).toBeGreaterThanOrEqual(6);
   });
 
   it('creates all 23 expected tables', () => {

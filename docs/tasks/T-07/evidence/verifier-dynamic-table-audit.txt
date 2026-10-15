@@ -1,0 +1,49 @@
+=== DYNAMIC TABLE AUDIT: EXPORT & DELETION COVERAGE ===
+
+Schema verification across all 7 database migration files in `supabase/migrations/`:
+1. profiles (user_id -> auth.users ON DELETE CASCADE)
+2. consents (user_id -> auth.users ON DELETE CASCADE)
+3. notification_prefs (user_id -> auth.users ON DELETE CASCADE)
+4. entitlements (user_id -> auth.users ON DELETE CASCADE)
+5. deletion_requests (user_id -> auth.users ON DELETE CASCADE)
+6. exports (user_id -> auth.users ON DELETE CASCADE)
+7. playbooks (user_id -> auth.users ON DELETE CASCADE)
+8. skills_progress (user_id -> auth.users ON DELETE CASCADE)
+9. sessions_log (user_id -> auth.users ON DELETE CASCADE)
+10. attempts (user_id -> auth.users ON DELETE CASCADE)
+11. turns (attempt_id -> attempts ON DELETE CASCADE)
+12. coach_feedback (attempt_id -> attempts ON DELETE CASCADE)
+13. ai_feedback (user_id -> auth.users ON DELETE CASCADE)
+14. moments (user_id -> auth.users ON DELETE CASCADE)
+15. energy_checkins (user_id -> auth.users ON DELETE CASCADE)
+16. micro_reps (user_id -> auth.users ON DELETE CASCADE)
+17. debriefs (user_id -> auth.users ON DELETE CASCADE)
+18. ladder_rungs (user_id -> auth.users ON DELETE CASCADE)
+19. journal_entries (user_id -> auth.users ON DELETE CASCADE)
+20. weekly_letters (user_id -> auth.users ON DELETE CASCADE)
+21. ai_calls (telemetry - service-role only)
+22. safety_events (telemetry - service-role only)
+23. ai_usage_daily (user_id -> auth.users ON DELETE CASCADE)
+
+Total public tables: 23
+
+Dynamic Deletion Audit:
+- Tested in `services/gateway/src/routes/privacy/__tests__/privacy.test.ts`
+- Seeds user rows across ALL 23 tables.
+- Invokes `deleteUserAccount(supabase, userId, { otpToken, bypassOtpInTest: true })`.
+- Iterates over all 23 tables and confirms 0 rows remain associated with userA.
+- Result: PASS.
+
+Data Export Audit:
+- User-owned tables aggregated: 17 direct tables + 2 child tables (turns, coach_feedback).
+- Each table query explicitly filters `user_id = userId`.
+- Child tables explicitly filter `attempt_id IN (userAttemptIds)`.
+- Foreign user data leak test: Seeding user A and user B verifies user A's export contains 0 traces of user B's attempts, turns, playbooks, or transcripts.
+- Result: PASS.
+
+Authorization & Tenant Isolation:
+- `POST /v1/privacy/export`: uses `request.userId` from JWT; ignores any body `userId`.
+- `GET /v1/privacy/export/:id`: verifies `data.user_id === request.userId`; returns 403 Forbidden for cross-tenant download attempts.
+- `POST /v1/privacy/delete-text`: uses `request.userId` from JWT.
+- `POST /v1/privacy/delete-account`: uses `request.userId` from JWT.
+- Result: PASS.
