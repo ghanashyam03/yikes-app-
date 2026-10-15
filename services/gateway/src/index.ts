@@ -1,8 +1,11 @@
-import { buildApp } from './app.js';
+import { createAndInitApp } from './app.js';
+import { loadEnv } from './config/env.js';
 
-const app = buildApp();
-const port = Number(process.env.PORT) || 3000;
-const host = process.env.HOST || '0.0.0.0';
+const env = loadEnv();
+const app = await createAndInitApp({ env, enableLogger: true });
+
+const port = env.PORT;
+const host = env.HOST;
 
 try {
   await app.listen({ port, host });

@@ -1,0 +1,1 @@
+﻿Zero hard-coded model IDs found in services/gateway/src/ (Search pattern: 'llama|mistral|meta/|gpt|claude|qwen')

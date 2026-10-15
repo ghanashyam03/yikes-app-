@@ -1,0 +1,96 @@
+﻿Scope: 6 of 7 workspace projects
+packages/ai-prompts typecheck$ tsc --noEmit
+packages/db typecheck$ tsc --noEmit
+packages/content typecheck$ tsc --noEmit
+packages/shared typecheck$ tsc --noEmit
+packages/content typecheck: Done
+packages/db typecheck: Done
+packages/ai-prompts typecheck: Done
+packages/shared typecheck: Done
+apps/mobile typecheck$ tsc --noEmit
+services/gateway typecheck$ tsc --noEmit
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+Scope: 6 of 7 workspace projects
+packages/ai-prompts test$ vitest run
+packages/shared test$ vitest run
+packages/db test$ vitest run
+packages/content test$ vitest run
+packages/shared test: 
+packages/shared test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/shared[39m
+packages/ai-prompts test: 
+packages/shared test: 
+packages/ai-prompts test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/ai-prompts[39m
+packages/ai-prompts test: 
+packages/db test: 
+packages/db test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/db[39m
+packages/db test: 
+packages/content test: 
+packages/content test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/content[39m
+packages/content test: 
+packages/shared test:  [32mΓ£ô[39m src/tokens/tokens.test.ts [2m([22m[2m10 tests[22m[2m)[22m[90m 17[2mms[22m[39m
+packages/shared test:  [32mΓ£ô[39m src/tokens/contrast.test.ts [2m([22m[2m19 tests[22m[2m)[22m[90m 14[2mms[22m[39m
+packages/shared test:  [32mΓ£ô[39m src/version.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 6[2mms[22m[39m
+packages/content test:  [32mΓ£ô[39m src/placeholder.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 6[2mms[22m[39m
+packages/ai-prompts test:  [32mΓ£ô[39m src/placeholder.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 7[2mms[22m[39m
+packages/db test:  [32mΓ£ô[39m src/schema.test.ts [2m([22m[2m5 tests[22m[2m)[22m[90m 14[2mms[22m[39m
+packages/shared test: 
+packages/shared test: [2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+packages/shared test: [2m      Tests [22m [1m[32m30 passed[39m[22m[90m (30)[39m
+packages/shared test: [2m   Start at [22m 23:23:09
+packages/shared test: [2m   Duration [22m 3.78s[2m (transform 539ms, setup 0ms, collect 721ms, tests 37ms, environment 2ms, prepare 2.29s)[22m
+packages/shared test: 
+packages/db test:  [32mΓ£ô[39m src/migrations.test.ts [2m([22m[2m6 tests[22m[2m)[22m[90m 22[2mms[22m[39m
+packages/ai-prompts test: 
+packages/content test: 
+packages/content test: [2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+packages/ai-prompts test: [2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+packages/content test: [2m      Tests [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+packages/ai-prompts test: [2m      Tests [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+packages/ai-prompts test: [2m   Start at [22m 23:23:09
+packages/content test: [2m   Start at [22m 23:23:09
+packages/content test: [2m   Duration [22m 3.80s[2m (transform 123ms, setup 0ms, collect 119ms, tests 6ms, environment 0ms, prepare 636ms)[22m
+packages/ai-prompts test: [2m   Duration [22m 3.83s[2m (transform 120ms, setup 0ms, collect 115ms, tests 7ms, environment 1ms, prepare 679ms)[22m
+packages/ai-prompts test: 
+packages/content test: 
+packages/db test:  [32mΓ£ô[39m src/placeholder.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 7[2mms[22m[39m
+packages/db test: 
+packages/db test: [2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+packages/db test: [2m      Tests [22m [1m[32m12 passed[39m[22m[90m (12)[39m
+packages/db test: [2m   Start at [22m 23:23:09
+packages/db test: [2m   Duration [22m 3.94s[2m (transform 200ms, setup 0ms, collect 320ms, tests 43ms, environment 2ms, prepare 1.71s)[22m
+packages/db test: 
+packages/shared test: Done
+packages/ai-prompts test: Done
+apps/mobile test$ jest --watchAll=false
+services/gateway test$ vitest run
+packages/content test: Done
+packages/db test: Done
+services/gateway test: 
+services/gateway test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway[39m
+services/gateway test: 
+services/gateway test:  [32mΓ£ô[39m src/usage/__tests__/daily-caps.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 11[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/providers/__tests__/fake.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 12[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/queue/__tests__/rate-limiter.test.ts [2m([22m[2m3 tests[22m[2m)[22m[90m 118[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/telemetry/__tests__/logger.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 43[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/structured/__tests__/call-structured.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 21[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/reliability/__tests__/reliability.test.ts [2m([22m[2m6 tests[22m[2m)[22m[90m 282[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/middleware/__tests__/auth.test.ts [2m([22m[2m3 tests[22m[2m)[22m[90m 138[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/app.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 228[2mms[22m[39m
+services/gateway test: 
+services/gateway test: [2m Test Files [22m [1m[32m8 passed[39m[22m[90m (8)[39m
+services/gateway test: [2m      Tests [22m [1m[32m25 passed[39m[22m[90m (25)[39m
+services/gateway test: [2m   Start at [22m 23:23:15
+services/gateway test: [2m   Duration [22m 3.09s[2m (transform 2.00s, setup 0ms, collect 5.58s, tests 852ms, environment 4ms, prepare 3.71s)[22m
+services/gateway test: 
+services/gateway test: Done
+apps/mobile test: PASS src/__tests__/layout.smoke.test.tsx
+apps/mobile test: PASS src/ui/primitives/__tests__/Screen.reducedMotion.test.tsx (6.031 s)
+apps/mobile test: PASS src/ui/primitives/__tests__/primitives.smoke.test.tsx (7.355 s)
+apps/mobile test: 
+apps/mobile test: Test Suites: 3 passed, 3 total
+apps/mobile test: Tests:       11 passed, 11 total
+apps/mobile test: Snapshots:   0 total
+apps/mobile test: Time:        9.639 s
+apps/mobile test: Ran all test suites.
+apps/mobile test: Done
