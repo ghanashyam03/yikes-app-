@@ -1,0 +1,15 @@
+$ pnpm --filter gateway exec node --import tsx -e "import('@yikes/shared/version').then(m => console.log('gateway resolves:', m.version))"
+gateway resolves: 0.0.1
+
+$ pnpm --filter mobile test
+PASS src/__tests__/layout.smoke.test.tsx
+  RootLayout smoke test
+    √ renders root layout without crashing (403 ms)
+    √ resolves @yikes/shared/version in mobile (11 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        4.777 s, estimated 5 s
+Ran all test suites.
+Done

@@ -1,0 +1,25 @@
+$ pnpm --filter mobile web
+$ expo start --web
+Starting project at C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile
+Starting Metro Bundler
+The following packages should be updated for best compatibility with the installed expo version:
+  react-native@0.76.7 - expected version: 0.76.9
+Your project may not work correctly until you install the expected versions of the packages.
+Waiting on http://localhost:8081
+
+$ curl.exe -I http://localhost:8081
+HTTP/1.1 200 OK
+Content-Type: text/html
+Date: Thu, 15 Oct 2026 11:03:11 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Content-Length: 1340
+
+HTML contains script:
+<script src="/node_modules/.pnpm/expo-router@4.0.22_69e7e1e3f960b44f31b8b74f9c905f9d/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.engine=hermes&transform.routerRoot=app&unstable_transformProfile=hermes-stable" defer></script>
+
+$ curl.exe -s "http://localhost:8081/node_modules/.pnpm/expo-router@4.0.22_69e7e1e3f960b44f31b8b74f9c905f9d/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.engine=hermes&transform.routerRoot=app&unstable_transformProfile=hermes-stable"
+HTTP/1.1 404 Not Found
+{"originModulePath":"C:\\Users\\ghana\\OneDrive\\Desktop\\yikes-app!/.","targetModuleName":"./node_modules/.pnpm/expo-router@4.0.22_69e7e1e3f960b44f31b8b74f9c905f9d/node_modules/expo-router/entry","message":"Unable to resolve module ./node_modules/.pnpm/expo-router@4.0.22_69e7e1e3f960b44f31b8b74f9c905f9d/node_modules/expo-router/entry from C:\\Users\\ghana\\OneDrive\\Desktop\\yikes-app!/.: \n\nNone of these files exist:\n  * ..\\..\\node_modules\\.pnpm\\expo-router@4.0.22_69e7e1e3f960b44f31b8b74f9c905f9d\\node_modules\\expo-router\\entry(.web.ts|.ts|.web.tsx|.tsx|.web.mjs|.mjs|.web.js|.js|.web.jsx|.jsx|.web.json|.json|.web.cjs|.cjs|.web.scss|.scss|.web.sass|.sass|.web.css|.css)\n  * ..\\..\\node_modules\\.pnpm\\expo-router@4.0.22_69e7e1e3f960b44f31b8b74f9c905f9d\\node_modules\\expo-router\\entry"}
+
+Cause: apps/mobile/metro.config.js sets config.watchFolders = [path.resolve(monorepoRoot, 'packages')], omitting monorepoRoot (which contains node_modules/.pnpm).

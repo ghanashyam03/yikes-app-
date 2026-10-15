@@ -1,0 +1,17 @@
+1. Node resolution from services/gateway:
+$ cd services/gateway
+$ node --input-type=module -e "import { version } from '@yikes/shared/version'; console.log('Resolved version:', version);"
+Resolved version: 0.0.1
+Exit code: 0
+
+2. Node resolution from apps/mobile:
+$ cd apps/mobile
+$ node --input-type=module -e "import { version } from '@yikes/shared/version'; console.log('Resolved version:', version);"
+Resolved version: 0.0.1
+Exit code: 0
+
+3. Gateway Vitest app.test.ts:
+✓ resolves @yikes/shared/version deep import
+
+4. Mobile Jest layout.smoke.test.tsx:
+✓ resolves @yikes/shared/version in mobile

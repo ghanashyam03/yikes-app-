@@ -1,0 +1,86 @@
+Scope: 6 of 7 workspace projects
+packages/content typecheck$ tsc --noEmit
+packages/ai-prompts typecheck$ tsc --noEmit
+packages/db typecheck$ tsc --noEmit
+packages/shared typecheck$ tsc --noEmit
+packages/content typecheck: Done
+packages/shared typecheck: Done
+packages/db typecheck: Done
+apps/mobile typecheck$ tsc --noEmit
+services/gateway typecheck$ tsc --noEmit
+packages/ai-prompts typecheck: Done
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+Scope: 6 of 7 workspace projects
+packages/ai-prompts test$ vitest run
+packages/content test$ vitest run
+packages/db test$ vitest run
+packages/shared test$ vitest run
+packages/shared test: 
+packages/shared test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/shared[39m
+packages/shared test: 
+packages/ai-prompts test: 
+packages/ai-prompts test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/ai-prompts[39m
+packages/ai-prompts test: 
+packages/content test: 
+packages/content test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/content[39m
+packages/content test: 
+packages/db test: 
+packages/db test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/db[39m
+packages/db test: 
+packages/shared test:  [32m✓[39m src/version.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 6[2mms[22m[39m
+packages/shared test: 
+packages/shared test: [2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+packages/shared test: [2m      Tests [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+packages/shared test: [2m   Start at [22m 17:44:55
+packages/shared test: [2m   Duration [22m 2.35s[2m (transform 187ms, setup 0ms, collect 156ms, tests 6ms, environment 1ms, prepare 597ms)[22m
+packages/shared test: 
+packages/ai-prompts test:  [32m✓[39m src/placeholder.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 6[2mms[22m[39m
+packages/shared test: Done
+apps/mobile test$ jest --watchAll=false
+packages/ai-prompts test: 
+packages/ai-prompts test: [2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+packages/ai-prompts test: [2m      Tests [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+packages/ai-prompts test: [2m   Start at [22m 17:44:55
+packages/ai-prompts test: [2m   Duration [22m 2.58s[2m (transform 330ms, setup 0ms, collect 415ms, tests 6ms, environment 1ms, prepare 759ms)[22m
+packages/ai-prompts test: 
+packages/ai-prompts test: Done
+services/gateway test$ vitest run
+packages/db test:  [32m✓[39m src/placeholder.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 4[2mms[22m[39m
+packages/content test:  [32m✓[39m src/placeholder.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 4[2mms[22m[39m
+packages/content test: 
+packages/db test: 
+packages/db test: [2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+packages/content test: [2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+packages/content test: [2m      Tests [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+packages/db test: [2m      Tests [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+packages/db test: [2m   Start at [22m 17:44:56
+packages/content test: [2m   Start at [22m 17:44:56
+packages/content test: [2m   Duration [22m 2.96s[2m (transform 112ms, setup 0ms, collect 91ms, tests 4ms, environment 0ms, prepare 401ms)[22m
+packages/db test: [2m   Duration [22m 2.95s[2m (transform 111ms, setup 0ms, collect 90ms, tests 4ms, environment 0ms, prepare 392ms)[22m
+packages/content test: 
+packages/db test: 
+packages/db test: Done
+packages/content test: Done
+services/gateway test: 
+services/gateway test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway[39m
+services/gateway test: 
+services/gateway test:  [32m✓[39m src/app.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 67[2mms[22m[39m
+services/gateway test: 
+services/gateway test: [2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+services/gateway test: [2m      Tests [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+services/gateway test: [2m   Start at [22m 17:44:59
+services/gateway test: [2m   Duration [22m 1.54s[2m (transform 108ms, setup 0ms, collect 502ms, tests 67ms, environment 0ms, prepare 334ms)[22m
+services/gateway test: 
+services/gateway test: Done
+apps/mobile test: PASS src/__tests__/layout.smoke.test.tsx
+apps/mobile test:   RootLayout smoke test
+apps/mobile test:     √ renders root layout without crashing (286 ms)
+apps/mobile test:     √ resolves @yikes/shared/version in mobile (5 ms)
+apps/mobile test: 
+apps/mobile test: Test Suites: 1 passed, 1 total
+apps/mobile test: Tests:       2 passed, 2 total
+apps/mobile test: Snapshots:   0 total
+apps/mobile test: Time:        3.331 s
+apps/mobile test: Ran all test suites.
+apps/mobile test: Done
