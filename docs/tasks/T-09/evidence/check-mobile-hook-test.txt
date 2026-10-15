@@ -1,0 +1,12 @@
+$ jest --watchAll=false src/features/safety/__tests__/useSafetyRoute.test.ts
+PASS src/features/safety/__tests__/useSafetyRoute.test.ts
+  useSafetyRoute
+    √ navigates to /support when verdict is crisis (21 ms)
+    √ does NOT navigate when verdict is allow (5 ms)
+    √ does NOT navigate to /support when verdict is block (3 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        2.107 s, estimated 3 s
+Ran all test suites matching /src\features\safety\__tests__\useSafetyRoute.test.ts/i.

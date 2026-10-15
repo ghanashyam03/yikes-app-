@@ -1,0 +1,10 @@
+$ vitest run src/safety/__tests__/crisis-terms.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/shared
+
+ ✓ src/safety/__tests__/crisis-terms.test.ts (2 tests) 15ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  01:44:30
+   Duration  1.01s (transform 102ms, setup 0ms, collect 99ms, tests 15ms, environment 0ms, prepare 285ms)
