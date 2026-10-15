@@ -1,0 +1,22 @@
+$ pnpm --filter mobile test src/features/auth/__tests__/acceptance.test.ts
+$ jest --watchAll=false src/features/auth/__tests__/acceptance.test.ts
+PASS src/features/auth/__tests__/acceptance.test.ts
+  T-06 Acceptance Checks
+    Acceptance Check 1: Unit tests for core lifecycle rules
+      √ under-18 path signs out and stores ZERO data (8 ms)
+      √ guest merge ordering executes in sequence before clearing guest state (2 ms)
+    Acceptance Check 2: Local email OTP login against Supabase auth
+      √ successfully requests and verifies email OTP (3 ms)
+    Acceptance Check 3: Profiles row read verification
+      √ queries profiles row only for the authenticated user id (1 ms)
+    Acceptance Check 4: Sign out clears secure storage
+      √ clears stored session tokens on sign out (1 ms)
+    Acceptance Check 5: No token or code appears in logs
+      √ does not log codes, tokens, or credentials to any console stream (3 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        2.387 s, estimated 4 s
+Ran all test suites matching /src\features\auth\__tests__\acceptance.test.ts/i.
+Exit code: 0

@@ -1,0 +1,29 @@
+Privacy and Data Safety Audit for T-06:
+
+1. Under-18 Path Zero-Data Guarantee:
+- Implementation: `apps/mobile/src/features/auth/ageGate.ts:33-40` (`handleUnder18Rejection`)
+  Calls `supabase.auth.signOut()` and `clearGuestSession()`.
+  Zero database records written.
+  Zero localStorage / secureStorage keys created or retained.
+- Verification: `apps/mobile/src/features/auth/__tests__/ageGate.test.ts`
+  Explicitly asserts `supabase.from` is never called, guest session is wiped to null, and `supabase.auth.signOut` is executed.
+
+2. Adult Confirmation Column Strictness:
+- Implementation: `apps/mobile/src/features/auth/ageGate.ts:48-56` (`confirmAdultStatus`)
+  Updates only `{ adult_confirmed_at: timestamp }` on `profiles`.
+- Verification: `apps/mobile/src/features/auth/__tests__/ageGate.test.ts`
+  Asserts that payload does not have `birth_year`, `birthYear`, `dob`, `date_of_birth`, or `birth_date`.
+
+3. Consents Table Isolation & Required Enforcement:
+- Implementation: `apps/mobile/src/features/auth/consentManager.ts:51-89` (`saveConsents`)
+  `required: true` is hardcoded regardless of client input.
+- Verification: `apps/mobile/src/features/auth/__tests__/consents.test.ts`
+  Attempts to pass `required: false`, verifies database write forces `granted: true`.
+
+Command run:
+$ pnpm --filter mobile test src/features/auth/__tests__/ageGate.test.ts src/features/auth/__tests__/consents.test.ts
+PASS src/features/auth/__tests__/consents.test.ts
+PASS src/features/auth/__tests__/ageGate.test.ts
+Test Suites: 2 passed, 2 total
+Tests: 6 passed, 6 total
+Exit code: 0
