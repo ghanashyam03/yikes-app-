@@ -1,0 +1,41 @@
+=== VERIFIER AUDIT: ZERO HARDCODED MODEL IDS & PINNED DEPENDENCIES ===
+1. Grep for model provider prefixes / IDs in packages/ai-prompts:
+Command: git grep -i -E "gpt|claude|llama|nemotron|mistral|qwen|deepseek" packages/ai-prompts
+Exit Code: 1 (Zero matches found)
+
+Command: git grep -i -E "model(_id|id)|model.*=" packages/ai-prompts
+Output:
+packages/ai-prompts/src/__tests__/__snapshots__/prompts.test.ts.snap:exports[`Prompt Builders & Format Specifications > 9. buildWatchExchangePrompt produces stable format for modelled dialogue 1`] = `
+packages/ai-prompts/src/__tests__/__snapshots__/prompts.test.ts.snap:You are the Demonstration Writer in yikes!, building a 40-second modelled dialogue where a communication skill is demonstrated cleanly.
+packages/ai-prompts/src/__tests__/__snapshots__/prompts.test.ts.snap:    "content": "Create a modelled Watch exchange demonstrating "graceful exits". Return JSON only.",
+packages/ai-prompts/src/__tests__/prompts.test.ts:  it('9. buildWatchExchangePrompt produces stable format for modelled dialogue', () => {
+packages/ai-prompts/src/watch-exchange.ts:You are the Demonstration Writer in yikes!, building a 40-second modelled dialogue where a communication skill is demonstrated cleanly.
+packages/ai-prompts/src/watch-exchange.ts:  const userContent = `Create a modelled Watch exchange demonstrating "${skill}". Return JSON only.`;
+
+Result: Only English word "modelled" (British spelling of modeled dialogue) occurs. Absolutely zero hardcoded model IDs in code.
+
+2. Pinned dependencies audit in packages/ai-prompts/package.json:
+Content:
+{
+  "name": "@yikes/ai-prompts",
+  "version": "0.0.1",
+  "type": "module",
+  "exports": {
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "eval": "tsx src/eval/run.ts"
+  },
+  "dependencies": {
+    "zod": "3.24.2"
+  },
+  "devDependencies": {
+    "tsx": "4.19.2",
+    "typescript": "5.7.2",
+    "vitest": "3.0.5"
+  }
+}
+
+Result: All dependency versions strictly pinned ("3.24.2", "4.19.2", "5.7.2", "3.0.5"). No carets (^) or tildes (~).

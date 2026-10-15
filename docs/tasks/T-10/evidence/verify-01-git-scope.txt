@@ -1,0 +1,47 @@
+=== VERIFIER AUDIT: GIT BRANCH & DIFF SCOPE ===
+Command: git branch --show-current
+Output:
+task/T-10-prompts
+
+Command: git log main..HEAD --oneline
+Output:
+e95163a T-10: AI prompts, schemas and eval harness
+
+Command: git diff --stat main...HEAD
+Output:
+ docs/tasks/T-10/REPORT.md                          |  77 +++
+ docs/tasks/T-10/evidence/01-unit-tests.txt         |  13 +
+ docs/tasks/T-10/evidence/02-eval-harness.txt       |  18 +
+ docs/tasks/T-10/evidence/03-pnpm-check.txt         | 113 +++
+ packages/ai-prompts/package.json                   |   7 +-
+ .../__tests__/__snapshots__/prompts.test.ts.snap   | 755 +++++++++++++++++++++
+ packages/ai-prompts/src/__tests__/eval.test.ts     |  59 ++
+ packages/ai-prompts/src/__tests__/prompts.test.ts  | 258 +++++++
+ packages/ai-prompts/src/__tests__/schemas.test.ts  | 320 +++++++++
+ .../ai-prompts/src/__tests__/utilities.test.ts     | 178 +++++
+ packages/ai-prompts/src/coach-feedback.ts          | 163 +++++
+ packages/ai-prompts/src/debrief-questions.ts       |  79 +++
+ packages/ai-prompts/src/debrief-takeaway.ts        |  75 ++
+ packages/ai-prompts/src/eval/fixtures.ts           | 615 +++++++++++++++++
+ packages/ai-prompts/src/eval/harness.ts            | 149 ++++
+ packages/ai-prompts/src/eval/run.ts                |  57 ++
+ packages/ai-prompts/src/partner-turn.ts            | 129 ++++
+ packages/ai-prompts/src/persona-card.ts            |  24 +
+ packages/ai-prompts/src/placeholder.test.ts        |   8 -
+ packages/ai-prompts/src/placeholder.ts             |   1 -
+ packages/ai-prompts/src/prep-card.ts               |  89 +++
+ packages/ai-prompts/src/read-scene.ts              |  98 +++
+ packages/ai-prompts/src/reply-helper.ts            |  90 +++
+ packages/ai-prompts/src/scenario-generator.ts      | 119 ++++
+ packages/ai-prompts/src/types.ts                   |  52 ++
+ packages/ai-prompts/src/utilities.ts               | 163 +++++
+ packages/ai-prompts/src/versions.ts                |  27 +
+ packages/ai-prompts/src/voice-style-summary.ts     |  76 +++
+ packages/ai-prompts/src/watch-exchange.ts          |  97 +++
+ packages/ai-prompts/src/weekly-letter.ts           |  82 +++
+ pnpm-lock.yaml                                     |   7 +
+ 31 files changed, 3988 insertions(+), 10 deletions(-)
+
+Scope Evaluation:
+Files owned: packages/ai-prompts/**, docs/tasks/T-10/**, pnpm-lock.yaml.
+All modified files strictly adhere to owned scope. Zero outside-scope files touched.

@@ -1,0 +1,23 @@
+=== VERIFIER AUDIT: EVAL HARNESS EXECUTION ===
+Command: pnpm --filter ai-prompts eval
+Output:
+$ tsx src/eval/run.ts
+===============================================================================================
+ yikes! AI Prompts & Coach Feedback Eval Harness (10 Diverse Transcripts)
+===============================================================================================
+Fixture ID | Name                         | Tone      | Schema | Quotes | Pivot | Honesty | Result
+-----------------------------------------------------------------------------------------------
+fixture-01 | Awkward Elevator Small Talk  | gentle    | PASS   | PASS   | PASS  | PASS    | ✓ PASS
+fixture-02 | Coffee Chat Catch-up         | straight  | PASS   | PASS   | PASS  | PASS    | ✓ PASS
+fixture-03 | Sprint Planning Update       | funny     | PASS   | PASS   | PASS  | PASS    | ✓ PASS
+fixture-04 | Design Disagreement          | straight  | PASS   | PASS   | PASS  | PASS    | ✓ PASS
+fixture-05 | Networking Mixer Intro       | gentle    | PASS   | PASS   | PASS  | PASS    | ✓ PASS
+fixture-06 | Senior Manager 1:1           | funny     | PASS   | PASS   | PASS  | PASS    | ✓ PASS
+fixture-07 | Dinner Party Group Dynamic   | gentle    | PASS   | PASS   | PASS  | PASS    | ✓ PASS
+fixture-08 | Pacing Personal Share        | straight  | PASS   | PASS   | PASS  | PASS    | ✓ PASS
+fixture-09 | Handling Silence at Lunch    | funny     | PASS   | PASS   | PASS  | PASS    | ✓ PASS
+fixture-10 | Project Wrap Exit            | straight  | PASS   | PASS   | PASS  | PASS    | ✓ PASS
+===============================================================================================
+Summary: 10/10 PASSED (0 failed)
+===============================================================================================
+Exit Code: 0

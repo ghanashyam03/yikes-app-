@@ -1,0 +1,24 @@
+=== VERIFIER AUDIT: AI-PROMPTS UNIT TESTS ===
+Command: pnpm --filter @yikes/ai-prompts test
+Output:
+$ vitest run
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/ai-prompts
+
+ ✓ src/__tests__/utilities.test.ts (14 tests) 15ms
+ ✓ src/__tests__/eval.test.ts (3 tests) 21ms
+ ✓ src/__tests__/schemas.test.ts (23 tests) 23ms
+ ✓ src/__tests__/prompts.test.ts (11 tests) 20ms
+
+ Test Files  4 passed (4)
+      Tests  51 passed (51)
+   Start at  02:33:40
+   Duration  1.58s (transform 620ms, setup 0ms, collect 1.40s, tests 79ms, environment 2ms, prepare 1.44s)
+Exit Code: 0
+
+Unit Test Verifications Verified:
+1. Schemas accept good and reject bad samples: Verified (23 tests across all 12 schemas).
+2. verifyQuotes catches paraphrased and invented quotes: Verified (accepts exact, whitespace-insensitive matches; rejects altered grammar and phantom lines).
+3. Mood clamp enforces 0.15 step limit: Verified (within delta preserved; exceeding clamped to +-0.15; bounded to [0.0, 1.0]).
+4. Stage median calculation: Verified (conservative for 1-2 votes, median of last 3 for >=3 votes, defaults to 'starting').
+5. Prompt builder snapshot tests: Verified (all 11 prompt builders match snapshot and contain required labeled sections).

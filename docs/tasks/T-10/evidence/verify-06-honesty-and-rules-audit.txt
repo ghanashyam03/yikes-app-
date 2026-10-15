@@ -1,0 +1,55 @@
+=== VERIFIER AUDIT: HONESTY RULES, FIELD ALIGNMENT & SPEC CHECKS ===
+
+1. Field Name Agreement (Prompt Output Format vs Zod Schema):
+- PartnerTurn: { reply, thought, mood: { engagement, rapport, patience, exitPressure }, wantsToEnd, cue } -> exact match with PartnerTurnOutputSchema.
+- CoachFeedback: { intro, worked: [{ quote, why }], pivot: { quote, whatHappened, rewrite } | null, tryNext, skillVotes: [{ skill, stage, reason }], partnerArc } -> exact match with CoachFeedbackSchema.
+- PrepCard: { openers: [string, string], questions: [string, string], exitLine, recoverySuggestion, quietBreakIdea } -> exact match with PrepCardSchema.
+- DebriefQuestions: { questions: string[] (min 4, max 5) } -> exact match with DebriefQuestionsSchema.
+- DebriefTakeaway: { takeaway, coreEssence, oneNextFocus } -> exact match with DebriefTakeawaySchema.
+- ReplyHelper: { readings: [string, string], disclaimer: "I can't know what they meant", replies: { warm, direct, light } } -> exact match with ReplyHelperSchema.
+- WeeklyLetter: { letter (<=150 words), wordCount, patternNoticed, nextFocus } -> exact match with WeeklyLetterSchema.
+- ScenarioGenerator: { title, setting, situation, userGoal, partnerPersona (PersonaCardSchema), difficulty, openingLine } -> exact match with ScenarioGeneratorSchema.
+- WatchExchange: { title, skillDemonstrated, dialogue: [{ speaker, text, demonstratesSkill }], targetLineIndex, explanation } -> exact match with WatchExchangeSchema.
+- ReadScene: { scene, dialogue: [{ speaker, text }], candidateThoughts: [string, string, string], trueIndex (0..2), cueNote } -> exact match with ReadSceneSchema.
+- VoiceStyleSummary: { summary, toneMarkers: string[], vocabularyTraits: string[], sentenceRhythm, samplePhrases: string[] } -> exact match with VoiceStyleSummarySchema.
+
+2. Mandatory Uncertainty Sentence in ReplyHelper:
+- File: packages/ai-prompts/src/reply-helper.ts L13:
+  `disclaimer: z.literal("I can't know what they meant")`
+- File: packages/ai-prompts/src/reply-helper.ts L40:
+  `2. The disclaimer field MUST be verbatim: "I can't know what they meant" (this mandatory sentence acknowledges AI limitations).`
+
+3. WeeklyLetter Word Limit (150 words or fewer):
+- File: packages/ai-prompts/src/weekly-letter.ts L6-L12:
+  `letter: z.string().min(1).refine((text) => text.trim().split(/\s+/).filter(Boolean).length <= 150)`
+  `wordCount: z.number().int().positive().max(150)`
+- File: packages/ai-prompts/src/weekly-letter.ts L48:
+  `1. The letter must be 150 words or fewer (strictly enforced).`
+
+4. Coach Honesty Rules (docs/spec/03-ai-system.md Section 14):
+- Verbatim quotes:
+  packages/ai-prompts/src/coach-feedback.ts L85:
+  `1. QUOTES VERBATIM: Every single quote in "worked" and "pivot" MUST be an exact character-for-character substring from the user's lines in the transcript. No paraphrasing, no cleaning up grammar, no trimming into invented phrases. Code strictly validates this!`
+- No praise without a line:
+  packages/ai-prompts/src/coach-feedback.ts L86:
+  `2. NO PRAISE WITHOUT A LINE: Never offer generic praise like "great job" or "you were confident". Every worked item must point directly to a specific quoted line and explain why it succeeded. If nothing worked, keep worked empty and explain kindly.`
+- No shaming:
+  packages/ai-prompts/src/coach-feedback.ts L87:
+  `3. NO SHAMING: Never use red marks, ranking, or phrases like "you failed" or "that was wrong". Unsuccessful moments are treated as "not-yet" with a concrete rewrite.`
+- No labels (shy, anxious, extroverted, introverted):
+  packages/ai-prompts/src/coach-feedback.ts L88:
+  `4. NO LABELS: NEVER label the user or anyone else as "shy", "anxious", "extroverted", or "introverted". Do not diagnose personalities or assign personality types.`
+- No diagnosis/medical words (treat, cure, therapy, diagnose):
+  packages/ai-prompts/src/coach-feedback.ts L89:
+  `5. NO DIAGNOSIS OR MEDICAL WORDS: Strictly NEVER use medical or clinical terms such as "treat", "cure", "therapy", or "diagnose". yikes! is practice, not medical care.`
+- Inner Voice / Simulated Characters / Read Scene signals:
+  packages/ai-prompts/src/read-scene.ts L45:
+  `6. HONESTY: Remember that different people give different signals; the exercise reveals what THIS character was written to think, not a universal rule.`
+- Sensitive topic exclusions (abuse, bereavement, confronting someone who harmed you, harassment reporting, medical news):
+  packages/ai-prompts/src/scenario-generator.ts L48:
+  `3. EXCLUDED TOPICS: Strictly NEVER generate scenarios involving abuse, bereavement, confronting someone who harmed you, harassment reporting, or medical/health bad news.`
+
+5. Utilities Audit:
+- verifyQuotes(feedback, transcript): normalizes whitespace; verifies exact substring matching; catches paraphrased or phantom quotes.
+- clampMood(prev, next, maxStep=0.15): limits each dimension delta to 0.15; bounds to [0, 1].
+- stageFromVotes(votes): takes last 3 votes, sorts discrete stages (starting=0, practicing=1, growing=2, natural=3), returns median.
