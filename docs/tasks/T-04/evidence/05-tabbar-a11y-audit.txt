@@ -1,0 +1,28 @@
+=== T-04 TabBar Accessibility and Touch Targets Audit ===
+Specification requirements from docs/spec/04-design-system.md & TASKS.md T-04:
+1. 48pt minimum touch targets on all interactive elements
+2. accessibilityRole="tab" for tabs, accessibilityRole="button" for center practice action
+3. VoiceOver & TalkBack accessibilityLabel on all tabs and practice button
+4. High contrast across Daylight and Midnight modes
+5. Liquid blob Reanimated worklet respecting Reduced Motion
+6. Icon press bounce with Reanimated worklet
+
+Audit findings:
+- TabItemButton touch target: style.tabButton defines minWidth: 48, minHeight: 48. PASS.
+- TabItemButton accessibilityRole: accessibilityRole="tab". PASS.
+- TabItemButton accessibilityLabel: sourced from navigationCopy.tabs.<tab>.accessibilityLabel. PASS.
+- TabItemButton accessibilityState: { selected: isFocused }. PASS.
+- PracticeCenterButton touch target: width: 48, height: 48, minTouchTarget satisfied. PASS.
+- PracticeCenterButton accessibilityRole: accessibilityRole="button". PASS.
+- PracticeCenterButton accessibilityLabel: navigationCopy.practiceButton.accessibilityLabel. PASS.
+- PracticeCenterButton accessibilityHint: navigationCopy.practiceButton.accessibilityHint. PASS.
+- Reduced Motion guard: reducedMotion checks applied in useEffect and press handlers. PASS.
+- Daylight and Midnight mode tokens: colors.glass.background, colors.glass.border, lightShadows.floating, darkGlows.soft. PASS.
+
+Automated Jest Test:
+- PASS src/navigation/__tests__/routes.test.tsx
+  - √ renders tab bar with 4 tabs and center practice button in daylight mode
+  - √ renders correctly in midnight mode
+  - √ has correct accessibility roles, labels and states on all tabs
+  - √ navigates when an inactive tab is pressed
+  - √ opens /practice modal when center practice button is pressed
