@@ -154,3 +154,18 @@ None. All 5 acceptance checks were executed and passed with command logs saved i
 - **Evidence**:
   - `pnpm install --frozen-lockfile` exited 0 (lockfile is clean and up to date).
   - `pnpm check` exited 0 (ESLint, TypeScript across all 6 workspace packages, Vitest unit tests, Fastify health inject test, and mobile layout smoke test all passed).
+
+### Fix round 2
+
+#### Issue 1: Mobile web JavaScript bundle fails to compile with HTTP 500 (missing @babel/runtime)
+- **What changed**: Added strictly pinned `"@babel/runtime": "7.29.10"` to `apps/mobile/package.json` dependencies (matching the exact runtime version in the workspace lockfile) to resolve Babel transpiler helper calls (`@babel/runtime/helpers/interopRequireDefault`). Added pinned `"query-string": "7.1.3"` to `apps/mobile/package.json` dependencies to satisfy `expo-router`'s unlisted CommonJS dependency in `getPathFromState.js` under pnpm strict isolation. Ran `pnpm install` and updated `pnpm-lock.yaml`.
+- **Files**:
+  - `apps/mobile/package.json`
+  - `pnpm-lock.yaml`
+  - `docs/tasks/T-00/evidence/04-mobile-web-bundle-200.txt`
+- **Commit**: `27721f0` ("T-00: fix issue 1 add pinned babel runtime dependency to mobile")
+- **Evidence**:
+  - `pnpm --filter mobile web` started; fetching `/` returns HTTP 200 HTML with entry bundle script path; fetching the entry bundle returns `HTTP/1.1 200 OK` with `Content-Type: application/javascript; charset=UTF-8` and 4,008,958 bytes of compiled JavaScript. Evidence saved in `docs/tasks/T-00/evidence/04-mobile-web-bundle-200.txt`.
+  - `pnpm install --frozen-lockfile` exited 0 (lockfile clean and verified against supply-chain policies).
+  - `pnpm check` exited 0 (ESLint, TypeScript across all 6 workspace packages, Vitest unit tests, Fastify health inject test, and mobile layout Jest smoke test all passed).
+
