@@ -1,0 +1,17 @@
+﻿
+[1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway[39m
+
+ [32mΓ£ô[39m src/usage/__tests__/daily-caps.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 10[2mms[22m[39m
+ [32mΓ£ô[39m src/providers/__tests__/fake.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 12[2mms[22m[39m
+ [32mΓ£ô[39m src/queue/__tests__/rate-limiter.test.ts [2m([22m[2m3 tests[22m[2m)[22m[90m 118[2mms[22m[39m
+ [32mΓ£ô[39m src/structured/__tests__/call-structured.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 20[2mms[22m[39m
+ [32mΓ£ô[39m src/telemetry/__tests__/logger.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 42[2mms[22m[39m
+ [32mΓ£ô[39m src/reliability/__tests__/reliability.test.ts [2m([22m[2m6 tests[22m[2m)[22m[33m 321[2mms[22m[39m
+ [32mΓ£ô[39m src/middleware/__tests__/auth.test.ts [2m([22m[2m3 tests[22m[2m)[22m[90m 123[2mms[22m[39m
+ [32mΓ£ô[39m src/app.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 230[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m8 passed[39m[22m[90m (8)[39m
+[2m      Tests [22m [1m[32m25 passed[39m[22m[90m (25)[39m
+[2m   Start at [22m 23:21:33
+[2m   Duration [22m 2.28s[2m (transform 1.04s, setup 0ms, collect 3.47s, tests 876ms, environment 3ms, prepare 3.16s)[22m
+
