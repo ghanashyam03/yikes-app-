@@ -238,6 +238,16 @@ describe('T-09 Safety Suite', () => {
       const teleManas = directory.allHelplines.find((h) => h.name.includes('Tele-MANAS'));
       expect(teleManas).toBeDefined();
       expect(teleManas?.phone).toBe('14416 (Toll-Free, 24x7, Multilingual across all Indian languages)');
+      expect(teleManas?.alternatePhone).toBe('1800-891-4416');
+      expect(teleManas?.website).toBe('https://telemanas.mohfw.gov.in');
+
+      // Verify no spurious sub-bullet entries were added as helplines
+      const spuriousNames = ['Alternate Phone', 'Website', 'Verification', 'Chat', 'Phone', 'SMS', 'Hours'];
+      for (const helpline of directory.allHelplines) {
+        for (const spurious of spuriousNames) {
+          expect(helpline.name.toLowerCase()).not.toEqual(spurious.toLowerCase());
+        }
+      }
 
       const lifeline988 = directory.allHelplines.find((h) => h.name.includes('988'));
       expect(lifeline988).toBeDefined();

@@ -8,6 +8,7 @@ export interface CrisisHelpline {
   sms?: string | undefined;
   website?: string | undefined;
   verification?: string | undefined;
+  hours?: string | undefined;
 }
 
 export interface CrisisRegion {
@@ -87,36 +88,25 @@ export function loadCrisisResources(customFilePath?: string): CrisisDirectory {
 
     if (!currentRegion) continue;
 
-    // Helpline name (e.g., "- **Tele-MANAS...**" or "- **Samaritans**")
-    if (line.startsWith('- **') && !line.startsWith('- **Phone') && !line.startsWith('- **SMS')) {
-      if (currentHelpline && currentHelpline.name) {
-        currentRegion.helplines.push(currentHelpline as CrisisHelpline);
-      }
+    // Check if line is indented or sub-bullet
+    const isIndented = /^\s+/.test(rawLine);
+    const isSubBullet =
+      isIndented ||
+      line.startsWith('- **Phone') ||
+      line.startsWith('- **Alternate Phone') ||
+      line.startsWith('- **Website') ||
+      line.startsWith('- **Hours') ||
+      line.startsWith('- **SMS') ||
+      line.startsWith('- **Chat') ||
+      line.startsWith('- **Verification');
 
-      // Check for inline website links like "- **Befrienders Worldwide**: https://..."
-      const inlineMatch = line.match(/-\s+\*\*([^*]+)\*\*:\s*(https?:\/\/\S+)/i);
-      if (inlineMatch && inlineMatch[1] && inlineMatch[2]) {
-        currentHelpline = {
-          name: inlineMatch[1].trim(),
-          website: inlineMatch[2].trim(),
-        };
-        currentRegion.helplines.push(currentHelpline as CrisisHelpline);
-        currentHelpline = null;
-        continue;
-      }
-
-      const nameMatch = line.match(/-\s+\*\*([^*]+)\*\*/);
-      if (nameMatch && nameMatch[1]) {
-        currentHelpline = {
-          name: nameMatch[1].trim(),
-        };
-      }
-      continue;
-    }
-
-    // Detail lines
-    if (currentHelpline) {
-      if (line.startsWith('- **Phone**:') || line.startsWith('- **Phone / WhatsApp**:') || line.startsWith('- **Phone & Text**:')) {
+    // Detail lines under current helpline
+    if (currentHelpline && isSubBullet) {
+      if (
+        line.startsWith('- **Phone**:') ||
+        line.startsWith('- **Phone / WhatsApp**:') ||
+        line.startsWith('- **Phone & Text**:')
+      ) {
         const val = line.split(':').slice(1).join(':').trim();
         currentHelpline.phone = val;
       } else if (line.startsWith('- **Alternate Phone**:')) {
@@ -128,10 +118,41 @@ export function loadCrisisResources(customFilePath?: string): CrisisDirectory {
       } else if (line.startsWith('- **Website**:') || line.startsWith('- **Chat**:')) {
         const val = line.split(':').slice(1).join(':').trim();
         currentHelpline.website = val;
+      } else if (line.startsWith('- **Hours**:')) {
+        const val = line.split(':').slice(1).join(':').trim();
+        currentHelpline.hours = val;
       } else if (line.startsWith('- **Verification**:')) {
         const val = line.split(':').slice(1).join(':').trim();
         currentHelpline.verification = val;
       }
+      continue;
+    }
+
+    // Top-level helpline (must NOT have leading whitespace, strictly matches ^-\s+\*\*)
+    if (!isIndented && /^-\s+\*\*/.test(rawLine) && !isSubBullet) {
+      if (currentHelpline && currentHelpline.name) {
+        currentRegion.helplines.push(currentHelpline as CrisisHelpline);
+        currentHelpline = null;
+      }
+
+      // Check for inline website links like "- **Befrienders Worldwide**: https://..."
+      const inlineMatch = line.match(/^-\s+\*\*([^*]+)\*\*:\s*(https?:\/\/\S+)/i);
+      if (inlineMatch && inlineMatch[1] && inlineMatch[2]) {
+        currentRegion.helplines.push({
+          name: inlineMatch[1].trim(),
+          website: inlineMatch[2].trim(),
+        });
+        currentHelpline = null;
+        continue;
+      }
+
+      const nameMatch = line.match(/^-\s+\*\*([^*]+)\*\*/);
+      if (nameMatch && nameMatch[1]) {
+        currentHelpline = {
+          name: nameMatch[1].trim(),
+        };
+      }
+      continue;
     }
   }
 
