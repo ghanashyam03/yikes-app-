@@ -131,7 +131,14 @@ importers:
         version: 5.7.2
 
   packages/ai-prompts:
+    dependencies:
+      zod:
+        specifier: 3.24.2
+        version: 3.24.2
     devDependencies:
+      tsx:
+        specifier: 4.19.2
+        version: 4.19.2
       typescript:
         specifier: 5.7.2
         version: 5.7.2

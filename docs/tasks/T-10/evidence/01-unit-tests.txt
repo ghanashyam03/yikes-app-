@@ -1,0 +1,13 @@
+﻿
+[1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/ai-prompts[39m
+
+ [32mΓ£ô[39m src/__tests__/utilities.test.ts [2m([22m[2m14 tests[22m[2m)[22m[90m 17[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/eval.test.ts [2m([22m[2m3 tests[22m[2m)[22m[90m 19[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/schemas.test.ts [2m([22m[2m23 tests[22m[2m)[22m[90m 18[2mms[22m[39m
+ [32mΓ£ô[39m src/__tests__/prompts.test.ts [2m([22m[2m11 tests[22m[2m)[22m[90m 20[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m4 passed[39m[22m[90m (4)[39m
+[2m      Tests [22m [1m[32m51 passed[39m[22m[90m (51)[39m
+[2m   Start at [22m 02:29:18
+[2m   Duration [22m 1.50s[2m (transform 669ms, setup 0ms, collect 1.42s, tests 74ms, environment 2ms, prepare 1.37s)[22m
+
