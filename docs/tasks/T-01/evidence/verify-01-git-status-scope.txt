@@ -1,0 +1,49 @@
+$ git branch --show-current
+task/T-01-spec
+
+$ git log main..HEAD --oneline
+26ad808 T-01: spec import and split
+
+$ git diff --stat main...HEAD
+ docs/design/README.md                              | 258 +++++++++++++++++++++
+ docs/spec/01-product.md                            |  82 +++++++
+ docs/spec/02-auth-onboarding.md                    |  42 ++++
+ docs/spec/03-ai-system.md                          |  80 +++++++
+ docs/spec/04-design-system.md                      |  40 ++++
+ docs/spec/05-screens-core.md                       |  50 ++++
+ docs/spec/05-screens-launch-quiz.md                |  36 +++
+ docs/spec/05-screens-realworld-ai-progress.md      |  38 +++
+ docs/spec/05-screens-settings-system.md            |  30 +++
+ docs/spec/06-data-safety.md                        |  38 +++
+ docs/spec/07-content.md                            |  20 ++
+ docs/spec/08-acceptance.md                         |  46 ++++
+ docs/spec/GLOSSARY.md                              |  98 ++++++++
+ docs/spec/INDEX.md                                 |  25 ++
+ docs/tasks/DECISIONS.md                            |  46 ++++
+ docs/tasks/T-00/VERIFY.md                          |  64 +++++
+ .../tasks/T-00/evidence/verify-01-pnpm-install.txt |   6 +
+ docs/tasks/T-00/evidence/verify-02-pnpm-check.txt  |  55 +++++
+ .../T-00/evidence/verify-03-gateway-health.txt     |  14 ++
+ .../evidence/verify-04-mobile-web-bundle-404.txt   |  25 ++
+ docs/tasks/T-00/evidence/verify-05-deep-import.txt |  17 ++
+ .../evidence/verify-06-unpinned-dependencies.txt   |  46 ++++
+ .../evidence/verify-round2-01-pnpm-install.txt     |   6 +
+ .../T-00/evidence/verify-round2-02-pnpm-check.txt  |  47 ++++
+ .../evidence/verify-round2-03-gateway-health.txt   |  12 +
+ .../verify-round2-04-mobile-web-bundle-500.txt     |  32 +++
+ .../T-00/evidence/verify-round2-05-deep-import.txt |  15 ++
+ .../verify-round2-06-pinned-dependencies.txt       |  11 +
+ .../evidence/verify-round3-01-pnpm-install.txt     |   6 +
+ .../T-00/evidence/verify-round3-02-pnpm-check.txt  |  42 ++++
+ .../evidence/verify-round3-03-gateway-health.txt   |  14 ++
+ .../verify-round3-04-mobile-web-bundle-200.txt     |  48 ++++
+ .../T-00/evidence/verify-round3-05-deep-import.txt |  19 ++
+ .../verify-round3-06-pinned-dependencies.txt       |   9 +
+ docs/tasks/T-01/REPORT.md                          |  57 +++++
+ docs/tasks/T-01/evidence/check-spec-split.txt      |  47 ++++
+ docs/tasks/T-01/evidence/pnpm-check.txt            |  86 +++++++
+ scripts/check-spec-split.mjs                       | 173 ++++++++++++++
+ 38 files changed, 1780 insertions(+)
+
+Scope note: Outside-scope edits to docs/tasks/T-00/* are pre-existing untracked verifier artifacts declared in REPORT.md.
+No application source code, package.json, or test files were modified.

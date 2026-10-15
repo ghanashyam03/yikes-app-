@@ -1,0 +1,29 @@
+$ vitest run src/tokens/contrast.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/shared
+
+ ✓ src/tokens/contrast.test.ts (19 tests) 14ms
+   ✓ WCAG AA Token Contrast Ratios > Daylight Theme > Ink text on Base background passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Daylight Theme > Ink text on Surface 1 passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Daylight Theme > Ink text on Surface 2 passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Daylight Theme > Muted text on Surface 1 passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Daylight Theme > Muted text on Base background passes WCAG AA (ratio >= 3.0)
+   ✓ WCAG AA Token Contrast Ratios > Daylight Theme > Ink text on Ember gradient start passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Daylight Theme > Ink text on Ember pop passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Daylight Theme > Ink text on Lilac tint passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Daylight Theme > Ink text on Mint tint passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Daylight Theme > Ink text on Honey tint passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Daylight Theme > Ink text on Sky tint passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Daylight Theme > Ink text on Bubblegum tint passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Midnight Theme > Ink text on Base background passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Midnight Theme > Ink text on Surface 1 passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Midnight Theme > Ink text on Surface 2 passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Midnight Theme > Muted text on Base background passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Midnight Theme > Muted text on Surface 1 passes WCAG AA (ratio >= 4.5)
+   ✓ WCAG AA Token Contrast Ratios > Midnight Theme > Muted text on Surface 2 passes WCAG AA (ratio >= 3.0)
+   ✓ WCAG AA Token Contrast Ratios > Midnight Theme > Ink text on Primary Ember button passes WCAG AA (ratio >= 4.5)
+
+ Test Files  1 passed (1)
+      Tests  19 passed (19)
+   Start at  18:23:16
+   Duration  1.18s

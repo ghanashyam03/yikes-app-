@@ -1,0 +1,20 @@
+$ vitest run src/tokens/tokens.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/shared
+
+ ✓ src/tokens/tokens.test.ts (10 tests) 16ms
+   ✓ Daylight palette matches spec values
+   ✓ Midnight palette matches spec values
+   ✓ Accent palettes match spec values with tint and pop
+   ✓ Spacing adheres to 8pt scale
+   ✓ Radii match spec requirements: card 28, sheet 36, pill 9999
+   ✓ Motion springs and durations match spec exactly
+   ✓ Haptic map includes required interactions
+   ✓ Focus ring recipe matches 3px Lilac ring with 2px offset
+   ✓ Shadow and glow recipes match spec requirements
+   ✓ Typography matches required font families and fallbacks
+
+ Test Files  1 passed (1)
+      Tests  10 passed (10)
+   Start at  18:23:16
+   Duration  1.12s

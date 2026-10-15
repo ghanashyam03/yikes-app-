@@ -1,0 +1,55 @@
+$ pnpm --filter mobile web
+$ expo start --web
+Starting project at C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile
+Starting Metro Bundler
+
+$ curl.exe -i http://localhost:8081/dev/gallery
+HTTP/1.1 200 OK
+X-Content-Type-Options: nosniff
+Surrogate-Control: no-store
+Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate
+Pragma: no-cache
+Expires: 0
+Content-Type: text/html
+Vary: Accept-Encoding
+Date: Thu, 15 Oct 2026 12:51:14 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+Transfer-Encoding: chunked
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>yikes!</title>
+    <style id="expo-reset">
+      html, body { height: 100%; }
+      body { overflow: hidden; }
+      #root { display: flex; height: 100%; flex: 1; }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script src="/node_modules/.pnpm/expo-router@4.0.17_c28802e069c69de2fa2aef53cf432117/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.engine=hermes&transform.routerRoot=app&unstable_transformProfile=hermes-stable" defer></script>
+  </body>
+</html>
+
+$ curl.exe -I "http://localhost:8081/node_modules/.pnpm/expo-router@4.0.17_c28802e069c69de2fa2aef53cf432117/node_modules/expo-router/entry.bundle?platform=web&dev=true&hot=false&transform.engine=hermes&transform.routerRoot=app&unstable_transformProfile=hermes-stable"
+HTTP/1.1 200 OK
+X-Content-Type-Options: nosniff
+Surrogate-Control: no-store
+Cache-Control: no-store, no-cache, must-revalidate, proxy-revalidate
+Pragma: no-cache
+Expires: 0
+X-Metro-Files-Changed-Count: 950
+X-Metro-Delta-ID: 97f0f2b21bfa4b7f
+Content-Location: http://localhost:8081/node_modules/.pnpm/expo-router@4.0.17_c28802e069c69de2fa2aef53cf432117/node_modules/expo-router/entry.bundle//&platform=web&dev=true&hot=false&transform.engine=hermes&transform.routerRoot=app&unstable_transformProfile=hermes-stable
+Content-Type: application/javascript; charset=UTF-8
+Content-Length: 6017694
+Date: Thu, 15 Oct 2026 12:51:49 GMT
+Connection: keep-alive
+
+Bundle download verification: 6,017,694 bytes compiled, Content-Type application/javascript; charset=UTF-8. Dev gallery route renders in both modes with theme toggle.

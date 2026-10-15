@@ -1,0 +1,13 @@
+$ jest --watchAll=false src/ui/primitives/__tests__/Screen.reducedMotion.test.tsx
+PASS src/ui/primitives/__tests__/Screen.reducedMotion.test.tsx
+  Screen Ambient Bubble Backdrop Reduced Motion
+    √ logic proves ambient drifting halts when Reduced Motion is enabled (2 ms)
+    √ renders ambient-drift-stopped element when Reduced Motion is forced on (128 ms)
+    √ renders ambient-drift-running element when Reduced Motion is false (24 ms)
+    √ renders Screen container with child text and backdrop (31 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        4.82 s
+Ran all test suites matching /src\\ui\\primitives\\__tests__\\Screen.reducedMotion.test.tsx/i.

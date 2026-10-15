@@ -1,0 +1,49 @@
+$ node scripts/check-spec-split.mjs
+=== Checking Spec Split Integrity ===
+
+--- Acceptance Check 2: Section 1 to 17 Distribution ---
+  Section  1 -> 01-product.md
+  Section  2 -> 01-product.md
+  Section  3 -> 02-auth-onboarding.md
+  Section  4 -> 02-auth-onboarding.md
+  Section  5 -> 03-ai-system.md
+  Section  6 -> 01-product.md
+  Section  7 -> 01-product.md
+  Section  8 -> 04-design-system.md
+  Section  9 -> 05-screens-launch-quiz.md
+  Section 10 -> 05-screens-core.md
+  Section 11 -> 05-screens-realworld-ai-progress.md
+  Section 12 -> 05-screens-settings-system.md
+  Section 13 -> 06-data-safety.md
+  Section 14 -> 03-ai-system.md
+  Section 15 -> 07-content.md
+  Section 16 -> 06-data-safety.md
+  Section 17 -> 08-acceptance.md
+PASS: Every spec section 1 to 17 appears in exactly one file.
+
+--- Acceptance Check 1: Content Comparison with SPEC_FULL.md ---
+PASS: Content is 100% IDENTICAL (42061 bytes match byte-for-byte).
+
+--- Acceptance Check 3: INDEX.md Link Resolution ---
+Found 15 links in INDEX.md:
+  [OK] `SPEC_FULL.md` -> ./SPEC_FULL.md (resolved to docs\spec\SPEC_FULL.md)
+  [OK] `01-product.md` -> ./01-product.md (resolved to docs\spec\01-product.md)
+  [OK] `02-auth-onboarding.md` -> ./02-auth-onboarding.md (resolved to docs\spec\02-auth-onboarding.md)
+  [OK] `03-ai-system.md` -> ./03-ai-system.md (resolved to docs\spec\03-ai-system.md)
+  [OK] `04-design-system.md` -> ./04-design-system.md (resolved to docs\spec\04-design-system.md)
+  [OK] `05-screens-launch-quiz.md` -> ./05-screens-launch-quiz.md (resolved to docs\spec\05-screens-launch-quiz.md)
+  [OK] `05-screens-core.md` -> ./05-screens-core.md (resolved to docs\spec\05-screens-core.md)
+  [OK] `05-screens-realworld-ai-progress.md` -> ./05-screens-realworld-ai-progress.md (resolved to docs\spec\05-screens-realworld-ai-progress.md)
+  [OK] `05-screens-settings-system.md` -> ./05-screens-settings-system.md (resolved to docs\spec\05-screens-settings-system.md)
+  [OK] `06-data-safety.md` -> ./06-data-safety.md (resolved to docs\spec\06-data-safety.md)
+  [OK] `07-content.md` -> ./07-content.md (resolved to docs\spec\07-content.md)
+  [OK] `08-acceptance.md` -> ./08-acceptance.md (resolved to docs\spec\08-acceptance.md)
+  [OK] `GLOSSARY.md` -> ./GLOSSARY.md (resolved to docs\spec\GLOSSARY.md)
+  [OK] `crisis-resources.md` -> ./crisis-resources.md (resolved to docs\spec\crisis-resources.md)
+  [OK] `SPEC_FULL.md` -> ./SPEC_FULL.md (resolved to docs\spec\SPEC_FULL.md)
+PASS: All INDEX.md links resolve successfully.
+
+========================================
+ALL ACCEPTANCE CHECKS PASSED CLEANLY
+========================================
+Exit Code: 0

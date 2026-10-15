@@ -1,0 +1,31 @@
+=== VERIFIER AUDIT: GLOSSARY, DECISIONS & DESIGN GUIDE ===
+
+--- 1. GLOSSARY.md Audit ---
+  Term: Playbook         -> PRESENT
+  Term: Moment           -> PRESENT
+  Term: Session          -> PRESENT
+  Term: Inner Voice      -> PRESENT
+  Term: Coach            -> PRESENT
+  Term: Gap              -> PRESENT
+  Term: Quiet Ladder     -> PRESENT
+  Term: Battery          -> PRESENT
+  Term: Rhythm           -> PRESENT
+  Term: Partner          -> PRESENT
+  Term: Persona          -> PRESENT
+  Term: Wince            -> PRESENT
+GLOSSARY Terms Result: PASS (All 12 terms defined)
+
+--- 2. DECISIONS.md Audit ---
+  Decision: Launch market & language       -> SATISFIED
+  Decision: Streak behavior                -> SATISFIED
+  Decision: Plus subscription pricing      -> SATISFIED
+  Decision: Calendar integration           -> SATISFIED
+DECISIONS Result: PASS (All 4 open decisions defined with specified defaults)
+
+--- 3. docs/design/README.md Audit ---
+Found 74 SVG mockups in docs/design.
+Screens covered: 74/74
+Design Guide Result: PASS (All 74 SVG screens individually analyzed with spec resolutions)
+
+OVERALL AUDIT RESULT: PASS
+Exit Code: 0
