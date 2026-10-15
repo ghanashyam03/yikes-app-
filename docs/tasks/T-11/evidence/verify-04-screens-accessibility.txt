@@ -1,0 +1,19 @@
+$ pnpm --filter mobile test src/features/onboarding/__tests__/screens.test.tsx
+
+PASS src/features/onboarding/__tests__/screens.test.tsx (6.823 s)
+  Onboarding Screens
+    Intro Screen (A3)
+      ✓ renders headline, preview tiles, and navigation actions (119 ms)
+    Quiz Step Screen (A4)
+      ✓ renders question 1, disables Next until option is selected, and allows Skip (184 ms)
+      ✓ renders slider question with null initial value and enables Next upon touch (27 ms)
+    Deeper Profile Screen (A5)
+      ✓ renders statement, 5 score options, and continues to next statement or completes (51 ms)
+    Playbook Reveal Screen (A8)
+      ✓ renders all 5 playbook tiles with edit buttons and Save button (108 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        7.506 s
+Ran all test suites matching /src\features\onboarding\__tests__\screens.test.tsx/i.

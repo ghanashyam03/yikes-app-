@@ -1,0 +1,15 @@
+﻿
+[1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/shared[39m
+
+ [32mΓ£ô[39m src/version.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 5[2mms[22m[39m
+ [32mΓ£ô[39m src/tokens/contrast.test.ts [2m([22m[2m19 tests[22m[2m)[22m[90m 9[2mms[22m[39m
+ [32mΓ£ô[39m src/safety/__tests__/crisis-terms.test.ts [2m([22m[2m3 tests[22m[2m)[22m[90m 22[2mms[22m[39m
+ [32mΓ£ô[39m src/playbook/__tests__/derivePlaybook.test.ts [2m([22m[2m6 tests[22m[2m)[22m[90m 13[2mms[22m[39m
+ [32mΓ£ô[39m src/playbook/__tests__/questions.test.ts [2m([22m[2m17 tests[22m[2m)[22m[90m 23[2mms[22m[39m
+ [32mΓ£ô[39m src/tokens/tokens.test.ts [2m([22m[2m10 tests[22m[2m)[22m[90m 12[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m6 passed[39m[22m[90m (6)[39m
+[2m      Tests [22m [1m[32m56 passed[39m[22m[90m (56)[39m
+[2m   Start at [22m 04:20:26
+[2m   Duration [22m 1.52s[2m (transform 826ms, setup 0ms, collect 1.39s, tests 84ms, environment 3ms, prepare 2.66s)[22m
+

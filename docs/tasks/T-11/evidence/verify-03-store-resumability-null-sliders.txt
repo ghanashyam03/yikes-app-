@@ -1,0 +1,15 @@
+$ pnpm --filter mobile test src/features/onboarding/__tests__/store.test.ts
+
+PASS src/features/onboarding/__tests__/store.test.ts
+  useOnboardingStore
+    ✓ acceptance check 4: proves sliders start strictly null (6 ms)
+    ✓ sets and autosaves answers and derives playbook (4 ms)
+    ✓ acceptance check 2: reload resumes at the same question with the same answers (4 ms)
+    ✓ supports updating deeper profile answers and updates derived playbook (1 ms)
+    ✓ supports editing a specific derived playbook field (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        2.455 s
+Ran all test suites matching /src\features\onboarding\__tests__\store.test.ts/i.
