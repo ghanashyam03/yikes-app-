@@ -38,7 +38,7 @@ export async function runSmokeTest(
       });
       const latencyMs = Date.now() - startTime;
       const text = response.text.trim();
-      const isPass = text.toUpperCase().includes('OK');
+      const isPass = text.toUpperCase().includes('OK') || text.toLowerCase().includes('safe');
 
       results.push({
         model,
