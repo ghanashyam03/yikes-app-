@@ -1,0 +1,16 @@
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!
+
+ ✓ docs/tasks/T-09/evidence/verifier-round2-audit.test.ts (8 tests) 49ms
+   ✓ Issue 1: verifies "apni jaan lena chahta hu" and "apni jaan lena chahti hu" and all novel crisis phrases are flagged in rule pre-filter, normal mode, and degraded mode
+   ✓ Verifies false-positive rate is 0% on ordinary awkward-conversation text
+   ✓ Issue 2: verifies loadCrisisResources() parses Tele-MANAS with alternatePhone and website intact and 0 spurious helplines
+   ✓ Verifies crisis resources loader rejects unverified and missing files
+   ✓ Verifies prompt injection guard neutralizes 10 injection strings
+   ✓ Verifies scenario exclusion validator for 5 domains
+   ✓ Verifies output guard rejects human claims and banned clinical terms
+   ✓ Verifies zero message text in safety_events database inserts and log streams
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  02:11:23
+   Duration  1.74s (transform 323ms, setup 0ms, collect 731ms, tests 49ms, environment 0ms, prepare 369ms)
