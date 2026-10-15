@@ -1,0 +1,92 @@
+$ pnpm check
+$ pnpm run lint && pnpm run typecheck && pnpm run test
+$ eslint .
+$ pnpm -r run typecheck
+Scope: 6 of 7 workspace projects
+packages/ai-prompts typecheck$ tsc --noEmit
+packages/db typecheck$ tsc --noEmit
+packages/shared typecheck$ tsc --noEmit
+packages/content typecheck$ tsc --noEmit
+packages/db typecheck: Done
+packages/ai-prompts typecheck: Done
+packages/shared typecheck: Done
+services/gateway typecheck$ tsc --noEmit
+apps/mobile typecheck$ tsc --noEmit
+packages/content typecheck: Done
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+$ pnpm -r run test
+Scope: 6 of 7 workspace projects
+packages/ai-prompts test$ vitest run
+packages/content test$ vitest run
+packages/db test$ vitest run
+packages/shared test$ vitest run
+packages/content test: 
+packages/content test:  RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/content
+packages/content test: 
+packages/ai-prompts test: 
+packages/ai-prompts test:  RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/ai-prompts
+packages/ai-prompts test: 
+packages/shared test: 
+packages/db test: 
+packages/shared test:  RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/shared
+packages/shared test: 
+packages/db test:  RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/db
+packages/db test: 
+packages/db test:  ✓ src/placeholder.test.ts (1 test) 6ms
+packages/ai-prompts test:  ✓ src/placeholder.test.ts (1 test) 7ms
+packages/shared test:  ✓ src/version.test.ts (1 test) 6ms
+packages/ai-prompts test: 
+packages/ai-prompts test:  Test Files  1 passed (1)
+packages/ai-prompts test:       Tests  1 passed (1)
+packages/ai-prompts test:    Start at  17:49:06
+packages/ai-prompts test:    Duration  2.83s (transform 176ms, setup 0ms, collect 164ms, tests 7ms, environment 1ms, prepare 651ms)
+packages/ai-prompts test: 
+packages/db test: 
+packages/db test:  Test Files  1 passed (1)
+packages/db test:       Tests  1 passed (1)
+packages/db test:    Start at  17:49:06
+packages/db test:    Duration  2.86s (transform 205ms, setup 0ms, collect 203ms, tests 6ms, environment 1ms, prepare 641ms)
+packages/db test: 
+packages/shared test: 
+packages/shared test:  Test Files  1 passed (1)
+packages/shared test:       Tests  1 passed (1)
+packages/shared test:    Start at  17:49:06
+packages/shared test:    Duration  2.89s (transform 186ms, setup 0ms, collect 195ms, tests 6ms, environment 1ms, prepare 679ms)
+packages/shared test: 
+packages/db test: Done
+packages/shared test: Done
+apps/mobile test$ jest --watchAll=false
+services/gateway test$ vitest run
+packages/ai-prompts test: Done
+packages/content test:  ✓ src/placeholder.test.ts (1 test) 7ms
+packages/content test: 
+packages/content test:  Test Files  1 passed (1)
+packages/content test:       Tests  1 passed (1)
+packages/content test:    Start at  17:49:06
+packages/content test:    Duration  3.56s (transform 107ms, setup 0ms, collect 105ms, tests 7ms, environment 1ms, prepare 374ms)
+packages/content test: 
+packages/content test: Done
+services/gateway test: 
+services/gateway test:  RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+services/gateway test: 
+services/gateway test:  ✓ src/app.test.ts (2 tests) 72ms
+services/gateway test: 
+services/gateway test:  Test Files  1 passed (1)
+services/gateway test:       Tests  2 passed (2)
+services/gateway test:    Start at  17:49:10
+services/gateway test:    Duration  1.67s (transform 120ms, setup 0ms, collect 515ms, tests 72ms, environment 0ms, prepare 410ms)
+services/gateway test: 
+services/gateway test: Done
+apps/mobile test: PASS src/__tests__/layout.smoke.test.tsx
+apps/mobile test:   RootLayout smoke test
+apps/mobile test:     √ renders root layout without crashing (241 ms)
+apps/mobile test:     √ resolves @yikes/shared/version in mobile (8 ms)
+apps/mobile test: 
+apps/mobile test: Test Suites: 1 passed, 1 total
+apps/mobile test: Tests:       2 passed, 2 total
+apps/mobile test: Snapshots:   0 total
+apps/mobile test: Time:        3.295 s
+apps/mobile test: Ran all test suites.
+apps/mobile test: Done
+Exit Code: 0
