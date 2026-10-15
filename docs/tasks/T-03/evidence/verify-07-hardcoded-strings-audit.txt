@@ -1,0 +1,23 @@
+Hardcoded String Audit Findings in apps/mobile/src/ui/components/
+
+1. apps/mobile/src/ui/components/ErrorBubble.tsx:112
+   Prop accessibilityLabel: "Retry"
+   Violation: Hardcoded accessibility string not imported from componentsCopy.
+
+2. apps/mobile/src/ui/components/ErrorBubble.tsx:117
+   JSX Text: "Retry"
+   Violation: Hardcoded button label not imported from componentsCopy.
+
+3. apps/mobile/src/ui/components/BatteryGauge.tsx:213-214
+   accessibilityActions labels:
+   - "Increase battery level by 10%"
+   - "Decrease battery level by 10%"
+   Violation: Hardcoded accessibility action labels not sourced from componentsCopy.
+
+4. apps/mobile/src/ui/components/RhythmRing.tsx:121
+   accessibilityValue text: `${clampedFilled} of ${clampedTotal} sessions`
+   Violation: Hardcoded value description string in JSX/props rather than function in componentsCopy.
+
+Rule reference:
+AGENTS.md Line 48: "Every user-facing string lives in apps/mobile/src/copy/<feature>.ts."
+TASKS.md T-03: "Every user-facing string in apps/mobile/src/copy/components.ts."

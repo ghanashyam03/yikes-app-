@@ -1,0 +1,12 @@
+$ pnpm --filter mobile test
+$ jest --watchAll=false
+PASS src/__tests__/layout.smoke.test.tsx
+PASS src/ui/primitives/__tests__/Screen.reducedMotion.test.tsx (5.107 s)
+PASS src/ui/primitives/__tests__/primitives.smoke.test.tsx (6.264 s)
+PASS src/ui/components/__tests__/components.test.tsx (6.923 s)
+
+Test Suites: 4 passed, 4 total
+Tests:       19 passed, 19 total
+Snapshots:   0 total
+Time:        8.63 s, estimated 10 s
+Ran all test suites.

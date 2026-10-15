@@ -1,0 +1,32 @@
+$ git branch --show-current
+task/T-05-schema
+
+$ git log main..HEAD --oneline
+0cd484d T-05: database schema, RLS and generated types
+
+$ git diff --stat main...HEAD
+ docs/tasks/T-05/REPORT.md                          |  61 +++
+ docs/tasks/T-05/evidence/check-db-reset.txt        |  13 +
+ docs/tasks/T-05/evidence/check-db-test.txt         |  96 ++++
+ docs/tasks/T-05/evidence/check-gen-db-types.txt    |   5 +
+ docs/tasks/T-05/evidence/check-pnpm-check.txt      |  43 ++
+ packages/db/src/migrations.test.ts                 |  77 +++
+ packages/db/src/schema.test.ts                     |  99 ++++
+ packages/db/src/types.ts                           | 584 +++++++++++++++++++++
+ scripts/db-test.mjs                                | 414 ++++++++++++++-
+ scripts/gen-db-types.mjs                           | 128 +++++
+ .../migrations/20261015000001_core_accounts.sql    |  79 +++
+ .../20261015000002_practice_and_sessions.sql       |  82 +++
+ .../20261015000003_moments_and_journal.sql         |  80 +++
+ .../20261015000004_ai_telemetry_and_safety.sql     |  36 ++
+ .../migrations/20261015000005_rls_policies.sql     | 206 ++++++++
+ supabase/migrations/20261015000006_functions.sql   |  14 +
+ supabase/seed.sql                                  |  75 +++
+ 17 files changed, 2091 insertions(+), 1 deletion(-)
+
+Contract Files Owned:
+supabase/**, packages/db/**, scripts/gen-db-types.mjs, scripts/db-test.mjs
+
+Scope Audit:
+All changed files fall strictly within Files Owned or task documentation/evidence.
+Zero outside-scope edits.

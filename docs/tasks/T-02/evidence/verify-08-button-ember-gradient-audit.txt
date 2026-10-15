@@ -1,0 +1,40 @@
+=== VERIFIER BUTTON EMBER GRADIENT AUDIT ===
+Task: T-02
+Specification: TASKS.md line 50 ("Button (primary Ember gradient with Ink text...)") & 04-design-system.md
+
+1. Code Inspection: apps/mobile/src/ui/primitives/Button.tsx
+- Svg, Defs, LinearGradient, Stop, Rect imported from 'react-native-svg':
+  Line 10: import Svg, { Defs, LinearGradient, Stop, Rect } from 'react-native-svg';
+
+- Gradient condition:
+  Line 85: const showEmberGradient = variant === 'primary' && !disabled && !selected;
+  Line 96: backgroundColor = showEmberGradient ? 'transparent' : accents.ember.pop;
+  Line 97: textColor = colors.ink;
+
+- Gradient rendering in Pressable:
+  Lines 171-181:
+  {showEmberGradient && (
+    <Svg style={StyleSheet.absoluteFill}>
+      <Defs>
+        <LinearGradient id="emberGrad" x1="0" y1="0" x2="1" y2="1">
+          <Stop offset="0" stopColor={accents.ember.gradient.start} />
+          <Stop offset="1" stopColor={accents.ember.gradient.end} />
+        </LinearGradient>
+      </Defs>
+      <Rect width="100%" height="100%" rx={radii.pill} fill="url(#emberGrad)" />
+    </Svg>
+  )}
+
+2. Color Tokens: packages/shared/src/tokens/colors.ts
+  Lines 70-73:
+  gradient: {
+    start: '#D67C62',
+    end: '#B85842'
+  }
+
+3. Text Color:
+  Line 97 sets textColor = colors.ink, which complies with "primary Ember gradient with Ink text".
+  WCAG AA contrast test confirms Ink on Primary Ember button passes AA (contrast ratio >= 4.5).
+
+AUDIT RESULT: PASS
+Primary Button variant correctly renders the SVG Ember linear gradient (#D67C62 to #B85842) with Ink text.

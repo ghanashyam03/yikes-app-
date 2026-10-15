@@ -1,0 +1,23 @@
+COMMAND:
+pnpm --filter @yikes/gateway smoke
+
+OUTPUT:
+$ tsx src/scripts/smoke.ts
+Running AI Gateway model smoke test...
+◇ injected env (17) from ..\..\.env.local
+Provider: nvidia
+Base URL: https://integrate.api.nvidia.com/v1
+
+--- MODEL SMOKE TEST RESULTS ---
+┌─────────┬─────────────────────────────────────────────────┬────────┬──────────────┬───────────────────────────┐
+│ (index) │ Model                                           │ Status │ Latency (ms) │ Output                    │
+├─────────┼─────────────────────────────────────────────────┼────────┼──────────────┼───────────────────────────┤
+│ 0       │ 'nvidia/nemotron-3-nano-omni-30b-a3b-reasoning' │ 'PASS' │ 1699         │ 'OK'                      │
+│ 1       │ 'nvidia/llama-3.1-nemotron-safety-guard-8b-v3'  │ 'PASS' │ 405          │ '{"User Safety": "safe"}' │
+│ 2       │ 'meta/llama-3.2-11b-vision-instruct'            │ 'PASS' │ 214          │ 'OK'                      │
+│ 3       │ 'nvidia/nemotron-3.5-content-safety'            │ 'PASS' │ 349          │ 'User Safety: safe'       │
+└─────────┴─────────────────────────────────────────────────┴────────┴──────────────┴───────────────────────────┘
+
+Summary: 4 passed, 0 failed (4 total)
+
+EXIT CODE: 0

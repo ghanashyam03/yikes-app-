@@ -1,0 +1,13 @@
+COMMAND:
+pnpm install --frozen-lockfile
+
+OUTPUT:
+Scope: all 7 workspace projects
+? Verifying lockfile against supply-chain policies (1250 entries)...
+[WARN] Request took 10430ms: https://registry.npmjs.org/react-is
+[WARN] Request took 14874ms: https://registry.npmjs.org/react
+✓ Lockfile passes supply-chain policies (1250 entries in 25.3s)
+Lockfile is up to date, resolution step is skipped
+Done in 26.1s using pnpm v12.10.1
+
+EXIT CODE: 0

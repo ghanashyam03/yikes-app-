@@ -1,0 +1,46 @@
+=== VERIFIER PRIMITIVE STATES & CAPABILITIES AUDIT ===
+
+1. Primitive States Audit across Text, Button, Chip, Card, Screen:
+- default: Supported and styled per Soft Pop tokens.
+- pressed: 94% squish spring overshoot implemented using Reanimated worklet spring physics (motion.springs.playful: stiffness 300, damping 26).
+- focused: 3px Lilac ring (#B9A8D9) with 2px offset implemented on Button, Chip, Card via FocusRingContainer.
+- selected: Supported on Button (Lilac tint fill + Lilac base border), Chip (Lilac tint fill + Lilac base border + checkbox role), Card (Lilac tint highlight).
+- disabled: Supported on Button (surface2 background, dashed line border, muted text, non-interactive), Chip, Card.
+- loading: Supported on Button via animated LoadingDots with 3-dot wave cycle and Reduced Motion fallback.
+
+2. Accessibility & Touch Targets:
+- Button: minHeight 48, minWidth 48 (meets 48pt minimum).
+- Chip: minHeight 48, minWidth 48 (meets 48pt minimum).
+- Card: minHeight 48, minWidth 48 (meets 48pt minimum).
+- Icon: minHeight 48, minWidth 48 touch container.
+- Text: maxFontSizeMultiplier={2.0} supports 200% dynamic font scaling without clipping.
+
+3. Icons SVG Audit:
+All 10 required icons implemented in apps/mobile/src/ui/icons/:
+- HomeIcon (home)
+- PathIcon (path)
+- CalendarIcon (calendar)
+- PersonIcon (person)
+- PlusIcon (plus)
+- BackIcon (back)
+- SendIcon (send)
+- CheckIcon (check)
+- CloseIcon (close)
+- BatteryIcon (battery)
+Each icon uses 2.5px rounded stroke, SVG vector definitions, and an active state accent dot / fill.
+
+4. Smoke Tests Execution:
+$ pnpm --filter mobile test -- src/ui/primitives/__tests__/primitives.smoke.test.tsx
+PASS src/ui/primitives/__tests__/primitives.smoke.test.tsx (5.904 s)
+  UI Primitives and States
+    √ renders Text with roles and highlighter swipe (43 ms)
+    √ renders Button in all states: default, loading, disabled, focused, selected (200 ms)
+    √ renders Chip with selection and pop interaction (10 ms)
+    √ renders Card with glossy bead and tint variants (6 ms)
+    √ renders all 10 required SVG icons (36 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+
+AUDIT RESULT: PASS
+All required primitives, states, accessibility targets, and SVG icons fully conform.
