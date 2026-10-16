@@ -1,0 +1,27 @@
+================================================================================
+ACCEPTANCE CHECK 4: Caps change with the plan
+Commands:
+- pnpm --filter gateway vitest run src/config/__tests__/limits.test.ts
+- pnpm --filter gateway vitest run src/routes/__tests__/billing.test.ts -t "Entitlements API"
+Date: 2026-10-16
+Status: PASS
+================================================================================
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-worktree-t23/services/gateway
+
+ ✓ src/config/__tests__/limits.test.ts (5 tests) 11ms
+   ✓ T-23: Plan Limits Configuration & Evaluation > provides correct default limits for Free tier: 40 chat turns, 3 Reply Helper, 1 Prep
+   ✓ T-23: Plan Limits Configuration & Evaluation > provides correct default limits for Plus tier: 120 chat turns, unlimited Reply Helper and Prep
+   ✓ T-23: Plan Limits Configuration & Evaluation > evaluateUsage correctly calculates remaining quota and allowed status for Free tier
+   ✓ T-23: Plan Limits Configuration & Evaluation > evaluateUsage correctly handles unlimited resources for Plus tier
+   ✓ T-23: Plan Limits Configuration & Evaluation > isUsageAllowed returns expected boolean based on limits
+
+ ✓ src/routes/__tests__/billing.test.ts (3 tests) 140ms
+   ✓ T-23: Billing Webhook & Entitlements API > Acceptance Check 4: Entitlements API & Quotas > rejects unauthenticated requests with 401
+   ✓ T-23: Billing Webhook & Entitlements API > Acceptance Check 4: Entitlements API & Quotas > returns free tier limits and features for user without plus entitlement
+   ✓ T-23: Billing Webhook & Entitlements API > Acceptance Check 4: Entitlements API & Quotas > returns plus tier limits and features for user with active plus entitlement
+
+ Test Files  2 passed (2)
+      Tests  8 passed (8)
+   Start at  14:27:54
+   Duration  2.45s

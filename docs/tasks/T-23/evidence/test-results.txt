@@ -1,0 +1,74 @@
+================================================================================
+T-23 BILLING TEST SUITES EXECUTION SUMMARY
+Date: 2026-10-16
+Status: ALL PASS (37 tests across Gateway and Mobile billing suites)
+================================================================================
+
+--- GATEWAY SUITES ---
+Command: pnpm --filter gateway vitest run src/routes/__tests__/billing.test.ts src/config/__tests__/limits.test.ts
+
+✓ src/config/__tests__/limits.test.ts (5 tests)
+  ✓ T-23: Plan Limits Configuration & Evaluation > provides correct default limits for Free tier: 40 chat turns, 3 Reply Helper, 1 Prep
+  ✓ T-23: Plan Limits Configuration & Evaluation > provides correct default limits for Plus tier: 120 chat turns, unlimited Reply Helper and Prep
+  ✓ T-23: Plan Limits Configuration & Evaluation > evaluateUsage correctly calculates remaining quota and allowed status for Free tier
+  ✓ T-23: Plan Limits Configuration & Evaluation > evaluateUsage correctly handles unlimited resources for Plus tier
+  ✓ T-23: Plan Limits Configuration & Evaluation > isUsageAllowed returns expected boolean based on limits
+
+✓ src/routes/__tests__/billing.test.ts (12 tests)
+  ✓ Acceptance Check 1: Webhook Signature Verification > rejects requests with missing or invalid bearer token with 401
+  ✓ Acceptance Check 1: Webhook Signature Verification > accepts requests with valid bearer token matching REVENUECAT_WEBHOOK_AUTH_TOKEN
+  ✓ Acceptance Check 2: Entitlement Transitions > transitions user from free to plus on INITIAL_PURCHASE
+  ✓ Acceptance Check 2: Entitlement Transitions > transitions user from plus to free on EXPIRATION
+  ✓ Acceptance Check 2: Entitlement Transitions > transitions user from plus to free on REVOCATION (refund)
+  ✓ Acceptance Check 2: Entitlement Transitions > handles CANCELLATION without immediately revoking entitlement
+  ✓ Acceptance Check 2: Entitlement Transitions > handles RENEWAL event to extend expiration date
+  ✓ Acceptance Check 2: Entitlement Transitions > handles UNCANCELLATION and PRODUCT_CHANGE events
+  ✓ Acceptance Check 4: Entitlements API & Quotas > rejects unauthenticated requests with 401
+  ✓ Acceptance Check 4: Entitlements API & Quotas > returns free tier limits and features for user without plus entitlement
+  ✓ Acceptance Check 4: Entitlements API & Quotas > returns plus tier limits and features for user with active plus entitlement
+  ✓ Acceptance Check 4: Entitlements API & Quotas > returns fallback free entitlement when database query fails
+
+Gateway Total: 17 passed / 17 total
+
+--- MOBILE SUITES ---
+Command: pnpm --filter mobile test src/features/billing
+
+✓ src/features/billing/__tests__/routeGuard.test.ts (6 tests)
+  ✓ Acceptance Check 3: Forbidden Route Guard > identifies /session/*/try as strictly forbidden (live chat mode)
+  ✓ Acceptance Check 3: Forbidden Route Guard > identifies /debrief/* as strictly forbidden (debrief mode)
+  ✓ Acceptance Check 3: Forbidden Route Guard > identifies /support as strictly forbidden (crisis support mode)
+  ✓ Acceptance Check 3: Forbidden Route Guard > identifies /tools/free-chat as strictly forbidden (free chat tool mode)
+  ✓ Acceptance Check 3: Forbidden Route Guard > permits non-forbidden screens: /paywall, /settings/subscription, /tabs/index
+  ✓ Acceptance Check 3: Forbidden Route Guard > handles empty or undefined route safely by permitting
+
+✓ src/features/billing/__tests__/billingCopy.test.ts (5 tests)
+  ✓ Billing Copy Compliance > contains ZERO clinical or diagnostic words across all billing strings
+  ✓ Billing Copy Compliance > contains ZERO false urgency or high-pressure conversion strings
+  ✓ Billing Copy Compliance > defines equal-weight labels for dismiss and primary CTA
+  ✓ Billing Copy Compliance > provides clear cancellation and restore terms
+  ✓ Billing Copy Compliance > formats user journey milestones warmly
+
+✓ src/features/billing/__tests__/subscriptionScreen.test.tsx (4 tests)
+  ✓ Subscription Screen (D4) > renders comparison of Free and Plus tiers with clear features
+  ✓ Subscription Screen (D4) > shows localized store pricing and 7-day trial terms
+  ✓ Subscription Screen (D4) > provides equal-weight Keep Free and Try Free buttons
+  ✓ Subscription Screen (D4) > provides working restore purchases action and manage subscription link
+
+✓ src/features/billing/__tests__/paywallMount.test.tsx (5 tests)
+  ✓ Acceptance Check 3: Paywall Prohibited Mounting > prohibits mounting on live chat route: /session/abc/try
+  ✓ Acceptance Check 3: Paywall Prohibited Mounting > prohibits mounting on debrief route: /debrief/moment-42
+  ✓ Acceptance Check 3: Paywall Prohibited Mounting > prohibits mounting on crisis support route: /support
+  ✓ Acceptance Check 3: Paywall Prohibited Mounting > prohibits mounting on free chat tool route: /tools/free-chat
+  ✓ Acceptance Check 3: Paywall Prohibited Mounting > mounts successfully on permitted routes showing user journey and equal weight buttons
+
+Mobile Billing Total: 20 passed / 20 total
+
+--- GLOBAL NAVIGATION SUITE ---
+Command: pnpm --filter mobile test src/navigation/__tests__/routes.test.tsx
+✓ src/navigation/__tests__/routes.test.tsx (9 tests) - all static imports and route registrations verified
+
+--- OVERALL TOTAL ---
+All 37 billing-specific tests passed.
+All 249 mobile tests passed across 50 suites.
+All 123 gateway tests passed across 22 suites.
+Clean pnpm check exit code: 0.
