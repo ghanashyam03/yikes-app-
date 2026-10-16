@@ -1,0 +1,14 @@
+$ pnpm --filter @yikes/gateway test src/routes/__tests__/reply.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+
+{"level":40,"time":1792113478816,"pid":31756,"hostname":"ghanashyambook","errorMsg":"Failed structured validation after retry: Schema validation failed: verdict: Required","msg":"Safety model evaluation failed; falling back to degraded rules mode"}
+{"level":40,"time":1792113478854,"pid":31756,"hostname":"ghanashyambook","errorMsg":"Failed structured validation after retry: Schema validation failed: verdict: Required","msg":"Safety model evaluation failed; falling back to degraded rules mode"}
+{"level":40,"time":1792113478898,"pid":31756,"hostname":"ghanashyambook","error":"Provider returned HTTP 500: Internal Server Error","msg":"Vision model failed or unavailable"}
+{"level":40,"time":1792113478904,"pid":31756,"hostname":"ghanashyambook","errorMsg":"Failed structured validation after retry: Schema validation failed: verdict: Required","msg":"Safety model evaluation failed; falling back to degraded rules mode"}
+ ✓ src/routes/__tests__/reply.test.ts (11 tests) 198ms
+
+ Test Files  1 passed (1)
+      Tests  11 passed (11)
+   Start at  06:47:56
+   Duration  2.41s (transform 369ms, setup 0ms, collect 1.21s, tests 198ms, environment 0ms, prepare 339ms)

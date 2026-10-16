@@ -1,0 +1,50 @@
+$ pnpm check
+$ pnpm run lint && pnpm run typecheck && pnpm run test
+
+> yikes@0.0.1 lint C:\Users\ghana\OneDrive\Desktop\yikes-app!
+> eslint .
+
+> yikes@0.0.1 typecheck C:\Users\ghana\OneDrive\Desktop\yikes-app!
+> pnpm -r run typecheck
+
+Scope: 6 of 7 workspace projects
+packages/content typecheck$ tsc --noEmit
+packages/ai-prompts typecheck$ tsc --noEmit
+packages/db typecheck$ tsc --noEmit
+packages/shared typecheck$ tsc --noEmit
+packages/db typecheck: Done
+packages/shared typecheck: Done
+apps/mobile typecheck$ tsc --noEmit
+packages/content typecheck: Done
+packages/ai-prompts typecheck: Done
+services/gateway typecheck$ tsc --noEmit
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+
+> yikes@0.0.1 test C:\Users\ghana\OneDrive\Desktop\yikes-app!
+> pnpm -r run test
+
+Scope: 6 of 7 workspace projects
+packages/content test$ vitest run
+packages/ai-prompts test$ vitest run
+packages/db test$ vitest run
+packages/shared test$ vitest run
+
+packages/shared test:  Test Files  6 passed (6)
+packages/shared test:       Tests  56 passed (56)
+packages/db test: Done
+packages/content test: Done
+packages/shared test: Done
+
+packages/ai-prompts test:  Test Files  4 passed (4)
+packages/ai-prompts test:       Tests  51 passed (51)
+packages/ai-prompts test: Done
+
+services/gateway test:  Test Files  13 passed (13)
+services/gateway test:       Tests  71 passed (71)
+services/gateway test: Done
+
+apps/mobile test:  Test Suites: 20 passed, 20 total
+apps/mobile test:  Tests:       105 passed, 105 total
+apps/mobile test:  Time:        21.133 s
+apps/mobile test: Done
