@@ -40,6 +40,14 @@ export const privacyCopy = {
       plainDetail:
         'Quiet weekly encouragement and notifications about new practice sessions.',
     },
+    voiceMatch: {
+      id: 'voice_match',
+      title: 'Voice Match',
+      description:
+        'Analyzes your practice style to make AI suggestions sound like you, not a generic assistant.',
+      plainDetail:
+        'Summarizes your authentic speaking cadence and tone markers. You can turn this off or clear your data at any time.',
+    },
     toggleAccessibility: (name: string, active: boolean) =>
       `${name} consent toggle, currently ${active ? 'enabled' : 'disabled'}`,
   },

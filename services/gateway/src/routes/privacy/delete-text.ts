@@ -80,6 +80,26 @@ export async function deleteUserText(
         clearedJournals = journalCount ?? 0;
       }
     }
+
+    // Always ensure playbooks.derived.voiceStyle is purged when practice text is deleted
+    try {
+      const { data: pb } = await supabase
+        .from('playbooks')
+        .select('derived')
+        .eq('user_id', userId)
+        .maybeSingle();
+
+      if (pb?.derived && typeof pb.derived === 'object' && 'voiceStyle' in pb.derived) {
+        const updatedDerived = { ...pb.derived };
+        delete (updatedDerived as Record<string, unknown>).voiceStyle;
+        await supabase
+          .from('playbooks')
+          .update({ derived: updatedDerived })
+          .eq('user_id', userId);
+      }
+    } catch (pbErr: unknown) {
+      logger.warn({ userId, errorMsg: String(pbErr) }, 'Failed clearing voiceStyle from playbook');
+    }
   } catch (err: unknown) {
     const msg = err instanceof Error ? err.message : String(err);
     logger.error({ userId, errorMsg: msg }, 'Error during deleteUserText');

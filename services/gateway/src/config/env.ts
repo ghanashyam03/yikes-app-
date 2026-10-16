@@ -53,6 +53,7 @@ const envSchema = z.object({
     .optional()
     .transform((val) => (val ? Number(val) : 8000))
     .pipe(z.number().positive().default(8000)),
+  JOB_SECRET: z.string().optional(),
 });
 
 export type GatewayEnv = z.infer<typeof envSchema>;
