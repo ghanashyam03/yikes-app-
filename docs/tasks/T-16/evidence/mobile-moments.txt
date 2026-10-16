@@ -1,0 +1,36 @@
+$ pnpm --filter @yikes/mobile test src/features/moments
+
+ PASS  src/features/moments/__tests__/momentsRls.test.ts
+  Acceptance Check 1: Multi-tenant RLS for Moments
+    ✓ User A can only read their own moments
+    ✓ User A cannot update moments owned by User B
+    ✓ User A cannot delete moments owned by User B
+    ✓ User A cannot see unlinked candidate calendar events belonging to other users
+    ✓ Prep cards are accessible only by the owner of the moment
+
+ PASS  src/features/moments/__tests__/pocketCard.test.tsx
+  Acceptance Check 4: Pocket card renders offline from cached prep
+    ✓ renders pocket card in offline mode without network connectivity
+    ✓ navigates back to moments when Back button is tapped
+
+ PASS  src/features/moments/__tests__/prepSchema.test.ts
+  Acceptance Check 2: Prep Card output schema adherence
+    ✓ validates structured prep card output conforming to schema
+    ✓ rejects invalid prep card structures missing required fields
+    ✓ provides fallback structure on parse error
+  Calendar Sync JIT & Zero Retention
+    ✓ keeps only selected events and drops unticked events immediately
+    ✓ converts ticked calendar events into moment drafts
+
+ PASS  src/features/moments/__tests__/momentsTab.test.tsx
+  Acceptance Check 5: Moments Tab & Empty State
+    ✓ displays empty state with exact prompt when no moments exist
+    ✓ navigates to add sheet when add button is tapped
+    ✓ renders upcoming and past moments when data is present
+    ✓ renders battery gauge and recovery banner
+
+Test Suites: 4 passed, 4 total
+Tests:       16 passed, 16 total
+Snapshots:   0 total
+Time:        9.134 s
+Ran all test suites matching /src\features\moments/i.

@@ -1,0 +1,25 @@
+$ pnpm --filter @yikes/gateway test src/routes/__tests__/prep.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+
+{"level":30,"time":1792122519037,"pid":12564,"hostname":"ghanashyambook","category":"abuse","msg":"Prep request blocked kindly by scenario exclusion validator"}
+{"level":30,"time":1792122519044,"pid":12564,"hostname":"ghanashyambook","category":"bereavement","msg":"Prep request blocked kindly by scenario exclusion validator"}
+{"level":30,"time":1792122519051,"pid":12564,"hostname":"ghanashyambook","category":"confronting_harm","msg":"Prep request blocked kindly by scenario exclusion validator"}
+{"level":30,"time":1792122519056,"pid":12564,"hostname":"ghanashyambook","category":"harassment_reporting","msg":"Prep request blocked kindly by scenario exclusion validator"}
+{"level":30,"time":1792122519062,"pid":12564,"hostname":"ghanashyambook","category":"medical_news","msg":"Prep request blocked kindly by scenario exclusion validator"}
+ ✓ src/routes/__tests__/prep.test.ts (8 tests) 155ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  09:18:36
+   Duration  2.52s
+
+Test Details:
+✓ POST /v1/prep > returns 401 Unauthorized when Authorization header is missing
+✓ POST /v1/prep > Acceptance Check 2: successfully generates prep card adhering to prepCardOutputSchema
+✓ POST /v1/prep > Acceptance Check 3: excludes scenario with abuse kindly and makes ZERO AI calls
+✓ POST /v1/prep > Acceptance Check 3: excludes scenario with bereavement kindly and makes ZERO AI calls
+✓ POST /v1/prep > Acceptance Check 3: excludes scenario with confronting harm kindly and makes ZERO AI calls
+✓ POST /v1/prep > Acceptance Check 3: excludes scenario with harassment reporting kindly and makes ZERO AI calls
+✓ POST /v1/prep > Acceptance Check 3: excludes scenario with medical news kindly and makes ZERO AI calls
+✓ POST /v1/prep > supports single-item regeneration with targetSection and targetIndex
