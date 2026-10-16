@@ -1,0 +1,59 @@
+=== T-12 VERIFIER AUDIT: SECURITY, SAFETY, & THOUGHT LEAKAGE ===
+
+1. THOUGHT LEAKAGE AUDIT:
+- Inspected services/gateway/src/partner/engine.ts lines 357-366:
+  `executeTurn` returns:
+  {
+    reply: replyText,
+    mood: clampedMood,
+    wantsToEnd,
+    cue: rawOutput.cue,
+    degraded: isDegraded,
+    turnIdx: partnerTurnIdx,
+    turnsCount: partnerTurnIdx + 1,
+  }
+  --> `thought` is stored in database `turns` table (line 342) but strictly excluded from the return payload.
+- Inspected services/gateway/src/routes/partner.ts:
+  - Streaming SSE (lines 181-191):
+    donePayload strictly includes reply, mood, wantsToEnd, cue, degraded, turnIdx, turnsCount. Zero thought field.
+  - JSON mode (line 212): returns `turnResult`. Zero thought field.
+  - `/v1/partner/end` (lines 504-537 in engine.ts):
+    Thoughts are revealed ONLY when `endAttempt` is called after attempt completion.
+  - Test verified in services/gateway/src/partner/__tests__/partner.test.ts #2:
+    Tested with `SECRET_INNER_VOICE_THEY_MUST_NOT_SEE_YET`, confirmed not present in turn response, only present in `/end` response. PASS.
+
+2. SAFETY IN BOTH DIRECTIONS:
+- Inbound user text safety:
+  services/gateway/src/partner/engine.ts line 209:
+  `const safetyCheck = await checkText(userText, 'input', ...)`
+  If `safetyCheck.verdict === 'crisis'`:
+  Attempt marked ended with 'crisis', returns `{ crisis: true }` with NO AI text.
+- Outbound partner reply safety:
+  services/gateway/src/partner/engine.ts line 306:
+  `const guardResult = guardOutput(replyText, 'partner');`
+  services/gateway/src/partner/engine.ts line 314:
+  `const outboundSafety = await checkText(replyText, 'output', ...)`
+  If guard fails or outbound safety != 'allow', replaces with persona authored fallback line.
+- Mobile client safety handling:
+  apps/mobile/src/features/try/useTrySession.ts line 217-220:
+  `if (res.crisis) { handleSafetyVerdict({ verdict: 'crisis' }); return; }`
+  Seamlessly transitions user to fixed Support screen. PASS.
+
+3. JWT AUTHENTICATION ONLY (NO BODY USER ID):
+- POST /v1/partner/start: `const userId = request.userId;` (line 97)
+- POST /v1/partner/turn: `const userId = request.userId;` (line 132)
+- POST /v1/partner/suggest: `const userId = request.userId;` (line 232)
+- POST /v1/partner/hint: `const userId = request.userId;` (line 261)
+- POST /v1/partner/end: `const userId = request.userId;` (line 290)
+- Request schemas in services/gateway/src/partner/types.ts do not accept `userId`. PASS.
+
+4. TURN CAPS:
+- services/gateway/src/partner/engine.ts line 51:
+  - warmup: 4 turns
+  - try / rehearsal: 6 turns
+  - free: 0 (unlimited)
+  - Automatically sets wantsToEnd: true when turn cap is reached. PASS.
+
+5. PINO LOG ZERO MESSAGE TEXT:
+- Log grep shows logger statements in partner engine and routes only log errorMsg, reason, or verdict.
+- Unit test #12 confirmed sensitive user string was not logged in stdout/stderr. PASS.
