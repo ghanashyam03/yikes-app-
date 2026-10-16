@@ -1,0 +1,21 @@
+# UI States & Offline Gap Audit for T-20 (Reply Helper)
+
+Date: 2026-10-16
+Auditor: VERIFIER
+
+Acceptance Check (5) Requirement:
+"All UI states render: paste mode, upload mode, result state with readings and 3 replies, cap reached, offline, and vision-down fallback."
+AGENTS.md Code Conventions (Line 49):
+"Every screen implements loading, empty, error and offline states."
+
+Audit Findings:
+1. Paste mode: Implemented and tested in `replyHelper.test.tsx` (L75, L84).
+2. Upload mode: Implemented and tested in `replyHelper.test.tsx` (L163).
+3. Result state with readings and 3 replies: Implemented and tested in `replyHelper.test.tsx` (L84-L110).
+4. Cap reached: Implemented and tested in `replyHelper.test.tsx` (L250-L267).
+5. Vision-down fallback: Implemented and tested in `replyHelper.test.tsx` (L202-L248).
+6. Offline state: MISSING.
+   - In `apps/mobile/src/features/reply-helper/useReplyHelper.ts`: When a network failure occurs during `requestReplyHelper`, the error is caught by `catch (err: unknown)` on lines 173-175 and falls back to `setError(replyCopy.errors.generic)` ("Couldn’t generate suggestions. Please try again.").
+   - In `apps/mobile/app/tools/reply-helper.tsx`: There is no offline state indicator, offline card, or offline banner.
+   - In `apps/mobile/src/copy/reply.ts`: There is no copy defined for an offline state.
+   - In `apps/mobile/src/features/reply-helper/__tests__/replyHelper.test.tsx`: There are 7 tests total, none of which test or assert an offline state.

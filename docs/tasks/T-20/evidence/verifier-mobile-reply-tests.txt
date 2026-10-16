@@ -1,0 +1,18 @@
+Command: pnpm --filter @yikes/mobile test src/features/reply-helper/__tests__/replyHelper.test.tsx
+Exit Code: 0
+Output:
+PASS src/features/reply-helper/__tests__/replyHelper.test.tsx (6.6 s)
+  T-20: Reply Helper Mobile Screen (C11)
+    √ renders header, segmented controls, and paste input by default (91 ms)
+    √ submits pasted message and renders readings with disclaimer and 3 reply tones (271 ms)
+    √ allows inline editing of a reply suggestion (113 ms)
+    √ saves chosen reply to journal only when Save button is pressed (168 ms)
+    √ handles screenshot selection and shows blur names warning with explicit skip (110 ms)
+    √ offers calm fallback to paste mode when vision model is unavailable (201 ms)
+    √ renders cap reached card when user reaches usage limit (91 ms)
+    √ renders offline state card when network request fails due to offline error (160 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        7.233 s

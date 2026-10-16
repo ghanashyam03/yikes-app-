@@ -1,0 +1,26 @@
+# Privacy, Uncertainty, and Safety Audit for T-20 (Reply Helper)
+
+Date: 2026-10-16
+Auditor: VERIFIER
+
+1. Privacy of Image Handling:
+- Screenshot base64 payloads received by POST /v1/reply/helper are decoded in-memory to Buffer for dimension/size validation and OCR vision prompt formatting.
+- The image Buffer or base64 data is NEVER written to Supabase tables, storage buckets, or local file caches.
+- Telemetry: callLogger is invoked with job: 'reply', logging only metadata (latency_ms, model, prompt_version, status, token_counts).
+- Zero image bytes or extracted message text appear in ai_calls (verified in reply.test.ts lines 267-294).
+- In mobile, saveToJournal (L225-L255 in useReplyHelper.ts) only persists the chosen reply text and tone to journal_entries upon explicit user tap. No image or screenshot is ever persisted.
+
+2. Pinned Dependencies:
+- apps/mobile/package.json line 20: "expo-image-picker": "16.0.6"
+- Verified pinned without ^ or ~ prefix.
+
+3. Uncertainty Language & Product Rules:
+- apps/mobile/src/copy/reply.ts line 43: disclaimer: "I can't know what they meant"
+- services/gateway/src/routes/reply.ts lines 393-395: enforces disclaimer === "I can't know what they meant"
+- packages/ai-prompts/src/reply-helper.ts: schema requires z.literal("I can't know what they meant"), prompts 2 readings and 3 replies in warm/direct/light tones.
+- No clinical terms (treat, cure, therapy, diagnose) in copy or code.
+- No red color used (Honey and Ember tokens used).
+
+4. On-Device Blur:
+- Builder accurately identified native blur limitation and marked UNVERIFIED per contract instruction.
+- Clear privacy warning displayed before upload with an explicit skip option.

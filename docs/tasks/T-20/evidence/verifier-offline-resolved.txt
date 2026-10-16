@@ -1,0 +1,29 @@
+Verification of Fix for Issue 1: Offline State Implementation and Test
+Date: 2026-10-16
+
+Audit findings:
+1. Copy file additions in apps/mobile/src/copy/reply.ts:
+   - offlineTitle: "You're offline"
+   - offlineDescription: "Reply Helper needs an internet connection to analyze messages. Please check your connection and try again."
+   - offlineRetry: "Try again"
+   Also grouped under replyCopy.offline object.
+
+2. State management in apps/mobile/src/features/reply-helper/useReplyHelper.ts:
+   - Tracks `isOffline` boolean state.
+   - Detects network errors ('Network request failed', 'Failed to fetch', 'ENOTFOUND', 'offline', ReplyApiError OFFLINE or status 0).
+   - Resets isOffline on retry attempts, input mode switches, and successful completions.
+
+3. UI rendering in apps/mobile/app/tools/reply-helper.tsx:
+   - Renders a Honey-tinted Card (`testID="reply-offline-card"`) containing:
+     - WinceMascot with pose="offline" (`testID="reply-offline-mascot"`)
+     - Title with ember accent typography: replyCopy.offline.offlineTitle
+     - Descriptive text: replyCopy.offline.offlineDescription
+     - Secondary action Button: replyCopy.offline.offlineRetry calling generateReplies
+   - Generic error banner is suppressed when isOffline is true to avoid redundant/conflicting error messages.
+
+4. Test in apps/mobile/src/features/reply-helper/__tests__/replyHelper.test.tsx:
+   - Unit test "renders offline state card when network request fails due to offline error":
+     - Simulates network rejection (Error('Network request failed'))
+     - Asserts presence of offlineTitle, offlineDescription, and offlineRetry button
+     - Tests retry flow recovering to valid result card upon network reconnection.
+   - Test executed and passed cleanly in 160 ms.
