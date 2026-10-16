@@ -1,0 +1,50 @@
+Starting Live 6-Turn Practice Partner Smoke Verification with NVIDIA API...
+Session Started! Attempt ID: att_1792108892892_zw4j318
+Opening Turn (partner): "Hey, thanks for coming by. Did you want to go over the "Discussing scope overflow" situation now?"
+
+--- Executing Turn 1 of 6 ---
+User: "Hey Maya, thanks for meeting. I wanted to talk about the two extra tickets assigned to me yesterday."
+Partner: "Sure, can you give me a quick rundown of what those tickets involve and how they impact the sprint goals?"
+Latency: 18971ms | Mood: engagement=0.6, rapport=0.55 | wantsToEnd=false
+
+--- Executing Turn 2 of 6 ---
+User: "Given our current commitments and QA testing cycle, taking both would push our release date back."
+Partner: "Makes sense. Let's look at the numbers before we lock it in."
+Latency: 26952ms | Mood: engagement=0.55, rapport=0.55 | wantsToEnd=false
+
+--- Executing Turn 3 of 6 ---
+User: "I recommend we focus entirely on the auth refactor first, and move the reporting tickets to next sprint."
+Partner: "I see where you're coming from, but how do we handle the handoff?"
+Latency: 34347ms | Mood: engagement=0.5, rapport=0.55 | wantsToEnd=false
+
+--- Executing Turn 4 of 6 ---
+User: "I can write up a quick risk summary for the stakeholders so everyone is on the same page."
+Partner: "Fair point. Give me a second to pull up the notes."
+Latency: 34870ms | Mood: engagement=0.45, rapport=0.55 | wantsToEnd=false
+
+--- Executing Turn 5 of 6 ---
+User: "Great, I will also let Alex know during tomorrow morning standup."
+Partner: "Hmm, I hadn't thought about it from that angle."
+Latency: 34448ms | Mood: engagement=0.4, rapport=0.55 | wantsToEnd=false
+
+--- Executing Turn 6 of 6 ---
+User: "Sounds like a solid plan. Thanks for working through this with me, Maya!"
+Partner: "Got it. What do you see as the biggest risk there?"
+Latency: 51386ms | Mood: engagement=0.35, rapport=0.55 | wantsToEnd=true
+
+Attempt ended successfully with 13 turns. Total revealed inner thoughts: 7
+
+======================================================
+   LIVE 6-TURN CHAT LATENCY & CONVERSATION TABLE
+======================================================
+┌─────────┬──────┬──────────────────────────────────────────┬────────────────────────────────────────────────────┬─────────────────────┬────────────┬───────────┬──────────┐
+│ (index) │ turn │ userMessage                              │ partnerReply                                       │ mood                │ wantsToEnd │ latencyMs │ degraded │
+├─────────┼──────┼──────────────────────────────────────────┼────────────────────────────────────────────────────┼─────────────────────┼────────────┼───────────┼──────────┤
+│ 0       │ 1    │ 'Hey Maya, thanks for meeting. I wan...' │ 'Sure, can you give me a quick rundown of what...' │ 'eng:0.6 rap:0.55'  │ false      │ 18971     │ false    │
+│ 1       │ 2    │ 'Given our current commitments and Q...' │ "Makes sense. Let's look at the numbers before..." │ 'eng:0.55 rap:0.55' │ false      │ 26952     │ true     │
+│ 2       │ 3    │ 'I recommend we focus entirely on th...' │ "I see where you're coming from, but how do we..." │ 'eng:0.5 rap:0.55'  │ false      │ 34347     │ true     │
+│ 3       │ 4    │ 'I can write up a quick risk summary...' │ 'Fair point. Give me a second to pull up the n...' │ 'eng:0.45 rap:0.55' │ false      │ 34870     │ true     │
+│ 4       │ 5    │ 'Great, I will also let Alex know du...' │ "Hmm, I hadn't thought about it from that angl..." │ 'eng:0.4 rap:0.55'  │ false      │ 34448     │ true     │
+│ 5       │ 6    │ 'Sounds like a solid plan. Thanks fo...' │ 'Got it. What do you see as the biggest risk t...' │ 'eng:0.35 rap:0.55' │ true       │ 51386     │ true     │
+└─────────┴──────┴──────────────────────────────────────────┴────────────────────────────────────────────────────┴─────────────────────┴────────────┴───────────┴──────────┘
+Average turn latency: 33496ms

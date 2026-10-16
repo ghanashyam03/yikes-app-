@@ -1,0 +1,12 @@
+$ vitest run src/partner/__tests__/partner.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+
+{"level":40,"time":1792109118428,"pid":7112,"hostname":"ghanashyambook","errorMsg":"AiUnavailableError: AI provider unavailable for job 'partner' (tried primary: test-partner, fallback: test-fallback)","msg":"Primary and fallback models failed; using persona authored lines"}
+{"level":40,"time":1792109118485,"pid":7112,"hostname":"ghanashyambook","errorMsg":"BadOutputError: Failed structured validation after retry: Schema validation failed: reply: Required; thought: Required; mood: Required; wantsToEnd: Required; cue: Required","msg":"Primary and fallback models failed; using persona authored lines"}
+ ✓ src/partner/__tests__/partner.test.ts (12 tests) 327ms
+
+ Test Files  1 passed (1)
+      Tests  12 passed (12)
+   Start at  05:35:15
+   Duration  2.74s (transform 466ms, setup 0ms, collect 1.42s, tests 327ms, environment 0ms, prepare 278ms)

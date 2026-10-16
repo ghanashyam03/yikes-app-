@@ -181,6 +181,9 @@ importers:
       '@supabase/supabase-js':
         specifier: 2.117.3
         version: 2.117.3
+      '@yikes/ai-prompts':
+        specifier: workspace:*
+        version: link:../../packages/ai-prompts
       '@yikes/shared':
         specifier: workspace:*
         version: link:../../packages/shared
