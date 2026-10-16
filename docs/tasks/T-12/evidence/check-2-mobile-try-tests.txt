@@ -1,0 +1,17 @@
+$ jest --watchAll=false src/features/try/__tests__/try.test.tsx
+PASS src/features/try/__tests__/try.test.tsx (9.267 s)
+  Try Chat Screen Suite (T-12)
+    √ 1. Normal chat flow: mounts, displays partner opening message, avatar, and Turn 1 of 6 pill (299 ms)
+    √ 2. Suggestion chip drops into input field on press and can be sent (177 ms)
+    √ 3. Typing indicator displays while awaiting response (74 ms)
+    √ 4. Slow reply 8s switches to calm "Maya is thinking" state (1136 ms)
+    √ 5. 20s idle cue fades in when user is inactive (1449 ms)
+    √ 6. Offline state renders offline notice card (74 ms)
+    √ 7. Daily cap reached state renders cap notice card (74 ms)
+    √ 8. Free Chat screen mounts and renders free chat mode with no turn limit (78 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        9.892 s, estimated 11 s
+Ran all test suites matching /src\features\try\__tests__\try.test.tsx/i.
