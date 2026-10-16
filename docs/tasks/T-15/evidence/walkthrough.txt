@@ -1,0 +1,10 @@
+$ jest --watchAll=false src/features/today/__tests__/walkthrough.test.tsx
+PASS src/features/today/__tests__/walkthrough.test.tsx
+  Automated First-Run Walkthrough: Warmup -> Coach read -> Playbook -> Today -> Session -> Complete
+    √ completes the full journey from warm-up to session completion (824 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        7.779 s
+Ran all test suites matching /src\features\today\__tests__\walkthrough.test.tsx/i.

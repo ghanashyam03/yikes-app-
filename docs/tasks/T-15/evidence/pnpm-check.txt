@@ -1,0 +1,35 @@
+$ pnpm check
+$ pnpm run lint && pnpm run typecheck && pnpm run test
+
+> yikes@0.0.1 lint
+> eslint .
+(Clean: 0 errors, 0 warnings)
+
+> yikes@0.0.1 typecheck
+> pnpm -r run typecheck
+Scope: 6 of 7 workspace projects
+packages/ai-prompts typecheck$ tsc --noEmit
+packages/db typecheck$ tsc --noEmit
+packages/shared typecheck$ tsc --noEmit
+packages/content typecheck$ tsc --noEmit
+packages/db typecheck: Done
+packages/shared typecheck: Done
+apps/mobile typecheck$ tsc --noEmit
+packages/content typecheck: Done
+packages/ai-prompts typecheck: Done
+services/gateway typecheck$ tsc --noEmit
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+
+> yikes@0.0.1 test
+> pnpm -r run test
+Scope: 6 of 7 workspace projects
+packages/ai-prompts test: 4 passed (4), 51 passed (51)
+packages/db test: 1 passed (1), 1 passed (1)
+packages/content test: 1 passed (1), 1 passed (1)
+packages/shared test: 4 passed (4), 11 passed (11)
+services/gateway test: 17 passed (17), 86 passed (86)
+apps/mobile test: 27 passed (27), 139 passed (139)
+
+All packages and services green.
+pnpm check passed cleanly.

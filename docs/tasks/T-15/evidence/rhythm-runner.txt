@@ -1,0 +1,20 @@
+$ jest --watchAll=false src/features/today/__tests__/rhythm.test.ts src/features/session-runner/__tests__/sessionRunner.test.ts
+PASS src/features/session-runner/__tests__/sessionRunner.test.ts
+  Session Runner Beat Flow and Persistence
+    √ Normal mode defines exactly 7 sequential beats (2 ms)
+    √ Take it easy mode defines streamlined 4-beat sequence (1 ms)
+    √ generates correct route paths for all beats (1 ms)
+    √ saves and resumes from a mid-session state seamlessly (5 ms)
+
+PASS src/features/today/__tests__/rhythm.test.ts
+  calculateWeeklyRhythm
+    √ calculates 0 completed sessions when log is empty (2 ms)
+    √ counts completed sessions strictly within current Monday-Sunday window (1 ms)
+    √ counts Take it easy sessions 100% identically toward Rhythm ring (1 ms)
+    √ respects custom weeklyGoal from Playbook (1 ms)
+
+Test Suites: 2 passed, 2 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        3.517 s
+Ran all test suites matching /src\features\today\__tests__\rhythm.test.ts|src\features\session-runner\__tests__\sessionRunner.test.ts/i.

@@ -1,0 +1,20 @@
+Command: pnpm --filter @yikes/mobile exec jest --roots "<rootDir>" "<rootDir>/../../docs/tasks/T-15/evidence" --testPathPattern "verifier-screen-states"
+Exit Code: 0
+Timestamp: 2026-10-16T03:07:02Z
+
+Output:
+PASS ../../docs/tasks/T-15/evidence/verifier-screen-states.test.tsx (43.594 s)
+  Verifier Independent Audit: Empty, Loading, Error, Offline states on Today & Path
+    √ renders Today loading state with skeleton shapes (54 ms)
+    √ renders Today error state with retry affordance (265 ms)
+    √ renders Today offline state banner (41 ms)
+    √ renders Today empty first day state with empty evidence notice (39 ms)
+    √ renders Path loading state with skeleton shapes (11 ms)
+    √ renders Path error banner (15 ms)
+    √ renders Path offline banner (11 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        44.212 s
+Ran all test suites matching /verifier-screen-states/i.

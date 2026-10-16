@@ -1,0 +1,22 @@
+Command: pnpm --filter @yikes/mobile test src/features/today/__tests__/chooseNextSession.test.ts
+Exit Code: 0
+Timestamp: 2026-10-16T03:04:25Z
+
+Output:
+$ jest --watchAll=false src/features/today/__tests__/chooseNextSession.test.ts
+PASS src/features/today/__tests__/chooseNextSession.test.ts
+  chooseNextSession
+    √ Scenario 1: Fresh user with no progress -> recommends Session 1 with foundation reason (6 ms)
+    √ Scenario 2: User with asking_followups priority -> recommends Session 2 with first step reason (2 ms)
+    √ Scenario 3: User with hardest place "Work meetings" -> recommends meeting-related session with meeting reason (1 ms)
+    √ Scenario 4: Skill in practicing stage -> recommends session with practicing reason (1 ms)
+    √ Scenario 5: Session 1 completed today -> skips Session 1 and picks next eligible session (1 ms)
+    √ Scenario 6: All sessions completed -> picks session needing refresh with refresh reason (1 ms)
+    √ Take it easy mode sets length to 2 minutes (1 ms)
+    √ canonicalSkillKey correctly maps aliases (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       8 passed, 8 total
+Snapshots:   0 total
+Time:        1.748 s
+Ran all test suites matching /src\features\today\__tests__\chooseNextSession.test.ts/i.
