@@ -1,14 +1,24 @@
-﻿
-[1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway[39m
+Command: pnpm --filter @yikes/gateway test src/routes/__tests__/reply.test.ts
+Exit Code: 0
+Output:
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
 
-{"level":40,"time":1792114020476,"pid":24056,"hostname":"ghanashyambook","errorMsg":"Failed structured validation after retry: Schema validation failed: verdict: Required","msg":"Safety model evaluation failed; falling back to degraded rules mode"}
-{"level":40,"time":1792114020511,"pid":24056,"hostname":"ghanashyambook","errorMsg":"Failed structured validation after retry: Schema validation failed: verdict: Required","msg":"Safety model evaluation failed; falling back to degraded rules mode"}
-{"level":40,"time":1792114020553,"pid":24056,"hostname":"ghanashyambook","error":"Provider returned HTTP 500: Internal Server Error","msg":"Vision model failed or unavailable"}
-{"level":40,"time":1792114020558,"pid":24056,"hostname":"ghanashyambook","errorMsg":"Failed structured validation after retry: Schema validation failed: verdict: Required","msg":"Safety model evaluation failed; falling back to degraded rules mode"}
- [32mΓ£ô[39m src/routes/__tests__/reply.test.ts [2m([22m[2m11 tests[22m[2m)[22m[90m 191[2mms[22m[39m
+ ✓ src/routes/__tests__/reply.test.ts (11 tests) 209ms
 
-[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
-[2m      Tests [22m [1m[32m11 passed[39m[22m[90m (11)[39m
-[2m   Start at [22m 06:56:58
-[2m   Duration [22m 2.43s[2m (transform 357ms, setup 0ms, collect 1.20s, tests 191ms, environment 0ms, prepare 332ms)[22m
+ Test Files  1 passed (1)
+      Tests  11 passed (11)
+   Start at  07:09:08
+   Duration  2.48s
 
+Breakdown of tests:
+- Dimension parsing helper: parses valid PNG dimensions (PASS)
+- Dimension parsing helper: returns null for too short buffer (PASS)
+- Paste mode: successfully generates readings and 3 replies from pasted text (PASS)
+- Paste mode: rejects empty input body (PASS)
+- Paste mode: rejects crisis messages via inbound safety check (PASS)
+- Screenshot mode & Image validation: extracts text via vision model and generates replies (PASS)
+- Screenshot mode & Image validation: rejects oversized image (> 4MB) with typed 400 error (PASS)
+- Screenshot mode & Image validation: rejects image with dimension > 1280px with typed 400 error (PASS)
+- Screenshot mode & Image validation: gracefully handles vision model failure with 503 suggesting paste mode (PASS)
+- Privacy & Telemetry Verification: verifies ZERO image bytes and ZERO message text are logged in ai_calls (PASS)
+- Usage Caps Enforcement: enforces limit when cap is reached (PASS)
