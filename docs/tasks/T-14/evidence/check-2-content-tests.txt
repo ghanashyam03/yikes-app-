@@ -1,0 +1,11 @@
+$ vitest run
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/content
+
+ ✓ src/__tests__/sessionMachine.test.ts (8 tests) 16ms
+ ✓ src/__tests__/content.test.ts (7 tests) 41ms
+
+ Test Files  2 passed (2)
+      Tests  15 passed (15)
+   Start at  06:19:05
+   Duration  1.31s (transform 327ms, setup 0ms, collect 495ms, tests 57ms, environment 1ms, prepare 693ms)

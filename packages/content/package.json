@@ -7,9 +7,14 @@
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "validate": "tsx src/validate.ts"
+  },
+  "dependencies": {
+    "zod": "3.24.2"
   },
   "devDependencies": {
+    "tsx": "4.19.2",
     "typescript": "5.7.2",
     "vitest": "3.0.5"
   }
