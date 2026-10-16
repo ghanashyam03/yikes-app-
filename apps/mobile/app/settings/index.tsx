@@ -79,7 +79,7 @@ export default function SettingsIndexScreen(): React.JSX.Element {
       privacy: isVisible('privacy', 'Privacy centre consent export delete data'),
       subscription: isVisible('subscription', 'Subscription Plus billing plan cancel'),
       help: isVisible('help', 'Help feedback faq contact questions report'),
-      aboutAi: isVisible('aboutAi', 'About the AI artificial intelligence models disclaimer not therapy'),
+      aboutAi: isVisible('aboutAi', 'About the AI artificial intelligence models disclaimer not medical care'),
     };
   }, [query]);
 

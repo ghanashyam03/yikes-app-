@@ -244,7 +244,7 @@ describe('T-22: Settings & Preferences', () => {
       expect(getByText('Which parts use AI?')).toBeTruthy();
       expect(getByText('Characters are not real people')).toBeTruthy();
       expect(getByText('What the Coach can and cannot do')).toBeTruthy();
-      expect(getByText('Not therapy or healthcare')).toBeTruthy();
+      expect(getByText('Not medical care or clinical advice')).toBeTruthy();
     });
   });
 });

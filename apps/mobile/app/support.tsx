@@ -102,7 +102,7 @@ export default function SupportModal(): React.JSX.Element {
             color={accents.honey.pop}
             style={{ fontWeight: '700', textTransform: 'uppercase', letterSpacing: 0.5 }}
           >
-            Practice Paused
+            {systemCopy.support.practicePausedBadge}
           </Text>
         </View>
 
@@ -189,7 +189,7 @@ export default function SupportModal(): React.JSX.Element {
           color="#E5E7EB"
           style={{ fontWeight: '700', marginBottom: spacing[2] }}
         >
-          Verified 24/7 Resources
+          {systemCopy.support.verifiedResourcesTitle}
         </Text>
 
         {filteredResources.map((res) => (
@@ -259,7 +259,7 @@ export default function SupportModal(): React.JSX.Element {
                   testID={`web-link-${res.id}`}
                 >
                   <Text role="labelSmall" color="#9CA3AF">
-                    Website ↗
+                    {systemCopy.support.websiteLinkText}
                   </Text>
                 </Pressable>
               )}

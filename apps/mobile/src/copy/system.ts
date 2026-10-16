@@ -102,6 +102,9 @@ export const systemCopy = {
     subtitle:
       'Practice is paused. When feelings get overwhelming, talking with someone who knows how to listen can make a real difference. Free, confidential support is available 24/7.',
     localePickerLabel: 'Region',
+    practicePausedBadge: 'Practice Paused',
+    verifiedResourcesTitle: 'Verified 24/7 Resources',
+    websiteLinkText: 'Website ↗',
     primaryCallButton: (name: string, phone: string) => `Call ${name} (${phone})`,
     primaryTextButton: (name: string, sms: string) => `Text ${name} (${sms})`,
     contactTrustedButton: 'Contact someone you trust',

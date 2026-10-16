@@ -175,8 +175,8 @@ export const settingsCopy = {
         body: 'Maya is built to help you explore phrasing options, spot conversation blind spots, and practice delivery before high-stakes moments. Maya cannot make life decisions for you, predict exact human responses in the real world, or provide professional advice.',
       },
       {
-        title: 'Not therapy or healthcare',
-        body: 'yikes! is a self-guided communication practice tool for everyday social confidence. It is not healthcare, medical advice, psychotherapy, diagnosis, or crisis support. If you are experiencing acute distress, please use our Support screen to reach certified human helplines.',
+        title: 'Not medical care or clinical advice',
+        body: 'yikes! is a self-guided communication practice tool for everyday social confidence. It is not healthcare, medical advice, psychiatric care, clinical assessment, or emergency crisis support. If you are experiencing distress, please reach out to professional healthcare services or use our Support resources.',
       },
       {
         title: 'Your privacy & model training',

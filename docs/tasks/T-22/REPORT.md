@@ -62,3 +62,24 @@ None. All modifications were confined to the files assigned to T-22 in `docs/tas
 - Integration of `WelcomeBackModal` trigger logic with background push notification resume / app foreground lifecycle events (Task T-24 or T-28).
 
 ## Fix rounds (left empty by the Builder; filled by the Fixer)
+
+### Fix round 1
+- **Issue**: Issue 1 - Banned Clinical Words Used in User-Facing Copy (Rule #4) & Non-blocking copy centralization
+- **What changed**:
+  1. `apps/mobile/src/copy/settings.ts`: Replaced `title: 'Not therapy or healthcare'` and its body (which contained `psychotherapy` and `diagnosis`) with compliant copy avoiding `treat`, `cure`, `therapy`, and `diagnose`:
+     - `title: 'Not medical care or clinical advice'`
+     - `body: 'yikes! is a self-guided communication practice tool for everyday social confidence. It is not healthcare, medical advice, psychiatric care, clinical assessment, or emergency crisis support. If you are experiencing distress, please reach out to professional healthcare services or use our Support resources.'`
+  2. `apps/mobile/app/settings/index.tsx`: Replaced `'...disclaimer not therapy'` in search keywords with `'...disclaimer not medical care'`.
+  3. `apps/mobile/src/features/settings/__tests__/settings.test.tsx`: Updated test assertion from `'Not therapy or healthcare'` to `'Not medical care or clinical advice'`.
+  4. `apps/mobile/src/copy/system.ts`: Centralized user-facing strings `practicePausedBadge: 'Practice Paused'`, `verifiedResourcesTitle: 'Verified 24/7 Resources'`, and `websiteLinkText: 'Website ↗'` into `systemCopy.support`.
+  5. `apps/mobile/app/support.tsx`: Replaced hardcoded inline text with centralized `systemCopy.support` strings.
+- **Files modified**:
+  - `apps/mobile/src/copy/settings.ts`
+  - `apps/mobile/app/settings/index.tsx`
+  - `apps/mobile/src/features/settings/__tests__/settings.test.tsx`
+  - `apps/mobile/src/copy/system.ts`
+  - `apps/mobile/app/support.tsx`
+- **Evidence**:
+  - `git grep -in -E "(treat|cure|therapy|diagnos)" apps/mobile/` confirmed zero clinical word violations across mobile copy and code.
+  - `pnpm --filter @yikes/mobile test src/features/settings src/features/system-states` passed 2/2 test suites (23/23 tests passed).
+  - `pnpm check` passed workspace-wide with exit code 0 (33/33 test suites passing).

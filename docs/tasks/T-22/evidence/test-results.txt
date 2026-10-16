@@ -1,0 +1,49 @@
+$ pnpm --filter @yikes/mobile test src/features/settings src/features/system-states
+
+> @yikes/mobile@0.0.1 test C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile
+> jest --watchAll=false src/features/settings src/features/system-states
+
+PASS src/features/settings/__tests__/settings.test.tsx (6.804 s)
+  T-22: Settings & Preferences
+    useSettings store & Rule #2 non-negotiables
+      √ strictly defaults streakEnabled to false per Rule #2 (2 ms)
+      √ has standard expected default settings (1 ms)
+      √ updates preference values cleanly (1 ms)
+      √ persists and restores state from storage across simulated restart (2 ms)
+      √ resets settings back to defaults cleanly (1 ms)
+    ReportAiButton component
+      √ renders report button and opens modal with explicit consent checkbox (128 ms)
+      √ submits report to ai_feedback table on submit (65 ms)
+    Settings screens rendering
+      √ renders SettingsIndexScreen with grouped cards and search filter (142 ms)
+      √ toggles streak and coach tone from SettingsIndexScreen (52 ms)
+      √ renders SettingsHelpScreen with FAQs accordion and contact form (68 ms)
+      √ renders SettingsAboutAiScreen with transparent disclosures and clinical disclaimer (35 ms)
+
+PASS src/features/system-states/__tests__/systemStates.test.tsx (6.957 s)
+  T-22: System States & Support Safety Screen
+    Acceptance Check 1 & 2: Support Screen Safety Guarantees
+      √ proves the Support screen contains no model-generated text and has fixed human copy (45 ms)
+      √ proves phone and text links use the correct schemes (tel: and sms:) (52 ms)
+      √ proves Contact someone you trust invokes Share.share with grounding copy (18 ms)
+      √ proves Back to practice button quietly navigates back (15 ms)
+    Acceptance Check 4: ErrorBoundary Plain Words & Single Action
+      √ catches thrown error, renders plain words, and never shows stack traces (38 ms)
+    Connectivity & Offline States
+      √ renders OfflineBanner when disconnected (12 ms)
+      √ renders ReconnectCard with retry action (25 ms)
+    BusyCard, DailyLimitCard & WelcomeBackModal
+      √ renders BusyCard and reveals backup/scripted actions after timeout (31 ms)
+      √ renders DailyLimitCard with calm honey styling and scripted action (19 ms)
+      √ renders WelcomeBackModal with zero guilt copy (22 ms)
+    EmptyStateCard Registry
+      √ renders all registry states (Moments, Journal, Gap, Ladder, History) (64 ms)
+    Dual Mode Rendering (Light & Dark)
+      √ renders Support screen cleanly in Light and Dark mode (36 ms)
+
+Test Suites: 2 passed, 2 total
+Tests:       23 passed, 23 total
+Snapshots:   0 total
+Time:        9.024 s
+Ran all test suites matching /src\features\settings|src\features\system-states/i.
+Done in 10.45s using pnpm v12.10.1
