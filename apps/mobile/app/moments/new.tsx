@@ -40,7 +40,7 @@ export default function MomentsNewScreen(): React.JSX.Element {
   const [eventDate, setEventDate] = useState<string>(
     new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString().split('T')[0] ?? ''
   );
-  const [formality, setFormality] = useState<number | null>(5);
+  const [formality, setFormality] = useState<number | null>(null);
   const [successVision, setSuccessVision] = useState<string>('');
   const [remindEveningBefore, setRemindEveningBefore] = useState<boolean>(true);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
@@ -103,7 +103,7 @@ export default function MomentsNewScreen(): React.JSX.Element {
           momentType: selectedType,
           attendees: attendees.trim() || undefined,
           eventDate: eventDate.trim() || undefined,
-          formality: formality ?? 5,
+          formality: formality ?? undefined,
           successVision: successVision.trim() || undefined,
           description: successVision.trim() || undefined,
           remindEveningBefore,
@@ -189,12 +189,12 @@ export default function MomentsNewScreen(): React.JSX.Element {
                 {
                   backgroundColor: colors.surface1,
                   color: colors.ink,
-                  borderColor: errorMsg ? accents.ember.pop : colors.line,
+                  borderColor: errorMsg ? accents.honey.pop : colors.line,
                 },
               ]}
             />
             {errorMsg ? (
-              <Text role="labelSmall" style={{ color: accents.ember.pop, marginTop: 4 }}>
+              <Text role="labelSmall" style={{ color: accents.honey.pop, marginTop: 4 }}>
                 {errorMsg}
               </Text>
             ) : null}

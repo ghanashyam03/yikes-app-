@@ -1,0 +1,21 @@
+======================================================================
+VERIFIER EVIDENCE: Acceptance Checks 2 & 3 - Prep Schema & Exclusion Guards
+Command: pnpm --filter @yikes/gateway test src/routes/__tests__/prep.test.ts
+Exit Code: 0
+======================================================================
+
+$ vitest run src/routes/__tests__/prep.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+
+{"level":30,"time":1792123030710,"pid":30012,"hostname":"ghanashyambook","category":"abuse","msg":"Prep request blocked kindly by scenario exclusion validator"}
+{"level":30,"time":1792123030719,"pid":30012,"hostname":"ghanashyambook","category":"bereavement","msg":"Prep request blocked kindly by scenario exclusion validator"}
+{"level":30,"time":1792123030724,"pid":30012,"hostname":"ghanashyambook","category":"confronting_harm","msg":"Prep request blocked kindly by scenario exclusion validator"}
+{"level":30,"time":1792123030729,"pid":30012,"hostname":"ghanashyambook","category":"harassment_reporting","msg":"Prep request blocked kindly by scenario exclusion validator"}
+{"level":30,"time":1792123030734,"pid":30012,"hostname":"ghanashyambook","category":"medical_news","msg":"Prep request blocked kindly by scenario exclusion validator"}
+ ✓ src/routes/__tests__/prep.test.ts (8 tests) 135ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  09:27:08
+   Duration  2.27s (transform 297ms, setup 0ms, collect 1.12s, tests 135ms, environment 0ms, prepare 331ms)

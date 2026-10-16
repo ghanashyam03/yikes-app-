@@ -1,0 +1,36 @@
+======================================================================
+VERIFIER EVIDENCE: Monorepo Health Check
+Command: pnpm install --frozen-lockfile && pnpm check
+Exit Code: 0
+======================================================================
+
+Scope: all 7 workspace projects
+Lockfile is up to date, resolution step is skipped
+Done in 575ms using pnpm v12.10.1
+
+$ pnpm run lint && pnpm run typecheck && pnpm run test
+$ eslint .
+Done in 3.1s
+
+$ pnpm -r run typecheck
+Scope: 6 of 7 workspace projects
+packages/content typecheck$ tsc --noEmit
+packages/db typecheck$ tsc --noEmit
+packages/ai-prompts typecheck$ tsc --noEmit
+packages/shared typecheck$ tsc --noEmit
+apps/mobile typecheck$ tsc --noEmit
+services/gateway typecheck$ tsc --noEmit
+All workspaces typecheck succeeded.
+
+$ pnpm -r run test
+Scope: 6 of 7 workspace projects
+packages/content test: 1 passed
+packages/db test: 1 passed
+packages/shared test: 6 passed (56 tests)
+packages/ai-prompts test: 4 passed (51 tests)
+services/gateway test: 7 passed (50 tests)
+apps/mobile test: 31 passed (155 tests)
+
+Test Suites: All passed across 6 workspaces.
+Tests:       313 passed total.
+Done in 42.4s.

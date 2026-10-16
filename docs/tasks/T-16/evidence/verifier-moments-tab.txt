@@ -1,0 +1,19 @@
+======================================================================
+VERIFIER EVIDENCE: Acceptance Check 5 - Moments Tab & Empty State
+Command: pnpm --filter @yikes/mobile test src/features/moments/__tests__/momentsTab.test.tsx
+Exit Code: 0
+======================================================================
+
+$ jest --watchAll=false src/features/moments/__tests__/momentsTab.test.tsx
+PASS src/features/moments/__tests__/momentsTab.test.tsx (6.91 s)
+  Acceptance Check 5: Moments Tab & Empty State
+    √ displays empty state with exact prompt when no moments exist (367 ms)
+    √ renders battery gauge and recovery tip on Moments tab header (60 ms)
+    √ renders timeline cards when moments are present (88 ms)
+    √ switches to Past segment and displays past empty state when no past moments exist (52 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        7.548 s
+Ran all test suites matching /src\\features\\moments\\__tests__\\momentsTab.test.tsx/i.

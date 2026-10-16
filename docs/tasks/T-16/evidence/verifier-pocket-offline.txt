@@ -1,0 +1,17 @@
+======================================================================
+VERIFIER EVIDENCE: Acceptance Check 4 - Offline Pocket Card Rendering
+Command: pnpm --filter @yikes/mobile test src/features/moments/__tests__/pocketCard.test.tsx
+Exit Code: 0
+======================================================================
+
+$ jest --watchAll=false src/features/moments/__tests__/pocketCard.test.tsx
+PASS src/features/moments/__tests__/pocketCard.test.tsx (5.923 s)
+  Acceptance Check 4: Pocket card renders offline from cached prep
+    √ renders Pocket card in dark mode with zero network requests when device is offline (332 ms)
+    √ navigates back to moments when Back button is tapped (29 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        6.572 s
+Ran all test suites matching /src\features\moments\__tests__\pocketCard.test.tsx/i.
