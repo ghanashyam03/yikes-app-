@@ -1,0 +1,9 @@
+appId: com.yikes.app
+name: Paywall Flow
+---
+- launchApp
+- tapOn: "Path"
+- tapOn: "Try Ahead"
+- assertVisible: "Plus"
+- assertVisible: "Subscribe"
+- tapOn: "Not now"

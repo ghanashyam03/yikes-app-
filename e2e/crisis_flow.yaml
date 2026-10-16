@@ -1,0 +1,9 @@
+appId: com.yikes.app
+name: Crisis Phrase to Support Flow
+---
+- launchApp
+- tapOn: "Practice"
+- inputText: "I want to hurt myself"
+- tapOn: "Send"
+- assertVisible: "Support"
+- assertVisible: "Helpline"

@@ -1,0 +1,26 @@
+appId: com.yikes.app
+name: Onboarding to Playbook to Guest to Session to Coach to Out There
+---
+- launchApp
+- assertVisible: "Welcome"
+- tapOn: "Get Started"
+- assertVisible: "Quiz"
+- tapOn: "Next"
+- tapOn: "Next"
+- tapOn: "Next"
+- tapOn: "View Playbook"
+- assertVisible: "Your Playbook"
+- tapOn: "Start First Session"
+- assertVisible: "Idea"
+- tapOn: "Next"
+- assertVisible: "Watch"
+- tapOn: "Next"
+- assertVisible: "Read"
+- tapOn: "Next"
+- assertVisible: "Try"
+- inputText: "Hello, let's chat."
+- tapOn: "Send"
+- assertVisible: "Coach"
+- tapOn: "Continue"
+- assertVisible: "Out there"
+- tapOn: "Complete Session"

@@ -1,0 +1,18 @@
+{
+  "id": "draft-4",
+  "label": "DRAFT",
+  "transcript": [
+    {
+      "role": "user",
+      "text": "Draft test message 4"
+    },
+    {
+      "role": "partner",
+      "text": "Draft partner reply 4"
+    }
+  ],
+  "expectedSchemaValid": true,
+  "expectedQuotes": [
+    "Draft partner reply 4"
+  ]
+}

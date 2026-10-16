@@ -1,0 +1,12 @@
+appId: com.yikes.app
+name: Privacy Export and Delete Flow
+---
+- launchApp
+- tapOn: "You"
+- tapOn: "Settings"
+- tapOn: "Privacy"
+- tapOn: "Export My Data"
+- assertVisible: "Export Link Ready"
+- tapOn: "Delete Account"
+- assertVisible: "Confirm Deletion"
+- tapOn: "Confirm"
