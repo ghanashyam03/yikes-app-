@@ -1,0 +1,25 @@
+$ pnpm check
+$ pnpm run lint && pnpm run typecheck && pnpm run test
+$ eslint .
+$ pnpm -r run typecheck
+Scope: 6 of 7 workspace projects
+packages/content typecheck$ tsc --noEmit
+packages/ai-prompts typecheck$ tsc --noEmit
+packages/db typecheck$ tsc --noEmit
+packages/shared typecheck$ tsc --noEmit
+packages/db typecheck: Done
+packages/content typecheck: Done
+packages/shared typecheck: Done
+apps/mobile typecheck$ tsc --noEmit
+packages/ai-prompts typecheck: Done
+services/gateway typecheck$ tsc --noEmit
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+$ pnpm -r run test
+...
+packages/content test: 2 passed, 15 passed, 15 total
+services/gateway test: 12 passed, 60 passed, 60 total
+apps/mobile test: 19 passed, 98 passed, 98 total
+
+Overall: All linting, typechecks, and tests passed cleanly.
+Exit code: 0

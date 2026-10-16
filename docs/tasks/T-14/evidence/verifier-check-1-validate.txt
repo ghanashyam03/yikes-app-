@@ -1,0 +1,11 @@
+$ pnpm --filter content validate
+$ tsx src/validate.ts
+Running @yikes/content validation...
+Validation PASSED cleanly:
+- 12 skills validated
+- 5 situation levels validated
+- 6 personas validated (non-red palettes, >=12 fallback lines)
+- 16 sessions validated (8 Unit 1, 8 Unit 2)
+- Zero banned clinical words found
+- Zero excluded topics found
+Exit Code: 0

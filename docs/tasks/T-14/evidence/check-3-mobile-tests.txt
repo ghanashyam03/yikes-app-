@@ -1,0 +1,19 @@
+$ jest --watchAll=false src/features/session-steps
+PASS src/features/session-steps/__tests__/sessionSteps.test.tsx (5.883 s)
+  Session Steps Suite: Idea (B4), Watch (B5), Read (B6)
+    Idea Screen (B4)
+      √ renders glass card with rule, example bubbles, and collapsible why this works in Daylight mode (256 ms)
+      √ renders cleanly in Midnight (dark) mode (19 ms)
+    Watch Screen (B5)
+      √ handles interactive taps, wrong feedback, correct glow, and Show me button (117 ms)
+      √ Show me reveals the target line directly when tapped (40 ms)
+      √ renders cleanly with gateway provider down (fallback mode) and in Midnight mode (18 ms)
+    Read Screen (B6)
+      √ displays 3 candidate thoughts and reveals true thought, cue note, and disclaimer on selection (41 ms)
+      √ renders cleanly with gateway provider down (fallback mode) and in Midnight mode (16 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        6.503 s, estimated 14 s
+Ran all test suites matching /src\\features\\session-steps/i.

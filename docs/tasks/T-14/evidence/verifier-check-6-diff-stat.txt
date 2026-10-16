@@ -1,0 +1,42 @@
+$ git diff --stat main...HEAD
+ apps/mobile/app/session/[id]/idea.tsx              |  272 ++++-
+ apps/mobile/app/session/[id]/read.tsx              |  378 ++++++-
+ apps/mobile/app/session/[id]/watch.tsx             |  311 +++++-
+ apps/mobile/src/copy/session.ts                    |   48 +
+ .../src/features/session-steps/SessionBeatBar.tsx  |   69 ++
+ .../session-steps/__tests__/sessionSteps.test.tsx  |  157 +++
+ .../src/features/session-steps/sessionApi.ts       |   93 ++
+ .../src/features/session-steps/sessionCatalog.ts   |  712 ++++++++++++
+ apps/mobile/src/features/session-steps/types.ts    |   58 +
+ .../src/features/session-steps/useSessionStep.ts   |  157 +++
+ docs/tasks/T-14/PLAN.md                            |   41 +
+ docs/tasks/T-14/REPORT.md                          |   65 ++
+ .../T-14/evidence/check-1-content-validate.txt     |    9 +
+ docs/tasks/T-14/evidence/check-2-content-tests.txt |   11 +
+ docs/tasks/T-14/evidence/check-3-mobile-tests.txt  |   19 +
+ docs/tasks/T-14/evidence/check-4-pnpm-check.txt    |   25 +
+ packages/content/package.json                      |    7 +-
+ packages/content/src/__tests__/content.test.ts     |   90 ++
+ .../content/src/__tests__/sessionMachine.test.ts   |  146 +++
+ packages/content/src/levels.ts                     |   31 +
+ packages/content/src/personas.ts                   |  336 ++++++
+ packages/content/src/placeholder.test.ts           |    8 -
+ packages/content/src/placeholder.ts                |    1 -
+ packages/content/src/sessionMachine.ts             |  143 +++
+ packages/content/src/sessions.ts                   | 1157 ++++++++++++++++++++
+ packages/content/src/skills.ts                     |  114 ++
+ packages/content/src/types.ts                      |  220 ++++
+ packages/content/src/validate.ts                   |  203 ++++
+ pnpm-lock.yaml                                     |    7 +
+ services/gateway/src/routes/content.ts             |  751 +++++++++++++
+ 30 files changed, 5623 insertions(+), 16 deletions(-)
+
+Scope Verification:
+All modified files fall strictly within the Files owned list specified in TASKS.md contract T-14:
+- packages/content/**
+- apps/mobile/app/session/[id]/idea.tsx, watch.tsx, read.tsx
+- apps/mobile/src/features/session-steps/**
+- apps/mobile/src/copy/session.ts
+- services/gateway/src/routes/content.ts
+- docs/tasks/T-14/**
+- pnpm-lock.yaml

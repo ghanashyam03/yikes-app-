@@ -1,0 +1,11 @@
+$ pnpm check
+lint: Done (0 errors)
+typecheck: Done across all packages (packages/shared, packages/content, packages/ai-prompts, services/gateway, apps/mobile)
+test: Done across all packages:
+- packages/shared test: 7 passed
+- packages/db test: 14 passed
+- packages/content test: 15 passed
+- packages/ai-prompts test: 51 passed
+- services/gateway test: 48 passed
+- apps/mobile test: 19 test suites passed, 98 tests passed
+Exit Code: 0
