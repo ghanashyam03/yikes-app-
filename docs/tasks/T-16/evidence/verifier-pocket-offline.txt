@@ -1,0 +1,10 @@
+$ pnpm --filter @yikes/mobile test src/features/moments/__tests__/pocketCard.test.tsx
+PASS src/features/moments/__tests__/pocketCard.test.tsx
+  Acceptance Check 4: Pocket card renders offline from cached prep
+    √ renders Pocket card in dark mode with zero network requests when device is offline (333 ms)
+    √ navigates back to moments when Back button is tapped (31 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        6.591 s

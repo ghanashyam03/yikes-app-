@@ -1,0 +1,25 @@
+$ pnpm --filter @yikes/gateway test src/routes/__tests__/prep.test.ts
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+
+{"level":30,"time":1792123863080,"pid":28192,"hostname":"ghanashyambook","category":"abuse","msg":"Prep request blocked kindly by scenario exclusion validator"}
+{"level":30,"time":1792123863089,"pid":28192,"hostname":"ghanashyambook","category":"bereavement","msg":"Prep request blocked kindly by scenario exclusion validator"}
+{"level":30,"time":1792123863095,"pid":28192,"hostname":"ghanashyambook","category":"confronting_harm","msg":"Prep request blocked kindly by scenario exclusion validator"}
+{"level":30,"time":1792123863101,"pid":28192,"hostname":"ghanashyambook","category":"harassment_reporting","msg":"Prep request blocked kindly by scenario exclusion validator"}
+{"level":30,"time":1792123863106,"pid":28192,"hostname":"ghanashyambook","category":"medical_news","msg":"Prep request blocked kindly by scenario exclusion validator"}
+ ✓ src/routes/__tests__/prep.test.ts (8 tests) 137ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+
+$ pnpm --filter @yikes/mobile test src/features/moments/__tests__/prepSchema.test.ts
+PASS src/features/moments/__tests__/prepSchema.test.ts
+  Acceptance Check 2 & 3: PrepCard Schema & Scenario Exclusion Guarantees
+    √ validates a complete structured prep output strictly matching prepCardOutputSchema (7 ms)
+    √ rejects prep card with fewer than 2 questions
+    √ rejects prep card with empty string fields
+  Calendar Just-In-Time Permission & Zero-Retention Privacy
+    √ requests calendar permission only on demand
+    √ filters and imports ONLY explicitly ticked events, retaining 0 unticked events (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total

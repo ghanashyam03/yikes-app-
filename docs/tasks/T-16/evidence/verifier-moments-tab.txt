@@ -1,0 +1,12 @@
+$ pnpm --filter @yikes/mobile test src/features/moments/__tests__/momentsTab.test.tsx
+PASS src/features/moments/__tests__/momentsTab.test.tsx
+  Acceptance Check 5: Moments Tab & Empty State
+    √ displays empty state with exact prompt when no moments exist (375 ms)
+    √ renders battery gauge and recovery tip on Moments tab header (52 ms)
+    √ renders timeline cards when moments are present (91 ms)
+    √ switches to Past segment and displays past empty state when no past moments exist (67 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        7.481 s
