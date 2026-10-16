@@ -1,0 +1,18 @@
+$ pnpm check
+services/gateway typecheck: Done
+packages/db typecheck: Done
+packages/content typecheck: Done
+packages/ai-prompts typecheck: Done
+packages/shared typecheck: Done
+apps/mobile typecheck: Done
+packages/shared test:  Test Files  4 passed (4)
+packages/shared test:       Tests  28 passed (28)
+packages/db test:  Test Files  3 passed (3)
+packages/db test:       Tests  12 passed (12)
+packages/content test:  Test Files  2 passed (2)
+packages/content test:       Tests  15 passed (15)
+services/gateway test:  Test Files  13 passed (13)
+services/gateway test:       Tests  71 passed (71)
+apps/mobile test:  Test Suites: 20 passed, 20 total
+apps/mobile test:  Tests:       105 passed, 105 total
+All workspaces passed check cleanly with exit code 0.

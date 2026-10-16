@@ -265,4 +265,31 @@ describe('T-20: Reply Helper Mobile Screen (C11)', () => {
       expect(getByText(replyCopy.caps.upgradeButton)).toBeTruthy();
     });
   });
+
+  it('renders offline state card when network request fails due to offline error', async () => {
+    const fetchError = new Error('Network request failed');
+    jest.spyOn(replyApi, 'requestReplyHelper').mockRejectedValueOnce(fetchError);
+
+    const { getByPlaceholderText, getByText, findByText } = renderScreen();
+
+    fireEvent.changeText(
+      getByPlaceholderText(replyCopy.pasteMode.placeholder),
+      'Will you be there tomorrow?'
+    );
+
+    fireEvent.press(getByText(replyCopy.actions.generate));
+
+    // Verify offline state card renders with offline copy
+    expect(await findByText(replyCopy.offline.offlineTitle)).toBeTruthy();
+    expect(getByText(replyCopy.offline.offlineDescription)).toBeTruthy();
+    expect(getByText(replyCopy.offline.offlineRetry)).toBeTruthy();
+
+    // Verify retry functionality recovers to results
+    jest.spyOn(replyApi, 'requestReplyHelper').mockResolvedValueOnce(mockSuccessResult);
+    fireEvent.press(getByText(replyCopy.offline.offlineRetry));
+
+    await waitFor(() => {
+      expect(getByText(replyCopy.readings.title)).toBeTruthy();
+    });
+  });
 });

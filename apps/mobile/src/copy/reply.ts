@@ -75,6 +75,20 @@ export const replyCopy = {
     description: 'You’ve reached your Reply Helper suggestions limit. Plus members get unlimited suggestions.',
     upgradeButton: 'See Plus options',
   },
+  offline: {
+    offlineTitle: "You're offline",
+    offlineDescription:
+      'Reply Helper needs an internet connection to analyze messages. Please check your connection and try again.',
+    offlineRetry: 'Try again',
+    title: "You're offline",
+    description:
+      'Reply Helper needs an internet connection to analyze messages. Please check your connection and try again.',
+    retry: 'Try again',
+  },
+  offlineTitle: "You're offline",
+  offlineDescription:
+    'Reply Helper needs an internet connection to analyze messages. Please check your connection and try again.',
+  offlineRetry: 'Try again',
   errors: {
     imageTooLarge: 'Image exceeds 4MB. Please pick a smaller image.',
     imageDimensionTooLarge: 'Image dimensions exceed 1280px. Please choose a smaller image.',

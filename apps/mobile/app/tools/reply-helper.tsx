@@ -17,6 +17,7 @@ import { Button } from '../../src/ui/primitives/Button';
 import { Card } from '../../src/ui/primitives/Card';
 import { Screen } from '../../src/ui/primitives/Screen';
 import { Text } from '../../src/ui/primitives/Text';
+import { WinceMascot } from '../../src/ui/components/WinceMascot';
 
 export default function ReplyHelperScreen(): React.JSX.Element {
   const router = useRouter();
@@ -49,6 +50,7 @@ export default function ReplyHelperScreen(): React.JSX.Element {
     savedToJournal,
     isSavingToJournal,
     capReached,
+    isOffline,
     error,
     suggestFallback,
   } = useReplyHelper({
@@ -120,6 +122,29 @@ export default function ReplyHelperScreen(): React.JSX.Element {
               style={styles.capButton}
             />
           </Card>
+        )}
+
+        {/* Offline State Notice */}
+        {isOffline && (
+          <View testID="reply-offline-card">
+            <Card tint="honey" style={styles.offlineCard}>
+              <View style={styles.offlineMascotWrapper}>
+                <WinceMascot pose="offline" size={64} testID="reply-offline-mascot" />
+              </View>
+              <Text role="titleSmall" color={accents.ember.base} style={styles.offlineTitle}>
+                {replyCopy.offline.offlineTitle}
+              </Text>
+              <Text role="bodySmall" muted align="center" style={styles.offlineDescription}>
+                {replyCopy.offline.offlineDescription}
+              </Text>
+              <Button
+                variant="secondary"
+                label={replyCopy.offline.offlineRetry}
+                onPress={generateReplies}
+                style={styles.offlineButton}
+              />
+            </Card>
+          </View>
         )}
 
         {/* Input Segmented Control */}
@@ -298,7 +323,7 @@ export default function ReplyHelperScreen(): React.JSX.Element {
         )}
 
         {/* Error Display */}
-        {error && !suggestFallback && (
+        {error && !suggestFallback && !isOffline && (
           <View style={[styles.errorContainer, { backgroundColor: isDark ? '#3D2024' : '#FDE8E8' }]}>
             <Text role="bodySmall" color={accents.ember.base}>
               {error}
@@ -744,6 +769,28 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   capButton: {
+    width: '100%',
+  },
+  offlineCard: {
+    padding: 20,
+    alignItems: 'center',
+    marginBottom: 16,
+  },
+  offlineMascotWrapper: {
+    marginBottom: 12,
+    alignItems: 'center',
+  },
+  offlineTitle: {
+    marginBottom: 6,
+    textAlign: 'center',
+    fontWeight: '700',
+  },
+  offlineDescription: {
+    marginBottom: 16,
+    lineHeight: 18,
+    textAlign: 'center',
+  },
+  offlineButton: {
     width: '100%',
   },
 });

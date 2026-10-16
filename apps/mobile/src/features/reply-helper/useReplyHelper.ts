@@ -40,6 +40,7 @@ export function useReplyHelper(options: UseReplyHelperOptions = {}) {
 
   const [error, setError] = useState<string | null>(null);
   const [errorCode, setErrorCode] = useState<string | null>(null);
+  const [isOffline, setIsOffline] = useState(false);
   const [suggestFallback, setSuggestFallback] = useState(false);
 
   const [savedToJournal, setSavedToJournal] = useState(false);
@@ -51,6 +52,7 @@ export function useReplyHelper(options: UseReplyHelperOptions = {}) {
     setMode(newMode);
     setError(null);
     setErrorCode(null);
+    setIsOffline(false);
     setSuggestFallback(false);
   }, []);
 
@@ -117,6 +119,7 @@ export function useReplyHelper(options: UseReplyHelperOptions = {}) {
     setBlurSkipped(false);
     setError(null);
     setErrorCode(null);
+    setIsOffline(false);
   }, []);
 
   // Submit request to gateway
@@ -127,6 +130,7 @@ export function useReplyHelper(options: UseReplyHelperOptions = {}) {
     setIsLoading(true);
     setError(null);
     setErrorCode(null);
+    setIsOffline(false);
     setSuggestFallback(false);
     setLoadingStep(mode === 'screenshot' ? 'reading_image' : 'generating_replies');
 
@@ -150,7 +154,17 @@ export function useReplyHelper(options: UseReplyHelperOptions = {}) {
       setActiveTone('warm');
       setSavedToJournal(false);
     } catch (err: unknown) {
-      if (err instanceof ReplyApiError) {
+      const errMsg = err instanceof Error ? err.message : String(err ?? '');
+      const isNetworkError =
+        errMsg.includes('Network request failed') ||
+        errMsg.includes('Failed to fetch') ||
+        errMsg.includes('ENOTFOUND') ||
+        errMsg.toLowerCase().includes('offline') ||
+        (err instanceof ReplyApiError && (err.code === 'OFFLINE' || err.status === 0));
+
+      if (isNetworkError) {
+        setIsOffline(true);
+      } else if (err instanceof ReplyApiError) {
         setErrorCode(err.code ?? null);
         if (err.code === 'CAP_REACHED' || err.status === 429) {
           setCapReached(true);
@@ -264,6 +278,7 @@ export function useReplyHelper(options: UseReplyHelperOptions = {}) {
     setEditingTone(null);
     setError(null);
     setErrorCode(null);
+    setIsOffline(false);
     setSuggestFallback(false);
     setSavedToJournal(false);
   }, []);
@@ -295,6 +310,7 @@ export function useReplyHelper(options: UseReplyHelperOptions = {}) {
     savedToJournal,
     isSavingToJournal,
     capReached,
+    isOffline,
     error,
     errorCode,
     suggestFallback,

@@ -1,0 +1,16 @@
+$ jest --watchAll=false src/features/reply-helper/__tests__/replyHelper.test.tsx
+PASS src/features/reply-helper/__tests__/replyHelper.test.tsx (6.667 s)
+  T-20: Reply Helper Mobile Screen (C11)
+    √ renders header, segmented controls, and paste input by default (96 ms)
+    √ submits pasted message and renders readings with disclaimer and 3 reply tones (256 ms)
+    √ allows inline editing of a reply suggestion (114 ms)
+    √ saves chosen reply to journal only when Save button is pressed (179 ms)
+    √ handles screenshot selection and shows blur names warning with explicit skip (107 ms)
+    √ offers calm fallback to paste mode when vision model is unavailable (173 ms)
+    √ renders cap reached card when user reaches usage limit (84 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        7.306 s
+Ran all test suites matching /src\features\reply-helper\__tests__\replyHelper.test.tsx/i.

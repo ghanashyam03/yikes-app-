@@ -61,3 +61,20 @@ None. All edited files are strictly within the T-20 Files owned contract.
 - Paywall upgrade routing from the Reply Helper usage limit card will be connected in T-23 (Billing and plan limits).
 
 ## Fix rounds (left empty by the Builder; filled by the Fixer)
+
+### Fix Round 1: Issue 1 — Missing Offline State Implementation and Test
+- **Issue**: Issue 1 from `docs/tasks/T-20/VERIFY.md` (Missing Offline State Implementation and Test).
+- **What changed**:
+  1. Added offline copy strings to `apps/mobile/src/copy/reply.ts` (`offlineTitle`, `offlineDescription`, `offlineRetry`).
+  2. Implemented `isOffline` state tracking in `apps/mobile/src/features/reply-helper/useReplyHelper.ts`, detecting network error signals (`Network request failed`, `Failed to fetch`, `ENOTFOUND`, `OFFLINE` code/status) while resetting state on retries and mode changes.
+  3. Rendered offline state card in `apps/mobile/app/tools/reply-helper.tsx` using Honey tint Card, Ember accent typography, `WinceMascot` (`pose="offline"`), and a retry button calling `generateReplies`. Redundant generic error banner is suppressed when offline.
+  4. Added integration test in `apps/mobile/src/features/reply-helper/__tests__/replyHelper.test.tsx` verifying offline state card rendering upon network failure and recovery to results upon retry.
+- **Files**:
+  - `apps/mobile/src/copy/reply.ts`
+  - `apps/mobile/src/features/reply-helper/useReplyHelper.ts`
+  - `apps/mobile/app/tools/reply-helper.tsx`
+  - `apps/mobile/src/features/reply-helper/__tests__/replyHelper.test.tsx`
+  - `docs/tasks/T-20/REPORT.md`
+- **Evidence**:
+  - `pnpm --filter @yikes/mobile test src/features/reply-helper/__tests__/replyHelper.test.tsx`: 8/8 tests passed.
+  - Full workspace `pnpm check`: all lint, typecheck, and test suites passing cleanly across all workspaces (106 mobile unit tests, 71 gateway tests).
