@@ -1,0 +1,30 @@
+================================================================================
+ACCEPTANCE CHECK 3: Paywall cannot mount on forbidden routes
+Commands:
+- pnpm --filter mobile test src/features/billing/__tests__/routeGuard.test.ts
+- pnpm --filter mobile test src/features/billing/__tests__/paywallMount.test.tsx
+Date: 2026-10-16
+Status: PASS
+================================================================================
+
+PASS src/features/billing/__tests__/routeGuard.test.ts
+  T-23 Acceptance Check 3: Forbidden Route Guard
+    ✓ identifies /session/*/try as strictly forbidden (live chat mode) (3 ms)
+    ✓ identifies /debrief/* as strictly forbidden (debrief mode) (1 ms)
+    ✓ identifies /support as strictly forbidden (crisis support mode) (1 ms)
+    ✓ identifies /tools/free-chat as strictly forbidden (free chat tool mode) (1 ms)
+    ✓ permits non-forbidden screens: /paywall, /settings/subscription, /tabs/index (1 ms)
+    ✓ handles empty or undefined route safely by permitting (1 ms)
+
+PASS src/features/billing/__tests__/paywallMount.test.tsx
+  T-23 Acceptance Check 3: Paywall Prohibited Mounting on Forbidden Routes
+    ✓ prohibits mounting on live chat route: /session/abc/try (45 ms)
+    ✓ prohibits mounting on debrief route: /debrief/moment-42 (12 ms)
+    ✓ prohibits mounting on crisis support route: /support (11 ms)
+    ✓ prohibits mounting on free chat tool route: /tools/free-chat (11 ms)
+    ✓ mounts successfully on permitted routes showing user journey and equal weight buttons (124 ms)
+
+Test Suites: 2 passed, 2 total
+Tests:       11 passed, 11 total
+Snapshots:   0 total
+Time:        4.52 s

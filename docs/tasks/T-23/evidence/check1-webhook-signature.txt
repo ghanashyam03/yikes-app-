@@ -1,0 +1,17 @@
+================================================================================
+ACCEPTANCE CHECK 1: Webhook signature test accepts valid and rejects invalid
+Command: pnpm --filter gateway vitest run src/routes/__tests__/billing.test.ts -t "signature"
+Date: 2026-10-16
+Status: PASS
+================================================================================
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-worktree-t23/services/gateway
+
+ ✓ src/routes/__tests__/billing.test.ts (2 tests) 205ms
+   ✓ T-23: Billing Webhook & Entitlements API > Acceptance Check 1: Webhook Signature Verification > rejects requests with missing or invalid bearer token with 401
+   ✓ T-23: Billing Webhook & Entitlements API > Acceptance Check 1: Webhook Signature Verification > accepts requests with valid bearer token matching REVENUECAT_WEBHOOK_AUTH_TOKEN
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  14:27:54
+   Duration  2.15s
