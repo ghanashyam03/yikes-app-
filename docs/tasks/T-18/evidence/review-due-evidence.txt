@@ -1,0 +1,28 @@
+=== T-18 Acceptance Check (1.1): Review-Due Rule (14 Days) ===
+Command: pnpm --filter mobile test reviewDue.test.ts
+Result: PASS (6 tests passed, 0 failed)
+Timestamp: 2026-10-16T12:22:52Z
+
+Test Suite Output:
+$ jest --watchAll=false reviewDue.test.ts
+PASS src/features/you/__tests__/reviewDue.test.ts
+  T-18 review-due rule (14 days)
+    √ returns false when lastPracticedAt is null or undefined (unpracticed) (5 ms)
+    √ returns false when practiced today (1 ms)
+    √ returns false when practiced 13 days ago (1 ms)
+    √ returns true when practiced exactly 14 days ago (1 ms)
+    √ returns true when practiced 20 days ago (1 ms)
+    √ returns false for future timestamps or invalid dates (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       6 passed, 6 total
+Snapshots:   0 total
+Time:        1.664 s
+
+Specification Verification:
+- Rule: A skill is marked "Review due" when it has had no practice for 14 or more days (docs/spec/05-screens-realworld-ai-progress.md C15).
+- Implementation: apps/mobile/src/features/you/reviewDue.ts
+  REVIEW_DUE_THRESHOLD_DAYS = 14;
+  diffDays >= REVIEW_DUE_THRESHOLD_DAYS returns true;
+- Displayed in apps/mobile/app/skill/[id].tsx:126-146 with Honey accent badge (never red).
+- Badge accessibilityRole="alert" and label="Review due. Last practiced over 14 days ago. A quick refresher keeps this natural."

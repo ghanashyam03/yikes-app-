@@ -1,0 +1,44 @@
+=== T-18 Acceptance Check (2): Every Screen Has a Designed Empty State ===
+Timestamp: 2026-10-16T12:20:00Z
+
+Screen Audit:
+1. Screen C12 (You Tab Bento):
+   - Path: apps/mobile/app/(tabs)/you.tsx
+   - Fallback/Empty representation:
+     * When evidenceQuotes store is empty, defaults to quiet evidence line:
+       quote: youCopy.bento.evidenceDefault ("You asked a follow-up that kept the conversation moving.")
+     * When journal has 0 entries: displays "Opens with 1st session" in card footer.
+     * When gap has 0 check-ins: displays "Start with 1st real step" and "Explore Gap".
+     * Verified by youScreen.test.tsx: PASS.
+
+2. Screen C13 (Growth Journal):
+   - Path: apps/mobile/app/journal.tsx:139-159
+   - Empty State:
+     * When entries.length === 0: renders <EmptyState pose="curious" title="Growth Journal" description="Your first entry appears after your first session." actionLabel="Start Today's Practice" />
+     * When filtered entries is empty: renders <EmptyState pose="thinking" title="Growth Journal" description="No entries found for this category." actionLabel="All" />
+     * Verified by journalScreen.test.tsx: PASS ("renders designed empty state when journal has no entries").
+
+3. Screen C15 (Skill Detail):
+   - Path: apps/mobile/app/skill/[id].tsx:40-64, 196-199
+   - Empty State:
+     * If skill is not found: renders <EmptyState pose="thinking" title="Skill not found" description="The requested skill was not found in your playbook." actionLabel="Back to skills" />
+     * If skill has no practice evidence yet: shows fallback rubric quotes and "No recent practice recorded for this skill yet."
+     * Verified by gapAndBatteryScreens.test.tsx: PASS.
+
+4. Screen C16 (Gap Screen):
+   - Path: apps/mobile/app/gap.tsx:253-263
+   - Empty State:
+     * When submissions.length === 0: renders <EmptyState pose="thinking" title="The Gap" description="Do a real-world step to start your Gap." actionLabel="Explore Quiet Ladder" onAction={() => router.push('/ladder')} />
+     * Verified by gapAndBatteryScreens.test.tsx: PASS ("renders designed empty state when no check-in submissions exist").
+
+5. Screen C17 (Battery Patterns Screen):
+   - Path: apps/mobile/app/battery.tsx:190-200
+   - Empty State:
+     * When logs.length === 0: renders <EmptyState pose="sleepy" title="Battery Patterns" description="Log a few battery check-ins to discover your weekly patterns." actionLabel="Log battery now" onAction={() => router.push('/energy')} />
+     * Verified by gapAndBatteryScreens.test.tsx: PASS ("renders designed empty state when no battery logs exist").
+
+6. Screen C18 (Quiet Ladder Screen):
+   - Path: apps/mobile/app/ladder.tsx:161-171
+   - Empty State:
+     * When rungs.length === 0: renders <EmptyState pose="thinking" title="Quiet Ladder" description="Your Quiet Ladder is ready to be seeded from your Playbook." actionLabel="Seed ladder" onAction={() => seedLadder()} />
+     * Verified by ladderScreen.test.tsx: PASS ("renders designed empty state when ladder has no rungs").

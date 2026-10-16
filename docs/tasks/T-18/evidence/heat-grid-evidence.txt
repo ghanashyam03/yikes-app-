@@ -1,0 +1,25 @@
+=== T-18 Acceptance Check (1.2): Heat-Grid Aggregation ===
+Command: pnpm --filter mobile test heatGrid.test.ts
+Result: PASS (3 tests passed, 0 failed)
+Timestamp: 2026-10-16T12:17:40Z
+
+Test Suite Output:
+$ jest --watchAll=false heatGrid.test.ts
+PASS src/features/you/__tests__/heatGrid.test.ts
+  T-18 Battery heat-grid aggregation
+    √ correctly maps dates to time slots (7 ms)
+    √ handles empty energy logs cleanly with 21 grid cells (3 ms)
+    √ aggregates logs across days, slots, and tags accurately (4 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        2.525 s
+
+Specification Verification:
+- Rule: Battery patterns (C17) as a heat grid from aggregated energy data.
+- Implementation: apps/mobile/src/features/you/heatGrid.ts
+  * 7 days x 3 time slots (morning: 5-12, afternoon: 12-17, evening: 17+) = 21 cells.
+  * Correctly groups by dayOfWeek and timeSlot.
+  * Computes topCostTags (negative relative impact) and topRechargeTags (positive relative impact).
+  * Renders on screen apps/mobile/app/battery.tsx:213-281 with accessible labels and token-based tints (Mint for high, Honey for medium, Lilac for low).

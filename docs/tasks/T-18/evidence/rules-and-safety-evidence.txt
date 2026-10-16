@@ -1,0 +1,43 @@
+=== T-18 Product Rules, Safety, and Verifier Focus Items Audit ===
+Timestamp: 2026-10-16T12:21:00Z
+
+1. Real and Verbatim Evidence Quotes in Skill Detail (C15):
+   - Path: apps/mobile/app/skill/[id].tsx:150-172 & apps/mobile/src/features/you/useYou.ts:58-88
+   - Evidence quotes are retrieved directly from user session history in guestProgress store.
+   - Filtered by skill domain context, preserving verbatim text.
+   - Displayed inside <EvidenceLine> components with quotation marks and session context.
+   - PASS.
+
+2. Headline in You Tab (C12):
+   - Path: apps/mobile/app/(tabs)/you.tsx:38-62
+   - Headline displays ONLY the user's name (or "Your Practice") and a quiet line of evidence.
+   - Strictly NO numeric score, NO XP, NO level, and NO streak is displayed in the headline.
+   - PASS.
+
+3. Zero Clinical Words:
+   - Evaluated regex \b(treat|cure|therapy|diagnos)[a-z]*\b across all files owned by T-18.
+   - In apps/mobile/src/copy/you.ts: 0 occurrences.
+   - In apps/mobile/app/**: 0 occurrences.
+   - In apps/mobile/src/features/**: 0 occurrences.
+   - In services/gateway/src/routes/insights.ts: Only appears as negative prompt instruction prohibiting the model from using those terms (line 286).
+   - PASS.
+
+4. Color Rules (Zero Red, Honey for Badges):
+   - Evaluated regex for red colors / badges.
+   - Skill "Review due" badge: accents.honey.tint (background), accents.honey.base (border), accents.honey.pop (text).
+   - Quiet Ladder current rung badge: accents.honey.tint & accents.honey.base.
+   - Completed badges: accents.mint.base & accents.mint.tint.
+   - AI suggested badge: accents.lilac.tint & accents.lilac.base.
+   - Error messages: plain descriptive text and tokens, zero red alerts.
+   - PASS.
+
+5. Pinned Packages & Dependencies:
+   - git diff main...HEAD package.json pnpm-lock.yaml returns 0 lines modified.
+   - Zero new packages or unpinned dependencies introduced.
+   - PASS.
+
+6. Aggregate-Only Data Safety for Battery Insights:
+   - Endpoint: POST /v1/insights/battery in services/gateway/src/routes/insights.ts.
+   - Prohibits and strictly rejects any payload containing 'message', 'messages', 'transcript', 'text', 'raw', 'content', 'body', 'prompt', or 'notes' with 400 FORBIDDEN_TEXT_PAYLOAD.
+   - Enforces Zod .strict() schema requiring only dayTimeAverages, topCostTags, and topRechargeTags.
+   - PASS.

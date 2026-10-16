@@ -1,0 +1,26 @@
+=== T-18 Acceptance Check (4): Insights Route Receives ONLY Aggregates ===
+Command: pnpm --filter gateway test insights.test.ts
+Result: PASS (6 tests passed, 0 failed)
+Timestamp: 2026-10-16T12:18:06Z
+
+Test Suite Output:
+$ vitest run insights.test.ts
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+ ✓ src/routes/__tests__/insights.test.ts (6 tests) 139ms
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+
+Tests Executed:
+1. POST /v1/insights/battery - rejects unauthenticated requests with 401: PASS
+2. POST /v1/insights/battery - rejects any request containing message text or transcript fields with 400 (FORBIDDEN_TEXT_PAYLOAD): PASS
+3. POST /v1/insights/battery - rejects any request containing transcript key with 400: PASS
+4. POST /v1/insights/battery - accepts valid aggregated statistics and returns 3 insight cards and Plan my week suggestion: PASS
+5. POST /v1/ladder/suggest - rejects unauthenticated requests with 401: PASS
+6. POST /v1/ladder/suggest - returns a suggested next micro-rep rung given current ladder rungs: PASS
+
+Specification Verification:
+- Rule: POST /v1/insights/battery from aggregated statistics only, never raw text (TASKS.md T-18; docs/spec/06-data-safety.md).
+- Implementation: services/gateway/src/routes/insights.ts
+  * Strict schema (BatteryInsightsRequestSchema.strict()) enforces only dayTimeAverages, topCostTags, topRechargeTags.
+  * FORBIDDEN_TEXT_KEYS check explicitly inspects top-level keys for 'message', 'messages', 'transcript', 'text', 'raw', 'content', 'body', 'prompt', 'notes' and immediately rejects with status 400 and code 'FORBIDDEN_TEXT_PAYLOAD'.
+  * Client implementation in apps/mobile/app/battery.tsx:63-68 only constructs payload from stats.dayTimeAverages, stats.topCostTags, and stats.topRechargeTags.
