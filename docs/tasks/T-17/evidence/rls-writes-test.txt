@@ -1,0 +1,33 @@
+$ pnpm --filter mobile test checkinRls.test.ts
+PASS src/features/checkin/__tests__/checkinRls.test.ts
+  Acceptance Check 4: RLS tests on the new writes (energy_checkins, debriefs, micro_reps)
+    √ proves database migrations enforce RLS on energy_checkins, micro_reps, and debriefs (25 ms)
+    √ energy_checkins insertion strictly injects authenticated user_id (8 ms)
+    √ micro_reps insertion strictly scopes writes to user_id (3 ms)
+    √ debriefs queries and mutations are isolated to owner (3 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        2.444 s
+Ran all test suites matching /checkinRls.test.ts/i.
+
+$ pnpm db:test
+Notice: No active database daemon detected. Running in-memory SQL schema and RLS verification...
+
+--- 1. Checking Row Level Security (RLS) on all public tables ---
+OK: Table 'energy_checkins' has RLS enabled.
+OK: Table 'micro_reps' has RLS enabled.
+OK: Table 'debriefs' has RLS enabled.
+
+--- 3. Two-User Isolation Tests (Multi-tenant RLS Verification) ---
+OK: User B reads 0 rows from User A in 'energy_checkins'.
+OK: User B reads 0 rows from User A in 'micro_reps'.
+OK: User B reads 0 rows from User A in 'debriefs'.
+
+--- 4. Verifying User B cannot INSERT rows for User A ---
+OK: User B inserting for User A into 'energy_checkins' was denied by RLS.
+OK: User B inserting for User A into 'micro_reps' was denied by RLS.
+OK: User B inserting for User A into 'debriefs' was denied by RLS.
+
+=== ALL DATABASE ACCEPTANCE CHECKS PASSED ===

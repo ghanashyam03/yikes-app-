@@ -1,0 +1,16 @@
+$ pnpm --filter mobile test energyScreen.test.tsx checkinScreen.test.tsx
+PASS src/features/energy/__tests__/energyScreen.test.tsx
+  Acceptance Check 5: Screen C6 Energy Check-in
+    √ renders draggable battery, tag chips, and Save button in under 10 seconds interaction (361 ms)
+    √ allows selecting and deselecting tag chips (95 ms)
+    √ saves battery entry and navigates back (92 ms)
+
+PASS src/features/checkin/__tests__/checkinScreen.test.tsx
+  Acceptance Check 5: Screen C8 Micro-Rep Check-in & Gap Reveal
+    √ runs through full 4-step check-in flow from question to Gap reveal (526 ms)
+
+Test Suites: 2 passed, 2 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        11.986 s
+Ran all test suites matching /energyScreen.test.tsx|checkinScreen.test.tsx/i.

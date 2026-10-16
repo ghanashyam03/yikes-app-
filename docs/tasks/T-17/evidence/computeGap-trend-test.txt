@@ -1,0 +1,19 @@
+$ pnpm --filter mobile test computeGap.test.ts
+PASS src/features/checkin/__tests__/computeGap.test.ts
+  T-17 computeGap pure functions
+    √ correctly calculates draining gap when actual is less draining than forecast (7 ms)
+    √ correctly calculates draining gap when actual is more draining than forecast (1 ms)
+    √ correctly handles exact match (1 ms)
+    √ correctly handles bounds at 0 and 10
+  T-17 computeWeeklyTrend pure functions
+    √ returns stable for empty array (1 ms)
+    √ returns stable for single checkin
+    √ detects a closing trend when earlier gaps were larger than recent gaps
+    √ detects a widening trend when recent gaps are larger than earlier gaps (1 ms)
+    √ detects a stable trend when gap differences remain within margin (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        1.967 s, estimated 3 s
+Ran all test suites matching /computeGap.test.ts/i.

@@ -1,0 +1,93 @@
+export const checkinsCopy = {
+  energy: {
+    title: 'Social Battery',
+    subtitle: 'Where is your battery sitting right now?',
+    helperText: 'Drag up or down. Takes under 10 seconds.',
+    dragHint: 'Adjust battery level from 0 to 100 percent',
+    levelLabel: (val: number) => `${val}%`,
+    levels: {
+      low: 'Low energy — protect your quiet space and recharge.',
+      mid: 'Steady battery — comfortable for low-key chats.',
+      high: 'Full battery — ready for connection or a stretch move.',
+    },
+    tagsTitle: 'What shaped your energy? (Optional)',
+    tags: [
+      { id: 'people', label: 'People' },
+      { id: 'noise', label: 'Noise' },
+      { id: 'length', label: 'Length' },
+      { id: 'who', label: 'Who' },
+    ],
+    saveButton: 'Save battery',
+    saving: 'Saving…',
+    savedToast: 'Battery level saved.',
+    backButton: 'Back',
+  },
+
+  microRep: {
+    title: 'Check-in',
+    subtitle: 'One small move in real life',
+    stepIndicator: (step: number, total: number) => `Step ${step} of ${total}`,
+    questionStep1: 'Did you ask the follow-up?',
+    optionsStep1: [
+      { id: 'yes', label: 'Yes, I did', description: 'Carried the move into the moment' },
+      { id: 'tried', label: 'I tried', description: 'Made an attempt when an opening appeared' },
+      { id: 'no', label: 'No, did not', description: 'Decided to let it pass this time' },
+      { id: 'no_chance', label: 'No chance', description: 'The situation did not come up' },
+    ],
+    questionStep2: 'How did it land?',
+    optionsStep2: [
+      { id: 'warmer', label: 'Warmer', description: 'They engaged or smiled' },
+      { id: 'same', label: 'The same', description: 'Neutral, everyday tone' },
+      { id: 'colder', label: 'Colder', description: 'Brief or distracted response' },
+    ],
+    questionStep3: 'How drained are you right now?',
+    step3Helper: 'Drag your battery level after this conversation',
+    nextButton: 'Continue',
+    finishButton: 'Reveal the Gap',
+    submitting: 'Calculating…',
+  },
+
+  gap: {
+    title: 'The Gap',
+    subtitle: 'Forecast vs. reality',
+    revealHeadline: (expected: number, actual: number) =>
+      `You expected ${expected} out of 10 draining; it was ${actual}.`,
+    revealExact: (expected: number) =>
+      `Your forecast of ${expected} out of 10 draining was spot-on with reality.`,
+    landedLine: (landed: string) => `Warmth landed: ${landed}.`,
+    coachHeading: 'Coach reflection',
+    defaultReflection: 'You anticipated it would cost energy; reality was lighter than expected.',
+    neutralNotice: 'Information, never a score. Forecasts get closer over time.',
+    doneButton: 'Done',
+  },
+
+  debrief: {
+    title: 'Debrief',
+    subtitle: 'Gentle reflection right after your conversation',
+    aestheticBadge: 'DEBRIEF · LILAC',
+    interviewerName: 'Interviewer',
+    suggestedChipsHeading: 'Suggested replies',
+    inputPlaceholder: 'Type a reply or pick a suggestion…',
+    sendButton: 'Send',
+    loadingSession: 'Starting debrief conversation…',
+    finishingSession: 'Synthesizing your takeaway card…',
+    takeawayCard: {
+      heading: 'Takeaway Card',
+      subheading: 'Your reflection in your own words',
+      essenceLabel: 'Core essence (tap to edit)',
+      focusLabel: 'One next focus',
+      saveToJournal: 'Save to Journal',
+      discard: 'Discard',
+      discardConfirmTitle: 'Discard this debrief?',
+      discardConfirmMessage: 'This reflection will not be stored in your journal.',
+      discardConfirmAction: 'Discard',
+      discardCancelAction: 'Keep debrief',
+      savedSuccess: 'Saved to your Growth Journal.',
+      discardedSuccess: 'Debrief discarded.',
+    },
+    safetyRedirect: {
+      title: 'Support Resources',
+      message: 'Routing to Support resources.',
+    },
+  },
+};

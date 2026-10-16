@@ -1,0 +1,12 @@
+$ pnpm --filter gateway test debrief.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+
+{"level":40,"time":1792128832147,"pid":17000,"hostname":"ghanashyambook","errorMsg":"Failed structured validation after retry: Schema validation failed: verdict: Required","msg":"Safety model evaluation failed; falling back to degraded rules mode"}
+{"level":30,"time":1792128832157,"pid":17000,"hostname":"ghanashyambook","debriefId":"debrief-crisis-test","msg":"Debrief answer flagged crisis; halting debrief with no AI text"}
+ ✓ src/routes/__tests__/debrief.test.ts (6 tests) 162ms
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  11:03:49
+   Duration  2.85s (transform 432ms, setup 0ms, collect 1.58s, tests 162ms, environment 0ms, prepare 369ms)
