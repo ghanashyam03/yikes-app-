@@ -1,0 +1,14 @@
+appId: com.yikes.app
+name: Add Moment, Prep, Rehearse Flow
+---
+- launchApp
+- tapOn: "Moments"
+- tapOn: "Add Moment"
+- inputText: "Difficult review with manager"
+- tapOn: "Generate Prep"
+- assertVisible: "Prep Plan"
+- tapOn: "Rehearse"
+- assertVisible: "Try"
+- inputText: "Hi, can we discuss my review?"
+- tapOn: "Send"
+- assertVisible: "Partner"

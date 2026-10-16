@@ -1,0 +1,18 @@
+{
+  "id": "baseline-6",
+  "label": "BASELINE",
+  "transcript": [
+    {
+      "role": "user",
+      "text": "Hi there, how are you feeling about the presentation?"
+    },
+    {
+      "role": "partner",
+      "text": "I guess it is fine, though I am a bit rushed."
+    }
+  ],
+  "expectedSchemaValid": true,
+  "expectedQuotes": [
+    "I guess it is fine"
+  ]
+}

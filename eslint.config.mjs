@@ -22,6 +22,8 @@ export default tseslint.config(
       '**/coverage/**',
       'docs/**',
       'scripts/**',
+      'e2e/**',
+      'packages/ai-prompts/eval/**',
       '**/*.config.js',
       '**/*.config.mjs',
     ],

@@ -1,0 +1,10 @@
+appId: com.yikes.app
+name: Check-in with Gap Reveal Flow
+---
+- launchApp
+- tapOn: "Check-in"
+- assertVisible: "How did it land?"
+- tapOn: "Good"
+- tapOn: "Submit"
+- assertVisible: "Gap Reveal"
+- assertVisible: "Coach Reflection"

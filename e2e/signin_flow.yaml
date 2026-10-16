@@ -1,0 +1,12 @@
+appId: com.yikes.app
+name: Sign In Flow
+---
+- launchApp
+- tapOn: "Sign In"
+- assertVisible: "Email"
+- inputText: "test@example.com"
+- tapOn: "Send Code"
+- assertVisible: "Enter Code"
+- inputText: "123456"
+- tapOn: "Verify"
+- assertVisible: "Today"
