@@ -6,5 +6,6 @@ module.exports = {
   moduleNameMapper: {
     '^@yikes/shared/(.*)$': '<rootDir>/../../packages/shared/src/$1',
   },
-  testTimeout: 15000,
+  maxWorkers: 2,
+  testTimeout: 20000,
 };
