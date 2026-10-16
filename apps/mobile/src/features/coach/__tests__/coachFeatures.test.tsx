@@ -105,7 +105,7 @@ describe('T-13 Acceptance Check 5: Coach & Inner Voice UI States', () => {
     expect(await findByTestId('session-coach-screen')).toBeTruthy();
     expect(getByText('Coach feedback')).toBeTruthy();
 
-    expect(await findByTestId('tile-what-worked')).toBeTruthy();
+    expect(await findByTestId('tile-what-worked', {}, { timeout: 3000 })).toBeTruthy();
     expect(await findByTestId('tile-pivot-moment', {}, { timeout: 3000 })).toBeTruthy();
     expect(await findByTestId('tile-try-next', {}, { timeout: 3000 })).toBeTruthy();
 

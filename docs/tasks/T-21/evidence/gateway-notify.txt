@@ -1,0 +1,19 @@
+$ vitest run src/routes/__tests__/notify.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-worktree-t21/services/gateway
+
+ ✓ src/routes/__tests__/notify.test.ts (8 tests) 710ms
+   ✓ T-21 Gateway Notify Routes & Jobs > POST /v1/notify/token > rejects unauthenticated requests with 401 389ms
+   ✓ T-21 Gateway Notify Routes & Jobs > POST /v1/notify/token > rejects invalid body with 400 12ms
+   ✓ T-21 Gateway Notify Routes & Jobs > POST /v1/notify/token > successfully registers push token for authenticated user 18ms
+   ✓ T-21 Gateway Notify Routes & Jobs > GET & PATCH /v1/notify/prefs > retrieves default notification preferences for authenticated user 16ms
+   ✓ T-21 Gateway Notify Routes & Jobs > GET & PATCH /v1/notify/prefs > updates preferences via PATCH /v1/notify/prefs 19ms
+   ✓ T-21 Gateway Notify Routes & Jobs > POST /v1/jobs/notify/welcome-back > rejects requests without job secret with 403 14ms
+   ✓ T-21 Gateway Notify Routes & Jobs > POST /v1/jobs/notify/welcome-back > processes eligible users and enforces quiet hours, pause week, away >= 3 days, and 7-day cooldown 142ms
+   ✓ T-21 Gateway Notify Routes & Jobs > POST /v1/jobs/notify/weekly-letter > sends Sunday Weekly Letter to eligible users 22ms
+
+ Test Files  1 passed (1)
+      Tests  8 passed (8)
+   Start at  13:37:37
+   Duration  12.14s
+Result: PASS

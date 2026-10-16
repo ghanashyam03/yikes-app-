@@ -1,0 +1,27 @@
+$ jest --watchAll=false src/features/notifications/__tests__/planNotifications.test.ts
+PASS src/features/notifications/__tests__/planNotifications.test.ts
+  T-21 Acceptance Check 1: planNotifications
+    Quiet hours calculation & enforcement
+      √ accurately parses 24h time to minutes (3 ms)
+      √ correctly detects overnight quiet hours (22:00 to 08:00) (2 ms)
+      √ never schedules any notification inside quiet hours (3 ms)
+    Max ONE notification per day rule
+      √ guarantees at most ONE notification per calendar day even when multiple qualify (4 ms)
+      √ prioritizes Moment prompts over generic rhythm nudges on the same day (3 ms)
+      √ schedules zero notifications for dates present in alreadyScheduledDates (2 ms)
+    Pause week rule
+      √ schedules strictly ZERO notifications when pausedUntil is in the future (2 ms)
+      √ resumes scheduling when pausedUntil is in the past (3 ms)
+    Welcome-back frequency rule
+      √ does not send welcome back if away for less than 3 days (2 ms)
+      √ schedules at most one warm welcome-back notification if away for 3+ days (3 ms)
+      √ suppresses welcome-back if already sent within the last 7 days (2 ms)
+      √ allows welcome-back if previous welcome-back was sent 8+ days ago (3 ms)
+    Per-type toggles
+      √ produces zero notifications for types that have been toggled off (2 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        5.48 s
+Result: PASS

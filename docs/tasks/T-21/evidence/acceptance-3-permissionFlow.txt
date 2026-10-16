@@ -1,0 +1,12 @@
+$ jest --watchAll=false src/features/notifications/__tests__/permissionFlow.test.tsx
+PASS src/features/notifications/__tests__/permissionFlow.test.tsx
+  T-21 Acceptance Check 3: Permission Flow Shows Preview First
+    √ renders the sample notification preview inside the permission modal (214 ms)
+    √ proves that requesting permissions opens the preview modal BEFORE requesting system permissions (68 ms)
+    √ dismissing the preview modal does not call system requestPermissions (42 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        5.432 s
+Result: PASS
