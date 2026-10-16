@@ -1,0 +1,30 @@
+﻿pnpm.exe : $ jest --watchAll=false src/features/analytics
+At C:\Users\ghana\AppData\Roaming\npm\pnpm.ps1:14 char:3
++   & "$basedir/node_modules/pnpm/pnpm.exe"   $args
++   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ($ jest --watchA...tures/analytics:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+PASS src/features/analytics/__tests__/analytics.test.ts
+  T-24 Analytics & Observability (Mobile)
+    Acceptance Check 1: Schema Enforcement & Zero Free-Text Guarantee
+      ΓêÜ rejects an unknown event name with AnalyticsValidationError (71 ms)
+      ΓêÜ rejects free-text property keys (e.g. text, message, prompt, transcript) (27 ms)
+      ΓêÜ rejects any unapproved non-schema property due to strict schema mode (38 ms)
+      ΓêÜ rejects non-enum string values where finite enums are expected (20 ms)
+      ΓêÜ accepts valid conformant event payloads (8 ms)
+    Acceptance Check 2: Consent Gating & Withdrawal Guarantee
+      ΓêÜ proves nothing is sent when consent is initially off (3 ms)
+      ΓêÜ proves events are sent only when consent is granted (5 ms)
+      ΓêÜ proves nothing is sent after consent is withdrawn (2 ms)
+      ΓêÜ proves identify() drops user identity when consent is off (2 ms)
+    Acceptance Check 3: Sentry Scrubber Removes Message Text & Transcripts
+      ΓêÜ proves message text in breadcrumb data is strictly redacted (13 ms)
+      ΓêÜ proves message text in breadcrumb message string and URLs is strictly redacted (1 ms)
+      ΓêÜ proves exception values containing prompt or dialogue text are redacted (3 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       12 passed, 12 total
+Snapshots:   0 total
+Time:        6.266 s
+Ran all test suites matching /src\\features\\analytics/i.
