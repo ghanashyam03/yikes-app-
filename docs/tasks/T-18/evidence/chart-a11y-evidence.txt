@@ -1,0 +1,37 @@
+=== T-18 Acceptance Check (3): Charts Have Text Alternatives ===
+Timestamp: 2026-10-16T12:20:00Z
+
+Chart Accessibility Audit:
+
+1. Gap Screen SVG Line Chart (C16):
+   - Path: apps/mobile/app/gap.tsx:104-113
+   - Root Container:
+     * accessible={true}
+     * accessibilityRole="image"
+     * accessibilityLabel={youCopy.gap.chartA11y(submissions.length, trendResult.trendDirection)}
+       Example output: "Gap chart with 4 real-world check-ins. Trend is currently closing."
+   - Individual Data Points (apps/mobile/app/gap.tsx:196-211):
+     * Each data point has a dedicated touch target (48pt min dimensions)
+     * accessibilityRole="button"
+     * accessibilityLabel={`Check-in ${i + 1}: expected ${c.submission.forecastDrain}, actual ${c.submission.actualDrain}`}
+   - Summary & Explanation Card (apps/mobile/app/gap.tsx:324-328):
+     * Plain text explanation: "The Gap reflects the difference between what your nervous system expected and what conversation actually cost. Over time, introverts find their forecasts drawing closer to reality."
+   - Verified by gapAndBatteryScreens.test.tsx: PASS.
+
+2. Battery Patterns Heat-Grid (C17):
+   - Path: apps/mobile/app/battery.tsx:213-281
+   - Table Container:
+     * accessible={true}
+     * accessibilityRole="image"
+     * accessibilityLabel="Weekly energy heat-grid across 7 days and 3 time slots"
+   - Heat-grid Cells (apps/mobile/app/battery.tsx:258-276):
+     * Each of the 21 cells has accessible={true} and accessibilityRole="text"
+     * accessibilityLabel={youCopy.battery.cellA11y(dayName, slotLabel, avg)}
+       Examples:
+       "Wed afternoon: average battery 35%"
+       "Sun morning: no check-ins recorded yet"
+   - Text Alternative Caption (apps/mobile/app/battery.tsx:208-210):
+     * "Average social battery percentage across morning, afternoon, and evening."
+   - Coach Insight Cards (apps/mobile/app/battery.tsx:308-325):
+     * 3 text cards explaining the patterns in plain language.
+   - Verified by gapAndBatteryScreens.test.tsx: PASS.

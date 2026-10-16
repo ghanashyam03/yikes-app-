@@ -1,0 +1,28 @@
+=== T-18 Acceptance Check (1.3): Ladder Reorder & Operations ===
+Command: pnpm --filter mobile test ladder.test.ts
+Result: PASS (5 tests passed, 0 failed)
+Timestamp: 2026-10-16T12:17:56Z
+
+Test Suite Output:
+$ jest --watchAll=false ladder.test.ts
+PASS src/features/ladder/__tests__/ladder.test.ts
+  T-18 Quiet Ladder pure reorder and store operations
+    √ pure reorderRungs moves rung up and updates sortOrder (7 ms)
+    √ pure reorderRungs moves rung down and updates sortOrder (1 ms)
+    √ pure reorderRungs handles top and bottom boundaries safely (2 ms)
+    √ seeds 8 rungs by default (91 ms)
+    √ adds, edits, and toggles completion of rungs (5 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       5 passed, 5 total
+Snapshots:   0 total
+Time:        2.705 s
+
+Specification Verification:
+- Rule: Quiet Ladder (C18) seeded from the Playbook with reorder, add, rewrite, mark done, and AI suggestion for next rung.
+- Implementation: apps/mobile/src/features/ladder/useLadder.ts & apps/mobile/app/ladder.tsx
+  * Pure reordering via reorderRungs swaps indices and normalizes 1-based sortOrder.
+  * Boundaries protected (index 0 cannot move up, index length-1 cannot move down).
+  * Marking done updates completed flag and sets completedAt timestamp.
+  * Rewrite in own words supported via editRung action and modal in UI.
+  * AI rung suggestion supported via suggestNextRung calling POST /v1/ladder/suggest with authored fallback.
