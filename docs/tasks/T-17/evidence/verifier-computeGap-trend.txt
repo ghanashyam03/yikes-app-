@@ -1,0 +1,23 @@
+=== T-17 Verifier computeGap and Trend Test ===
+Command: pnpm --filter mobile test computeGap.test.ts
+Output:
+$ jest --watchAll=false computeGap.test.ts
+PASS src/features/checkin/__tests__/computeGap.test.ts
+  T-17 computeGap pure functions
+    √ correctly calculates draining gap when actual is less draining than forecast (6 ms)
+    √ correctly calculates draining gap when actual is more draining than forecast (1 ms)
+    √ correctly handles exact match (2 ms)
+    √ correctly handles bounds at 0 and 10 (1 ms)
+  T-17 computeWeeklyTrend pure functions
+    √ returns stable for empty array (1 ms)
+    √ returns stable for single checkin (1 ms)
+    √ detects a closing trend when earlier gaps were larger than recent gaps (1 ms)
+    √ detects a widening trend when recent gaps are larger than earlier gaps (1 ms)
+    √ detects a stable trend when gap differences remain within margin (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       9 passed, 9 total
+Snapshots:   0 total
+Time:        2.368 s
+Ran all test suites matching /computeGap.test.ts/i.
+Result: PASS (Exit code: 0)

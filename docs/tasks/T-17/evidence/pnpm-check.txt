@@ -1,0 +1,34 @@
+$ pnpm check
+$ pnpm run lint && pnpm run typecheck && pnpm run test
+$ eslint .
+
+$ pnpm -r run typecheck
+Scope: 6 of 7 workspace projects
+packages/ai-prompts typecheck$ tsc --noEmit
+packages/shared typecheck$ tsc --noEmit
+packages/content typecheck$ tsc --noEmit
+packages/db typecheck$ tsc --noEmit
+packages/db typecheck: Done
+packages/content typecheck: Done
+packages/shared typecheck: Done
+apps/mobile typecheck$ tsc --noEmit
+packages/ai-prompts typecheck: Done
+services/gateway typecheck$ tsc --noEmit
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+
+$ pnpm -r run test
+Scope: 6 of 7 workspace projects
+services/gateway test: ✓ src/routes/__tests__/debrief.test.ts (6 tests) 162ms
+services/gateway test: Test Files  4 passed (4)
+services/gateway test: Tests  27 passed (27)
+services/gateway test: Done
+
+apps/mobile test: PASS src/features/checkin/__tests__/computeGap.test.ts
+apps/mobile test: PASS src/features/checkin/__tests__/checkinRls.test.ts
+apps/mobile test: PASS src/features/checkin/__tests__/checkinScreen.test.tsx
+apps/mobile test: PASS src/features/energy/__tests__/energyScreen.test.tsx
+apps/mobile test: PASS src/features/debrief/__tests__/debriefScreen.test.tsx
+apps/mobile test: Test Suites: 38 passed, 38 total
+apps/mobile test: Tests:       198 passed, 198 total
+apps/mobile test: Done

@@ -1,0 +1,16 @@
+=== T-17 Verifier Debrief Screen & Crisis Routing Test ===
+Command: pnpm --filter mobile test debriefScreen.test.tsx
+Output:
+$ jest --watchAll=false debriefScreen.test.tsx
+PASS src/features/debrief/__tests__/debriefScreen.test.tsx (11.15 s)
+  Acceptance Checks 2 & 3: Screen C7 Debrief Chat & Safety Routing
+    √ renders Debrief chat with Lilac aesthetic, interviewer message, and suggested chips (584 ms)
+    √ completes conversation and displays Takeaway card with editable core essence (294 ms)
+    √ CRITICAL ACCEPTANCE CHECK 3: Crisis phrase in debrief answer routes to /support with NO AI text (211 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       3 passed, 3 total
+Snapshots:   0 total
+Time:        11.886 s
+Ran all test suites matching /debriefScreen.test.tsx/i.
+Result: PASS (Exit code: 0)

@@ -1,0 +1,36 @@
+=== T-17 Verifier PNPM Check ===
+Command: pnpm check
+Output:
+$ pnpm run lint && pnpm run typecheck && pnpm run test
+$ eslint .
+$ pnpm -r run typecheck
+Scope: 6 of 7 workspace projects
+packages/content typecheck$ tsc --noEmit
+packages/ai-prompts typecheck$ tsc --noEmit
+packages/shared typecheck$ tsc --noEmit
+packages/db typecheck$ tsc --noEmit
+packages/db typecheck: Done
+packages/shared typecheck: Done
+apps/mobile typecheck$ tsc --noEmit
+packages/content typecheck: Done
+packages/ai-prompts typecheck: Done
+services/gateway typecheck$ tsc --noEmit
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+$ pnpm -r run test
+Scope: 6 of 7 workspace projects
+packages/ai-prompts test$ vitest run
+packages/db test$ vitest run
+packages/shared test$ vitest run
+packages/content test$ vitest run
+packages/ai-prompts test: 6 passed (6)
+packages/shared test: 17 passed (17)
+packages/db test: 14 passed (14)
+packages/content test: 22 passed (22)
+services/gateway test: 19 test files passed (100 tests)
+apps/mobile test: 38 test suites passed, 198 tests passed
+
+Test Suites: 38 passed, 38 total
+Tests:       198 passed, 198 total
+Snapshots:   0 total
+Result: PASS (Exit code: 0)

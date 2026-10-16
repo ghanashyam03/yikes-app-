@@ -1,0 +1,23 @@
+=== T-17 Verifier Gateway Debrief Routes Test ===
+Command: pnpm --filter gateway test debrief.test.ts
+Output:
+$ vitest run debrief.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+
+{"level":40,"time":1792129206452,"pid":30776,"hostname":"ghanashyambook","errorMsg":"Failed structured validation after retry: Schema validation failed: verdict: Required","msg":"Safety model evaluation failed; falling back to degraded rules mode"}
+{"level":30,"time":1792129206461,"pid":30776,"hostname":"ghanashyambook","debriefId":"debrief-crisis-test","msg":"Debrief answer flagged crisis; halting debrief with no AI text"}
+ ✓ src/routes/__tests__/debrief.test.ts (6 tests) 149ms
+   ✓ POST /v1/debrief/start > rejects unauthenticated requests with 401
+   ✓ POST /v1/debrief/start > starts a debrief session and returns debriefId and 4-5 gentle questions
+   ✓ POST /v1/debrief/answer > appends safe answer and advances to next question or completes
+   ✓ POST /v1/debrief/answer > CRITICAL: Crisis phrase in answer returns { crisis: true } with NO AI text
+   ✓ POST /v1/debrief/finish > generates editable takeaway card with headline, coreEssence, quoteContext
+   ✓ POST /v1/checkin/reflect > returns exactly 1 neutral line of reflection with no score, grade, or judgement words
+
+ Test Files  1 passed (1)
+      Tests  6 passed (6)
+   Start at  11:10:03
+   Duration  2.90s (transform 522ms, setup 0ms, collect 1.71s, tests 149ms, environment 0ms, prepare 374ms)
+
+Result: PASS (Exit code: 0)
