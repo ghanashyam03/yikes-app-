@@ -1,0 +1,41 @@
+Command: pnpm install --frozen-lockfile && pnpm check
+Exit Code: 0
+Timestamp: 2026-10-16T02:58:03Z
+
+Output Summary:
+Scope: all 7 workspace projects
+Lockfile is up to date, resolution step is skipped
+
+> yikes-monorepo@0.0.1 check
+> pnpm run lint && pnpm run typecheck && pnpm run test
+
+> yikes-monorepo@0.0.1 lint
+> eslint .
+
+> yikes-monorepo@0.0.1 typecheck
+> pnpm -r run typecheck
+
+Scope: 6 of 7 workspace projects
+packages/ai-prompts typecheck: Done
+packages/shared typecheck: Done
+packages/content typecheck: Done
+packages/db typecheck: Done
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+
+> yikes-monorepo@0.0.1 test
+> pnpm -r run test
+
+Scope: 6 of 7 workspace projects
+packages/db test: 1 passed, 1 total (5 tests)
+packages/content test: 2 passed, 2 total (15 tests)
+packages/shared test: 7 passed, 7 total (25 tests)
+packages/ai-prompts test: 4 passed, 4 total (16 tests)
+services/gateway test: 10 passed, 10 total (34 tests)
+apps/mobile test: 27 passed, 27 total (139 tests)
+
+Test Suites: 27 passed, 27 total
+Tests:       139 passed, 139 total
+Snapshots:   0 total
+Ran all test suites.
+Done.

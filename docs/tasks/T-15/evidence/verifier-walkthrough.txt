@@ -1,0 +1,14 @@
+Command: pnpm --filter @yikes/mobile test src/features/today/__tests__/walkthrough.test.tsx
+Exit Code: 0
+Timestamp: 2026-10-16T03:05:00Z
+
+Output:
+PASS src/features/today/__tests__/walkthrough.test.tsx (7.154 s)
+  Automated First-Run Walkthrough: Warmup -> Coach read -> Playbook -> Today -> Session -> Complete
+    √ completes the full journey from warm-up to session completion (838 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        7.782 s, estimated 18 s
+Ran all test suites matching /src\features\today\__tests__\walkthrough.test.tsx/i.
