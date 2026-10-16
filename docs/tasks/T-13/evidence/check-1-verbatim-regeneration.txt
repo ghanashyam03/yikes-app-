@@ -1,0 +1,17 @@
+Command: pnpm --filter gateway test coachEngine.test.ts
+Exit code: 0
+
+Output:
+$ vitest run coachEngine.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+
+{"level":30,"time":1792116551331,"pid":18404,"hostname":"ghanashyambook","invalidQuotes":["Hey do you have a minute for questions?","Hey do you have a minute for questions?"],"msg":"Initial coach output had invalid quotes. Attempting regeneration once."}
+{"level":30,"time":1792116551339,"pid":18404,"hostname":"ghanashyambook","invalidQuotes":["Totally made up user phrase"],"msg":"Initial coach output had invalid quotes. Attempting regeneration once."}
+{"level":30,"time":1792116551340,"pid":18404,"hostname":"ghanashyambook","msg":"No valid worked quotes remain. Applying authored rubric fallback."}
+ ✓ src/coach/__tests__/coachEngine.test.ts (2 tests) 20ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  07:39:09
+   Duration  1.47s (transform 277ms, setup 0ms, collect 491ms, tests 20ms, environment 0ms, prepare 274ms)

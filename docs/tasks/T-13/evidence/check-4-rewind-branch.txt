@@ -1,0 +1,16 @@
+Command: pnpm --filter gateway test rewindManager.test.ts
+Exit code: 0
+
+Output:
+$ vitest run rewindManager.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+
+ ✓ src/coach/__tests__/rewindManager.test.ts (2 tests) 11ms
+   ✓ T-13 Acceptance Check 4: Rewind Branching & Turn Filtering > proves the branched attempt keeps exactly the turns before fromTurn
+   ✓ T-13 Acceptance Check 4: Rewind Branching & Turn Filtering > proves rewinding to turn 1 keeps only opening turn 0
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+   Start at  07:40:05
+   Duration  1.15s (transform 94ms, setup 0ms, collect 96ms, tests 11ms, environment 0ms, prepare 313ms)

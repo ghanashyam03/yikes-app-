@@ -1,0 +1,21 @@
+Command: pnpm --filter gateway test coachRoutes.test.ts
+Exit code: 0
+
+Output:
+$ vitest run coachRoutes.test.ts
+
+ RUN  v3.0.5 C:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway
+
+ ✓ src/routes/__tests__/coachRoutes.test.ts (7 tests) 152ms
+   ✓ T-13 Coach Routes & Thoughts Guard > Acceptance Check 3: Confidential Thoughts Access Guard > proves GET /v1/attempts/:id/thoughts returns 403 Forbidden before attempt has ended
+   ✓ T-13 Coach Routes & Thoughts Guard > Acceptance Check 3: Confidential Thoughts Access Guard > proves GET /v1/attempts/:id/thoughts returns thoughts array after attempt has ended
+   ✓ T-13 Coach Routes & Thoughts Guard > POST /v1/coach/feedback > returns structured coach feedback for a practice attempt
+   ✓ T-13 Coach Routes & Thoughts Guard > POST /v1/coach/feedback > returns 400 for invalid request body
+   ✓ T-13 Coach Routes & Thoughts Guard > POST /v1/partner/rewind > branches attempt and returns copied turns strictly before fromTurn
+   ✓ T-13 Coach Routes & Thoughts Guard > POST /v1/coach/compare > summarises two paths side by side
+   ✓ T-13 Coach Routes & Thoughts Guard > POST /v1/ai/feedback > records thumbs rating into ai_feedback
+
+ Test Files  1 passed (1)
+      Tests  7 passed (7)
+   Start at  07:39:42
+   Duration  2.38s (transform 398ms, setup 0ms, collect 1.26s, tests 152ms, environment 0ms, prepare 337ms)

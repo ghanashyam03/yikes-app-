@@ -1,0 +1,20 @@
+Command: pnpm --filter mobile test coachFeatures.test.tsx
+Exit code: 0
+
+Output:
+$ jest --watchAll=false coachFeatures.test.tsx
+PASS src/features/coach/__tests__/coachFeatures.test.tsx (10.596 s)
+  T-13 Acceptance Check 5: Coach & Inner Voice UI States
+    √ 1. Loading skeleton: mounts and displays loading skeleton while feedback is in flight (140 ms)
+    √ 2. Progressive reveal: reveals What worked, Pivot moment, and Try this next time tiles (1444 ms)
+    √ 3. Error state: displays calm error card with retry button when API fails (76 ms)
+    √ 4. AI-down fallback: renders authored rubric fallback seamlessly (1373 ms)
+    √ 5. Fairness rating: sends thumbs feedback to ai_feedback endpoint (101 ms)
+    √ 6. Try it action: rewinds and routes with prefilled rewrite text (1082 ms)
+    √ 7. Inner voice screen: displays scrubber, turns, and thought bubbles (34 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        11.215 s, estimated 21 s
+Ran all test suites matching /coachFeatures.test.tsx/i.
