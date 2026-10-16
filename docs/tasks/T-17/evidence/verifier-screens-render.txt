@@ -1,0 +1,17 @@
+=== T-17 Verifier Screen Rendering Test ===
+Command: pnpm --filter mobile test energyScreen.test.tsx checkinScreen.test.tsx
+Output:
+PASS src/features/energy/__tests__/energyScreen.test.tsx
+  Acceptance Check 5: Screen C6 Energy Check-in
+    √ renders draggable battery, tag chips, and Save button in under 10 seconds interaction
+    √ allows selecting and deselecting tag chips
+    √ saves battery entry and navigates back
+
+PASS src/features/checkin/__tests__/checkinScreen.test.tsx
+  Acceptance Check 5: Screen C8 Micro-Rep Check-in & Gap Reveal
+    √ runs through full 4-step check-in flow from question to Gap reveal
+
+Test Suites: 2 passed, 2 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Result: PASS (Exit code: 0)
