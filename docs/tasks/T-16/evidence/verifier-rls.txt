@@ -1,20 +1,14 @@
-======================================================================
-VERIFIER EVIDENCE: Acceptance Check 1 - Moment CRUD Multi-Tenant RLS
-Command: pnpm --filter @yikes/mobile test src/features/moments/__tests__/momentsRls.test.ts
-Exit Code: 0
-======================================================================
-
-$ jest --watchAll=false src/features/moments/__tests__/momentsRls.test.ts
+$ pnpm --filter @yikes/mobile test src/features/moments/__tests__/momentsRls.test.ts
 PASS src/features/moments/__tests__/momentsRls.test.ts
   Acceptance Check 1: Moment CRUD multi-tenant RLS enforcement
     √ proves database migrations define full RLS coverage on public.moments (10 ms)
     √ fetchMomentsFromSupabase queries exclusively with user_id = auth user (5 ms)
-    √ createMomentInSupabase guarantees insertion scoped to the requesting tenant (3 ms)
+    √ createMomentInSupabase guarantees insertion scoped to the requesting tenant (2 ms)
     √ updateMomentInSupabase rejects updates outside tenant scope (2 ms)
     √ deleteMomentInSupabase scopes deletion strictly by moment id and tenant id (2 ms)
 
 Test Suites: 1 passed, 1 total
 Tests:       5 passed, 5 total
 Snapshots:   0 total
-Time:        1.78 s
+Time:        1.687 s
 Ran all test suites matching /src\features\moments\__tests__\momentsRls.test.ts/i.
