@@ -1,0 +1,31 @@
+﻿
+[1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway[39m
+
+ [2m[90mΓåô[39m[22m src/coach/__tests__/rewindManager.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [32mΓ£ô[39m src/coach/__tests__/stageTracker.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 15[2mms[22m[39m
+ [2m[90mΓåô[39m[22m src/reliability/__tests__/reliability.test.ts [2m([22m[2m6 tests[22m[2m | [22m[33m6 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/structured/__tests__/call-structured.test.ts [2m([22m[2m4 tests[22m[2m | [22m[33m4 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/coach/__tests__/coachEngine.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/safety/__tests__/route.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/providers/__tests__/fake.test.ts [2m([22m[2m4 tests[22m[2m | [22m[33m4 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/routes/__tests__/insights.test.ts [2m([22m[2m6 tests[22m[2m | [22m[33m6 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/queue/__tests__/rate-limiter.test.ts [2m([22m[2m3 tests[22m[2m | [22m[33m3 skipped[39m[2m)[22m
+{"level":40,"time":1792135834685,"pid":32808,"hostname":"ghanashyambook","errorMsg":"AI provider unavailable for job 'safety' (tried primary: nvidia/llama-3.1-nemotron-safety-guard-8b-v3, fallback: nvidia/nemotron-3.5-content-safety)","msg":"Safety model evaluation failed; falling back to degraded rules mode"}
+ [32mΓ£ô[39m src/safety/__tests__/safety.test.ts [2m([22m[2m14 tests[22m[2m | [22m[33m12 skipped[39m[2m)[22m[90m 228[2mms[22m[39m
+ [2m[90mΓåô[39m[22m src/telemetry/__tests__/logger.test.ts [2m([22m[2m1 test[22m[2m | [22m[33m1 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/routes/__tests__/debrief.test.ts [2m([22m[2m6 tests[22m[2m | [22m[33m6 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/routes/__tests__/reply.test.ts [2m([22m[2m11 tests[22m[2m | [22m[33m11 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/routes/__tests__/coachRoutes.test.ts [2m([22m[2m7 tests[22m[2m | [22m[33m7 skipped[39m[2m)[22m
+ [32mΓ£ô[39m src/routes/privacy/__tests__/privacy.test.ts [2m([22m[2m7 tests[22m[2m | [22m[33m6 skipped[39m[2m)[22m[90m 84[2mms[22m[39m
+ [32mΓ£ô[39m src/routes/__tests__/prep.test.ts [2m([22m[2m8 tests[22m[2m | [22m[33m7 skipped[39m[2m)[22m[90m 189[2mms[22m[39m
+ [32mΓ£ô[39m src/routes/__tests__/letter.test.ts [2m([22m[2m17 tests[22m[2m | [22m[33m15 skipped[39m[2m)[22m[90m 65[2mms[22m[39m
+ [2m[90mΓåô[39m[22m src/partner/__tests__/partner.test.ts [2m([22m[2m12 tests[22m[2m | [22m[33m12 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/middleware/__tests__/auth.test.ts [2m([22m[2m3 tests[22m[2m | [22m[33m3 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/usage/__tests__/daily-caps.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/app.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+
+[2m Test Files [22m [1m[32m5 passed[39m[22m[2m | [22m[33m16 skipped[39m[90m (21)[39m
+[2m      Tests [22m [1m[32m10 passed[39m[22m[2m | [22m[33m113 skipped[39m[90m (123)[39m
+[2m   Start at [22m 13:00:30
+[2m   Duration [22m 5.67s[2m (transform 9.37s, setup 0ms, collect 34.55s, tests 581ms, environment 11ms, prepare 12.47s)[22m
+

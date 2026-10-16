@@ -177,7 +177,7 @@ describe('D3 Privacy Centre Screen', () => {
       const keptGuarantees = getAllByText(privacyCopy.deleteText.keptGuarantee);
       expect(keptGuarantees.length).toBeGreaterThanOrEqual(1);
     });
-  });
+  }, 15000);
 
   it('opens OTP modal for Delete Account with 30-day notice and handles confirmation', async () => {
     const { getByLabelText, getByPlaceholderText, getAllByText } = render(

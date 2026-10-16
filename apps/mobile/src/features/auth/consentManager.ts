@@ -1,20 +1,22 @@
 import { supabase } from './supabaseClient';
 import { authCopy } from '../../copy/auth';
 
-export type ConsentKind = 'required' | 'analytics' | 'improve_ai' | 'marketing';
+export type ConsentKind = 'required' | 'analytics' | 'improve_ai' | 'marketing' | 'voice_match';
 
 export interface ConsentsState {
   required: boolean;
   analytics: boolean;
   improve_ai: boolean;
   marketing: boolean;
+  voice_match?: boolean;
 }
 
 export const DEFAULT_CONSENTS: ConsentsState = {
   required: true,
   analytics: false,
   improve_ai: false,
-  marketing: false
+  marketing: false,
+  voice_match: false,
 };
 
 /**
@@ -54,6 +56,9 @@ export async function saveConsents(
 ): Promise<{ ok: boolean; error?: string }> {
   try {
     const kinds: ConsentKind[] = ['required', 'analytics', 'improve_ai', 'marketing'];
+    if (consents.voice_match !== undefined) {
+      kinds.push('voice_match');
+    }
     const now = new Date().toISOString();
 
     for (const kind of kinds) {
@@ -80,6 +85,28 @@ export async function saveConsents(
             granted,
             updated_at: now
           });
+      }
+
+      // If voice_match consent is withdrawn, purge voiceStyle from playbooks
+      if (kind === 'voice_match' && !granted) {
+        try {
+          const { data: pb } = await supabase
+            .from('playbooks')
+            .select('derived')
+            .eq('user_id', userId)
+            .maybeSingle();
+
+          if (pb?.derived && typeof pb.derived === 'object' && 'voiceStyle' in pb.derived) {
+            const updatedDerived = { ...pb.derived };
+            delete (updatedDerived as Record<string, unknown>).voiceStyle;
+            await supabase
+              .from('playbooks')
+              .update({ derived: updatedDerived })
+              .eq('user_id', userId);
+          }
+        } catch {
+          // DB trigger also handles this
+        }
       }
     }
     return { ok: true };

@@ -1,0 +1,35 @@
+﻿
+[1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway[39m
+
+ [2m[90mΓåô[39m[22m src/coach/__tests__/rewindManager.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/coach/__tests__/stageTracker.test.ts [2m([22m[2m4 tests[22m[2m | [22m[33m4 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/reliability/__tests__/reliability.test.ts [2m([22m[2m6 tests[22m[2m | [22m[33m6 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/structured/__tests__/call-structured.test.ts [2m([22m[2m4 tests[22m[2m | [22m[33m4 skipped[39m[2m)[22m
+{"level":30,"time":1792135825979,"pid":34748,"hostname":"ghanashyambook","invalidQuotes":["Hey do you have a minute for questions?","Hey do you have a minute for questions?"],"msg":"Initial coach output had invalid quotes. Attempting regeneration once."}
+{"level":30,"time":1792135825996,"pid":34748,"hostname":"ghanashyambook","invalidQuotes":["Totally made up user phrase"],"msg":"Initial coach output had invalid quotes. Attempting regeneration once."}
+{"level":30,"time":1792135825996,"pid":34748,"hostname":"ghanashyambook","msg":"No valid worked quotes remain. Applying authored rubric fallback."}
+ [32mΓ£ô[39m src/coach/__tests__/coachEngine.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 39[2mms[22m[39m
+ [2m[90mΓåô[39m[22m src/providers/__tests__/fake.test.ts [2m([22m[2m4 tests[22m[2m | [22m[33m4 skipped[39m[2m)[22m
+ [32mΓ£ô[39m src/safety/__tests__/safety.test.ts [2m([22m[2m14 tests[22m[2m | [22m[33m11 skipped[39m[2m)[22m[90m 39[2mms[22m[39m
+ [2m[90mΓåô[39m[22m src/routes/__tests__/insights.test.ts [2m([22m[2m6 tests[22m[2m | [22m[33m6 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/safety/__tests__/route.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [32mΓ£ô[39m src/routes/privacy/__tests__/privacy.test.ts [2m([22m[2m7 tests[22m[2m | [22m[33m6 skipped[39m[2m)[22m[90m 160[2mms[22m[39m
+ [2m[90mΓåô[39m[22m src/queue/__tests__/rate-limiter.test.ts [2m([22m[2m3 tests[22m[2m | [22m[33m3 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/telemetry/__tests__/logger.test.ts [2m([22m[2m1 test[22m[2m | [22m[33m1 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/routes/__tests__/debrief.test.ts [2m([22m[2m6 tests[22m[2m | [22m[33m6 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/routes/__tests__/prep.test.ts [2m([22m[2m8 tests[22m[2m | [22m[33m8 skipped[39m[2m)[22m
+{"level":40,"time":1792135827252,"pid":9624,"hostname":"ghanashyambook","error":"AiUnavailableError: AI provider unavailable for job 'long' (tried primary: test-long, fallback: test-alt)","msg":"Weekly letter generation failed; using authored fallback"}
+{"level":40,"time":1792135827264,"pid":9624,"hostname":"ghanashyambook","error":"AiUnavailableError: AI provider unavailable for job 'long' (tried primary: test-long, fallback: test-alt)","msg":"Weekly letter generation failed; using authored fallback"}
+ [32mΓ£ô[39m src/routes/__tests__/letter.test.ts [2m([22m[2m17 tests[22m[2m | [22m[33m12 skipped[39m[2m)[22m[90m 84[2mms[22m[39m
+ [2m[90mΓåô[39m[22m src/routes/__tests__/coachRoutes.test.ts [2m([22m[2m7 tests[22m[2m | [22m[33m7 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/routes/__tests__/reply.test.ts [2m([22m[2m11 tests[22m[2m | [22m[33m11 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/middleware/__tests__/auth.test.ts [2m([22m[2m3 tests[22m[2m | [22m[33m3 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/partner/__tests__/partner.test.ts [2m([22m[2m12 tests[22m[2m | [22m[33m12 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/usage/__tests__/daily-caps.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+ [2m[90mΓåô[39m[22m src/app.test.ts [2m([22m[2m2 tests[22m[2m | [22m[33m2 skipped[39m[2m)[22m
+
+[2m Test Files [22m [1m[32m4 passed[39m[22m[2m | [22m[33m17 skipped[39m[90m (21)[39m
+[2m      Tests [22m [1m[32m11 passed[39m[22m[2m | [22m[33m112 skipped[39m[90m (123)[39m
+[2m   Start at [22m 13:00:22
+[2m   Duration [22m 5.38s[2m (transform 7.30s, setup 0ms, collect 31.89s, tests 322ms, environment 12ms, prepare 12.01s)[22m
+

@@ -190,6 +190,29 @@ export default function SettingsPrivacyScreen(): React.JSX.Element {
               thumbColor={colors.surface1}
             />
           </View>
+
+          <View style={[styles.divider, { backgroundColor: colors.line }]} />
+
+          {/* Voice Match */}
+          <View style={styles.consentRow}>
+            <View style={styles.consentTextCol}>
+              <Text role="bodyMedium" color={colors.ink} style={styles.consentTitle}>
+                {privacyCopy.consents.voiceMatch.title}
+              </Text>
+              <Text role="bodySmall" color={colors.muted}>
+                {privacyCopy.consents.voiceMatch.description}
+              </Text>
+            </View>
+            <Switch
+              value={Boolean(consents.voice_match)}
+              onValueChange={(val) => {
+                void toggleConsent('voice_match', val);
+              }}
+              accessibilityLabel={privacyCopy.consents.toggleAccessibility('Voice Match', Boolean(consents.voice_match))}
+              trackColor={{ false: colors.surface1, true: accents.mint.base }}
+              thumbColor={colors.surface1}
+            />
+          </View>
         </Card>
 
         {/* Section 2: Download my data */}
