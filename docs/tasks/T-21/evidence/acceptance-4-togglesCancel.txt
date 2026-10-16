@@ -1,0 +1,13 @@
+$ jest --watchAll=false src/features/notifications/__tests__/togglesCancel.test.ts
+PASS src/features/notifications/__tests__/togglesCancel.test.ts
+  T-21 Acceptance Check 4: Toggles actually cancel scheduled items
+    √ initially contains all 4 scheduled items (12 ms)
+    √ cancels scheduled rhythm_nudge items when rhythm_nudge toggle is turned OFF (8 ms)
+    √ cancels scheduled moment_prompt items when moment_prompt toggle is turned OFF (7 ms)
+    √ cancels ALL scheduled notifications when pauseForAWeek is invoked (11 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        4.51 s
+Result: PASS

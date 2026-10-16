@@ -1,0 +1,27 @@
+$ jest --watchAll=false src/features/notifications/__tests__/notificationsCopy.test.ts
+PASS src/features/notifications/__tests__/notificationsCopy.test.ts
+  T-21 Acceptance Check 2: Notifications Copy Library
+    √ contains at least 20 copy strings and templates (2 ms)
+    Zero guilt language & streak threat enforcement
+      √ asserts no copy line contains guilt phrase: you missed (2 ms)
+      √ asserts no copy line contains guilt phrase: streak (1 ms)
+      √ asserts no copy line contains guilt phrase: don't lose (1 ms)
+      √ asserts no copy line contains guilt phrase: dont lose (1 ms)
+      √ asserts no copy line contains guilt phrase: hurry (1 ms)
+      √ asserts no copy line contains guilt phrase: last chance (1 ms)
+      √ asserts no copy line contains guilt phrase: /only \\w+ left/i (1 ms)
+    Zero clinical language enforcement
+      √ asserts no copy line contains clinical word: treat (2 ms)
+      √ asserts no copy line contains clinical word: cure (1 ms)
+      √ asserts no copy line contains clinical word: therapy (1 ms)
+      √ asserts no copy line contains clinical word: diagnose (1 ms)
+    Content completeness & quality
+      √ has previews and titles for all required notification categories (2 ms)
+      √ includes permission flow copy with preview headline and tag (1 ms)
+      √ includes Max one a day badge and explanation (1 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       15 passed, 15 total
+Snapshots:   0 total
+Time:        4.21 s
+Result: PASS
