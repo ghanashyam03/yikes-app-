@@ -1,0 +1,1138 @@
+﻿Scope: 6 of 7 workspace projects
+packages/shared typecheck$ tsc --noEmit
+packages/ai-prompts typecheck$ tsc --noEmit
+packages/db typecheck$ tsc --noEmit
+packages/content typecheck$ tsc --noEmit
+packages/db typecheck: Done
+packages/shared typecheck: Done
+apps/mobile typecheck$ tsc --noEmit
+packages/content typecheck: Done
+packages/ai-prompts typecheck: Done
+services/gateway typecheck$ tsc --noEmit
+services/gateway typecheck: Done
+apps/mobile typecheck: Done
+Scope: 6 of 7 workspace projects
+packages/ai-prompts test$ vitest run
+packages/shared test$ vitest run
+packages/content test$ vitest run
+packages/db test$ vitest run
+packages/content test: 
+packages/content test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/content[39m
+packages/content test: 
+packages/ai-prompts test: 
+packages/ai-prompts test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/ai-prompts[39m
+packages/ai-prompts test: 
+packages/shared test: 
+packages/shared test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/shared[39m
+packages/shared test: 
+packages/db test: 
+packages/db test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/packages/db[39m
+packages/db test: 
+packages/db test:  [32mΓ£ô[39m src/migrations.test.ts [2m([22m[2m6 tests[22m[2m)[22m[90m 23[2mms[22m[39m
+packages/content test:  [32mΓ£ô[39m src/__tests__/sessionMachine.test.ts [2m([22m[2m8 tests[22m[2m)[22m[90m 25[2mms[22m[39m
+packages/db test:  [32mΓ£ô[39m src/schema.test.ts [2m([22m[2m5 tests[22m[2m)[22m[90m 15[2mms[22m[39m
+packages/shared test:  [32mΓ£ô[39m src/tokens/contrast.test.ts [2m([22m[2m19 tests[22m[2m)[22m[90m 13[2mms[22m[39m
+packages/shared test:  [32mΓ£ô[39m src/playbook/__tests__/derivePlaybook.test.ts [2m([22m[2m6 tests[22m[2m)[22m[90m 20[2mms[22m[39m
+packages/shared test:  [32mΓ£ô[39m src/playbook/__tests__/questions.test.ts [2m([22m[2m17 tests[22m[2m)[22m[90m 33[2mms[22m[39m
+packages/db test:  [32mΓ£ô[39m src/placeholder.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 7[2mms[22m[39m
+packages/db test: 
+packages/db test: [2m Test Files [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+packages/ai-prompts test:  [32mΓ£ô[39m src/__tests__/utilities.test.ts [2m([22m[2m14 tests[22m[2m)[22m[90m 24[2mms[22m[39m
+packages/db test: [2m      Tests [22m [1m[32m12 passed[39m[22m[90m (12)[39m
+packages/db test: [2m   Start at [22m 10:21:42
+packages/db test: [2m   Duration [22m 3.51s[2m (transform 383ms, setup 0ms, collect 457ms, tests 45ms, environment 3ms, prepare 2.10s)[22m
+packages/db test: 
+packages/shared test:  [32mΓ£ô[39m src/version.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 6[2mms[22m[39m
+packages/ai-prompts test:  [32mΓ£ô[39m src/__tests__/schemas.test.ts [2m([22m[2m23 tests[22m[2m)[22m[90m 32[2mms[22m[39m
+packages/db test: Done
+packages/ai-prompts test:  [32mΓ£ô[39m src/__tests__/prompts.test.ts [2m([22m[2m11 tests[22m[2m)[22m[90m 42[2mms[22m[39m
+packages/shared test:  [32mΓ£ô[39m src/safety/__tests__/crisis-terms.test.ts [2m([22m[2m3 tests[22m[2m)[22m[90m 24[2mms[22m[39m
+packages/ai-prompts test:  [32mΓ£ô[39m src/__tests__/eval.test.ts [2m([22m[2m3 tests[22m[2m)[22m[90m 30[2mms[22m[39m
+packages/ai-prompts test: 
+packages/ai-prompts test: [2m Test Files [22m [1m[32m4 passed[39m[22m[90m (4)[39m
+packages/ai-prompts test: [2m      Tests [22m [1m[32m51 passed[39m[22m[90m (51)[39m
+packages/ai-prompts test: [2m   Start at [22m 10:21:42
+packages/ai-prompts test: [2m   Duration [22m 4.22s[2m (transform 1.23s, setup 0ms, collect 1.94s, tests 127ms, environment 2ms, prepare 3.34s)[22m
+packages/ai-prompts test: 
+packages/content test:  [32mΓ£ô[39m src/__tests__/content.test.ts [2m([22m[2m7 tests[22m[2m)[22m[90m 48[2mms[22m[39m
+packages/ai-prompts test: Done
+packages/shared test:  [32mΓ£ô[39m src/tokens/tokens.test.ts [2m([22m[2m10 tests[22m[2m)[22m[90m 9[2mms[22m[39m
+packages/content test: 
+packages/content test: [2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+packages/content test: [2m      Tests [22m [1m[32m15 passed[39m[22m[90m (15)[39m
+packages/content test: [2m   Start at [22m 10:21:42
+packages/content test: [2m   Duration [22m 4.38s[2m (transform 425ms, setup 0ms, collect 593ms, tests 73ms, environment 1ms, prepare 1.55s)[22m
+packages/content test: 
+packages/shared test: 
+packages/shared test: [2m Test Files [22m [1m[32m6 passed[39m[22m[90m (6)[39m
+packages/shared test: [2m      Tests [22m [1m[32m56 passed[39m[22m[90m (56)[39m
+packages/shared test: [2m   Start at [22m 10:21:42
+packages/shared test: [2m   Duration [22m 4.37s[2m (transform 1.16s, setup 0ms, collect 1.50s, tests 107ms, environment 5ms, prepare 4.48s)[22m
+packages/shared test: 
+packages/content test: Done
+packages/shared test: Done
+apps/mobile test$ jest --watchAll=false
+services/gateway test$ vitest run
+services/gateway test: 
+services/gateway test: [1m[7m[36m RUN [39m[27m[22m [36mv3.0.5 [39m[90mC:/Users/ghana/OneDrive/Desktop/yikes-app!/services/gateway[39m
+services/gateway test: 
+services/gateway test:  [32mΓ£ô[39m src/coach/__tests__/stageTracker.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 17[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/coach/__tests__/rewindManager.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 18[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/queue/__tests__/rate-limiter.test.ts [2m([22m[2m3 tests[22m[2m)[22m[90m 126[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/providers/__tests__/fake.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 15[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/middleware/__tests__/auth.test.ts [2m([22m[2m3 tests[22m[2m)[22m[90m 297[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/structured/__tests__/call-structured.test.ts [2m([22m[2m4 tests[22m[2m)[22m[90m 27[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/reliability/__tests__/reliability.test.ts [2m([22m[2m6 tests[22m[2m)[22m[90m 298[2mms[22m[39m
+services/gateway test: {"level":30,"time":1792126313317,"pid":29128,"hostname":"ghanashyambook","invalidQuotes":["Hey do you have a minute for questions?","Hey do you have a minute for questions?"],"msg":"Initial coach output had invalid quotes. Attempting regeneration once."}
+services/gateway test: {"level":30,"time":1792126313404,"pid":29128,"hostname":"ghanashyambook","invalidQuotes":["Totally made up user phrase"],"msg":"Initial coach output had invalid quotes. Attempting regeneration once."}
+services/gateway test: {"level":30,"time":1792126313404,"pid":29128,"hostname":"ghanashyambook","msg":"No valid worked quotes remain. Applying authored rubric fallback."}
+services/gateway test:  [32mΓ£ô[39m src/coach/__tests__/coachEngine.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 106[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/safety/__tests__/route.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 422[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/telemetry/__tests__/logger.test.ts [2m([22m[2m1 test[22m[2m)[22m[90m 39[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/usage/__tests__/daily-caps.test.ts [2m([22m[2m2 tests[22m[2m)[22m[90m 11[2mms[22m[39m
+services/gateway test: [90mstderr[2m | src/safety/__tests__/safety.test.ts[2m > [22m[2mT-09 Safety Suite[2m > [22m[2mAcceptance Check 2: Degraded mode reliability[2m > [22m[2mgracefully allows benign input and sets degraded: true when safety model fails
+services/gateway test: [22m[39mΓùç injected env (17) from ..\..\.env.local
+services/gateway test: 
+services/gateway test: {"level":40,"time":1792126314500,"pid":30468,"hostname":"ghanashyambook","errorMsg":"Failed structured validation after retry: Schema validation failed: verdict: Required","msg":"Safety model evaluation failed; falling back to degraded rules mode"}
+services/gateway test: {"level":40,"time":1792126314580,"pid":30468,"hostname":"ghanashyambook","errorMsg":"Failed structured validation after retry: Schema validation failed: verdict: Required","msg":"Safety model evaluation failed; falling back to degraded rules mode"}
+services/gateway test: {"level":30,"time":1792126314608,"pid":30036,"hostname":"ghanashyambook","category":"abuse","msg":"Prep request blocked kindly by scenario exclusion validator"}
+services/gateway test: {"level":40,"time":1792126314602,"pid":31724,"hostname":"ghanashyambook","errorMsg":"AI provider unavailable for job 'safety' (tried primary: nvidia/llama-3.1-nemotron-safety-guard-8b-v3, fallback: nvidia/nemotron-3.5-content-safety)","msg":"Safety model evaluation failed; falling back to degraded rules mode"}
+services/gateway test: {"level":30,"time":1792126314624,"pid":30036,"hostname":"ghanashyambook","category":"bereavement","msg":"Prep request blocked kindly by scenario exclusion validator"}
+services/gateway test: {"level":40,"time":1792126314639,"pid":31524,"hostname":"ghanashyambook","errorMsg":"Failed structured validation after retry: Schema validation failed: intro: Required; worked: Required; pivot: Required; tryNext: Required; skillVotes: Required; partnerArc: Required","msg":"Coach structured call failed; using authored fallback"}
+services/gateway test: {"level":30,"time":1792126314687,"pid":30036,"hostname":"ghanashyambook","category":"confronting_harm","msg":"Prep request blocked kindly by scenario exclusion validator"}
+services/gateway test:  [32mΓ£ô[39m src/safety/__tests__/safety.test.ts [2m([22m[2m14 tests[22m[2m)[22m[33m 364[2mms[22m[39m
+services/gateway test: {"level":30,"time":1792126314724,"pid":30036,"hostname":"ghanashyambook","category":"harassment_reporting","msg":"Prep request blocked kindly by scenario exclusion validator"}
+services/gateway test: {"level":30,"time":1792126314733,"pid":30036,"hostname":"ghanashyambook","category":"medical_news","msg":"Prep request blocked kindly by scenario exclusion validator"}
+services/gateway test: {"level":40,"time":1792126314733,"pid":31524,"hostname":"ghanashyambook","errorMsg":"Failed structured validation after retry: Schema validation failed: summary: Required; differences: Required; partnerShift: Required","msg":"Comparative model call failed; returning deterministic summary"}
+services/gateway test:  [32mΓ£ô[39m src/routes/__tests__/prep.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 508[2mms[22m[39m
+services/gateway test: {"level":40,"time":1792126314757,"pid":30468,"hostname":"ghanashyambook","error":"Provider returned HTTP 500: Internal Server Error","msg":"Vision model failed or unavailable"}
+services/gateway test:  [32mΓ£ô[39m src/routes/__tests__/coachRoutes.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 515[2mms[22m[39m
+services/gateway test: {"level":40,"time":1792126314795,"pid":30468,"hostname":"ghanashyambook","errorMsg":"Failed structured validation after retry: Schema validation failed: verdict: Required","msg":"Safety model evaluation failed; falling back to degraded rules mode"}
+services/gateway test:  [32mΓ£ô[39m src/routes/privacy/__tests__/privacy.test.ts [2m([22m[2m7 tests[22m[2m)[22m[33m 566[2mms[22m[39m
+services/gateway test:    [33m[2mΓ£ô[22m[39m T-07: Gateway Privacy Routes & Data Rights[2m > [22mAcceptance Check 1: Export contains only that user rows and zero rows of other users [33m366[2mms[22m[39m
+services/gateway test:  [32mΓ£ô[39m src/routes/__tests__/reply.test.ts [2m([22m[2m11 tests[22m[2m)[22m[33m 590[2mms[22m[39m
+services/gateway test: {"level":40,"time":1792126315128,"pid":24540,"hostname":"ghanashyambook","errorMsg":"AiUnavailableError: AI provider unavailable for job 'partner' (tried primary: test-partner, fallback: test-fallback)","msg":"Primary and fallback models failed; using persona authored lines"}
+services/gateway test: {"level":40,"time":1792126315458,"pid":24540,"hostname":"ghanashyambook","errorMsg":"BadOutputError: Failed structured validation after retry: Schema validation failed: reply: Required; thought: Required; mood: Required; wantsToEnd: Required; cue: Required","msg":"Primary and fallback models failed; using persona authored lines"}
+services/gateway test:  [32mΓ£ô[39m src/partner/__tests__/partner.test.ts [2m([22m[2m12 tests[22m[2m)[22m[33m 1101[2mms[22m[39m
+services/gateway test:    [33m[2mΓ£ô[22m[39m T-12: Gateway Practice Partner API & Engine[2m > [22m1. POST /v1/partner/start starts an attempt and returns opening dialogue and initial mood [33m315[2mms[22m[39m
+services/gateway test: [90mstderr[2m | src/app.test.ts[2m > [22m[2mgateway app & route loader[2m > [22m[2mGET /health returns { ok: true } via auto-loaded route
+services/gateway test: [22m[39mΓùç injected env (17) from ..\..\.env.local
+services/gateway test: 
+services/gateway test:  [32mΓ£ô[39m src/app.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 1377[2mms[22m[39m
+services/gateway test:    [33m[2mΓ£ô[22m[39m gateway app & route loader[2m > [22mGET /health returns { ok: true } via auto-loaded route [33m1318[2mms[22m[39m
+services/gateway test: 
+services/gateway test: [2m Test Files [22m [1m[32m18 passed[39m[22m[90m (18)[39m
+services/gateway test: [2m      Tests [22m [1m[32m94 passed[39m[22m[90m (94)[39m
+services/gateway test: [2m   Start at [22m 10:21:48
+services/gateway test: [2m   Duration [22m 8.32s[2m (transform 19.42s, setup 0ms, collect 45.00s, tests 6.40s, environment 10ms, prepare 17.74s)[22m
+services/gateway test: 
+services/gateway test: Done
+apps/mobile test: PASS src/__tests__/layout.smoke.test.tsx (11.193 s)
+apps/mobile test: PASS src/ui/primitives/__tests__/Screen.reducedMotion.test.tsx (10.981 s)
+apps/mobile test: PASS src/ui/primitives/__tests__/primitives.smoke.test.tsx (13.308 s)
+apps/mobile test: PASS src/features/session-steps/__tests__/sessionSteps.test.tsx (13.999 s)
+apps/mobile test: (node:3028) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+apps/mobile test: (Use `node --trace-warnings ...` to show where the warning was created)
+apps/mobile test: PASS src/features/auth/__tests__/screens.test.tsx (15.012 s)
+apps/mobile test: PASS src/ui/components/__tests__/components.test.tsx (14.917 s)
+apps/mobile test: (node:31628) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+apps/mobile test: (Use `node --trace-warnings ...` to show where the warning was created)
+apps/mobile test: PASS src/features/reply-helper/__tests__/replyHelper.test.tsx (14.981 s)
+apps/mobile test: (node:26228) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+apps/mobile test: (Use `node --trace-warnings ...` to show where the warning was created)
+apps/mobile test: PASS src/features/onboarding/__tests__/screens.test.tsx (16.566 s)
+apps/mobile test: (node:31416) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+apps/mobile test: (Use `node --trace-warnings ...` to show where the warning was created)
+apps/mobile test: (node:15276) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+apps/mobile test: (Use `node --trace-warnings ...` to show where the warning was created)
+apps/mobile test: PASS src/features/today/__tests__/rhythm.test.ts
+apps/mobile test: PASS src/features/path/__tests__/pathScreenStates.test.tsx (16.515 s)
+apps/mobile test:   ΓùÅ Console
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to PathScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at PathScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(tabs)\path.tsx:29:55)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 150 |[39m
+apps/mobile test:      [90m 151 |[39m       resetProgress[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 153 |[39m           completedSessionIds[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 154 |[39m           sessionsLog[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 155 |[39m           skillsProgress[33m:[39m {}[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetProgress] (src/features/today/guestProgress.ts:152:9)
+apps/mobile test:       at Object.resetProgress (src/features/path/__tests__/pathScreenStates.test.tsx:21:38)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to PathScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at PathScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(tabs)\path.tsx:29:55)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 150 |[39m
+apps/mobile test:      [90m 151 |[39m       resetProgress[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 153 |[39m           completedSessionIds[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 154 |[39m           sessionsLog[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 155 |[39m           skillsProgress[33m:[39m {}[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetProgress] (src/features/today/guestProgress.ts:152:9)
+apps/mobile test:       at Object.resetProgress (src/features/path/__tests__/pathScreenStates.test.tsx:21:38)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to PathScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at PathScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(tabs)\path.tsx:29:55)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 150 |[39m
+apps/mobile test:      [90m 151 |[39m       resetProgress[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 153 |[39m           completedSessionIds[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 154 |[39m           sessionsLog[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 155 |[39m           skillsProgress[33m:[39m {}[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetProgress] (src/features/today/guestProgress.ts:152:9)
+apps/mobile test:       at Object.resetProgress (src/features/path/__tests__/pathScreenStates.test.tsx:21:38)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to PathScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at PathScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(tabs)\path.tsx:29:55)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 150 |[39m
+apps/mobile test:      [90m 151 |[39m       resetProgress[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 153 |[39m           completedSessionIds[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 154 |[39m           sessionsLog[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 155 |[39m           skillsProgress[33m:[39m {}[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetProgress] (src/features/today/guestProgress.ts:152:9)
+apps/mobile test:       at Object.resetProgress (src/features/path/__tests__/pathScreenStates.test.tsx:21:38)
+apps/mobile test: 
+apps/mobile test: (node:31196) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+apps/mobile test: (Use `node --trace-warnings ...` to show where the warning was created)
+apps/mobile test: (node:27980) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+apps/mobile test: (Use `node --trace-warnings ...` to show where the warning was created)
+apps/mobile test: PASS src/features/onboarding/__tests__/guestMerger.test.ts
+apps/mobile test: PASS src/features/privacy/__tests__/privacy.test.tsx (16.369 s)
+apps/mobile test:   ΓùÅ Console
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to PrivacyModals inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at onConfirmDeleteText (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\features\privacy\PrivacyModals.tsx:17:3)
+apps/mobile test:           at RNCSafeAreaView
+apps/mobile test:           at Component (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockNativeComponent.js:17:18)
+apps/mobile test:           at edges (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-safe-area-cont_41bc010edb5fbc9f8d645d0878d147eb\node_modules\react-native-safe-area-context\src\SafeAreaView.tsx:24:6)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\ui\primitives\Screen.tsx:29:3)
+apps/mobile test:           at SettingsPrivacyScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\settings\privacy.tsx:22:48)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m  96 |[39m         canUse [33m=[39m [36mawait[39m checkCanUseImprovement(token)[33m.[39m[36mcatch[39m(() [33m=>[39m fetched[33m.[39mimprove_ai)[33m;[39m
+apps/mobile test:      [90m  97 |[39m       }
+apps/mobile test:     [31m[1m>[22m[39m[90m  98 |[39m       [36mset[39m({
+apps/mobile test:      [90m     |[39m       [31m[1m^[22m[39m
+apps/mobile test:      [90m  99 |[39m         consents[33m:[39m fetched[33m,[39m
+apps/mobile test:      [90m 100 |[39m         canUseForImprovement[33m:[39m canUse[33m,[39m
+apps/mobile test:      [90m 101 |[39m         isLoadingConsents[33m:[39m [36mfalse[39m[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at set (src/features/privacy/usePrivacy.ts:98:7)
+apps/mobile test:       at asyncGeneratorStep (../../node_modules/.pnpm/@babel+runtime@7.29.10/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+apps/mobile test:       at _next (../../node_modules/.pnpm/@babel+runtime@7.29.10/node_modules/@babel/runtime/helpers/asyncToGenerator.js:17:9)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to SettingsPrivacyScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at SettingsPrivacyScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\settings\privacy.tsx:22:48)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m  96 |[39m         canUse [33m=[39m [36mawait[39m checkCanUseImprovement(token)[33m.[39m[36mcatch[39m(() [33m=>[39m fetched[33m.[39mimprove_ai)[33m;[39m
+apps/mobile test:      [90m  97 |[39m       }
+apps/mobile test:     [31m[1m>[22m[39m[90m  98 |[39m       [36mset[39m({
+apps/mobile test:      [90m     |[39m       [31m[1m^[22m[39m
+apps/mobile test:      [90m  99 |[39m         consents[33m:[39m fetched[33m,[39m
+apps/mobile test:      [90m 100 |[39m         canUseForImprovement[33m:[39m canUse[33m,[39m
+apps/mobile test:      [90m 101 |[39m         isLoadingConsents[33m:[39m [36mfalse[39m[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at set (src/features/privacy/usePrivacy.ts:98:7)
+apps/mobile test:       at asyncGeneratorStep (../../node_modules/.pnpm/@babel+runtime@7.29.10/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+apps/mobile test:       at _next (../../node_modules/.pnpm/@babel+runtime@7.29.10/node_modules/@babel/runtime/helpers/asyncToGenerator.js:17:9)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to PrivacyModals inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at onConfirmDeleteText (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\features\privacy\PrivacyModals.tsx:17:3)
+apps/mobile test:           at RNCSafeAreaView
+apps/mobile test:           at Component (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockNativeComponent.js:17:18)
+apps/mobile test:           at edges (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-safe-area-cont_41bc010edb5fbc9f8d645d0878d147eb\node_modules\react-native-safe-area-context\src\SafeAreaView.tsx:24:6)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\ui\primitives\Screen.tsx:29:3)
+apps/mobile test:           at SettingsPrivacyScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\settings\privacy.tsx:22:48)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m  96 |[39m         canUse [33m=[39m [36mawait[39m checkCanUseImprovement(token)[33m.[39m[36mcatch[39m(() [33m=>[39m fetched[33m.[39mimprove_ai)[33m;[39m
+apps/mobile test:      [90m  97 |[39m       }
+apps/mobile test:     [31m[1m>[22m[39m[90m  98 |[39m       [36mset[39m({
+apps/mobile test:      [90m     |[39m       [31m[1m^[22m[39m
+apps/mobile test:      [90m  99 |[39m         consents[33m:[39m fetched[33m,[39m
+apps/mobile test:      [90m 100 |[39m         canUseForImprovement[33m:[39m canUse[33m,[39m
+apps/mobile test:      [90m 101 |[39m         isLoadingConsents[33m:[39m [36mfalse[39m[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at set (src/features/privacy/usePrivacy.ts:98:7)
+apps/mobile test:       at asyncGeneratorStep (../../node_modules/.pnpm/@babel+runtime@7.29.10/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+apps/mobile test:       at _next (../../node_modules/.pnpm/@babel+runtime@7.29.10/node_modules/@babel/runtime/helpers/asyncToGenerator.js:17:9)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to SettingsPrivacyScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at SettingsPrivacyScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\settings\privacy.tsx:22:48)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m  96 |[39m         canUse [33m=[39m [36mawait[39m checkCanUseImprovement(token)[33m.[39m[36mcatch[39m(() [33m=>[39m fetched[33m.[39mimprove_ai)[33m;[39m
+apps/mobile test:      [90m  97 |[39m       }
+apps/mobile test:     [31m[1m>[22m[39m[90m  98 |[39m       [36mset[39m({
+apps/mobile test:      [90m     |[39m       [31m[1m^[22m[39m
+apps/mobile test:      [90m  99 |[39m         consents[33m:[39m fetched[33m,[39m
+apps/mobile test:      [90m 100 |[39m         canUseForImprovement[33m:[39m canUse[33m,[39m
+apps/mobile test:      [90m 101 |[39m         isLoadingConsents[33m:[39m [36mfalse[39m[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at set (src/features/privacy/usePrivacy.ts:98:7)
+apps/mobile test:       at asyncGeneratorStep (../../node_modules/.pnpm/@babel+runtime@7.29.10/node_modules/@babel/runtime/helpers/asyncToGenerator.js:3:17)
+apps/mobile test:       at _next (../../node_modules/.pnpm/@babel+runtime@7.29.10/node_modules/@babel/runtime/helpers/asyncToGenerator.js:17:9)
+apps/mobile test: 
+apps/mobile test: PASS src/features/auth/__tests__/quietLock.test.ts
+apps/mobile test: PASS src/navigation/__tests__/routes.test.tsx (17.46 s)
+apps/mobile test: (node:9832) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+apps/mobile test: (Use `node --trace-warnings ...` to show where the warning was created)
+apps/mobile test: PASS src/features/moments/__tests__/pocketCard.test.tsx
+apps/mobile test:   ΓùÅ Console
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to MomentPocketCardScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at MomentPocketCardScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\moments\[id]\pocket.tsx:19:35)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 183 |[39m
+apps/mobile test:      [90m 184 |[39m       resetStore[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 185 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 186 |[39m           moments[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 187 |[39m           isLoading[33m:[39m [36mfalse[39m[33m,[39m
+apps/mobile test:      [90m 188 |[39m           error[33m:[39m [36mnull[39m[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetStore] (src/features/moments/useMoments.ts:185:9)
+apps/mobile test:       at Object.resetStore (src/features/moments/__tests__/pocketCard.test.tsx:59:27)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to MomentPocketCardScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at MomentPocketCardScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\moments\[id]\pocket.tsx:19:35)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 183 |[39m
+apps/mobile test:      [90m 184 |[39m       resetStore[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 185 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 186 |[39m           moments[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 187 |[39m           isLoading[33m:[39m [36mfalse[39m[33m,[39m
+apps/mobile test:      [90m 188 |[39m           error[33m:[39m [36mnull[39m[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetStore] (src/features/moments/useMoments.ts:185:9)
+apps/mobile test:       at Object.resetStore (src/features/moments/__tests__/pocketCard.test.tsx:59:27)
+apps/mobile test: 
+apps/mobile test: PASS src/features/auth/__tests__/guestStorage.test.ts
+apps/mobile test: PASS src/features/today/__tests__/todayScreenStates.test.tsx (16.96 s)
+apps/mobile test:   ΓùÅ Console
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to TodayScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at TodayScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(tabs)\index.tsx:26:55)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 150 |[39m
+apps/mobile test:      [90m 151 |[39m       resetProgress[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 153 |[39m           completedSessionIds[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 154 |[39m           sessionsLog[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 155 |[39m           skillsProgress[33m:[39m {}[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetProgress] (src/features/today/guestProgress.ts:152:9)
+apps/mobile test:       at Object.resetProgress (src/features/today/__tests__/todayScreenStates.test.tsx:21:38)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to TodayScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at TodayScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(tabs)\index.tsx:26:55)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 150 |[39m
+apps/mobile test:      [90m 151 |[39m       resetProgress[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 153 |[39m           completedSessionIds[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 154 |[39m           sessionsLog[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 155 |[39m           skillsProgress[33m:[39m {}[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetProgress] (src/features/today/guestProgress.ts:152:9)
+apps/mobile test:       at Object.resetProgress (src/features/today/__tests__/todayScreenStates.test.tsx:21:38)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to TodayScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at TodayScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(tabs)\index.tsx:26:55)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 150 |[39m
+apps/mobile test:      [90m 151 |[39m       resetProgress[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 153 |[39m           completedSessionIds[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 154 |[39m           sessionsLog[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 155 |[39m           skillsProgress[33m:[39m {}[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetProgress] (src/features/today/guestProgress.ts:152:9)
+apps/mobile test:       at Object.resetProgress (src/features/today/__tests__/todayScreenStates.test.tsx:21:38)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to TodayScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at TodayScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(tabs)\index.tsx:26:55)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 150 |[39m
+apps/mobile test:      [90m 151 |[39m       resetProgress[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 153 |[39m           completedSessionIds[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 154 |[39m           sessionsLog[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 155 |[39m           skillsProgress[33m:[39m {}[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetProgress] (src/features/today/guestProgress.ts:152:9)
+apps/mobile test:       at Object.resetProgress (src/features/today/__tests__/todayScreenStates.test.tsx:21:38)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to TodayScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at TodayScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(tabs)\index.tsx:26:55)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 150 |[39m
+apps/mobile test:      [90m 151 |[39m       resetProgress[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 153 |[39m           completedSessionIds[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 154 |[39m           sessionsLog[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 155 |[39m           skillsProgress[33m:[39m {}[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetProgress] (src/features/today/guestProgress.ts:152:9)
+apps/mobile test:       at Object.resetProgress (src/features/today/__tests__/todayScreenStates.test.tsx:21:38)
+apps/mobile test: 
+apps/mobile test: PASS src/features/auth/__tests__/acceptance.test.ts
+apps/mobile test: (node:32376) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+apps/mobile test: (Use `node --trace-warnings ...` to show where the warning was created)
+apps/mobile test: PASS src/features/system-states/__tests__/systemStates.test.tsx (6.919 s)
+apps/mobile test: PASS src/features/auth/__tests__/ageGate.test.ts
+apps/mobile test: PASS src/features/today/__tests__/walkthrough.test.tsx (17.898 s)
+apps/mobile test:   ΓùÅ Console
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to CoachReadScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at CoachReadScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(onboarding)\coach-read.tsx:30:63)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 150 |[39m
+apps/mobile test:      [90m 151 |[39m       resetProgress[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 153 |[39m           completedSessionIds[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 154 |[39m           sessionsLog[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 155 |[39m           skillsProgress[33m:[39m {}[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetProgress] (src/features/today/guestProgress.ts:152:9)
+apps/mobile test:       at Object.resetProgress (src/features/today/__tests__/walkthrough.test.tsx:33:38)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to TodayScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at TodayScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(tabs)\index.tsx:26:55)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 150 |[39m
+apps/mobile test:      [90m 151 |[39m       resetProgress[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 153 |[39m           completedSessionIds[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 154 |[39m           sessionsLog[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 155 |[39m           skillsProgress[33m:[39m {}[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetProgress] (src/features/today/guestProgress.ts:152:9)
+apps/mobile test:       at Object.resetProgress (src/features/today/__tests__/walkthrough.test.tsx:33:38)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to SessionOutThereScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at SessionOutThereScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\session\[id]\out-there.tsx:31:55)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 150 |[39m
+apps/mobile test:      [90m 151 |[39m       resetProgress[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 153 |[39m           completedSessionIds[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 154 |[39m           sessionsLog[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 155 |[39m           skillsProgress[33m:[39m {}[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetProgress] (src/features/today/guestProgress.ts:152:9)
+apps/mobile test:       at Object.resetProgress (src/features/today/__tests__/walkthrough.test.tsx:33:38)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to SessionCompleteScreen inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at SessionCompleteScreen (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\session\[id]\complete.tsx:28:48)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 150 |[39m
+apps/mobile test:      [90m 151 |[39m       resetProgress[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 152 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 153 |[39m           completedSessionIds[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 154 |[39m           sessionsLog[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 155 |[39m           skillsProgress[33m:[39m {}[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetProgress] (src/features/today/guestProgress.ts:152:9)
+apps/mobile test:       at Object.resetProgress (src/features/today/__tests__/walkthrough.test.tsx:33:38)
+apps/mobile test: 
+apps/mobile test: PASS src/features/session-runner/__tests__/sessionRunner.test.ts
+apps/mobile test: PASS src/features/auth/__tests__/consents.test.ts
+apps/mobile test: PASS src/features/today/__tests__/chooseNextSession.test.ts
+apps/mobile test: PASS src/features/moments/__tests__/prepSchema.test.ts
+apps/mobile test: (node:5084) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+apps/mobile test: (Use `node --trace-warnings ...` to show where the warning was created)
+apps/mobile test: PASS src/features/onboarding/__tests__/store.test.ts
+apps/mobile test: PASS src/features/moments/__tests__/momentsRls.test.ts
+apps/mobile test: PASS src/features/safety/__tests__/useSafetyRoute.test.ts
+apps/mobile test: PASS src/features/auth/__tests__/otpManager.test.ts
+apps/mobile test: PASS src/features/settings/__tests__/settings.test.tsx (6.96 s)
+apps/mobile test: (node:30032) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+apps/mobile test: (Use `node --trace-warnings ...` to show where the warning was created)
+apps/mobile test: PASS src/features/moments/__tests__/momentsTab.test.tsx (5.178 s)
+apps/mobile test:   ΓùÅ Console
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to MomentsTab inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at MomentsTab (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(tabs)\moments.tsx:24:39)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 183 |[39m
+apps/mobile test:      [90m 184 |[39m       resetStore[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 185 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 186 |[39m           moments[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 187 |[39m           isLoading[33m:[39m [36mfalse[39m[33m,[39m
+apps/mobile test:      [90m 188 |[39m           error[33m:[39m [36mnull[39m[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetStore] (src/features/moments/useMoments.ts:185:9)
+apps/mobile test:       at Object.resetStore (src/features/moments/__tests__/momentsTab.test.tsx:25:27)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to MomentsTab inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at MomentsTab (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(tabs)\moments.tsx:24:39)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 183 |[39m
+apps/mobile test:      [90m 184 |[39m       resetStore[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 185 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 186 |[39m           moments[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 187 |[39m           isLoading[33m:[39m [36mfalse[39m[33m,[39m
+apps/mobile test:      [90m 188 |[39m           error[33m:[39m [36mnull[39m[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetStore] (src/features/moments/useMoments.ts:185:9)
+apps/mobile test:       at Object.resetStore (src/features/moments/__tests__/momentsTab.test.tsx:25:27)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to MomentsTab inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at MomentsTab (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(tabs)\moments.tsx:24:39)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 183 |[39m
+apps/mobile test:      [90m 184 |[39m       resetStore[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 185 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 186 |[39m           moments[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 187 |[39m           isLoading[33m:[39m [36mfalse[39m[33m,[39m
+apps/mobile test:      [90m 188 |[39m           error[33m:[39m [36mnull[39m[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetStore] (src/features/moments/useMoments.ts:185:9)
+apps/mobile test:       at Object.resetStore (src/features/moments/__tests__/momentsTab.test.tsx:25:27)
+apps/mobile test: 
+apps/mobile test:     console.error
+apps/mobile test:       Warning: An update to MomentsTab inside a test was not wrapped in act(...).
+apps/mobile test:       
+apps/mobile test:       When testing, code that causes React state updates should be wrapped into act(...):
+apps/mobile test:       
+apps/mobile test:       act(() => {
+apps/mobile test:         /* fire events that update state */
+apps/mobile test:       });
+apps/mobile test:       /* assert on the output */
+apps/mobile test:       
+apps/mobile test:       This ensures that you're testing the behavior the user would see in the browser. Learn more at https://reactjs.org/link/wrap-tests-with-act
+apps/mobile test:           at MomentsTab (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\app\(tabs)\moments.tsx:24:39)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at View
+apps/mobile test:           at View (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native@0.76.7_@babel+_4006b12577bb201a2ec9af1376812865\node_modules\react-native\jest\mockComponent.js:33:18)
+apps/mobile test:           at AnimatedComponent (C:\Users\ghana\OneDrive\Desktop\yikes-app!\node_modules\.pnpm\react-native-reanimated@3.1_fe3f40745e298f8c47571f7d4068880f\node_modules\react-native-reanimated\src\createAnimatedComponent\createAnimatedComponent.tsx:141:71)
+apps/mobile test:           at children (C:\Users\ghana\OneDrive\Desktop\yikes-app!\apps\mobile\src\theme\ThemeProvider.tsx:51:3)
+apps/mobile test: 
+apps/mobile test:     [0m [90m 183 |[39m
+apps/mobile test:      [90m 184 |[39m       resetStore[33m:[39m () [33m=>[39m {
+apps/mobile test:     [31m[1m>[22m[39m[90m 185 |[39m         [36mset[39m({
+apps/mobile test:      [90m     |[39m         [31m[1m^[22m[39m
+apps/mobile test:      [90m 186 |[39m           moments[33m:[39m [][33m,[39m
+apps/mobile test:      [90m 187 |[39m           isLoading[33m:[39m [36mfalse[39m[33m,[39m
+apps/mobile test:      [90m 188 |[39m           error[33m:[39m [36mnull[39m[33m,[39m[0m
+apps/mobile test: 
+apps/mobile test:       at printWarning (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:72:30)
+apps/mobile test:       at error (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:46:7)
+apps/mobile test:       at warnIfUpdatesNotWrappedWithActDEV (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:16716:9)
+apps/mobile test:       at scheduleUpdateOnFiber (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:14916:5)
+apps/mobile test:       at forceStoreRerender (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6251:5)
+apps/mobile test:       at handleStoreChange (../../node_modules/.pnpm/react-test-renderer@18.3.1_react@18.3.1/node_modules/react-test-renderer/cjs/react-test-renderer.development.js:6227:7)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:39
+apps/mobile test:           at Set.forEach (<anonymous>)
+apps/mobile test:       at setState (../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/vanilla.js:11:17)
+apps/mobile test:       at ../../node_modules/.pnpm/zustand@5.0.3_@types+react@_477e3a66e1f98cac8db62b079d27d131/node_modules/zustand/middleware.js:341:7
+apps/mobile test:       at Object.set [as resetStore] (src/features/moments/useMoments.ts:185:9)
+apps/mobile test:       at Object.resetStore (src/features/moments/__tests__/momentsTab.test.tsx:25:27)
+apps/mobile test: 
+apps/mobile test: PASS src/features/try/__tests__/try.test.tsx (20.184 s)
+apps/mobile test: PASS src/features/coach/__tests__/coachFeatures.test.tsx (19.999 s)
+apps/mobile test: A worker process has failed to exit gracefully and has been force exited. This is likely caused by tests leaking due to improper teardown. Try running with --detectOpenHandles to find leaks. Active timers can also cause this, ensure that .unref() was called on them.
+apps/mobile test: 
+apps/mobile test: Test Suites: 33 passed, 33 total
+apps/mobile test: Tests:       178 passed, 178 total
+apps/mobile test: Snapshots:   0 total
+apps/mobile test: Time:        25.497 s
+apps/mobile test: Ran all test suites.
+apps/mobile test: Done
