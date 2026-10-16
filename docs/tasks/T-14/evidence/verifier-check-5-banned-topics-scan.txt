@@ -1,0 +1,13 @@
+Audit: Scanned packages/content/src, services/gateway/src/routes/content.ts, apps/mobile/src/features/session-steps/sessionCatalog.ts for:
+- abuse, bereavement, confronting harm, harassment, medical, treat, cure, therapy, diagnose
+
+Regex Scan Output:
+Filename    LineNumber Line
+--------    ---------- ----
+validate.ts         12 // Words strictly banned from content (clinical / medical framing)
+validate.ts         13 export const BANNED_CLINICAL_REGEX = /\b(treat|treatment|treating|cure|curative|therapy|therapist|therapeutic|diagnose|diagnosis|diagnosing|diagnostic)\b/i;
+validate.ts         15 // Excluded topics: abuse, bereavement, harassment, self-harm, medical emergencies
+validate.ts         16 export const EXCLUDED_TOPICS_REGEX = /\b(abuse|abusive|bereavement|funeral|mourning|harassment|suicide|self-harm|chemotherapy|oncology|terminal illness)\b/i;
+
+Zero banned words or excluded topics present in curriculum, sessions, personas, skills, or levels content.
+Exit Code: 0
